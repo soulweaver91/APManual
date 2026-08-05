@@ -1,18 +1,1635 @@
 {
-    "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.regions.schema.json",
-    "ExampleRegion":{
-        "connects_to": ["Second Region"],
-        "requires": "|Ryu| or {YamlCompare(Example_Range >= example )}",
-        "starting": true
+  "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.regions.schema.json",
+  "New Game": {
+    "connects_to": [
+      "Episode: Formerly a Prince",
+      "Episode: Jazz in Time",
+      "Episode: Flashback",
+      "Episode: Funky Monkeys",
+      "Episode: Shareware Demo",
+      "Episode: The Secret Files",
+      "Episode: Christmas Chronicles",
+      "Level Free Select"
+    ],
+    "starting": true
+  },
+  "Level Free Select": {
+    "connects_to": [
+      "Rabbit in Training - Start",
+      "Dungeon Dilemma - Start",
+      "Knight Cap - Jazz Start",
+      "Knight Cap - Spaz Start",
+      "Tossed Salad - Jazz Start",
+      "Tossed Salad - Spaz Start",
+      "Carrot Juice - Start",
+      "Weirder Science - Jazz Start",
+      "Weirder Science - Spaz Start",
+      "Loose Screws - Start",
+      "Victorian Secret - Start",
+      "Colonial Chaos - Start",
+      "Purple Haze Maze - Start",
+      "Funky Grooveathon - Start",
+      "Beach Bunny Bingo - Start",
+      "Marinated Rabbit - Start",
+      "Diamondus Forever - Start",
+      "Fourteen Carrot - Start",
+      "Electric Boogaloo - Start",
+      "Voltage Village - Start",
+      "Medieval Kineval - Start",
+      "Hare Scare - Start",
+      "Gargoyles Lair - Start",
+      "Thriller Gorilla - Start",
+      "Jungle Jump - Start",
+      "A Cold Day in Heck - Start",
+      "Rabbit Roast - Start",
+      "Burnin Biscuits - Start",
+      "Bad Pitt - Start",
+      "Darn Ratz - Start",
+      "Retro Rabbit - Start",
+      "Frog Stomp - Start",
+      "Easter Bunny - Start",
+      "Spring Chickens - Start",
+      "Scrambled Eggs - Start",
+      "Ghostly Antics - Start",
+      "Skeletons Turf - Start",
+      "Graveyard Shift - Start",
+      "Turtle Town - Start",
+      "Suburbia Commando - Start",
+      "Urban Brawl - Start",
+      "Snow Bunnies - Start",
+      "Dashing thru the snow.. - Start",
+      "Tinsel Town - Start"
+    ],
+    "requires": "{YamlEnabled(allow_levels_out_of_order)}"
+  },
+  "Episode: Formerly a Prince": {
+    "connects_to": [
+      "Rabbit in Training - Start",
+      "Dungeon Dilemma - Start"
+    ],
+    "requires": "|Rabbit in Training Unlock| or |Dungeon Dilemma Unlock| or |Formerly a Prince Progressive Level Unlock:1|"
+  },
+  "Episode: Jazz in Time": {
+    "connects_to": [
+      "Victorian Secret - Start"
+    ],
+    "requires": "|Victorian Secret Unlock| or |Jazz in Time Progressive Level Unlock:1|"
+  },
+  "Episode: Flashback": {
+    "connects_to": [
+      "Diamondus Forever - Start"
+    ],
+    "requires": "|Diamondus Forever Unlock| or |Flashback Progressive Level Unlock:1|"
+  },
+  "Episode: Funky Monkeys": {
+    "connects_to": [
+      "Thriller Gorilla - Start"
+    ],
+    "requires": "|Thriller Gorilla Unlock| or |Funky Monkeys Progressive Level Unlock:1|"
+  },
+  "Episode: Shareware Demo": {
+    "connects_to": [
+      "Darn Ratz - Start"
+    ],
+    "requires": "|Darn Ratz Unlock| or |Shareware Demo Progressive Level Unlock:1|"
+  },
+  "Episode: The Secret Files": {
+    "connects_to": [
+      "Easter Bunny - Start"
+    ],
+    "requires": "|Easter Bunny Unlock| or |The Secret Files Progressive Level Unlock:1|"
+  },
+  "Episode: Christmas Chronicles": {
+    "connects_to": [
+      "Snow Bunnies - Start"
+    ],
+    "requires": "|Snow Bunnies Unlock| or |Christmas Chronicles Progressive Level Unlock:1|"
+  },
+  "Rabbit in Training - Start": {
+    "connects_to": [
+      "Rabbit in Training - After Vine Pit"
+    ],
+    "requires": "|Rabbit in Training Unlock| or |Formerly a Prince Progressive Level Unlock:1|",
+    "_comment": "R:M0"
+  },
+  "Rabbit in Training - After Vine Pit": {
+    "connects_to": [
+      "Rabbit in Training - Start",
+      "Rabbit in Training - After Destructible Blocks"
+    ],
+    "requires": "{canDoubleJump()} or {canCopter()}",
+    "_comment": "R:M1"
+  },
+  "Rabbit in Training - After Destructible Blocks": {
+    "connects_to": [
+      "Rabbit in Training - After Vine Pit",
+      "Rabbit in Training - After Buttstomp Blocks"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M2"
+  },
+  "Rabbit in Training - After Buttstomp Blocks": {
+    "connects_to": [
+      "Rabbit in Training - Exit"
+    ],
+    "requires": "{canDestroyButtstompBlocks()}",
+    "_comment": "R:M3"
+  },
+  "Rabbit in Training - Exit": {
+    "connects_to": [
+      "Dungeon Dilemma - Start"
+    ]
+  },
+  "Dungeon Dilemma - Start": {
+    "connects_to": [
+      "Dungeon Dilemma - After Drop at Start"
+    ],
+    "requires": "|Dungeon Dilemma Unlock| or |Formerly a Prince Progressive Level Unlock:2|",
+    "_comment": "R:M0"
+  },
+  "Dungeon Dilemma - After Drop at Start": {
+    "connects_to": [
+      "Dungeon Dilemma - Start",
+      "Dungeon Dilemma - Before and Around Save Point One"
+    ],
+    "exit_requires": {
+      "Dungeon Dilemma - Start": "{canDoubleJump()} or {canUppercut()}"
     },
-    "Second Region": {
-        "requires": "|@Characters:1|",
-        "connects_to": ["Third Region"],
-        "exit_requires": {
-            "Third Region": "|@Characters:5|"
-        }
+    "_comment": "R:M1"
+  },
+  "Dungeon Dilemma - Before and Around Save Point One": {
+    "connects_to": [
+      "Dungeon Dilemma - After Drop at Start",
+      "Dungeon Dilemma - Full Health Carrot Secret",
+      "Dungeon Dilemma - One Up Crate Secret",
+      "Dungeon Dilemma - Spring Sequence after Save Point One"
+    ],
+    "exit_requires": {
+      "Dungeon Dilemma - After Drop at Start": "{canDoubleJump()} or {canUppercut()}"
     },
-    "Third Region": {
-        "connects_to": []
-    }
+    "_comment": "R:M2"
+  },
+  "Dungeon Dilemma - Full Health Carrot Secret": {
+    "connects_to": [
+      "Dungeon Dilemma - Before and Around Save Point One"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A1"
+  },
+  "Dungeon Dilemma - One Up Crate Secret": {
+    "connects_to": [
+      "Dungeon Dilemma - Before and Around Save Point One"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A2"
+  },
+  "Dungeon Dilemma - Spring Sequence after Save Point One": {
+    "connects_to": [
+      "Dungeon Dilemma - Before and Around Save Point One",
+      "Dungeon Dilemma - Between Spring Section and Vines After Save Point Two"
+    ],
+    "exit_requires": {
+      "Dungeon Dilemma - Before and Around Save Point One": "|Freezer Permit| and {canDoubleJump()} or {canUppercut()}"
+    },
+    "_comment": "R:M3"
+  },
+  "Dungeon Dilemma - Between Spring Section and Vines After Save Point Two": {
+    "connects_to": [
+      "Dungeon Dilemma - Gem Crate Behind Buttstomp Blocks",
+      "Dungeon Dilemma - Silver Coin Tunnel into Spring Leading to One Up",
+      "Dungeon Dilemma - Gem Chute Next to Bonus Warp",
+      "Dungeon Dilemma - Bonus Warp Area",
+      "Dungeon Dilemma - Final Section"
+    ],
+    "_comment": "R:M4"
+  },
+  "Dungeon Dilemma - Gem Crate Behind Buttstomp Blocks": {
+    "connects_to": [
+      "Dungeon Dilemma - Between Spring Section and Vines After Save Point Two"
+    ],
+    "requires": "{canDestroyButtstompBlocks()}",
+    "_comment": "R:A3"
+  },
+  "Dungeon Dilemma - Silver Coin Tunnel into Spring Leading to One Up": {
+    "connects_to": [
+      "Dungeon Dilemma - Between Spring Section and Vines After Save Point Two"
+    ],
+    "requires": "{canDestroyButtstompBlocks()}",
+    "_comment": "R:A4"
+  },
+  "Dungeon Dilemma - Gem Chute Next to Bonus Warp": {
+    "connects_to": [
+      "Dungeon Dilemma - Between Spring Section and Vines After Save Point Two"
+    ],
+    "requires": "{canDoubleJump()} or {canUppercut()}",
+    "_comment": "R:A5"
+  },
+  "Dungeon Dilemma - Bonus Warp Area": {
+    "connects_to": [
+      "Dungeon Dilemma - Between Spring Section and Vines After Save Point Two"
+    ],
+    "requires": "{canDestroyButtstompBlocks()}",
+    "_comment": "R:B1    18 coins along the main path, 8 in region R:A5"
+  },
+  "Dungeon Dilemma - Final Section": {
+    "connects_to": [
+      "Dungeon Dilemma - Start",
+      "Dungeon Dilemma - Exit"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M5"
+  },
+  "Dungeon Dilemma - Exit": {
+    "connects_to": [
+      "Knight Cap - Jazz Start",
+      "Knight Cap - Spaz Start"
+    ]
+  },
+  "Knight Cap - Jazz Start": {
+    "connects_to": [
+      "Knight Cap - Jazz Main Area"
+    ],
+    "requires": "(|Knight Cap Unlock| or |Formerly a Prince Progressive Level Unlock:3|) and (|Jazz Unlock| or |Lori Unlock|)",
+    "_comment": "R:J0"
+  },
+  "Knight Cap - Jazz Main Area": {
+    "connects_to": [
+      "Knight Cap - Jazz Left Path Left Branch Before Chute",
+      "Knight Cap - Jazz Left Path Convergence",
+      "Knight Cap - Jazz Only Freezer Upgrade Secret",
+      "Knight Cap - Jazz Only Gold Coin Secret",
+      "Knight Cap - Shared Path Start From Right"
+    ],
+    "exit_requires": {
+      "Knight Cap - Jazz Left Path Convergence": "{canDestroyButtstompBlocks()}"
+    },
+    "_comment": "R:J1"
+  },
+  "Knight Cap - Jazz Left Path Left Branch Before Chute": {
+    "connects_to": [
+      "Knight Cap - Jazz Main Area",
+      "Knight Cap - Jazz Left Path Left Branch After Chute"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:J2"
+  },
+  "Knight Cap - Jazz Left Path Left Branch After Chute": {
+    "connects_to": [
+      "Knight Cap - Jazz Left Path Convergence"
+    ],
+    "_comment": "R:J3"
+  },
+  "Knight Cap - Jazz Only Freezer Upgrade Secret": {
+    "connects_to": [
+      "Knight Cap - Jazz Main Area"
+    ],
+    "requires": "{canUppercut()}",
+    "_comment": "R:A1"
+  },
+  "Knight Cap - Jazz Only Gold Coin Secret": {
+    "connects_to": [
+      "Knight Cap - Jazz Main Area"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A2"
+  },
+  "Knight Cap - Jazz Left Path Convergence": {
+    "connects_to": [
+      "Knight Cap - Jazz Main Area",
+      "Knight Cap - Jazz Left Path Left Branch After Chute",
+      "Knight Cap - Jazz Left Path End"
+    ],
+    "exit_requires": {
+      "Knight Cap - Jazz Main Area": "{canUppercut()}",
+      "Knight Cap - Jazz Left Path Left Branch After Chute": "{canUppercut()}"
+    },
+    "_comment": "R:J4"
+  },
+  "Knight Cap - Jazz Left Path End": {
+    "connects_to": [
+      "Knight Cap - Shared Path Start From Left"
+    ],
+    "_comment": "R:J5"
+  },
+  "Knight Cap - Spaz Start": {
+    "connects_to": [
+      "Knight Cap - Spaz Only After Chute"
+    ],
+    "requires": "(|Knight Cap Unlock| or |Formerly a Prince Progressive Level Unlock:3|) and |Spaz Unlock|",
+    "_comment": "R:S0"
+  },
+  "Knight Cap - Spaz Only After Chute": {
+    "connects_to": [
+      "Knight Cap - Spaz Start",
+      "Knight Cap - Shared Path Start From Left",
+      "Knight Cap - Spaz Only One Up Secret",
+      "Knight Cap - Spaz Only Gold Coin Secret"
+    ],
+    "exit_requires": {
+      "Knight Cap - Spaz Start": "{canDoubleJump()}"
+    },
+    "_comment": "R:S1"
+  },
+  "Knight Cap - Spaz Only One Up Secret": {
+    "connects_to": [
+      "Knight Cap - Spaz Only After Chute"
+    ],
+    "requires": "{canSidekick()}",
+    "_comment": "R:A3"
+  },
+  "Knight Cap - Spaz Only Gold Coin Secret": {
+    "connects_to": [
+      "Knight Cap - Spaz Only After Chute"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A4"
+  },
+  "Knight Cap - Shared Path Start From Left": {
+    "connects_to": [
+      "Knight Cap - Shared Path Start From Right"
+    ],
+    "_comment": "R:M1"
+  },
+  "Knight Cap - Shared Path Start From Right": {
+    "connects_to": [
+      "Knight Cap - Shared Path Start"
+    ],
+    "_comment": "R:M2"
+  },
+  "Knight Cap - Shared Path Start": {
+    "connects_to": [
+      "Knight Cap - After Vine",
+      "Knight Cap - Gem Ring Secret",
+      "Knight Cap - Bonus Warp Area"
+    ],
+    "_comment": "R:M3"
+  },
+  "Knight Cap - Gem Ring Secret": {
+    "connects_to": [
+      "Knight Cap - Shared Path Start"
+    ],
+    "requires": "{canDestroyButtstompBlocks()}",
+    "_comment": "R:A5"
+  },
+  "Knight Cap - Bonus Warp Area": {
+    "connects_to": [
+      "Knight Cap - Shared Path Start"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:B1    Requirement TBD"
+  },
+  "Knight Cap - After Vine": {
+    "connects_to": [
+      "Knight Cap - Shared Path Start",
+      "Knight Cap - After One Way"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M4"
+  },
+  "Knight Cap - After One Way": {
+    "connects_to": [
+      "Knight Cap - Flight Carrot Ledge",
+      "Knight Cap - Extra Life Secret",
+      "Knight Cap - Silly Message Secret",
+      "Knight Cap - Boss Area"
+    ],
+    "_comment": "R:M5"
+  },
+  "Knight Cap - Flight Carrot Ledge": {
+    "connects_to": [
+      "Knight Cap - After One Way"
+    ],
+    "requires": "{canDoubleJump()} or {canUppercut()}",
+    "_comment": "R:A6"
+  },
+  "Knight Cap - Extra Life Secret": {
+    "connects_to": [
+      "Knight Cap - After One Way"
+    ],
+    "requires": "{canDestroyButtstompBlocks()}",
+    "_comment": "R:A7"
+  },
+  "Knight Cap - Silly Message Secret": {
+    "connects_to": [
+      "Knight Cap - After One Way"
+    ],
+    "requires": "{canDoubleJump()} or {canUppercut()}",
+    "_comment": "R:A8"
+  },
+  "Knight Cap - Boss Area": {
+    "connects_to": [
+      "Knight Cap - Exit"
+    ],
+    "_comment": "R:M6"
+  },
+  "Knight Cap - Exit": {
+    "connects_to": [
+      "Tossed Salad - Jazz Start",
+      "Tossed Salad - Spaz Start"
+    ]
+  },
+  "Tossed Salad - Jazz Start": {
+    "connects_to": [
+      "Tossed Salad - Shared Path Start",
+      "Tossed Salad - One Up High Above Frozen Spring Secret"
+    ],
+    "requires": "|Tossed Salad Unlock| or |Formerly a Prince Progressive Level Unlock:4|",
+    "_comment": "R:J0    Spaz can drop down here by not shooting down the tree bridges"
+  },
+  "Tossed Salad - Spaz Start": {
+    "connects_to": [
+      "Tossed Salad - Jazz Start",
+      "Tossed Salad - Spaz Only Final Part"
+    ],
+    "requires": "(|Tossed Salad Unlock| or |Formerly a Prince Progressive Level Unlock:4|) and |Spaz Unlock|",
+    "_comment": "R:S0"
+  },
+  "Tossed Salad - Spaz Only Final Part": {
+    "connects_to": [
+      "Tossed Salad - Spaz Start",
+      "Tossed Salad - Shared Path Start"
+    ],
+    "exit_requires": {
+      "Tossed Salad - Spaz Start": "|Freezer Permit| and {canDoubleJump()}"
+    },
+    "_comment": "R:S1"
+  },
+  "Tossed Salad - One Up High Above Frozen Spring Secret": {
+    "connects_to": [
+      "Tossed Salad - Jazz Start"
+    ],
+    "requires": "|Toaster Permit|",
+    "_comment": "R:A1"
+  },
+  "Tossed Salad - Shared Path Start": {
+    "connects_to": [
+      "Tossed Salad - After First Save Point"
+    ],
+    "_comment": "R:M1"
+  },
+  "Tossed Salad - After First Save Point": {
+    "connects_to": [
+      "Tossed Salad - Shared Path Lower Section"
+    ],
+    "_comment": "R:M2"
+  },
+  "Tossed Salad - Shared Path Lower Section": {
+    "connects_to": [
+      "Tossed Salad - After First Save Point",
+      "Tossed Salad - Around Second Save Point",
+      "Tossed Salad - East Gold Coin Area"
+    ],
+    "exit_requires": {
+      "Tossed Salad - After First Save Point": "{canDoubleJump()} or {canUppercut()}"
+    },
+    "_comment": "R:M3"
+  },
+  "Tossed Salad - East Gold Coin Area": {
+    "connects_to": [
+      "Tossed Salad - Shared Path Lower Section"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A2"
+  },
+  "Tossed Salad - Around Second Save Point": {
+    "connects_to": [
+      "Tossed Salad - Before Final Chute",
+      "Tossed Salad - Under Jazz Section Bridge",
+      "Tossed Salad - Two Silver Coins After Second Save Point Secret"
+    ],
+    "_comment": "R:M4"
+  },
+  "Tossed Salad - Under Jazz Section Bridge": {
+    "connects_to": [
+      "Tossed Salad - Around Second Save Point"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A3"
+  },
+  "Tossed Salad - Two Silver Coins After Second Save Point Secret": {
+    "connects_to": [
+      "Tossed Salad - Before Final Chute"
+    ],
+    "_comment": "R:A4"
+  },
+  "Tossed Salad - Before Final Chute": {
+    "connects_to": [
+      "Tossed Salad - Final Part",
+      "Tossed Salad - Bonus Warp Area"
+    ],
+    "_comment": "R:M5"
+  },
+  "Tossed Salad - Bonus Warp Area": {
+    "connects_to": [
+      "Tossed Salad - Before Final Chute"
+    ],
+    "_comment": "R:B1    Requirement TBD"
+  },
+  "Tossed Salad - Final Part": {
+    "connects_to": [
+      "Tossed Salad - Exit"
+    ],
+    "_comment": "R:M6"
+  },
+  "Tossed Salad - Exit": {
+    "connects_to": [
+      "Carrot Juice - Start"
+    ]
+  },
+  "Carrot Juice - Start": {
+    "connects_to": [
+      "Carrot Juice - Left Path After First Fall",
+      "Carrot Juice - Right Path",
+      "Carrot Juice - One Up High Above Start Secret"
+    ],
+    "requires": "|Carrot Juice Unlock| or |Formerly a Prince Progressive Level Unlock:5|",
+    "_comment": "R:M0"
+  },
+  "Carrot Juice - One Up High Above Start Secret": {
+    "connects_to": [
+      "Carrot Juice - Start"
+    ],
+    "requires": "{canCopter()} or {canDoubleJump()}",
+    "_comment": "R:A1"
+  },
+  "Carrot Juice - Left Path After First Fall": {
+    "connects_to": [
+      "Carrot Juice - Start",
+      "Carrot Juice - Left Path After Second Fall"
+    ],
+    "exit_requires": {
+      "Carrot Juice - Start": "{canUppercut()} or {canDoubleJump()}"
+    },
+    "_comment": "R:M1"
+  },
+  "Carrot Juice - Left Path After Second Fall": {
+    "connects_to": [
+      "Carrot Juice - Left Path After First Fall",
+      "Carrot Juice - Left Path Crate Accessed with Pushable Rock Secret",
+      "Carrot Juice - Left Path After Third Fall"
+    ],
+    "exit_requires": {
+      "Carrot Juice - Left Path After First Fall": "{canUppercut()} or {canDoubleJump()}"
+    },
+    "_comment": "R:M2"
+  },
+  "Carrot Juice - Left Path Crate Accessed with Pushable Rock Secret": {
+    "connects_to": [
+      "Carrot Juice - Left Path After Second Fall"
+    ],
+    "requires": "{canUppercut()} or {canDoubleJump()}",
+    "_comment": "R:A2"
+  },
+  "Carrot Juice - Left Path After Third Fall": {
+    "connects_to": [
+      "Carrot Juice - Left Path After Second Fall",
+      "Carrot Juice - Left Path After Fourth Fall"
+    ],
+    "exit_requires": {
+      "Carrot Juice - Left Path After Second Fall": "{canUppercut()} or {canDoubleJump()}"
+    },
+    "_comment": "R:M3"
+  },
+  "Carrot Juice - Left Path After Fourth Fall": {
+    "connects_to": [
+      "Carrot Juice - Left Path After Third Fall",
+      "Carrot Juice - Left Path Last Section"
+    ],
+    "exit_requires": {
+      "Carrot Juice - Left Path After Third Fall": "|Freezer Permit| and ({canUppercut()} or {canDoubleJump()})"
+    },
+    "_comment": "R:M4"
+  },
+  "Carrot Juice - Left Path Last Section": {
+    "connects_to": [
+      "Carrot Juice - Paths Convergence",
+      "Carrot Juice - Gems and Ammo High in Cave Area Secret",
+      "Carrot Juice - Left Path Ammo and Super Gem Secret"
+    ],
+    "_comment": "R:M5"
+  },
+  "Carrot Juice - Gems and Ammo High in Cave Area Secret": {
+    "connects_to": [
+      "Carrot Juice - Left Path Last Section"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A3"
+  },
+  "Carrot Juice - Left Path Ammo and Super Gem Secret": {
+    "connects_to": [
+      "Carrot Juice - Left Path Last Section"
+    ],
+    "_comment": "R:A4"
+  },
+  "Carrot Juice - Right Path": {
+    "connects_to": [
+      "Carrot Juice - Start",
+      "Carrot Juice - Paths Convergence"
+    ],
+    "exit_requires": {
+      "Carrot Juice - Start": "|Freezer Permit|"
+    },
+    "_comment": "R:M6"
+  },
+  "Carrot Juice - Paths Convergence": {
+    "connects_to": [
+      "Carrot Juice - After Poles One Way"
+    ],
+    "_comment": "R:M7"
+  },
+  "Carrot Juice - After First Drop after Convergence": {
+    "connects_to": [
+      "Carrot Juice - Paths Convergence",
+      "Carrot Juice - After Second Drop after Convergence"
+    ],
+    "exit_requires": {
+      "Carrot Juice - Paths Convergence": "{canUppercut()} or {canDoubleJump()}"
+    },
+    "_comment": "R:M8"
+  },
+  "Carrot Juice - After Second Drop after Convergence": {
+    "connects_to": [
+      "Carrot Juice - After First Drop after Convergence",
+      "Carrot Juice - After Poles One Way"
+    ],
+    "exit_requires": {
+      "Carrot Juice - After First Drop after Convergence": "|Freezer Permit|"
+    },
+    "_comment": "R:M9"
+  },
+  "Carrot Juice - After Poles One Way": {
+    "connects_to": [
+      "Carrot Juice - Around Second Save Point"
+    ],
+    "_comment": "R:M10"
+  },
+  "Carrot Juice - Around Second Save Point": {
+    "connects_to": [
+      "Carrot Juice - Five Silver Coins Behind Blocks Secret",
+      "Carrot Juice - Six Silver Coins Above Bubble Shield Secret",
+      "Carrot Juice - After Horizontal Spring after Second Save Point"
+    ],
+    "_comment": "R:M11"
+  },
+  "Carrot Juice - Five Silver Coins Behind Blocks Secret": {
+    "connects_to": [
+      "Carrot Juice - Around Second Save Point"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A5"
+  },
+  "Carrot Juice - Six Silver Coins Above Bubble Shield Secret": {
+    "connects_to": [
+      "Carrot Juice - Around Second Save Point"
+    ],
+    "_comment": "R:A6    Can barely be reached with dashing"
+  },
+  "Carrot Juice - After Horizontal Spring after Second Save Point": {
+    "connects_to": [
+      "Carrot Juice - Around Second Save Point",
+      "Carrot Juice - After East Upper Spring One Way"
+    ],
+    "exit_requires": {
+      "Carrot Juice - Around Second Save Point": "|Freezer Permit|"
+    },
+    "_comment": "R:M12"
+  },
+  "Carrot Juice - After East Upper Spring One Way": {
+    "connects_to": [
+      "Carrot Juice - Lizard Copter Extra Life Secret",
+      "Carrot Juice - Gold Coin And Bouncer Ammo Warp Secret",
+      "Carrot Juice - Gold Coin Warp Secret",
+      "Carrot Juice - After Fall Near End of Level"
+    ],
+    "_comment": "R:M13"
+  },
+  "Carrot Juice - Lizard Copter Extra Life Secret": {
+    "connects_to": [
+      "Carrot Juice - After East Upper Spring One Way"
+    ],
+    "_comment": "R:A7"
+  },
+  "Carrot Juice - Gold Coin And Bouncer Ammo Warp Secret": {
+    "connects_to": [
+      "Carrot Juice - After East Upper Spring One Way"
+    ],
+    "_comment": "R:A8"
+  },
+  "Carrot Juice - Gold Coin Warp Secret": {
+    "connects_to": [
+      "Carrot Juice - After East Upper Spring One Way"
+    ],
+    "_comment": "R:A9"
+  },
+  "Carrot Juice - After Fall Near End of Level": {
+    "connects_to": [
+      "Carrot Juice - Bonus Warp Area",
+      "Carrot Juice - One Way After Fall Near End of Level"
+    ],
+    "_comment": "R:M14"
+  },
+  "Carrot Juice - Bonus Warp Area": {
+    "connects_to": [
+      "Carrot Juice - After Fall Near End of Level"
+    ],
+    "_comment": "R:B1    Requirement TBD"
+  },
+  "Carrot Juice - One Way After Fall Near End of Level": {
+    "connects_to": [
+      "Carrot Juice - End of Level Top Path",
+      "Carrot Juice - Boss Area"
+    ],
+    "_comment": "R:M15"
+  },
+  "Carrot Juice - End of Level Top Path": {
+    "connects_to": [
+      "Carrot Juice - One Way After Fall Near End of Level"
+    ],
+    "_comment": "R:A10"
+  },
+  "Carrot Juice - Boss Area": {
+    "connects_to": [
+      "Carrot Juice - Exit"
+    ],
+    "requires": "{canDestroyButtstompBlocks()}",
+    "_comment": "R:M16"
+  },
+  "Carrot Juice - Exit": {
+    "connects_to": [
+      "Weirder Science - Jazz Start",
+      "Weirder Science - Spaz Start"
+    ]
+  },
+  "Weirder Science - Jazz Start": {
+    "connects_to": [
+      "Weirder Science - Jazz Gold Coin Secret",
+      "Weirder Science - Shared Path Start"
+    ],
+    "requires": "(|Weirder Science Unlock| or |Formerly a Prince Progressive Level Unlock:6|) and (|Jazz Unlock| or |Lori Unlock|)",
+    "_comment": "R:J0"
+  },
+  "Weirder Science - Jazz Gold Coin Secret": {
+    "connects_to": [
+      "Weirder Science - Jazz Start"
+    ],
+    "requires": "{canDestroyBouncerBlocks()}",
+    "_comment": "R:A1"
+  },
+  "Weirder Science - Spaz Start": {
+    "connects_to": [
+      "Weirder Science - Spaz Silver Coins Warp Secret",
+      "Weirder Science - Spaz Silver Coins Behind Blocks Secret",
+      "Weirder Science - Spaz Only Below Silver Coins Behind Blocks"
+    ],
+    "requires": "(|Weirder Science Unlock| or |Formerly a Prince Progressive Level Unlock:6|) and (|Spaz Unlock|)",
+    "_comment": "R:S0"
+  },
+  "Weirder Science - Spaz Silver Coins Warp Secret": {
+    "connects_to": [
+      "Weirder Science - Spaz Start"
+    ],
+    "_comment": "R:A2"
+  },
+  "Weirder Science - Spaz Silver Coins Behind Blocks Secret": {
+    "connects_to": [
+      "Weirder Science - Spaz Start",
+      "Weirder Science - Spaz Only Below Silver Coins Behind Blocks"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A3"
+  },
+  "Weirder Science - Spaz Only Below Silver Coins Behind Blocks": {
+    "connects_to": [
+      "Weirder Science - Spaz Only After Springs"
+    ],
+    "_comment": "R:S1"
+  },
+  "Weirder Science - Spaz Only After Springs": {
+    "connects_to": [
+      "Weirder Science - Spaz Only Below Silver Coins Behind Blocks",
+      "Weirder Science - Spaz Only After Hooks"
+    ],
+    "exit_requires": {
+      "Weirder Science - Spaz Only Below Silver Coins Behind Blocks": "|Freezer Permit|"
+    },
+    "_comment": "R:S2"
+  },
+  "Weirder Science - Spaz Only After Hooks": {
+    "connects_to": [
+      "Weirder Science - Spaz Only After Springs",
+      "Weirder Science - Shared Path Start"
+    ],
+    "requires": "{canGrabHooks()}",
+    "_comment": "R:S3"
+  },
+  "Weirder Science - Shared Path Start": {
+    "connects_to": [
+      "Weirder Science - After Shared Sucker Tube",
+      "Weirder Science - Green Gems Below Buttstomp Blocks Secret"
+    ],
+    "_comment": "R:M1"
+  },
+  "Weirder Science - Green Gems Below Buttstomp Blocks Secret": {
+    "connects_to": [
+      "Weirder Science - Shared Path Start"
+    ],
+    "requires": "{canDestroyButtstompBlocks()}",
+    "_comment": "R:A4"
+  },
+  "Weirder Science - After Shared Sucker Tube": {
+    "connects_to": [
+      "Weirder Science - Gold Coin and Super Gem Above Frozen Spring Secret",
+      "Weirder Science - Gold Coin Among Breakable Blocks Secret",
+      "Weirder Science - Around First Save Point"
+    ],
+    "_comment": "R:M2"
+  },
+  "Weirder Science - Gold Coin and Super Gem Above Frozen Spring Secret": {
+    "connects_to": [
+      "Weirder Science - After Shared Sucker Tube"
+    ],
+    "requires": "|Toaster Permit|",
+    "_comment": "R:A5"
+  },
+  "Weirder Science - Gold Coin Among Breakable Blocks Secret": {
+    "connects_to": [
+      "Weirder Science - After Shared Sucker Tube"
+    ],
+    "requires": "{canDestroyWildcardBlocks()} and {canDestroyBouncerBlocks()}",
+    "_comment": "R:A6"
+  },
+  "Weirder Science - Around First Save Point": {
+    "connects_to": [
+      "Weirder Science - Gold Coin Among Breakable Blocks Secret",
+      "Weirder Science - After Shared Sucker Tube",
+      "Weirder Science - Before Ascending Hooks"
+    ],
+    "exit_requires": {
+      "Weirder Science - After Shared Sucker Tube": "{canDestroyWildcardBlocks()}"
+    },
+    "_comment": "R:M3"
+  },
+  "Weirder Science - Before Ascending Hooks": {
+    "connects_to": [
+      "Weirder Science - After Ascending Hooks"
+    ],
+    "_comment": "R:M4"
+  },
+  "Weirder Science - After Ascending Hooks": {
+    "connects_to": [
+      "Weirder Science - Before Ascending Hooks",
+      "Weirder Science - Silver Coins Behind Buttstomp Blocks Secret",
+      "Weirder Science - After Poles"
+    ],
+    "requires": "{canGrabHooks()}",
+    "_comment": "R:M5"
+  },
+  "Weirder Science - Silver Coins Behind Buttstomp Blocks Secret": {
+    "connects_to": [
+      "Weirder Science - After Ascending Hooks"
+    ],
+    "requires": "{canDestroyButtstompBlocks()}",
+    "_comment": "R:A7"
+  },
+  "Weirder Science - After Poles": {
+    "connects_to": [
+      "Weirder Science - Ledges Before High Pair of Hooks"
+    ],
+    "_comment": "R:M6"
+  },
+  "Weirder Science - Ledges Before High Pair of Hooks": {
+    "connects_to": [
+      "Weirder Science - After Poles",
+      "Weirder Science - After High Pair of Hooks"
+    ],
+    "requires": "{canGrabHooks()} or {canUppercut()} or {canDoubleJump()}",
+    "_comment": "R:M7"
+  },
+  "Weirder Science - After High Pair of Hooks": {
+    "connects_to": [
+      "Weirder Science - Ledges Before High Pair of Hooks",
+      "Weirder Science - After Main Path Buttstomp Blocks"
+    ],
+    "requires": "{canGrabHooks()}",
+    "_comment": "R:M8"
+  },
+  "Weirder Science - After Main Path Buttstomp Blocks": {
+    "connects_to": [
+      "Weirder Science - After Sucker Tube Below Buttstomp Blocks"
+    ],
+    "requires": "{canDestroyButtstompBlocks()}",
+    "_comment": "R:M9"
+  },
+  "Weirder Science - After Sucker Tube Below Buttstomp Blocks": {
+    "connects_to": [
+      "Weirder Science - Bonus Warp Area",
+      "Weirder Science - Room with Exit"
+    ],
+    "_comment": "R:M10"
+  },
+  "Weirder Science - Bonus Warp Area": {
+    "connects_to": [
+      "Weirder Science - After Main Path Buttstomp Blocks"
+    ],
+    "_comment": "R:B1    Requirement TBD"
+  },
+  "Weirder Science - Room with Exit": {
+    "connects_to": [
+      "Weirder Science - Exit"
+    ],
+    "_comment": "R:M11"
+  },
+  "Weirder Science - Exit": {
+    "connects_to": [
+      "Loose Screws - Start"
+    ]
+  },
+  "Loose Screws - Start": {
+    "connects_to": [
+      "Loose Screws - After Speed Blocks"
+    ],
+    "requires": "|Loose Screws Unlock| or |Formerly a Prince Progressive Level Unlock:7|",
+    "_comment": "R:M0    All coins at the start can be reached with basic jumps and dashing (high gold coin requires using the green spring in the crate on the left)"
+  },
+  "Loose Screws - After Speed Blocks": {
+    "connects_to": [
+      "Loose Screws - Start",
+      "Loose Screws - After First Spring Sequence",
+      "Loose Screws - Gems Behind Destructible Wall Secret",
+      "Loose Screws - Gold Coin Behind Vine and Buttstomp Block Secret"
+    ],
+    "requires": "{canDestroySpeedBlocks()}",
+    "_comment": "R:M1"
+  },
+  "Loose Screws - Gems Behind Destructible Wall Secret": {
+    "connects_to": [
+      "Loose Screws - After Speed Blocks"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A1"
+  },
+  "Loose Screws - Gold Coin Behind Vine and Buttstomp Block Secret": {
+    "connects_to": [
+      "Loose Screws - After Speed Blocks"
+    ],
+    "requires": "{canGrabVines()} and {canDestroyButtstompBlocks()}",
+    "_comment": "R:A2"
+  },
+  "Loose Screws - After First Spring Sequence": {
+    "connects_to": [
+      "Loose Screws - After One Way Near First Save Point",
+      "Loose Screws - Silver Coins Behind Destructible Wall and Springs Secret"
+    ],
+    "requires": "{canDestroySpeedBlocks()}",
+    "_comment": "R:M2    Traveling backwards is not possible since the gap after the first spring only lets you travel upwards."
+  },
+  "Loose Screws - Silver Coins Behind Destructible Wall and Springs Secret": {
+    "connects_to": [
+      "Loose Screws - After First Spring Sequence"
+    ],
+    "requires": "{canDestroyBouncerBlocks()}",
+    "_comment": "R:A3"
+  },
+  "Loose Screws - After One Way Near First Save Point": {
+    "connects_to": [
+      "Loose Screws - After Main Path Destructible Blocks"
+    ],
+    "_comment": "R:M3"
+  },
+  "Loose Screws - After Main Path Destructible Blocks": {
+    "connects_to": [
+      "Loose Screws - After Second Spring Sequence",
+      "Loose Screws - After One Way Near First Save Point",
+      "Loose Screws - Carrots and Lab Rat Behind Destructible Blocks Secret"
+    ],
+    "exit_requires": {
+      "Loose Screws - After One Way Near First Save Point": "{canUppercut()} or {canDoubleJump()}"
+    },
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M4"
+  },
+  "Loose Screws - Carrots and Lab Rat Behind Destructible Blocks Secret": {
+    "connects_to": [
+      "Loose Screws - After Main Path Destructible Blocks"
+    ],
+    "_comment": "R:A4"
+  },
+  "Loose Screws - After Second Spring Sequence": {
+    "connects_to": [
+      "Loose Screws - Airboard Section"
+    ],
+    "_comment": "R:M5"
+  },
+  "Loose Screws - Airboard Section": {
+    "connects_to": [
+      "Loose Screws - After Second Spring Sequence",
+      "Loose Screws - Airboard Backtrack Silver Coins Behind Blocks Secret",
+      "Loose Screws - After Airboard Section"
+    ],
+    "requires": "{canDestroyButtstompBlocks()}",
+    "_comment": "R:M6"
+  },
+  "Loose Screws - Airboard Backtrack Silver Coins Behind Blocks Secret": {
+    "connects_to": [
+      "Loose Screws - After Second Spring Sequence",
+      "Loose Screws - Airboard Section"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A5"
+  },
+  "Loose Screws - After Airboard Section": {
+    "connects_to": [
+      "Loose Screws - Gold Coins Above Second Save Point Secret",
+      "Loose Screws - After Downward Vine Sequence"
+    ],
+    "_comment": "R:M7"
+  },
+  "Loose Screws - Gold Coins Above Second Save Point Secret": {
+    "connects_to": [
+      "Loose Screws - After Airboard Section"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A6"
+  },
+  "Loose Screws - After Downward Vine Sequence": {
+    "connects_to": [
+      "Loose Screws - Before Final Speed Blocks",
+      "Loose Screws - Bonus Warp Area"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M8"
+  },
+  "Loose Screws - Bonus Warp Area": {
+    "connects_to": [
+      "Loose Screws - After Downward Vine Sequence"
+    ],
+    "_comment": "R:B1    Requirement TBD"
+  },
+  "Loose Screws - Before Final Speed Blocks": {
+    "connects_to": [
+      "Loose Screws - After Final Speed Blocks"
+    ],
+    "_comment": "R:M9"
+  },
+  "Loose Screws - After Final Speed Blocks": {
+    "connects_to": [
+      "Loose Screws - Boss Area"
+    ],
+    "requires": "{canDestroySpeedBlocks()}",
+    "_comment": "R:M10"
+  },
+  "Loose Screws - Boss Area": {
+    "connects_to": [
+      "Loose Screws - Exit"
+    ],
+    "_comment": "R:M11"
+  },
+  "Loose Screws - Exit": {
+    "connects_to": [
+      "Victorian Secret - Start"
+    ]
+  },
+  "Victorian Secret - Start": {
+    "connects_to": [
+      "Victorian Secret - Exit"
+    ],
+    "requires": "|Victorian Secret Unlock| or |Jazz in Time Progressive Level Unlock:1|"
+  },
+
+
+
+
+
+  "Victorian Secret - Exit": {
+    "connects_to": [
+      "Colonial Chaos - Start"
+    ]
+  },
+  "Colonial Chaos - Start": {
+    "connects_to": [
+      "Colonial Chaos - Exit"
+    ],
+    "requires": "|Colonial Chaos Unlock| or |Jazz in Time Progressive Level Unlock:2|"
+  },
+
+
+
+
+
+  "Colonial Chaos - Exit": {
+    "connects_to": [
+      "Purple Haze Maze - Start"
+    ]
+  },
+  "Purple Haze Maze - Start": {
+    "connects_to": [
+      "Purple Haze Maze - Exit"
+    ],
+    "requires": "|Purple Haze Maze Unlock| or |Jazz in Time Progressive Level Unlock:3|"
+  },
+
+
+
+
+
+  "Purple Haze Maze - Exit": {
+    "connects_to": [
+      "Funky Grooveathon - Start"
+    ]
+  },
+  "Funky Grooveathon - Start": {
+    "connects_to": [
+      "Funky Grooveathon - Exit"
+    ],
+    "requires": "|Funky Grooveathon Unlock| or |Jazz in Time Progressive Level Unlock:4|"
+  },
+
+
+
+
+
+  "Funky Grooveathon - Exit": {
+    "connects_to": [
+      "Beach Bunny Bingo - Start"
+    ]
+  },
+  "Beach Bunny Bingo - Start": {
+    "connects_to": [
+      "Beach Bunny Bingo - Exit"
+    ],
+    "requires": "|Beach Bunny Bingo Unlock| or |Jazz in Time Progressive Level Unlock:5|"
+  },
+
+
+
+
+
+  "Beach Bunny Bingo - Exit": {
+    "connects_to": [
+      "Marinated Rabbit - Start"
+    ]
+  },
+  "Marinated Rabbit - Start": {
+    "connects_to": [
+      "Marinated Rabbit - Exit"
+    ],
+    "requires": "|Marinated Rabbit Unlock| or |Jazz in Time Progressive Level Unlock:6|"
+  },
+
+
+
+
+
+  "Marinated Rabbit - Exit": {
+    "connects_to": [
+      "Diamondus Forever - Start"
+    ]
+  },
+  "Diamondus Forever - Start": {
+    "connects_to": [
+      "Diamondus Forever - Exit"
+    ],
+    "requires": "|Diamondus Forever Unlock| or |Flashback Progressive Level Unlock:1|"
+  },
+
+
+
+
+
+  "Diamondus Forever - Exit": {
+    "connects_to": [
+      "Fourteen Carrot - Start"
+    ]
+  },
+  "Fourteen Carrot - Start": {
+    "connects_to": [
+      "Fourteen Carrot - Exit"
+    ],
+    "requires": "|Fourteen Carrot Unlock| or |Flashback Progressive Level Unlock:2|"
+  },
+
+
+
+
+
+  "Fourteen Carrot - Exit": {
+    "connects_to": [
+      "Electric Boogaloo - Start"
+    ]
+  },
+  "Electric Boogaloo - Start": {
+    "connects_to": [
+      "Electric Boogaloo - Exit"
+    ],
+    "requires": "|Electric Boogaloo Unlock| or |Flashback Progressive Level Unlock:3|"
+  },
+
+
+
+
+
+  "Electric Boogaloo - Exit": {
+    "connects_to": [
+      "Voltage Village - Start"
+    ]
+  },
+  "Voltage Village - Start": {
+    "connects_to": [
+      "Voltage Village - Exit"
+    ],
+    "requires": "|Voltage Village Unlock| or |Flashback Progressive Level Unlock:4|"
+  },
+
+
+
+
+
+  "Voltage Village - Exit": {
+    "connects_to": [
+      "Medieval Kineval - Start"
+    ]
+  },
+  "Medieval Kineval - Start": {
+    "connects_to": [
+      "Medieval Kineval - Exit",
+      "Medieval Kineval - Secret Level Exit"
+    ],
+    "requires": "|Medieval Kineval Unlock| or |Flashback Progressive Level Unlock:5|"
+  },
+
+
+
+
+
+  "Medieval Kineval - Exit": {
+    "connects_to": [
+      "Hare Scare - Start"
+    ]
+  },
+  "Medieval Kineval - Secret Level Exit": {
+    "connects_to": [
+      "Gargoyles Lair - Start"
+    ]
+  },
+  "Hare Scare - Start": {
+    "connects_to": [
+      "Hare Scare - Exit"
+    ],
+    "requires": "|Hare Scare Unlock| or |Flashback Progressive Level Unlock:6|"
+  },
+
+
+
+
+
+  "Hare Scare - Exit": {
+    "connects_to": [
+      "Thriller Gorilla - Start"
+    ]
+  },
+  "Gargoyles Lair - Start": {
+    "connects_to": [
+      "Gargoyles Lair - Exit"
+    ],
+    "requires": "|Gargoyles Lair Unlock| or |Flashback Progressive Level Unlock:7|"
+  },
+
+
+
+
+
+  "Gargoyles Lair - Exit": {
+    "connects_to": [
+      "Medieval Kineval - Start"
+    ]
+  },
+  "Thriller Gorilla - Start": {
+    "connects_to": [
+      "Thriller Gorilla - Exit"
+    ],
+    "requires": "|Thriller Gorilla Unlock| or |Funky Monkeys Progressive Level Unlock:1|"
+  },
+
+
+
+
+
+  "Thriller Gorilla - Exit": {
+    "connects_to": [
+      "Jungle Jump - Start"
+    ]
+  },
+  "Jungle Jump - Start": {
+    "connects_to": [
+      "Jungle Jump - Exit"
+    ],
+    "requires": "|Jungle Jump Unlock| or |Funky Monkeys Progressive Level Unlock:2|"
+  },
+
+
+
+
+
+  "Jungle Jump - Exit": {
+    "connects_to": [
+      "A Cold Day in Heck - Start"
+    ]
+  },
+  "A Cold Day in Heck - Start": {
+    "connects_to": [
+      "A Cold Day in Heck - Exit"
+    ],
+    "requires": "|A Cold Day in Heck Unlock| or |Funky Monkeys Progressive Level Unlock:3|"
+  },
+
+
+
+
+
+  "A Cold Day in Heck - Exit": {
+    "connects_to": [
+      "Rabbit Roast - Start"
+    ]
+  },
+  "Rabbit Roast - Start": {
+    "connects_to": [
+      "Rabbit Roast - Exit"
+    ],
+    "requires": "|Rabbit Roast Unlock| or |Funky Monkeys Progressive Level Unlock:4|"
+  },
+
+
+
+
+
+  "Rabbit Roast - Exit": {
+    "connects_to": [
+      "Burnin Biscuits - Start"
+    ]
+  },
+  "Burnin Biscuits - Start": {
+    "connects_to": [
+      "Burnin Biscuits - Exit"
+    ],
+    "requires": "|Burnin Biscuits Unlock| or |Funky Monkeys Progressive Level Unlock:5|"
+  },
+
+
+
+
+
+  "Burnin Biscuits - Exit": {
+    "connects_to": [
+      "Bad Pitt - Start"
+    ]
+  },
+  "Bad Pitt - Start": {
+    "connects_to": [
+      "Bad Pitt - Exit"
+    ],
+    "requires": "|Bad Pitt Unlock| or |Funky Monkeys Progressive Level Unlock:6|"
+  },
+
+
+
+
+
+  "Bad Pitt - Exit": {
+    "connects_to": []
+  },
+  "Darn Ratz - Start": {
+    "connects_to": [
+      "Darn Ratz - Exit"
+    ],
+    "requires": "|Darn Ratz Unlock| or |Shareware Demo Progressive Level Unlock:1|"
+  },
+
+
+
+
+
+  "Darn Ratz - Exit": {
+    "connects_to": [
+      "Retro Rabbit - Start"
+    ]
+  },
+  "Retro Rabbit - Start": {
+    "connects_to": [
+      "Retro Rabbit - Exit"
+    ],
+    "requires": "|Retro Rabbit Unlock| or |Shareware Demo Progressive Level Unlock:2|"
+  },
+
+
+
+
+
+  "Retro Rabbit - Exit": {
+    "connects_to": [
+      "Frog Stomp - Start"
+    ]
+  },
+  "Frog Stomp - Start": {
+    "connects_to": [
+      "Frog Stomp - Exit"
+    ],
+    "requires": "|Frog Stomp Unlock| or |Shareware Demo Progressive Level Unlock:3|"
+  },
+
+
+
+
+
+  "Frog Stomp - Exit": {
+    "connects_to": []
+  },
+  "Easter Bunny - Start": {
+    "connects_to": [
+      "Easter Bunny - Exit"
+    ],
+    "requires": "{YamlEnabled(enable_tsf)} and (|Easter Bunny Unlock| or |The Secret Files Progressive Level Unlock:1|)"
+  },
+
+
+
+
+
+  "Easter Bunny - Exit": {
+    "connects_to": [
+      "Spring Chickens - Start"
+    ]
+  },
+  "Spring Chickens - Start": {
+    "connects_to": [
+      "Spring Chickens - Exit"
+    ],
+    "requires": "{YamlEnabled(enable_tsf)} and (|Spring Chickens Unlock| or |The Secret Files Progressive Level Unlock:2|)"
+  },
+
+
+
+
+
+  "Spring Chickens - Exit": {
+    "connects_to": [
+      "Scrambled Eggs - Start"
+    ]
+  },
+  "Scrambled Eggs - Start": {
+    "connects_to": [
+      "Scrambled Eggs - Exit"
+    ],
+    "requires": "{YamlEnabled(enable_tsf)} and (|Scrambled Eggs Unlock| or |The Secret Files Progressive Level Unlock:3|)"
+  },
+
+
+
+
+
+  "Scrambled Eggs - Exit": {
+    "connects_to": [
+      "Ghostly Antics - Start"
+    ]
+  },
+  "Ghostly Antics - Start": {
+    "connects_to": [
+      "Ghostly Antics - Exit"
+    ],
+    "requires": "{YamlEnabled(enable_tsf)} and (|Ghostly Antics Unlock| or |The Secret Files Progressive Level Unlock:4|)"
+  },
+
+
+
+
+
+  "Ghostly Antics - Exit": {
+    "connects_to": [
+      "Skeletons Turf - Start"
+    ]
+  },
+  "Skeletons Turf - Start": {
+    "connects_to": [
+      "Skeletons Turf - Exit"
+    ],
+    "requires": "{YamlEnabled(enable_tsf)} and (|Skeletons Turf Unlock| or |The Secret Files Progressive Level Unlock:5|)"
+  },
+
+
+
+
+
+  "Skeletons Turf - Exit": {
+    "connects_to": [
+      "Graveyard Shift - Start"
+    ]
+  },
+  "Graveyard Shift - Start": {
+    "connects_to": [
+      "Graveyard Shift - Exit"
+    ],
+    "requires": "{YamlEnabled(enable_tsf)} and (|Graveyard Shift Unlock| or |The Secret Files Progressive Level Unlock:6|)"
+  },
+
+
+
+
+
+  "Graveyard Shift - Exit": {
+    "connects_to": [
+      "Turtle Town - Start"
+    ]
+  },
+  "Turtle Town - Start": {
+    "connects_to": [
+      "Turtle Town - Exit"
+    ],
+    "requires": "{YamlEnabled(enable_tsf)} and (|Turtle Town Unlock| or |The Secret Files Progressive Level Unlock:7|)"
+  },
+
+
+
+
+
+  "Turtle Town - Exit": {
+    "connects_to": [
+      "Suburbia Commando - Start"
+    ]
+  },
+  "Suburbia Commando - Start": {
+    "connects_to": [
+      "Suburbia Commando - Exit"
+    ],
+    "requires": "{YamlEnabled(enable_tsf)} and (|Suburbia Commando Unlock| or |The Secret Files Progressive Level Unlock:8|)"
+  },
+
+
+
+
+
+  "Suburbia Commando - Exit": {
+    "connects_to": [
+      "Urban Brawl - Start"
+    ]
+  },
+  "Urban Brawl - Start": {
+    "connects_to": [
+      "Urban Brawl - Exit"
+    ],
+    "requires": "{YamlEnabled(enable_tsf)} and (|Urban Brawl Unlock| or |The Secret Files Progressive Level Unlock:9|)"
+  },
+
+
+
+
+
+  "Urban Brawl - Exit": {
+    "connects_to": []
+  },
+  "Snow Bunnies - Start": {
+    "connects_to": [
+      "Snow Bunnies - Exit"
+    ],
+    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and (|Snow Bunnies Unlock| or |Christmas Chronicles Progressive Level Unlock:1|)"
+  },
+
+
+
+
+
+
+  "Snow Bunnies - Exit": {
+    "connects_to": [
+      "Dashing thru the snow.. - Start"
+    ]
+  },
+  "Dashing thru the snow.. - Start": {
+    "connects_to": [
+      "Dashing thru the snow.. - Exit"
+    ],
+    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and (|Dashing thru the snow.. Unlock| or |Christmas Chronicles Progressive Level Unlock:2|)"
+  },
+
+
+
+
+
+  "Dashing thru the snow.. - Exit": {
+    "connects_to": [
+      "Tinsel Town - Start"
+    ]
+  },
+  "Tinsel Town - Start": {
+    "connects_to": [
+      "Tinsel Town - Exit"
+    ],
+    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and (|Tinsel Town Unlock| or |Christmas Chronicles Progressive Level Unlock:3|)"
+  },
+
+
+
+
+
+  "Tinsel Town - Exit": {
+    "connects_to": []
+  }
 }

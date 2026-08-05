@@ -5,25 +5,53 @@ from BaseClasses import MultiWorld, CollectionState
 
 import re
 
-# Sometimes you have a requirement that is just too messy or repetitive to write out with boolean logic.
-# Define a function here, and you can use it in a requires string with {function_name()}.
-def overfishedAnywhere(world: World, state: CollectionState, player: int):
-    """Has the player collected all fish from any fishing log?"""
-    for cat, items in world.item_name_groups:
-        if cat.endswith("Fishing Log") and state.has_all(items, player):
-            return True
-    return False
+# # Sometimes you have a requirement that is just too messy or repetitive to write out with boolean logic.
+# # Define a function here, and you can use it in a requires string with {function_name()}.
+# def overfishedAnywhere(world: World, state: CollectionState, player: int):
+#     """Has the player collected all fish from any fishing log?"""
+#     for cat, items in world.item_name_groups:
+#         if cat.endswith("Fishing Log") and state.has_all(items, player):
+#             return True
+#     return False
+# 
+# # You can also pass an argument to your function, like {function_name(15)}
+# # Note that all arguments are strings, so you'll need to convert them to ints if you want to do math.
+# def anyClassLevel(state: CollectionState, player: int, level: str):
+#     """Has the player reached the given level in any class?"""
+#     for item in ["Figher Level", "Black Belt Level", "Thief Level", "Red Mage Level", "White Mage Level", "Black Mage Level"]:
+#         if state.count(item, player) >= int(level):
+#             return True
+#     return False
 
-# You can also pass an argument to your function, like {function_name(15)}
-# Note that all arguments are strings, so you'll need to convert them to ints if you want to do math.
-def anyClassLevel(state: CollectionState, player: int, level: str):
-    """Has the player reached the given level in any class?"""
-    for item in ["Figher Level", "Black Belt Level", "Thief Level", "Red Mage Level", "White Mage Level", "Black Mage Level"]:
-        if state.count(item, player) >= int(level):
-            return True
-    return False
+def canDoubleJump():
+    return "|Spaz Unlock| and (|Double Jump Unlock| or {YamlDisabled(basic_movement_in_pool)})"
 
-# You can also return a string from your function, and it will be evaluated as a requires string.
-def requiresMelee():
-    """Returns a requires string that checks if the player has unlocked the tank."""
-    return "|Figher Level:15| or |Black Belt Level:15| or |Thief Level:15|"
+def canCopter():
+    return "(|Jazz Unlock| or |Lori Unlock|) and (|Copter Ears Unlock| or {YamlDisabled(basic_movement_in_pool)})"
+
+def canUppercut():
+    return "|Jazz Unlock| and (|Uppercut Unlock| or {YamlDisabled(basic_movement_in_pool)})"
+
+def canSidekick():
+    return "(|Spaz Unlock| or |Lori Unlock|) and (|Sidekick Unlock| or {YamlDisabled(basic_movement_in_pool)})"
+
+def canButtstomp():
+    return "|Buttstomp Unlock| or {YamlDisabled(basic_movement_in_pool)}"
+
+def canDestroyWildcardBlocks():
+    return "|Wildcard Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}"
+
+def canDestroyBouncerBlocks():
+    return "|Bouncer Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}"
+
+def canDestroyButtstompBlocks():
+    return "(|Special Move Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}) and (|Buttstomp Unlock| or {YamlDisabled(basic_movement_in_pool)})"
+
+def canDestroySpeedBlocks():
+    return "|Speed Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}"
+
+def canGrabVines():
+    return "|Vine Traversal| or {YamlDisabled(basic_movement_in_pool)}"
+
+def canGrabHooks():
+    return "|Hook Traversal| or {YamlDisabled(basic_movement_in_pool)}"

@@ -1,288 +1,1030 @@
 {
-	"$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.locations.schema.json",
-    "data": [
-        {
-            "name": "Example_Range decide the amount of items required for this location",
-            "requires": "{OptionCount(Item Name for OptionCount Example, Example_Range)}"
-        },
-        {
-            "name": "Beat the Game - Ryu",
-            "category": ["Starter Team", "Left Side"],
-            "region": "ExampleRegion"
-        },
-        {
-            "name": "Beat the Game - Chun-Li",
-            "category": ["Starter Team", "Left Side"],
-            "requires": "|Chun-Li| or {YamlCompare(Example_Choice == 1)}"
-        },
-        {
-            "name": "Beat the Game - Akuma",
-            "category": ["Starter Team", "Left Side"],
-            "requires": "|Akuma| or {YamlCompare(Example_Toggle != True)}"
-        },
-
-        {
-            "name": "Beat the Game - Jill",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Jill| and {ItemValue(star:5)}"
-        },
-        {
-            "name": "Beat the Game - Shuma-Gorath",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Shuma-Gorath|",
-            "hint_entrance": "Unlock Shuma-Gorath"
-        },
-        {
-            "name": "Beat the Game - Nemesis T-Type",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Nemesis T-Type|"
-        },
-        {
-            "name": "Beat the Game - Firebrand",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Firebrand|"
-        },
-        {
-            "name": "Beat the Game - Strider Hiryu",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Strider Hiryu|"
-        },
-        {
-            "name": "Beat the Game - Phoenix Wright",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Phoenix Wright|"
-        },
-        {
-            "name": "Beat the Game - Nova",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Nova|"
-        },
-        {
-            "name": "Beat the Game - Ghost Rider",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Ghost Rider|"
-        },
-        {
-            "name": "Beat the Game - Hawkeye",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Hawkeye|"
-        },
-        {
-            "name": "Beat the Game - Doctor Strange",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Doctor Strange|"
-        },
-        {
-            "name": "Beat the Game - Chris",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Chris|"
-        },
-        {
-            "name": "Beat the Game - Arthur",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Arthur|"
-        },
-        {
-            "name": "Beat the Game - Frank West",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Frank West|"
-        },
-        {
-            "name": "Beat the Game - Vergil",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Vergil|"
-        },
-        {
-            "name": "Beat the Game - Iron Fist",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Iron Fist|"
-        },
-        {
-            "name": "Beat the Game - Rocket Raccoon",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Rocket Raccoon|"
-        },
-        {
-            "name": "Beat the Game - Captain America",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Captain America|"
-        },
-        {
-            "name": "Beat the Game - Dormammu",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Dormammu|"
-        },
-        {
-            "name": "Beat the Game - Wesker",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Wesker|"
-        },
-        {
-            "name": "Beat the Game - Zero",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Zero|"
-        },
-        {
-            "name": "Beat the Game - Dante",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Dante|"
-        },
-        {
-            "name": "Beat the Game - Deadpool",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Deadpool| or {YamlEnabled(free_deadpool)}"
-        },
-        {
-            "name": "Beat the Game - Wolverine",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Wolverine|"
-        },
-        {
-            "name": "Beat the Game - Iron Man",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Iron Man|"
-        },
-        {
-            "name": "Beat the Game - Doctor Doom",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Doctor Doom|"
-        },
-        {
-            "name": "Beat the Game - Morrigan",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Morrigan|"
-        },
-        {
-            "name": "Beat the Game - Tron",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Tron|"
-        },
-        {
-            "name": "Beat the Game - Trish",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Trish|"
-        },
-        {
-            "name": "Beat the Game - X-23",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|X-23|"
-        },
-        {
-            "name": "Beat the Game - Storm",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Storm|"
-        },
-        {
-            "name": "Beat the Game - Thor",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Thor|"
-        },
-        {
-            "name": "Beat the Game - M.O.D.O.K.",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|M.O.D.O.K.|"
-        },
-        {
-            "name": "Beat the Game - Felicia",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Felicia|"
-        },
-        {
-            "name": "Beat the Game - Spencer",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Spencer|"
-        },
-        {
-            "name": "Beat the Game - Viewtiful Joe",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Viewtiful Joe|"
-        },
-        {
-            "name": "Beat the Game - Spider-Man",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Spider-Man|",
-            "prehint": true
-        },
-        {
-            "name": "Beat the Game - Sentinel",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Sentinel|"
-        },
-        {
-            "name": "Beat the Game - Hulk",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Hulk|"
-        },
-        {
-            "name": "Beat the Game - Super-Skrull",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Super-Skrull|"
-        },
-        {
-            "name": "Beat the Game - Hsien-Ko",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Hsien-Ko|"
-        },
-        {
-            "name": "Beat the Game - Haggar",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Haggar|"
-        },
-        {
-            "name": "Beat the Game - C. Viper",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|C. Viper|"
-        },
-        {
-            "name": "Beat the Game - Amaterasu",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Amaterasu|"
-        },
-        {
-            "name": "Beat the Game - Phoenix",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Phoenix|"
-        },
-        {
-            "name": "Beat the Game - Magneto",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Magneto|"
-        },
-        {
-            "name": "Beat the Game - She-Hulk",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|She-Hulk|"
-        },
-        {
-            "name": "Beat the Game - Taskmaster",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Taskmaster|"
-        },
-
-        {
-            "name": "We Saved the World!",
-            "victory": true,
-            "category": ["All Characters Complete!"],
-            "requires": "|Marvel event| and |Capcom event|"
-        },
-        {
-            "name": "Marvel%",
-            "victory": true,
-            "category": ["All Characters Complete!"],
-            "requires": "|Marvel event|"
-        },
-        {
-            "name": "Capcom%",
-            "victory": true,
-            "category": ["All Characters Complete!"],
-            "requires": "|Capcom event|"
-        },
-        {
-            "name": "Stars%",
-            "victory": true,
-            "category": ["All Characters Complete!"],
-            "requires": "{ItemValue(star:10)} and {ItemValue(coins:10)}"
-        }
-    ]
+  "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.locations.schema.json",
+  "data": [
+    {
+      "name": "Rabbit in Training - Save Point 1 (152, 47)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Rabbit in Training",
+        "Save Point Locations"
+      ],
+      "region": "Rabbit in Training - After Buttstomp Blocks",
+      "sort-key": "01-00-00-SavePoint"
+    },
+    {
+      "name": "Rabbit in Training - Sign 1 (7, 35)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Rabbit in Training",
+        "Sign Locations"
+      ],
+      "region": "Rabbit in Training - Start",
+      "sort-key": "01-00-20-Sign"
+    },
+    {
+      "name": "Rabbit in Training - Sign 2 (19, 35)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Rabbit in Training",
+        "Sign Locations"
+      ],
+      "region": "Rabbit in Training - Start",
+      "sort-key": "01-00-21-Sign"
+    },
+    {
+      "name": "Rabbit in Training - Sign 3 (40, 34)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Rabbit in Training",
+        "Sign Locations"
+      ],
+      "region": "Rabbit in Training - Start",
+      "sort-key": "01-00-22-Sign"
+    },
+    {
+      "name": "Rabbit in Training - Sign 4 (61, 34)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Rabbit in Training",
+        "Sign Locations"
+      ],
+      "region": "Rabbit in Training - After Vine Pit",
+      "sort-key": "01-00-23-Sign"
+    },
+    {
+      "name": "Rabbit in Training - Sign 5 (71, 34)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Rabbit in Training",
+        "Sign Locations"
+      ],
+      "region": "Rabbit in Training - After Destructible Blocks",
+      "sort-key": "01-00-24-Sign"
+    },
+    {
+      "name": "Rabbit in Training - Sign 6 (73, 52)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Rabbit in Training",
+        "Sign Locations"
+      ],
+      "region": "Rabbit in Training - After Buttstomp Blocks",
+      "sort-key": "01-00-25-Sign"
+    },
+    {
+      "name": "Rabbit in Training - Sign 7 (87, 52)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Rabbit in Training",
+        "Sign Locations"
+      ],
+      "region": "Rabbit in Training - After Buttstomp Blocks",
+      "sort-key": "01-00-26-Sign"
+    },
+    {
+      "name": "Rabbit in Training - Sign 8 (106, 53)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Rabbit in Training",
+        "Sign Locations"
+      ],
+      "region": "Rabbit in Training - After Buttstomp Blocks",
+      "sort-key": "01-00-27-Sign"
+    },
+    {
+      "name": "Rabbit in Training - Sign 9 (112, 53)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Rabbit in Training",
+        "Sign Locations"
+      ],
+      "region": "Rabbit in Training - After Buttstomp Blocks",
+      "sort-key": "01-00-28-Sign"
+    },
+    {
+      "name": "Rabbit in Training - Sign 10 (118, 53)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Rabbit in Training",
+        "Sign Locations"
+      ],
+      "region": "Rabbit in Training - After Buttstomp Blocks",
+      "sort-key": "01-00-29-Sign"
+    },
+    {
+      "name": "Rabbit in Training - Sign 11 (124, 53)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Rabbit in Training",
+        "Sign Locations"
+      ],
+      "region": "Rabbit in Training - After Buttstomp Blocks",
+      "sort-key": "01-00-30-Sign"
+    },
+    {
+      "name": "Rabbit in Training - Sign 12 (138, 50)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Rabbit in Training",
+        "Sign Locations"
+      ],
+      "region": "Rabbit in Training - After Buttstomp Blocks",
+      "sort-key": "01-00-31-Sign"
+    },
+    {
+      "name": "Rabbit in Training - Sign 13 (149, 47)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Rabbit in Training",
+        "Sign Locations"
+      ],
+      "region": "Rabbit in Training - After Buttstomp Blocks",
+      "sort-key": "01-00-32-Sign"
+    },
+    {
+      "name": "Rabbit in Training - Sign 14 (163, 50)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Rabbit in Training",
+        "Sign Locations"
+      ],
+      "region": "Rabbit in Training - After Buttstomp Blocks",
+      "sort-key": "01-00-33-Sign"
+    },
+    {
+      "name": "Rabbit in Training - Sign 15 (173, 53)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Rabbit in Training",
+        "Sign Locations"
+      ],
+      "region": "Rabbit in Training - After Buttstomp Blocks",
+      "sort-key": "01-00-34-Sign"
+    },
+    {
+      "name": "Rabbit in Training - Sign 16 (199, 53)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Rabbit in Training",
+        "Sign Locations"
+      ],
+      "region": "Rabbit in Training - After Buttstomp Blocks",
+      "sort-key": "01-00-35-Sign"
+    },
+    {
+      "name": "Rabbit in Training - Level Complete",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Rabbit in Training",
+        "Save Point Locations"
+      ],
+      "region": "Rabbit in Training - Exit",
+      "sort-key": "01-00-99-Complete"
+    },
+    {
+      "name": "Dungeon Dilemma - Save Point 1 (98, 15)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Dungeon Dilemma",
+        "Save Point Locations"
+      ],
+      "region": "Dungeon Dilemma - Start",
+      "sort-key": "01-01-00-SavePoint"
+    },
+    {
+      "name": "Dungeon Dilemma - Save Point 2 (208, 33)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Dungeon Dilemma",
+        "Save Point Locations"
+      ],
+      "region": "Dungeon Dilemma - Start",
+      "sort-key": "01-01-01-SavePoint"
+    },
+    {
+      "name": "Dungeon Dilemma - Sign 1 (32, 15)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Dungeon Dilemma",
+        "Sign Locations"
+      ],
+      "region": "Dungeon Dilemma - Start",
+      "sort-key": "01-01-20-Sign"
+    },
+    {
+      "name": "Dungeon Dilemma - Sign 2 (73, 25)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Dungeon Dilemma",
+        "Sign Locations"
+      ],
+      "region": "Dungeon Dilemma - Start",
+      "sort-key": "01-01-21-Sign"
+    },
+    {
+      "name": "Dungeon Dilemma - Sign 3 (114, 9)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Dungeon Dilemma",
+        "Sign Locations"
+      ],
+      "region": "Dungeon Dilemma - One Up Crate Secret",
+      "sort-key": "01-01-22-Sign"
+    },
+    {
+      "name": "Dungeon Dilemma - Sign 4 (210, 22)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Dungeon Dilemma",
+        "Sign Locations"
+      ],
+      "region": "Dungeon Dilemma - Bonus Warp Area",
+      "sort-key": "01-01-23-Sign"
+    },
+    {
+      "name": "Dungeon Dilemma - Sign 5 (235, 8)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Dungeon Dilemma",
+        "Sign Locations"
+      ],
+      "region": "Dungeon Dilemma - Final Section",
+      "sort-key": "01-01-24-Sign"
+    },
+    {
+      "name": "Dungeon Dilemma - Bonus Warp",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Dungeon Dilemma",
+        "Bonus Warp Locations"
+      ],
+      "region": "Dungeon Dilemma - Bonus Warp Area",
+      "sort-key": "01-01-90-Bonus"
+    },
+    {
+      "name": "Dungeon Dilemma - Level Complete",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Dungeon Dilemma"
+      ],
+      "region": "Dungeon Dilemma - Exit",
+      "sort-key": "01-01-99-Complete"
+    },
+    {
+      "name": "Knight Cap - Save Point 1 (149, 43)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Knight Cap",
+        "Save Point Locations"
+      ],
+      "region": "Knight Cap - Shared Path Start",
+      "sort-key": "01-02-00-SavePoint"
+    },
+    {
+      "name": "Knight Cap - Save Point 2 (194, 21)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Knight Cap",
+        "Save Point Locations"
+      ],
+      "region": "Knight Cap - After One Way",
+      "sort-key": "01-02-01-SavePoint"
+    },
+    {
+      "name": "Knight Cap - Sign 1 (89, 20)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Knight Cap",
+        "Sign Locations"
+      ],
+      "region": "Knight Cap - Jazz Start",
+      "sort-key": "01-02-20-Sign"
+    },
+    {
+      "name": "Knight Cap - Sign 2 (58, 53)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Knight Cap",
+        "Sign Locations"
+      ],
+      "region": "Knight Cap - Jazz Left Path End",
+      "sort-key": "01-02-21-Sign"
+    },
+    {
+      "name": "Knight Cap - Sign 3 (16, 46)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Knight Cap",
+        "Sign Locations"
+      ],
+      "region": "Knight Cap - Spaz Start",
+      "sort-key": "01-02-22-Sign"
+    },
+    {
+      "name": "Knight Cap - Sign 4 (94, 59)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Knight Cap",
+        "Sign Locations"
+      ],
+      "region": "Knight Cap - Spaz Start",
+      "sort-key": "01-02-23-Sign"
+    },
+    {
+      "name": "Knight Cap - Sign 5 (163, 31)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Knight Cap",
+        "Sign Locations"
+      ],
+      "region": "Knight Cap - Bonus Warp Area",
+      "sort-key": "01-02-24-Sign"
+    },
+    {
+      "name": "Knight Cap - Sign 6 (224, 5)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Knight Cap",
+        "Sign Locations"
+      ],
+      "region": "Knight Cap - Silly Message Secret",
+      "sort-key": "01-02-25-Sign"
+    },
+    {
+      "name": "Knight Cap - Sign 7 (239, 19)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Knight Cap",
+        "Sign Locations"
+      ],
+      "region": "Knight Cap - After One Way",
+      "sort-key": "01-02-26-Sign"
+    },
+    {
+      "name": "Knight Cap - Bonus Warp",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Knight Cap",
+        "Bonus Warp Locations"
+      ],
+      "region": "Knight Cap - Bonus Warp Area",
+      "sort-key": "01-02-90-Bonus"
+    },
+    {
+      "name": "Knight Cap - Queen Earlong Defeated",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Knight Cap"
+      ],
+      "region": "Knight Cap - Exit",
+      "sort-key": "01-02-98-Boss"
+    },
+    {
+      "name": "Knight Cap - Level Complete",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Knight Cap"
+      ],
+      "region": "Knight Cap - Exit",
+      "sort-key": "01-02-99-Complete"
+    },
+    {
+      "name": "Tossed Salad - Save Point 1 (194, 36)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Tossed Salad",
+        "Save Point Locations"
+      ],
+      "region": "Tossed Salad - Shared Path Start",
+      "sort-key": "01-03-00-SavePoint"
+    },
+    {
+      "name": "Tossed Salad - Save Point 2 (156, 57)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Tossed Salad",
+        "Save Point Locations"
+      ],
+      "region": "Tossed Salad - Shared Path Start",
+      "sort-key": "01-03-01-SavePoint"
+    },
+    {
+      "name": "Tossed Salad - Save Point 3 (109, 34)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Tossed Salad",
+        "Save Point Locations"
+      ],
+      "region": "Tossed Salad - Around Second Save Point",
+      "sort-key": "01-03-02-SavePoint"
+    },
+    {
+      "name": "Tossed Salad - Sign 1 (145, 23)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Tossed Salad",
+        "Sign Locations"
+      ],
+      "region": "Tossed Salad - Jazz Start",
+      "sort-key": "01-03-20-Sign"
+    },
+    {
+      "name": "Tossed Salad - Sign 2 (73, 36)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Tossed Salad",
+        "Sign Locations"
+      ],
+      "region": "Tossed Salad - Bonus Warp Area",
+      "sort-key": "01-03-21-Sign"
+    },
+    {
+      "name": "Tossed Salad - Bonus Warp",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Tossed Salad",
+        "Bonus Warp Locations"
+      ],
+      "region": "Tossed Salad - Bonus Warp Area",
+      "sort-key": "01-03-90-Bonus"
+    },
+    {
+      "name": "Tossed Salad - Level Complete",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Tossed Salad"
+      ],
+      "region": "Tossed Salad - Exit",
+      "sort-key": "01-03-99-Complete"
+    },
+    {
+      "name": "Carrot Juice - Save Point 1 (83, 52)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Carrot Juice",
+        "Save Point Locations"
+      ],
+      "region": "Carrot Juice - Left Path Last Section",
+      "sort-key": "01-04-00-SavePoint"
+    },
+    {
+      "name": "Carrot Juice - Save Point 2 (112, 7)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Carrot Juice",
+        "Save Point Locations"
+      ],
+      "region": "Carrot Juice - Around Second Save Point",
+      "sort-key": "01-04-01-SavePoint"
+    },
+    {
+      "name": "Carrot Juice - Sign 1 (82, 11)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Carrot Juice",
+        "Sign Locations"
+      ],
+      "region": "Carrot Juice - Around Second Save Point",
+      "sort-key": "01-04-20-Sign"
+    },
+    {
+      "name": "Carrot Juice - Sign 2 (89, 8)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Carrot Juice",
+        "Sign Locations"
+      ],
+      "region": "Carrot Juice - Around Second Save Point",
+      "sort-key": "01-04-21-Sign"
+    },
+    {
+      "name": "Carrot Juice - Sign 3 (130, 1)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Carrot Juice",
+        "Sign Locations"
+      ],
+      "region": "Carrot Juice - Lizard Copter Extra Life Secret",
+      "sort-key": "01-04-22-Sign"
+    },
+    {
+      "name": "Carrot Juice - Bonus Warp",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Carrot Juice",
+        "Bonus Warp Locations"
+      ],
+      "region": "Carrot Juice - Bonus Warp Area",
+      "sort-key": "01-04-90-Bonus"
+    },
+    {
+      "name": "Carrot Juice - Schwartzenguard Defeated",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Carrot Juice"
+      ],
+      "region": "Carrot Juice - Exit",
+      "sort-key": "01-04-98-Boss"
+    },
+    {
+      "name": "Carrot Juice - Level Complete",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Carrot Juice"
+      ],
+      "region": "Carrot Juice - Exit",
+      "sort-key": "01-04-99-Complete"
+    },
+    {
+      "name": "Weirder Science - Save Point 1 (157, 56)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Weirder Science",
+        "Save Point Locations"
+      ],
+      "region": "Weirder Science - Shared Path Start",
+      "sort-key": "01-05-00-SavePoint"
+    },
+    {
+      "name": "Weirder Science - Save Point 2 (222, 34)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Weirder Science",
+        "Save Point Locations"
+      ],
+      "region": "Weirder Science - After Poles",
+      "sort-key": "01-05-01-SavePoint"
+    },
+    {
+      "name": "Weirder Science - Bonus Warp",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Weirder Science",
+        "Bonus Warp Locations"
+      ],
+      "region": "Weirder Science - Bonus Warp Area",
+      "sort-key": "01-05-90-Bonus"
+    },
+    {
+      "name": "Weirder Science - Level Complete",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Weirder Science"
+      ],
+      "region": "Weirder Science - Exit",
+      "sort-key": "01-05-99-Complete"
+    },
+    {
+      "name": "Loose Screws - Save Point 1 (51, 20)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Loose Screws",
+        "Save Point Locations"
+      ],
+      "region": "Loose Screws - After One Way Near First Save Point",
+      "sort-key": "01-06-00-SavePoint"
+    },
+    {
+      "name": "Loose Screws - Save Point 2 (183, 41)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Loose Screws",
+        "Save Point Locations"
+      ],
+      "region": "Loose Screws - After Airboard Section",
+      "sort-key": "01-06-01-SavePoint"
+    },
+    {
+      "name": "Loose Screws - Save Point 3 (234, 40)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Loose Screws"
+      ],
+      "region": "Loose Screws - After Final Speed Blocks",
+      "sort-key": "01-06-02-SavePoint"
+    },
+    {
+      "name": "Loose Screws - Sign 1 (69, 59)",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Loose Screws",
+        "Sign Locations"
+      ],
+      "region": "Loose Screws - Start",
+      "sort-key": "01-06-20-Sign"
+    },
+    {
+      "name": "Loose Screws - Bonus Warp",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Loose Screws",
+        "Bonus Warp Locations"
+      ],
+      "region": "Loose Screws - Bonus Warp Area",
+      "sort-key": "01-06-90-Bonus"
+    },
+    {
+      "name": "Loose Screws - Superbot Defeated",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Loose Screws"
+      ],
+      "region": "Loose Screws - Exit",
+      "sort-key": "01-06-98-Boss"
+    },
+    {
+      "name": "Loose Screws - Level Complete",
+      "category": [
+        "Episode: Formerly a Prince",
+        "Loose Screws"
+      ],
+      "region": "Loose Screws - Exit",
+      "sort-key": "01-06-99-Complete"
+    },
+    {
+      "name": "Victorian Secret - Level Complete",
+      "category": [
+        "Episode: Jazz in Time",
+        "Victorian Secret"
+      ],
+      "region": "Victorian Secret - Exit",
+      "sort-key": "02-01-99-Complete"
+    },
+    {
+      "name": "Colonial Chaos - Level Complete",
+      "category": [
+        "Episode: Jazz in Time",
+        "Colonial Chaos"
+      ],
+      "region": "Colonial Chaos - Exit",
+      "sort-key": "02-02-99-Complete"
+    },
+    {
+      "name": "Purple Haze Maze - Level Complete",
+      "category": [
+        "Episode: Jazz in Time",
+        "Purple Haze Maze"
+      ],
+      "region": "Purple Haze Maze - Exit",
+      "sort-key": "02-03-99-Complete"
+    },
+    {
+      "name": "Funky Grooveathon - Level Complete",
+      "category": [
+        "Episode: Jazz in Time",
+        "Funky Grooveathon"
+      ],
+      "region": "Funky Grooveathon - Exit",
+      "sort-key": "02-04-99-Complete"
+    },
+    {
+      "name": "Beach Bunny Bingo - Level Complete",
+      "category": [
+        "Episode: Jazz in Time",
+        "Beach Bunny Bingo"
+      ],
+      "region": "Beach Bunny Bingo - Exit",
+      "sort-key": "02-05-99-Complete"
+    },
+    {
+      "name": "Marinated Rabbit - Uterus Defeated",
+      "category": [
+        "Episode: Jazz in Time",
+        "Marinated Rabbit"
+      ],
+      "region": "Marinated Rabbit - Exit",
+      "sort-key": "02-06-98-Boss"
+    },
+    {
+      "name": "Marinated Rabbit - Level Complete",
+      "category": [
+        "Episode: Jazz in Time",
+        "Marinated Rabbit"
+      ],
+      "region": "Marinated Rabbit - Exit",
+      "sort-key": "02-06-99-Complete"
+    },
+    {
+      "name": "Diamondus Forever - Level Complete",
+      "category": [
+        "Episode: Flashback",
+        "Diamondus Forever"
+      ],
+      "region": "Diamondus Forever - Exit",
+      "sort-key": "03-01-99-Complete"
+    },
+    {
+      "name": "Fourteen Carrot - Level Complete",
+      "category": [
+        "Episode: Flashback",
+        "Fourteen Carrot"
+      ],
+      "region": "Fourteen Carrot - Exit",
+      "sort-key": "03-02-99-Complete"
+    },
+    {
+      "name": "Electric Boogaloo - Level Complete",
+      "category": [
+        "Episode: Flashback",
+        "Electric Boogaloo"
+      ],
+      "region": "Electric Boogaloo - Exit",
+      "sort-key": "03-03-99-Complete"
+    },
+    {
+      "name": "Voltage Village - Level Complete",
+      "category": [
+        "Episode: Flashback",
+        "Voltage Village"
+      ],
+      "region": "Voltage Village - Exit",
+      "sort-key": "03-04-99-Complete"
+    },
+    {
+      "name": "Medieval Kineval - Level Complete",
+      "category": [
+        "Episode: Flashback",
+        "Medieval Kineval"
+      ],
+      "region": "Medieval Kineval - Exit",
+      "sort-key": "03-05-99-Complete"
+    },
+    {
+      "name": "Hare Scare - Bolly Defeated",
+      "category": [
+        "Episode: Flashback",
+        "Hare Scare"
+      ],
+      "region": "Hare Scare - Exit",
+      "sort-key": "03-06-98-Boss"
+    },
+    {
+      "name": "Hare Scare - Level Complete",
+      "category": [
+        "Episode: Flashback",
+        "Hare Scare"
+      ],
+      "region": "Hare Scare - Exit",
+      "sort-key": "03-06-99-Complete"
+    },
+    {
+      "name": "Gargoyles Lair - Level Complete",
+      "category": [
+        "Episode: Flashback",
+        "Gargoyles Lair"
+      ],
+      "region": "Gargoyles Lair - Exit",
+      "sort-key": "03-07-99-Complete"
+    },
+    {
+      "name": "Thriller Gorilla - Level Complete",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Thriller Gorilla"
+      ],
+      "region": "Thriller Gorilla - Exit",
+      "sort-key": "04-01-99-Complete"
+    },
+    {
+      "name": "Jungle Jump - Level Complete",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Jungle Jump"
+      ],
+      "region": "Jungle Jump - Exit",
+      "sort-key": "04-02-99-Complete"
+    },
+    {
+      "name": "A Cold Day in Heck - Bubba Defeated",
+      "category": [
+        "Episode: Funky Monkeys",
+        "A Cold Day in Heck"
+      ],
+      "region": "A Cold Day in Heck - Exit",
+      "sort-key": "04-03-98-Boss"
+    },
+    {
+      "name": "A Cold Day in Heck - Level Complete",
+      "category": [
+        "Episode: Funky Monkeys",
+        "A Cold Day in Heck"
+      ],
+      "region": "A Cold Day in Heck - Exit",
+      "sort-key": "04-03-99-Complete"
+    },
+    {
+      "name": "Rabbit Roast - Level Complete",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Rabbit Roast"
+      ],
+      "region": "Rabbit Roast - Exit",
+      "sort-key": "04-04-99-Complete"
+    },
+    {
+      "name": "Burnin Biscuits - Level Complete",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Burnin Biscuits"
+      ],
+      "region": "Burnin Biscuits - Exit",
+      "sort-key": "04-05-99-Complete"
+    },
+    {
+      "name": "Bad Pitt - Devil Devan Defeated",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Bad Pitt"
+      ],
+      "region": "Bad Pitt - Exit",
+      "sort-key": "04-06-98-Boss"
+    },
+    {
+      "name": "Bad Pitt - Level Complete",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Bad Pitt"
+      ],
+      "region": "Bad Pitt - Exit",
+      "sort-key": "04-06-99-Complete"
+    },
+    {
+      "name": "Darn Ratz - Level Complete",
+      "category": [
+        "Episode: Shareware Demo",
+        "Darn Ratz"
+      ],
+      "region": "Darn Ratz - Exit",
+      "sort-key": "05-01-99-Complete"
+    },
+    {
+      "name": "Retro Rabbit - Level Complete",
+      "category": [
+        "Episode: Shareware Demo",
+        "Retro Rabbit"
+      ],
+      "region": "Retro Rabbit - Exit",
+      "sort-key": "05-02-99-Complete"
+    },
+    {
+      "name": "Frog Stomp - Bubba Defeated",
+      "category": [
+        "Episode: Shareware Demo",
+        "Frog Stomp"
+      ],
+      "region": "Frog Stomp - Exit",
+      "sort-key": "05-03-98-Boss"
+    },
+    {
+      "name": "Frog Stomp - Level Complete",
+      "category": [
+        "Episode: Shareware Demo",
+        "Frog Stomp"
+      ],
+      "region": "Frog Stomp - Exit",
+      "sort-key": "05-03-99-Complete"
+    },
+    {
+      "name": "Easter Bunny - Level Complete",
+      "category": [
+        "Episode: The Secret Files",
+        "Easter Bunny",
+        "The Secret Files Content"
+      ],
+      "region": "Easter Bunny - Exit",
+      "sort-key": "06-01-99-Complete"
+    },
+    {
+      "name": "Spring Chickens - Level Complete",
+      "category": [
+        "Episode: The Secret Files",
+        "Spring Chickens",
+        "The Secret Files Content"
+      ],
+      "region": "Spring Chickens - Exit",
+      "sort-key": "06-02-99-Complete"
+    },
+    {
+      "name": "Scrambled Eggs - Level Complete",
+      "category": [
+        "Episode: The Secret Files",
+        "Scrambled Eggs",
+        "The Secret Files Content"
+      ],
+      "region": "Scrambled Eggs - Exit",
+      "sort-key": "06-03-99-Complete"
+    },
+    {
+      "name": "Ghostly Antics - Level Complete",
+      "category": [
+        "Episode: The Secret Files",
+        "Ghostly Antics",
+        "The Secret Files Content"
+      ],
+      "region": "Ghostly Antics - Exit",
+      "sort-key": "06-04-99-Complete"
+    },
+    {
+      "name": "Skeletons Turf - Level Complete",
+      "category": [
+        "Episode: The Secret Files",
+        "Skeletons Turf",
+        "The Secret Files Content"
+      ],
+      "region": "Skeletons Turf - Exit",
+      "sort-key": "06-05-99-Complete"
+    },
+    {
+      "name": "Graveyard Shift - Level Complete",
+      "category": [
+        "Episode: The Secret Files",
+        "Graveyard Shift",
+        "The Secret Files Content"
+      ],
+      "region": "Graveyard Shift - Exit",
+      "sort-key": "06-06-99-Complete"
+    },
+    {
+      "name": "Turtle Town - Level Complete",
+      "category": [
+        "Episode: The Secret Files",
+        "Turtle Town",
+        "The Secret Files Content"
+      ],
+      "region": "Turtle Town - Exit",
+      "sort-key": "06-07-99-Complete"
+    },
+    {
+      "name": "Suburbia Commando - Level Complete",
+      "category": [
+        "Episode: The Secret Files",
+        "Suburbia Commando",
+        "The Secret Files Content"
+      ],
+      "region": "Suburbia Commando - Exit",
+      "sort-key": "06-08-99-Complete"
+    },
+    {
+      "name": "Urban Brawl - Level Complete",
+      "category": [
+        "Episode: The Secret Files",
+        "Urban Brawl",
+        "The Secret Files Content"
+      ],
+      "region": "Urban Brawl - Exit",
+      "sort-key": "06-09-99-Complete"
+    },
+    {
+      "name": "Snow Bunnies - Level Complete",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Snow Bunnies",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Snow Bunnies - Exit",
+      "sort-key": "07-01-99-Complete"
+    },
+    {
+      "name": "Dashing thru the snow.. - Level Complete",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Dashing thru the snow..",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Dashing thru the snow.. - Exit",
+      "sort-key": "07-02-99-Complete"
+    },
+    {
+      "name": "Tinsel Town - Xmas Bilsy Defeated",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Tinsel Town",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Tinsel Town - Exit",
+      "sort-key": "07-03-98-Boss"
+    },
+    {
+      "name": "Tinsel Town - Level Complete",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Tinsel Town",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Tinsel Town - Exit",
+      "sort-key": "07-03-99-Complete"
+    },
+    {
+      "name": "Victory",
+      "category": [
+      ],
+      "requires": "|All Episodes Complete|",
+      "victory": true,
+      "sort-key": "99-00-99-Victory"
+    }
+  ]
 }
-

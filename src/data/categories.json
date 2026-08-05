@@ -1,9 +1,168 @@
 {
-    "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.categories.schema.json",
-    "Example Logic only category": {
-        "hidden": true
-    },
-    "Example Yaml-option category": {
-        "yaml_option": ["DLC_enabled"]
-    }
+  "Episode: Formerly a Prince": {
+    "sort-key": ".E01"
+  },
+  "Episode: Jazz in Time": {
+    "sort-key": ".E02"
+  },
+  "Episode: Flashback": {
+    "sort-key": ".E03"
+  },
+  "Episode: Funky Monkeys": {
+    "sort-key": ".E04"
+  },
+  "Episode: Shareware Demo": {
+    "sort-key": ".E05"
+  },
+  "Episode: The Secret Files": {
+    "sort-key": ".E06"
+  },
+  "Episode: Christmas Chronicles": {
+    "sort-key": ".E07"
+  },
+
+
+  "Rabbit in Training": {
+    "hidden": true
+  },
+  "Dungeon Dilemma": {
+    "hidden": true
+  },
+  "Knight Cap": {
+    "hidden": true
+  },
+  "Tossed Salad": {
+    "hidden": true
+  },
+  "Carrot Juice": {
+    "hidden": true
+  },
+  "Weirder Science": {
+    "hidden": true
+  },
+  "Loose Screws": {
+    "hidden": true
+  },
+  "Victorian Secret": {
+    "hidden": true
+  },
+  "Colonial Chaos": {
+    "hidden": true
+  },
+  "Purple Haze Maze": {
+    "hidden": true
+  },
+  "Funky Grooveathon": {
+    "hidden": true
+  },
+  "Beach Bunny Bingo": {
+    "hidden": true
+  },
+  "Marinated Rabbit": {
+    "hidden": true
+  },
+  "Diamondus Forever": {
+    "hidden": true
+  },
+  "Fourteen Carrot": {
+    "hidden": true
+  },
+  "Electric Boogaloo": {
+    "hidden": true
+  },
+  "Voltage Village": {
+    "hidden": true
+  },
+  "Medieval Kineval": {
+    "hidden": true
+  },
+  "Hare Scare": {
+    "hidden": true
+  },
+  "Gargoyles Lair": {
+    "hidden": true
+  },
+  "Thriller Gorilla": {
+    "hidden": true
+  },
+  "Jungle Jump": {
+    "hidden": true
+  },
+  "A Cold Day in Heck": {
+    "hidden": true
+  },
+  "Rabbit Roast": {
+    "hidden": true
+  },
+  "Burnin Biscuits": {
+    "hidden": true
+  },
+  "Bad Pitt": {
+    "hidden": true
+  },
+  "Darn Ratz": {
+    "hidden": true
+  },
+  "Retro Rabbit": {
+    "hidden": true
+  },
+  "Frog Stomp": {
+    "hidden": true
+  },
+  "Easter Bunny": {
+    "hidden": true
+  },
+  "Spring Chickens": {
+    "hidden": true
+  },
+  "Scrambled Eggs": {
+    "hidden": true
+  },
+  "Ghostly Antics": {
+    "hidden": true
+  },
+  "Skeletons Turf": {
+    "hidden": true
+  },
+  "Graveyard Shift": {
+    "hidden": true
+  },
+  "Turtle Town": {
+    "hidden": true
+  },
+  "Suburbia Commando": {
+    "hidden": true
+  },
+  "Urban Brawl": {
+    "hidden": true
+  },
+  "Snow Bunnies": {
+    "hidden": true
+  },
+  "Dashing thru the snow..": {
+    "hidden": true
+  },
+  "Tinsel Town": {
+    "hidden": true
+  },
+  "Individual Level Unlocks": {
+    "hidden": true,
+    "yaml_option": ["individual_level_unlock_keys"]
+  },
+  "Progressive Level Unlocks": {
+    "hidden": true,
+    "yaml_option": ["!individual_level_unlock_keys"]
+  },
+  "The Secret Files Content": {
+    "yaml_option": ["enable_tsf"]
+  },
+  "Christmas Chronicles Content": {
+    "yaml_option": ["enable_cc"]
+  },
+  "Holiday Hare Content": {
+    "yaml_option": ["enable_hh"]
+  },
+  "Starting Levels": {
+    "hidden": true
+  }
 }

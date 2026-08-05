@@ -10,15 +10,6 @@
             "description": "How to End your Randomized playthrough.",
             "aliases": {"easiest": 0},
             "hidden": false
-        },
-        "death_link": {
-            "default": false
-        },
-        "filler_traps": {
-            "_comment": "Using values here let you set a 'recommended' filler_trap percentage or even a default percentage",
-            "values": {
-                "recommended": 20
-            }
         }
     },
     "user": {
@@ -26,56 +17,72 @@
             "type": "Toggle",
             "default": true
         },
-        "Example_Toggle":{
+        "basic_movement_in_pool": {
+            "name": "Basic movement in pool",
             "description": [
-                "This is a Toggle",
-                "A simple boolean, aka True or False set the initial value with \"default\""
+                "All special movement abilities (buttstomp, sidekick, double jump, copter ears, uppercut) are items in the pool that need to be unlocked."
             ],
             "type": "Toggle",
             "default": false,
-            "group": "Example Options"
+            "group": "Item Pool"
         },
-        "Example_Choice":{
-            "type": "Choice",
+        "block_destruction_in_pool": {
+            "name": "Block destruction in pool",
             "description": [
-                "This is a Choice",
-                "Let the user pick from a list of values",
-                "allow_custom_value let a player define their own text value",
-                "Currently the only use for Choice in Manual outside of hooks is the goal"
+                "Permissions for destroying specific obstruction blocks are items in the pool that need to be unlocked."
             ],
-            "values": {
-                "start":0,
-                "test":1
-             },
-            "default": 0,
-            "allow_custom_value": false,
-            "group": "Example Options"
-        },
-        "Example_Range":{
-            "type": "Range",
-            "description": [
-                "This is a Range",
-                "Allow the player to specify a value between 'start' and 'end'",
-                "if you include a \"values\" you can define the label for certain values",
-                "Currently the only use for Range in Manual outside of hooks is 'filler_trap'"
-            ],
-            "range_start": 0,
-            "default": 1,
-            "range_end": 5,
-            "values": {"example": 2},
-            "group": "Example Options"
-        },
-
-        "DLC_enabled":{
-            "display_name": "DLC Enabled",
-            "description": "Is the Dlc enabled?",
             "type": "Toggle",
-            "visibility": [
-                "simple_ui",
-                "complex_ui",
-                "template"
+            "default": false,
+            "group": "Item Pool"
+        },
+        "individual_level_unlock_keys": {
+            "name": "Individual level unlock keys",
+            "description": [
+                "Unlock levels with individual keys rather than episode-specific progressive level unlock items."
             ],
-            "default": true
+            "type": "Toggle",
+            "default": false,
+            "group": "Item Pool"
+        },
+        "allow_levels_out_of_order": {
+            "name": "Allow playing levels out of order",
+            "description": [
+                "Typically, reaching a specific level requires beating (and having access to) the prior levels in the same episode.",
+                "If this is enabled, you're allowed to play a level out of order by loading it through JCS",
+                "or by copying it onto your Home Cooked Levels list and playing it that way.",
+                "Simply playing through locked levels in an episode while ignoring location checks to reach the unlocked level",
+                "is not allowed, as that way you may gain access to weapons or weapon upgrades not available in your unlocked levels."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Item Pool"
+        },
+        "enable_tsf": {
+            "name": "Enable The Secret Files content",
+            "description": [
+                "This includes the levels listed in The Secret Files category and the Lori character unlock."
+            ],
+            "type": "Toggle",
+            "default": true,
+            "group": "Item Pool"
+        },
+        "enable_hh": {
+            "name": "Enable Holiday Hare content",
+            "description": [
+                "This includes the levels listed in the Christmas Chronicles category, but not the Lori character unlock."
+            ],
+            "type": "Toggle",
+            "default": true,
+            "group": "Item Pool"
+        },
+        "enable_cc": {
+            "name": "Enable Holiday Hare content",
+            "description": [
+                "This includes the levels listed in the Christmas Chronicles category and the Lori character unlock."
+            ],
+            "type": "Toggle",
+            "default": true,
+            "group": "Item Pool"
         }
     }
 

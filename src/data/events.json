@@ -1,19 +1,194 @@
-{
-	"$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.events.schema.json",
-    "data": [
-        {
-            "name": "Marvel event",
-            "requires": "|@Right Side:all|",
-            "visible": true
-        },
-        {
-            "name": "Capcom event",
-            "requires": "|@Left Side:all|"
-        },
-        {
-            "name": "Stars_event",
-            "copy_location": "Stars%"
-        }
-    ]
-}
-
+[
+  { 
+    "name": "Rabbit in Training Complete", 
+    "copy_location": "Rabbit in Training - Level Complete"
+  },
+  { 
+    "name": "Dungeon Dilemma Complete", 
+    "copy_location": "Dungeon Dilemma - Level Complete"
+  },
+  { 
+    "name": "Knight Cap Complete", 
+    "copy_location": "Knight Cap - Level Complete"
+  },
+  { 
+    "name": "Tossed Salad Complete", 
+    "copy_location": "Tossed Salad - Level Complete"
+  },
+  { 
+    "name": "Carrot Juice Complete", 
+    "copy_location": "Carrot Juice - Level Complete"
+  },
+  { 
+    "name": "Weirder Science Complete", 
+    "copy_location": "Weirder Science - Level Complete"
+  },
+  { 
+    "name": "Loose Screws Complete", 
+    "copy_location": "Loose Screws - Level Complete"
+  },
+  { 
+    "name": "Formerly a Prince Complete", 
+    "requires": "|Rabbit in Training Complete| and |Dungeon Dilemma Complete| and |Knight Cap Complete| and |Tossed Salad Complete| and |Carrot Juice Complete| and |Weirder Science Complete|"
+  },
+  { 
+    "name": "Victorian Secret Complete", 
+    "copy_location": "Victorian Secret - Level Complete"
+  },
+  { 
+    "name": "Colonial Chaos Complete", 
+    "copy_location": "Colonial Chaos - Level Complete"
+  },
+  { 
+    "name": "Purple Haze Maze Complete", 
+    "copy_location": "Purple Haze Maze - Level Complete"
+  },
+  { 
+    "name": "Funky Grooveathon Complete", 
+    "copy_location": "Funky Grooveathon - Level Complete"
+  },
+  { 
+    "name": "Beach Bunny Bingo Complete", 
+    "copy_location": "Beach Bunny Bingo - Level Complete"
+  },
+  { 
+    "name": "Marinated Rabbit Complete", 
+    "copy_location": "Marinated Rabbit - Level Complete"
+  },
+  { 
+    "name": "Jazz in Time Complete", 
+    "requires": "|Victorian Secret Complete| and |Colonial Chaos Complete| and |Purple Haze Maze Complete| and |Funky Grooveathon Complete| and |Beach Bunny Bingo Complete| and |Marinated Rabbit Complete|"
+  },
+  { 
+    "name": "Diamondus Forever Complete", 
+    "copy_location": "Diamondus Forever - Level Complete"
+  },
+  { 
+    "name": "Fourteen Carrot Complete", 
+    "copy_location": "Fourteen Carrot - Level Complete"
+  },
+  { 
+    "name": "Electric Boogaloo Complete", 
+    "copy_location": "Electric Boogaloo - Level Complete"
+  },
+  { 
+    "name": "Voltage Village Complete", 
+    "copy_location": "Voltage Village - Level Complete"
+  },
+  { 
+    "name": "Medieval Kineval Complete", 
+    "copy_location": "Medieval Kineval - Level Complete"
+  },
+  { 
+    "name": "Hare Scare Complete", 
+    "copy_location": "Hare Scare - Level Complete"
+  },
+  { 
+    "name": "Flashback Complete", 
+    "requires": "|Diamondus Forever Complete| and |Fourteen Carrot Complete| and |Electric Boogaloo Complete| and |Voltage Village Complete| and |Medieval Kineval Complete| and |Hare Scare Complete|"
+  },
+  { 
+    "name": "Thriller Gorilla Complete", 
+    "copy_location": "Thriller Gorilla - Level Complete"
+  },
+  { 
+    "name": "Jungle Jump Complete", 
+    "copy_location": "Jungle Jump - Level Complete"
+  },
+  { 
+    "name": "A Cold Day in Heck Complete", 
+    "copy_location": "A Cold Day in Heck - Level Complete"
+  },
+  { 
+    "name": "Rabbit Roast Complete", 
+    "copy_location": "Rabbit Roast - Level Complete"
+  },
+  { 
+    "name": "Burnin Biscuits Complete", 
+    "copy_location": "Burnin Biscuits - Level Complete"
+  },
+  { 
+    "name": "Bad Pitt Complete", 
+    "copy_location": "Bad Pitt - Level Complete"
+  },
+  { 
+    "name": "Funky Monkeys Complete", 
+    "requires": "|Thriller Gorilla Complete| and |Jungle Jump Complete| and |A Cold Day in Heck Complete| and |Rabbit Roast Complete| and |Burnin Biscuits Complete| and |Bad Pitt Complete|"
+  },
+  { 
+    "name": "Darn Ratz Complete", 
+    "copy_location": "Darn Ratz - Level Complete"
+  },
+  { 
+    "name": "Retro Rabbit Complete", 
+    "copy_location": "Retro Rabbit - Level Complete"
+  },
+  { 
+    "name": "Frog Stomp Complete", 
+    "copy_location": "Frog Stomp - Level Complete"
+  },
+  { 
+    "name": "Shareware Demo Complete", 
+    "requires": "|Darn Ratz Complete| and |Retro Rabbit Complete| and |Frog Stomp Complete|"
+  },
+  { 
+    "name": "Easter Bunny Complete", 
+    "copy_location": "Easter Bunny - Level Complete"
+  },
+  { 
+    "name": "Spring Chickens Complete", 
+    "copy_location": "Spring Chickens - Level Complete"
+  },
+  { 
+    "name": "Scrambled Eggs Complete", 
+    "copy_location": "Scrambled Eggs - Level Complete"
+  },
+  { 
+    "name": "Ghostly Antics Complete", 
+    "copy_location": "Ghostly Antics - Level Complete"
+  },
+  { 
+    "name": "Skeletons Turf Complete", 
+    "copy_location": "Skeletons Turf - Level Complete"
+  },
+  { 
+    "name": "Graveyard Shift Complete", 
+    "copy_location": "Graveyard Shift - Level Complete"
+  },
+  { 
+    "name": "Turtle Town Complete", 
+    "copy_location": "Turtle Town - Level Complete"
+  },
+  { 
+    "name": "Suburbia Commando Complete", 
+    "copy_location": "Suburbia Commando - Level Complete"
+  },
+  { 
+    "name": "Urban Brawl Complete",
+    "copy_location": "Urban Brawl - Level Complete"
+  },
+  { 
+    "name": "The Secret Files Complete", 
+    "requires": "{YamlDisabled(enable_tsf)} or (|Easter Bunny Complete| and |Spring Chickens Complete| and |Scrambled Eggs Complete| and |Ghostly Antics Complete| and |Skeletons Turf Complete| and |Graveyard Shift Complete| and |Turtle Town Complete| and |Suburbia Commando Complete| and |Urban Brawl Complete|)"
+  },
+  { 
+    "name": "Snow Bunnies Complete", 
+    "copy_location": "Snow Bunnies - Level Complete"
+  },
+  { 
+    "name": "Dashing thru the snow.. Complete", 
+    "copy_location": "Dashing thru the snow.. - Level Complete"
+  },
+  { 
+    "name": "Tinsel Town Complete",
+    "copy_location": "Tinsel Town - Level Complete"
+  },
+  { 
+    "name": "Christmas Chronicles Complete", 
+    "requires": "({YamlDisabled(enable_hh)} and {YamlDisabled(enable_cc)}) or (|Snow Bunnies Complete| and |Dashing thru the snow.. Complete| and |Tinsel Town Complete|)"
+  },
+  { 
+    "name": "All Episodes Complete",
+    "requires": "|Formerly a Prince Complete| and |Jazz in Time Complete| and |Flashback Complete| and |Shareware Demo Complete| and |The Secret Files Complete| and |Christmas Chronicles Complete|"
+  }
+]
