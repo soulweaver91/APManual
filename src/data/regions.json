@@ -270,7 +270,7 @@
       "Knight Cap - Jazz Main Area",
       "Knight Cap - Jazz Left Path Left Branch After Chute"
     ],
-    "requires": "{canDestroyWildcardBlocks()}",
+    "requires": "{canDestroyBouncerBlocks()}",
     "_comment": "R:J2"
   },
   "Knight Cap - Jazz Left Path Left Branch After Chute": {
@@ -323,6 +323,7 @@
       "Knight Cap - Spaz Start",
       "Knight Cap - Shared Path Start From Left",
       "Knight Cap - Spaz Only One Up Secret",
+      "Knight Cap - Spaz Only Two Gold Coins Secret",
       "Knight Cap - Spaz Only Gold Coin Secret"
     ],
     "exit_requires": {
@@ -341,8 +342,15 @@
     "connects_to": [
       "Knight Cap - Spaz Only After Chute"
     ],
-    "requires": "{canDestroyWildcardBlocks()}",
+    "requires": "{canDestroyBouncerBlocks()}",
     "_comment": "R:A4"
+  },
+  "Knight Cap - Spaz Only Two Gold Coins Secret": {
+    "connects_to": [
+      "Knight Cap - Spaz Only After Chute"
+    ],
+    "requires": "{canDestroyBouncerBlocks()}",
+    "_comment": "R:A5"
   },
   "Knight Cap - Shared Path Start From Left": {
     "connects_to": [
@@ -375,8 +383,7 @@
     "connects_to": [
       "Knight Cap - Shared Path Start"
     ],
-    "requires": "{canDestroyWildcardBlocks()}",
-    "_comment": "R:B1    Requirement TBD"
+    "_comment": "R:B1    Every character can get to the bonus by default: shared path has 9 coins available, and Jazz/Lori additionally has 25 and Spaz has 12 coins, meaning no tools are needed for the 20 coin warp fee."
   },
   "Knight Cap - After Vine": {
     "connects_to": [
