@@ -642,6 +642,56 @@
       "sort-key": "01-06-99-Complete"
     },
     {
+      "name": "Victorian Secret - Save Point 1 (157, 22)",
+      "category": [
+        "Episode: Jazz in Time",
+        "Victorian Secret",
+        "Save Point Locations"
+      ],
+      "region": "Victorian Secret - In and After First Sewer Section",
+      "sort-key": "02-01-00-SavePoint"
+    },
+    {
+      "name": "Victorian Secret - Save Point 2 (251, 54)",
+      "category": [
+        "Episode: Jazz in Time",
+        "Victorian Secret",
+        "Save Point Locations"
+      ],
+      "region": "Victorian Secret - Second Sewer Section",
+      "sort-key": "02-01-01-SavePoint"
+    },
+    {
+      "name": "Victorian Secret - Save Point 3 (7, 9)",
+      "category": [
+        "Episode: Jazz in Time",
+        "Victorian Secret",
+        "Save Point Locations"
+      ],
+      "region": "Victorian Secret - Final Section",
+      "sort-key": "02-01-02-SavePoint"
+    },
+    {
+      "name": "Victorian Secret - Sign 1 (101, 43)",
+      "category": [
+        "Episode: Jazz in Time",
+        "Victorian Secret",
+        "Sign Locations"
+      ],
+      "region": "Victorian Secret - Start",
+      "sort-key": "01-06-20-Sign"
+    },
+    {
+      "name": "Victorian Secret - Bonus Warp",
+      "category": [
+        "Episode: Jazz in Time",
+        "Victorian Secret",
+        "Bonus Warp Locations"
+      ],
+      "region": "Victorian Secret - Bonus Warp Area",
+      "sort-key": "02-01-90-Bonus"
+    },
+    {
       "name": "Victorian Secret - Level Complete",
       "category": [
         "Episode: Jazz in Time",
@@ -651,6 +701,36 @@
       "sort-key": "02-01-99-Complete"
     },
     {
+      "name": "Colonial Chaos - Save Point 1 (119, 8)",
+      "category": [
+        "Episode: Jazz in Time",
+        "Colonial Chaos",
+        "Save Point Locations"
+      ],
+      "region": "Colonial Chaos - In and Near First Sewer Section",
+      "sort-key": "02-02-00-SavePoint"
+    },
+    {
+      "name": "Colonial Chaos - Save Point 2 (217, 15)",
+      "category": [
+        "Episode: Jazz in Time",
+        "Colonial Chaos",
+        "Save Point Locations"
+      ],
+      "region": "Colonial Chaos - Above Clotheslines Near Second Sewer Section",
+      "sort-key": "02-02-01-SavePoint"
+    },
+    {
+      "name": "Colonial Chaos - Bonus Warp",
+      "category": [
+        "Episode: Jazz in Time",
+        "Colonial Chaos",
+        "Bonus Warp Locations"
+      ],
+      "region": "Colonial Chaos - Bonus Warp Area",
+      "sort-key": "02-02-90-Bonus"
+    },
+    {
       "name": "Colonial Chaos - Level Complete",
       "category": [
         "Episode: Jazz in Time",
@@ -658,6 +738,35 @@
       ],
       "region": "Colonial Chaos - Exit",
       "sort-key": "02-02-99-Complete"
+    },
+    {
+      "name": "Purple Haze Maze - Save Point 1 (37, 62)",
+      "category": [
+        "Episode: Jazz in Time",
+        "Purple Haze Maze",
+        "Save Point Locations"
+      ],
+      "region": "Purple Haze Maze - Around First Save Point",
+      "sort-key": "02-03-00-SavePoint"
+    },
+    {
+      "name": "Purple Haze Maze - Sign 1 (134, 61)",
+      "category": [
+        "Episode: Jazz in Time",
+        "Purple Haze Maze",
+        "Sign Locations"
+      ],
+      "region": "Purple Haze Maze - Bottom Section After First Save Point",
+      "sort-key": "02-03-20-Sign"
+    },
+    {
+      "name": "Purple Haze Maze - Bonus Warp",
+      "category": [
+        "Episode: Jazz in Time",
+        "Purple Haze Maze"
+      ],
+      "region": "Purple Haze Maze - Bonus Warp Area",
+      "sort-key": "02-03-90-Bonus"
     },
     {
       "name": "Purple Haze Maze - Level Complete",

@@ -1091,15 +1091,71 @@
   },
   "Victorian Secret - Start": {
     "connects_to": [
+      "Victorian Secret - Coins in Window Above Start Secret",
+      "Victorian Secret - In and After First Sewer Section"
+    ],
+    "requires": "|Victorian Secret Unlock| or |Jazz in Time Progressive Level Unlock:1|",
+    "exit_requires": {
+      "Victorian Secret - In and After First Sewer Section": "{canDestroyButtstompBlocks()}"
+    },
+    "_comment": "R:M0"
+  },
+  "Victorian Secret - Coins in Window Above Start Secret": {
+    "connects_to": [
+      "Victorian Secret - Start"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A1"
+  },
+  "Victorian Secret - In and After First Sewer Section": {
+    "connects_to": [
+      "Victorian Secret - After Clothesline Across the Chasm",
+      "Victorian Secret - Extra Life Alcove Behind Blocks Secret",
+      "Victorian Secret - Gold Coin on the Roof Behind Blocks Secret"
+    ],
+    "_comment": "R:M1"
+  },
+  "Victorian Secret - Extra Life Alcove Behind Blocks Secret": {
+    "connects_to": [
+      "Victorian Secret - In and After First Sewer Section"
+    ],
+    "requires": "{canDestroySeekerBlocks()}",
+    "_comment": "R:A2"
+  },
+  "Victorian Secret - Gold Coin on the Roof Behind Blocks Secret": {
+    "connects_to": [
+      "Victorian Secret - In and After First Sewer Section"
+    ],
+    "requires": "{canDestroySeekerBlocks()}",
+    "_comment": "R:A3"
+  },
+  "Victorian Secret - After Clothesline Across the Chasm": {
+    "connects_to": [
+      "Victorian Secret - Second Sewer Section"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M2"
+  },
+  "Victorian Secret - Second Sewer Section": {
+    "connects_to": [
+      "Victorian Secret - Final Section"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M3"
+  },
+  "Victorian Secret - Final Section": {
+    "connects_to": [
+      "Victorian Secret - Exit",
+      "Victorian Secret - Bonus Warp Area"
+    ],
+    "_comment": "R:M4"
+  },
+  "Victorian Secret - Bonus Warp Area": {
+    "connects_to": [
       "Victorian Secret - Exit"
     ],
-    "requires": "|Victorian Secret Unlock| or |Jazz in Time Progressive Level Unlock:1|"
+    "_comment": "R:B1    Requirement TBD"
   },
-
-
-
-
-
   "Victorian Secret - Exit": {
     "connects_to": [
       "Colonial Chaos - Start"
@@ -1107,15 +1163,81 @@
   },
   "Colonial Chaos - Start": {
     "connects_to": [
-      "Colonial Chaos - Exit"
+      "Colonial Chaos - Silver Coins in Window Above Start",
+      "Colonial Chaos - In and Near First Sewer Section"
     ],
-    "requires": "|Colonial Chaos Unlock| or |Jazz in Time Progressive Level Unlock:2|"
+    "requires": "|Colonial Chaos Unlock| or |Jazz in Time Progressive Level Unlock:2|",
+    "_comment": "R:M0"
   },
 
-
-
-
-
+  "Colonial Chaos - Silver Coins in Window Above Start": {
+    "connects_to": [
+      "Colonial Chaos - Start"
+    ],
+    "requires": "{canUppercut()} or {canDoubleJump()} or {canCopter()}",
+    "_comment": "R:A1"
+  },
+  "Colonial Chaos - In and Near First Sewer Section": {
+    "connects_to": [
+      "Colonial Chaos - After Drop Between Buildings"
+    ],
+    "requires": "{canDestroyButtstompBlocks()}",
+    "_comment": "R:M1"
+  },
+  "Colonial Chaos - After Drop Between Buildings": {
+    "connects_to": [
+      "Colonial Chaos - Above Clotheslines Near Second Sewer Section",
+      "Colonial Chaos - Bonus Warp Area"
+    ],
+    "_comment": "R:M2"
+  },
+  "Colonial Chaos - Above Clotheslines Near Second Sewer Section": {
+    "connects_to": [
+      "Colonial Chaos - After Drop Between Buildings",
+      "Colonial Chaos - Chute at the Start of Second Sewer Section"
+    ],
+    "_comment": "R:M3"
+  },
+  "Colonial Chaos - Bonus Warp Area": {
+    "connects_to": [
+      "Colonial Chaos - Above Clotheslines Near Second Sewer Section"
+    ],
+    "_comment": "R:B1    Requirement TBD"
+  },
+  "Colonial Chaos - Chute at the Start of Second Sewer Section": {
+    "connects_to": [
+      "Colonial Chaos - Ammo Crate Behind Blocks Secret",
+      "Colonial Chaos - Second Sewer Section after Breakable Blocks"
+    ],
+    "_comment": "R:M4"
+  },
+  "Colonial Chaos - Ammo Crate Behind Blocks Secret": {
+    "connects_to": [
+      "Colonial Chaos - Chute at the Start of Second Sewer Section"
+    ],
+    "_comment": "R:A2"
+  },
+  "Colonial Chaos - Second Sewer Section after Breakable Blocks": {
+    "connects_to": [
+      "Colonial Chaos - Chute at the Start of Second Sewer Section",
+      "Colonial Chaos - Final Section"
+    ],
+    "_comment": "R:M5"
+  },
+  "Colonial Chaos - Final Section": {
+    "connects_to": [
+      "Colonial Chaos - Exit",
+      "Colonial Chaos - Gem Crate Behind Blocks Secret"
+    ],
+    "_comment": "R:M6"
+  },
+  "Colonial Chaos - Gem Crate Behind Blocks Secret": {
+    "connects_to": [
+      "Colonial Chaos - Final Section"
+    ],
+    "requires": "{canDestroySeekerBlocks()}",
+    "_comment": "R:A3"
+  },
   "Colonial Chaos - Exit": {
     "connects_to": [
       "Purple Haze Maze - Start"
@@ -1123,15 +1245,179 @@
   },
   "Purple Haze Maze - Start": {
     "connects_to": [
-      "Purple Haze Maze - Exit"
+      "Purple Haze Maze - Through the Hat Near Start"
     ],
-    "requires": "|Purple Haze Maze Unlock| or |Jazz in Time Progressive Level Unlock:3|"
+    "requires": "|Purple Haze Maze Unlock| or |Jazz in Time Progressive Level Unlock:3|",
+    "_comment": "R:M0"
   },
-
-
-
-
-
+  "Purple Haze Maze - Through the Hat Near Start": {
+    "connects_to": [
+      "Purple Haze Maze - Large Room Before First Save Point"
+    ],
+    "_comment": "R:M1"
+  },
+  "Purple Haze Maze - Large Room Before First Save Point": {
+    "connects_to": [
+      "Purple Haze Maze - Six Silver Coins Behind RF Blocks Secret",
+      "Purple Haze Maze - Above Vine in Large Room Before First Save Point",
+      "Purple Haze Maze - Six Silver Coins Behind Breakable Wall Before First Save Point",
+      "Purple Haze Maze - Tunnel Section Around Bonus Warp"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M2"
+  },
+  "Purple Haze Maze - Six Silver Coins Behind RF Blocks Secret": {
+    "connects_to": [
+      "Purple Haze Maze - Large Room Before First Save Point"
+    ],
+    "requires": "{canDestroyRFMissileBlocks()}",
+    "_comment": "R:A1"
+  },
+  "Purple Haze Maze - Above Vine in Large Room Before First Save Point": {
+    "connects_to": [
+      "Purple Haze Maze - Large Room Before First Save Point",
+      "Purple Haze Maze - Six Silver Coins Behind Breakable Wall Before First Save Point"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A2"
+  },
+  "Purple Haze Maze - Six Silver Coins Behind Breakable Wall Before First Save Point": {
+    "connects_to": [
+      "Purple Haze Maze - Six Silver Coins Behind Breakable Wall Before First Save Point",
+      "Purple Haze Maze - Large Room Before First Save Point"
+    ],
+    "requires": "{canDestroyRFMissileBlocks()}",
+    "_comment": "R:A3"
+  },
+  "Purple Haze Maze - Tunnel Section Around Bonus Warp": {
+    "connects_to": [
+      "Purple Haze Maze - Around First Save Point",
+      "Purple Haze Maze - Bonus Warp Area"
+    ],
+    "_comment": "R:M3"
+  },
+  "Purple Haze Maze - Bonus Warp Area": {
+    "connects_to": [
+      "Purple Haze Maze - Around First Save Point"
+    ],
+    "requires": "{canDestroyRFMissileBlocks()}",
+    "_comment": "R:B1    Two sets of six silver coins, both behind RF destructible scenery"
+  },
+  "Purple Haze Maze - Around First Save Point": {
+    "connects_to": [
+      "Purple Haze Maze - Tunnel Section Around Bonus Warp",
+      "Purple Haze Maze - Toaster Ammo Crate Behind RF Blocks Secret",
+      "Purple Haze Maze - Bottom Section After First Save Point"
+    ],
+    "exit_requires": {
+      "Purple Haze Maze - Tunnel Section Around Bonus Warp": "{canUppercut()} or {canDoubleJump()}"
+    },
+    "_comment": "R:M4"
+  },
+  "Purple Haze Maze - Toaster Ammo Crate Behind RF Blocks Secret": {
+    "connects_to": [
+      "Purple Haze Maze - Around First Save Point"
+    ],
+    "requires": "{canDestroyRFMissileBlocks()}",
+    "_comment": "R:A4"
+  },
+  "Purple Haze Maze - Bottom Section After First Save Point": {
+    "connects_to": [
+      "Purple Haze Maze - Birdy Secret",
+      "Purple Haze Maze - RF Ammo Above Vine in Bottom Section",
+      "Purple Haze Maze - Small Room Before One Way"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M5"
+  },
+  "Purple Haze Maze - Birdy Secret": {
+    "connects_to": [
+      "Purple Haze Maze - Bottom Section After First Save Point"
+    ],
+    "requires": "{canDestroyRFMissileBlocks()}",
+    "_comment": "R:A5"
+  },
+  "Purple Haze Maze - RF Ammo Above Vine in Bottom Section": {
+    "connects_to": [
+      "Purple Haze Maze - Bottom Section After First Save Point"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A6"
+  },
+  "Purple Haze Maze - Small Room Before One Way": {
+    "connects_to": [
+      "Purple Haze Maze - Bottom Section After First Save Point",
+      "Purple Haze Maze - Below Singular Hook After One Way"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M6"
+  },
+  "Purple Haze Maze - Below Singular Hook After One Way": {
+    "connects_to": [
+      "Purple Haze Maze - Above Singular Hook After One Way"
+    ],
+    "_comment": "R:M7"
+  },
+  "Purple Haze Maze - Above Singular Hook After One Way": {
+    "connects_to": [
+      "Purple Haze Maze - Ascending Hooks Room",
+      "Purple Haze Maze - Four Green Gems Secret"
+    ],
+    "requires": "{canGrabHooks()}",
+    "_comment": "R:M8"
+  },
+  "Purple Haze Maze - Four Green Gems Secret": {
+    "connects_to": [
+      "Purple Haze Maze - Above Singular Hook After One Way"
+    ],
+    "requires": "{canDestroyRFMissileBlocks()}",
+    "_comment": "R:A7"
+  },
+  "Purple Haze Maze - Ascending Hooks Room": {
+    "connects_to": [
+      "Purple Haze Maze - Above Singular Hook After One Way",
+      "Purple Haze Maze - After Vines in Ascending Hooks Room"
+    ],
+    "exit_requires": {
+      "Purple Haze Maze - Above Singular Hook After One Way": "{canGrabHooks()}",
+      "Purple Haze Maze - After Vines in Ascending Hooks Room": "{canGrabHooks()}"
+    },
+    "_comment": "R:M9"
+  },
+  "Purple Haze Maze - After Vines in Ascending Hooks Room": {
+    "connects_to": [
+      "Purple Haze Maze - Ascending Hooks Room",
+      "Purple Haze Maze - After Final Hooks",
+      "Purple Haze Maze - Three Red Gems Secret"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M10"
+  },
+  "Purple Haze Maze - Three Red Gems Secret": {
+    "connects_to": [
+      "Purple Haze Maze - After Vines in Ascending Hooks Room"
+    ],
+    "requires": "{canDestroyRFMissileBlocks()}",
+    "_comment": "R:A8"
+  },
+  "Purple Haze Maze - After Final Hooks": {
+    "connects_to": [
+      "Purple Haze Maze - After Vines in Ascending Hooks Room",
+      "Purple Haze Maze - Final Section"
+    ],
+    "requires": "{canGrabHooks()}",
+    "_comment": "R:M11"
+  },
+  "Purple Haze Maze - Final Section": {
+    "connects_to": [
+      "Purple Haze Maze - Exit",
+      "Purple Haze Maze - After Final Hooks"
+    ],
+    "exit_requires": {
+      "Purple Haze Maze - After Final Hooks": "{canUppercut()} or {canDoubleJump()}"
+    },
+    "_comment": "R:M12"
+  },
   "Purple Haze Maze - Exit": {
     "connects_to": [
       "Funky Grooveathon - Start"

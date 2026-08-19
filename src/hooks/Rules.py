@@ -42,7 +42,13 @@ def canDestroyWildcardBlocks():
     return "|Wildcard Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}"
 
 def canDestroyBouncerBlocks():
-    return "|Bouncer Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}"
+    return "(|Bouncer Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}) and |Bouncer Permit|"
+
+def canDestroySeekerBlocks():
+    return "(|Seeker Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}) and |Seeker Permit|"
+
+def canDestroyRFMissileBlocks():
+    return "(|RF Missile Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}) and |RF Missile Permit|"
 
 def canDestroyButtstompBlocks():
     return "(|Special Move Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}) and (|Buttstomp Unlock| or {YamlDisabled(basic_movement_in_pool)})"
