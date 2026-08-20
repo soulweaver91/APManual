@@ -50,6 +50,9 @@ def canDestroySeekerBlocks():
 def canDestroyRFMissileBlocks():
     return "(|RF Missile Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}) and |RF Missile Permit|"
 
+def canDestroyTNTBlocks():
+    return "(|TNT Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}) and |TNT Permit|"
+
 def canDestroyButtstompBlocks():
     return "(|Special Move Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}) and (|Buttstomp Unlock| or {YamlDisabled(basic_movement_in_pool)})"
 
@@ -61,3 +64,6 @@ def canGrabVines():
 
 def canGrabHooks():
     return "|Hook Traversal| or {YamlDisabled(basic_movement_in_pool)}"
+
+def canSwim():
+    return "|Swimming Unlock| or {YamlDisabled(basic_movement_in_pool)}"

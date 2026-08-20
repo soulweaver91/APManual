@@ -69,6 +69,14 @@
     },
     {
       "count": 1,
+      "name": "Swimming Unlock",
+      "category": [
+        "Basic Movement Ability"
+      ],
+      "progression": true
+    },
+    {
+      "count": 1,
       "name": "Bouncer Permit",
       "category": [
         "Weapon Unlock"
@@ -113,7 +121,7 @@
       "category": [
         "Weapon Unlock"
       ],
-      "useful": true
+      "progression": true
     },
     {
       "count": 1,
@@ -193,7 +201,7 @@
       "category": [
         "Level Movement Ability"
       ],
-      "useful": true
+      "progression": true
     },
     {
       "count": 1,

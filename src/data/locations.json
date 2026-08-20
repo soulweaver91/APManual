@@ -763,7 +763,8 @@
       "name": "Purple Haze Maze - Bonus Warp",
       "category": [
         "Episode: Jazz in Time",
-        "Purple Haze Maze"
+        "Purple Haze Maze",
+        "Bonus Warp Locations"
       ],
       "region": "Purple Haze Maze - Bonus Warp Area",
       "sort-key": "02-03-90-Bonus"
@@ -778,6 +779,26 @@
       "sort-key": "02-03-99-Complete"
     },
     {
+      "name": "Funky Grooveathon - Save Point 1 (164, 57)",
+      "category": [
+        "Episode: Jazz in Time",
+        "Funky Grooveathon",
+        "Save Point Locations"
+      ],
+      "region": "Funky Grooveathon - Main Section",
+      "sort-key": "02-04-00-SavePoint"
+    },
+    {
+      "name": "Funky Grooveathon - Bonus Warp",
+      "category": [
+        "Episode: Jazz in Time",
+        "Funky Grooveathon",
+        "Bonus Warp Locations"
+      ],
+      "region": "Funky Grooveathon - Bonus Warp Area",
+      "sort-key": "02-04-90-Bonus"
+    },
+    {
       "name": "Funky Grooveathon - Level Complete",
       "category": [
         "Episode: Jazz in Time",
@@ -787,6 +808,26 @@
       "sort-key": "02-04-99-Complete"
     },
     {
+      "name": "Beach Bunny Bingo - Save Point 1 (224, 36)",
+      "category": [
+        "Episode: Jazz in Time",
+        "Beach Bunny Bingo",
+        "Save Point Locations"
+      ],
+      "region": "Beach Bunny Bingo - Around Late Save Point",
+      "sort-key": "02-05-00-SavePoint"
+    },
+    {
+      "name": "Beach Bunny Bingo - Bonus Warp",
+      "category": [
+        "Episode: Jazz in Time",
+        "Beach Bunny Bingo",
+        "Bonus Warp Locations"
+      ],
+      "region": "Beach Bunny Bingo - Bonus Warp Area",
+      "sort-key": "02-05-90-Bonus"
+    },
+    {
       "name": "Beach Bunny Bingo - Level Complete",
       "category": [
         "Episode: Jazz in Time",
@@ -794,6 +835,36 @@
       ],
       "region": "Beach Bunny Bingo - Exit",
       "sort-key": "02-05-99-Complete"
+    },
+    {
+      "name": "Marinated Rabbit - Save Point 1 (80, 28)",
+      "category": [
+        "Episode: Jazz in Time",
+        "Marinated Rabbit",
+        "Save Point Locations"
+      ],
+      "region": "Marinated Rabbit - Water Section Before Strong Current",
+      "sort-key": "02-06-00-SavePoint"
+    },
+    {
+      "name": "Marinated Rabbit - Save Point 2 (196, 59)",
+      "category": [
+        "Episode: Jazz in Time",
+        "Marinated Rabbit",
+        "Save Point Locations"
+      ],
+      "region": "Marinated Rabbit - Main Water Section",
+      "sort-key": "02-06-01-SavePoint"
+    },
+    {
+      "name": "Marinated Rabbit - Bonus Warp Area",
+      "category": [
+        "Episode: Jazz in Time",
+        "Marinated Rabbit",
+        "Bonus Warp Locations"
+      ],
+      "region": "Marinated Rabbit - Bonus Warp Area",
+      "sort-key": "02-06-90-Bonus"
     },
     {
       "name": "Marinated Rabbit - Uterus Defeated",

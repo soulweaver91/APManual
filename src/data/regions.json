@@ -1432,15 +1432,86 @@
   },
   "Funky Grooveathon - Start": {
     "connects_to": [
-      "Funky Grooveathon - Exit"
+      "Funky Grooveathon - Between Hats",
+      "Funky Grooveathon - TNT Ammo Above Vine Near Start",
+      "Funky Grooveathon - Bouncer Ammo on High Ledge"
     ],
-    "requires": "|Funky Grooveathon Unlock| or |Jazz in Time Progressive Level Unlock:4|"
+    "requires": "|Funky Grooveathon Unlock| or |Jazz in Time Progressive Level Unlock:4|",
+    "_comment": "R:M0"
   },
-
-
-
-
-
+  "Funky Grooveathon - TNT Ammo Above Vine Near Start": {
+    "connects_to": [
+      "Funky Grooveathon - Start"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A1"
+  },
+  "Funky Grooveathon - Bouncer Ammo on High Ledge": {
+    "connects_to": [
+      "Funky Grooveathon - Start"
+    ],
+    "requires": "{canDoubleJump()} or ({canUppercut()} and {canCopter()})",
+    "_comment": "R:A2"
+  },
+  "Funky Grooveathon - Between Hats": {
+    "connects_to": [
+      "Funky Grooveathon - Main Section",
+      "Funky Grooveathon - Carrot Above Cheshire Cat Hook"
+    ],
+    "_comment": "R:M1"
+  },
+  "Funky Grooveathon - Carrot Above Cheshire Cat Hook": {
+    "connects_to": [
+      "Funky Grooveathon - Between Hats"
+    ],
+    "requires": "{canGrabHooks()}",
+    "_comment": "R:A3"
+  },
+  "Funky Grooveathon - Main Section": {
+    "connects_to": [
+      "Funky Grooveathon - Exit",
+      "Funky Grooveathon - Bonus Warp Area",
+      "Funky Grooveathon - Bouncer Ammo Behind Stomp Blocks Secret",
+      "Funky Grooveathon - Five Sandwiches Behind Destructible Blocks Secret",
+      "Funky Grooveathon - Five Silver Coins Behind Destructible Blocks Secret",
+      "Funky Grooveathon - Three Green Gems Behind Stomp Blocks Secret"
+    ],
+    "_comment": "R:M2"
+  },
+  "Funky Grooveathon - Bonus Warp Area": {
+    "connects_to": [
+      "Funky Grooveathon - Main Section"
+    ],
+    "_comment": "R:B1    No requirements, the required 10 coins are available without any limited regions"
+  },
+  "Funky Grooveathon - Bouncer Ammo Behind Stomp Blocks Secret": {
+    "connects_to": [
+      "Funky Grooveathon - Main Section"
+    ],
+    "requires": "{canSidekick()} or ({canDestroyButtstompBlocks()} and {canGrabVines()} and |TNT Permit|)",
+    "_comment": "R:A4   The only TNT pickups in this level are behind the vines. (Bringing TNT from a different level is as of now out of logic.)"
+  },
+  "Funky Grooveathon - Five Sandwiches Behind Destructible Blocks Secret": {
+    "connects_to": [
+      "Funky Grooveathon - Main Section"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A5"
+  },
+  "Funky Grooveathon - Five Silver Coins Behind Destructible Blocks Secret": {
+    "connects_to": [
+      "Funky Grooveathon - Main Section"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A6"
+  },
+  "Funky Grooveathon - Three Green Gems Behind Stomp Blocks Secret": {
+    "connects_to": [
+      "Funky Grooveathon - Main Section"
+    ],
+    "requires": "{canUppercut()} or ({canDestroyButtstompBlocks()} and {canGrabVines()} and |TNT Permit|)",
+    "_comment": "R:A7"
+  },
   "Funky Grooveathon - Exit": {
     "connects_to": [
       "Beach Bunny Bingo - Start"
@@ -1448,15 +1519,44 @@
   },
   "Beach Bunny Bingo - Start": {
     "connects_to": [
+      "Beach Bunny Bingo - After One Ways"
+    ],
+    "requires": "|Beach Bunny Bingo Unlock| or |Jazz in Time Progressive Level Unlock:5|",
+    "_comment": "R:M0"
+  },
+  "Beach Bunny Bingo - After One Ways": {
+    "connects_to": [
+      "Beach Bunny Bingo - Around Late Save Point",
+      "Beach Bunny Bingo - Four Silver Coins Behind TNT Blocks Secret",
+      "Beach Bunny Bingo - Bonus Warp Area"
+    ],
+    "_comment": "R:M1"
+  },
+  "Beach Bunny Bingo - Four Silver Coins Behind TNT Blocks Secret": {
+    "connects_to": [
+      "Beach Bunny Bingo - After One Ways"
+    ],
+    "requires": "{canDestroyTNTBlocks()}",
+    "_comment": "R:A1"
+  },
+  "Beach Bunny Bingo - Bonus Warp Area": {
+    "connects_to": [
+      "Beach Bunny Bingo - After One Ways"
+    ],
+    "_comment": "R:B1    Enough coins are available without the TNT secret."
+  },
+  "Beach Bunny Bingo - Around Late Save Point": {
+    "connects_to": [
+      "Beach Bunny Bingo - Final Section"
+    ],
+    "_comment": "R:M1"
+  },
+  "Beach Bunny Bingo - Final Section": {
+    "connects_to": [
       "Beach Bunny Bingo - Exit"
     ],
-    "requires": "|Beach Bunny Bingo Unlock| or |Jazz in Time Progressive Level Unlock:5|"
+    "_comment": "R:M1"
   },
-
-
-
-
-
   "Beach Bunny Bingo - Exit": {
     "connects_to": [
       "Marinated Rabbit - Start"
@@ -1464,14 +1564,68 @@
   },
   "Marinated Rabbit - Start": {
     "connects_to": [
+      "Marinated Rabbit - Water Section Before Strong Current"
+    ],
+    "requires": "|Marinated Rabbit Unlock| or |Jazz in Time Progressive Level Unlock:6|",
+    "_comment": "R:M0"
+  },
+  "Marinated Rabbit - Water Section Before Strong Current": {
+    "connects_to": [
+      "Marinated Rabbit - Start",
+      "Marinated Rabbit - Main Water Section"
+    ],
+    "requires": "{canSwim()}",
+    "_comment": "R:M1"
+  },
+  "Marinated Rabbit - Main Water Section": {
+    "connects_to": [
+      "Marinated Rabbit - Cavern Between Water Sections",
+      "Marinated Rabbit - Detour After Strong Current",
+      "Marinated Rabbit - Bonus Warp Area"
+    ],
+    "requires": "{canSwim()}",
+    "_comment": "R:M2"
+  },
+  "Marinated Rabbit - Detour After Strong Current": {
+    "connects_to": [
+      "Marinated Rabbit - Main Water Section"
+    ],
+    "_comment": "R:A1"
+  },
+  "Marinated Rabbit - Bonus Warp Area": {
+    "connects_to": [
+      "Marinated Rabbit - Main Water Section"
+    ],
+    "requires": "{canSwim()}",
+    "_comment": "R:B1"
+  },
+  "Marinated Rabbit - Cavern Between Water Sections": {
+    "connects_to": [
+      "Marinated Rabbit - Water Section Near End of Level"
+    ],
+    "_comment": "R:M3"
+  },
+  "Marinated Rabbit - Water Section Near End of Level": {
+    "connects_to": [
+      "Marinated Rabbit - Cavern Between Water Sections",
+      "Marinated Rabbit - Final Section Before Boss"
+    ],
+    "requires": "{canSwim()}",
+    "_comment": "R:M4"
+  },
+  "Marinated Rabbit - Final Section Before Boss": {
+    "connects_to": [
+      "Marinated Rabbit - Water Section Near End of Level",
+      "Marinated Rabbit - Boss Arena"
+    ],
+    "_comment": "R:M5"
+  },
+  "Marinated Rabbit - Boss Arena": {
+    "connects_to": [
       "Marinated Rabbit - Exit"
     ],
-    "requires": "|Marinated Rabbit Unlock| or |Jazz in Time Progressive Level Unlock:6|"
+    "_comment": "R:M6"
   },
-
-
-
-
 
   "Marinated Rabbit - Exit": {
     "connects_to": [
