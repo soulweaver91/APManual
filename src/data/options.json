@@ -19,6 +19,7 @@
         },
         "basic_movement_in_pool": {
             "name": "Basic movement in pool",
+            "display_name": "Basic movement in pool",
             "description": [
                 "All special movement abilities (buttstomp, sidekick, double jump, copter ears, uppercut) are items in the pool that need to be unlocked."
             ],
@@ -28,6 +29,7 @@
         },
         "block_destruction_in_pool": {
             "name": "Block destruction in pool",
+            "display_name": "Block destruction in pool",
             "description": [
                 "Permissions for destroying specific obstruction blocks are items in the pool that need to be unlocked."
             ],
@@ -37,6 +39,7 @@
         },
         "individual_level_unlock_keys": {
             "name": "Individual level unlock keys",
+            "display_name": "Individual level unlock keys",
             "description": [
                 "Unlock levels with individual keys rather than episode-specific progressive level unlock items."
             ],
@@ -46,12 +49,15 @@
         },
         "allow_levels_out_of_order": {
             "name": "Allow playing levels out of order",
+            "display_name": "Allow playing levels out of order",
             "description": [
                 "Typically, reaching a specific level requires beating (and having access to) the prior levels in the same episode.",
                 "If this is enabled, you're allowed to play a level out of order by loading it through JCS",
                 "or by copying it onto your Home Cooked Levels list and playing it that way.",
                 "Simply playing through locked levels in an episode while ignoring location checks to reach the unlocked level",
-                "is not allowed, as that way you may gain access to weapons or weapon upgrades not available in your unlocked levels."
+                "is not allowed, as that way you may gain access to weapons or weapon upgrades not available in your unlocked levels.",
+                "",
+                "Doesn't do anything if levels are unlocked progressively, as you always have the ability to jump between episodes."
             ],
             "type": "Toggle",
             "default": false,
@@ -59,6 +65,7 @@
         },
         "enable_tsf": {
             "name": "Enable The Secret Files content",
+            "display_name": "Enable The Secret Files content",
             "description": [
                 "This includes the levels listed in The Secret Files category and the Lori character unlock."
             ],
@@ -67,7 +74,8 @@
             "group": "Item Pool"
         },
         "enable_hh": {
-            "name": "Enable Holiday Hare content",
+            "name": "Enable Holiday Hare '98 content",
+            "display_name": "Enable Holiday Hare '98 content",
             "description": [
                 "This includes the levels listed in the Christmas Chronicles category, but not the Lori character unlock."
             ],
@@ -76,7 +84,8 @@
             "group": "Item Pool"
         },
         "enable_cc": {
-            "name": "Enable Holiday Hare content",
+            "name": "Enable Christmas Chronicles content",
+            "display_name": "Enable Christmas Chronicles content",
             "description": [
                 "This includes the levels listed in the Christmas Chronicles category and the Lori character unlock."
             ],
