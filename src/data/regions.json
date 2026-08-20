@@ -31,7 +31,7 @@
       "Funky Grooveathon - Start",
       "Beach Bunny Bingo - Start",
       "Marinated Rabbit - Start",
-      "Diamondus Forever - Start",
+      "A Diamondus Forever - Start",
       "Fourteen Carrot - Start",
       "Electric Boogaloo - Start",
       "Voltage Village - Start",
@@ -77,9 +77,9 @@
   },
   "Episode: Flashback": {
     "connects_to": [
-      "Diamondus Forever - Start"
+      "A Diamondus Forever - Start"
     ],
-    "requires": "|Diamondus Forever Unlock| or |Flashback Progressive Level Unlock:1|"
+    "requires": "|A Diamondus Forever Unlock| or |Flashback Progressive Level Unlock:1|"
   },
   "Episode: Funky Monkeys": {
     "connects_to": [
@@ -1629,21 +1629,21 @@
 
   "Marinated Rabbit - Exit": {
     "connects_to": [
-      "Diamondus Forever - Start"
+      "A Diamondus Forever - Start"
     ]
   },
-  "Diamondus Forever - Start": {
+  "A Diamondus Forever - Start": {
     "connects_to": [
-      "Diamondus Forever - Exit"
+      "A Diamondus Forever - Exit"
     ],
-    "requires": "|Diamondus Forever Unlock| or |Flashback Progressive Level Unlock:1|"
+    "requires": "|A Diamondus Forever Unlock| or |Flashback Progressive Level Unlock:1|"
   },
 
 
 
 
 
-  "Diamondus Forever - Exit": {
+  "A Diamondus Forever - Exit": {
     "connects_to": [
       "Fourteen Carrot - Start"
     ]

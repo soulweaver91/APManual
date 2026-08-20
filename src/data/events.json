@@ -62,8 +62,8 @@
       "requires": "|Victorian Secret Complete| and |Colonial Chaos Complete| and |Purple Haze Maze Complete| and |Funky Grooveathon Complete| and |Beach Bunny Bingo Complete| and |Marinated Rabbit Complete|"
     },
     {
-      "name": "Diamondus Forever Complete",
-      "copy_location": "Diamondus Forever - Level Complete"
+      "name": "A Diamondus Forever Complete",
+      "copy_location": "A Diamondus Forever - Level Complete"
     },
     {
       "name": "Fourteen Carrot Complete",
@@ -87,7 +87,7 @@
     },
     {
       "name": "Flashback Complete",
-      "requires": "|Diamondus Forever Complete| and |Fourteen Carrot Complete| and |Electric Boogaloo Complete| and |Voltage Village Complete| and |Medieval Kineval Complete| and |Hare Scare Complete|"
+      "requires": "|A Diamondus Forever Complete| and |Fourteen Carrot Complete| and |Electric Boogaloo Complete| and |Voltage Village Complete| and |Medieval Kineval Complete| and |Hare Scare Complete|"
     },
     {
       "name": "Thriller Gorilla Complete",
