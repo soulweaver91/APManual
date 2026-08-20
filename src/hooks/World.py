@@ -4,8 +4,9 @@ from worlds.AutoWorld import World
 from BaseClasses import MultiWorld, CollectionState, Item
 
 # Object classes from Manual -- extending AP core -- representing items and locations that are used in generation
-from ..Items import ManualItem
+from ..Items import ManualItem, item_name_to_item
 from ..Locations import ManualLocation
+from ..Helpers import get_option_value
 
 # Raw JSON data from the Manual apworld, respectively:
 #          data/game.json, data/items.json, data/locations.json, data/regions.json
@@ -70,6 +71,17 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
 #       will create 5 items that are the "useful trap" class
 # {"Item Name": {ItemClassification.useful: 5}} <- You can also use the classification directly
 def before_create_items_all(item_config: dict[str, int|dict], world: World, multiworld: MultiWorld, player: int) -> dict[str, int|dict]:
+    # By default, only the first levels (plus the tutorial level) of each episode are eligible to be available at the start.
+    # If levels are allowed to done in any order, any level is eligible to be a starting level, though.
+    if get_option_value(multiworld, player, 'allow_levels_out_of_order') and get_option_value(multiworld, player, 'individual_level_unlock_keys'):
+        for item in item_name_to_item.values():
+            if (
+                'category' in item.keys()
+                and 'Individual Level Unlocks' in item['category']
+                and not 'Starting Levels' in item['category']
+            ):
+                item['category'].append('Starting Levels')
+            
     return item_config
 
 # The item pool before starting items are processed, in case you want to see the raw item pool at that stage
