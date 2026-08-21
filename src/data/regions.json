@@ -31,10 +31,12 @@
       "Funky Grooveathon - Start",
       "Beach Bunny Bingo - Start",
       "Marinated Rabbit - Start",
-      "A Diamondus Forever - Start",
+      "A Diamondus Forever - Jazz Start",
+      "A Diamondus Forever - Spaz Start",
       "Fourteen Carrot - Start",
       "Electric Boogaloo - Start",
-      "Voltage Village - Start",
+      "Voltage Village - Jazz Start",
+      "Voltage Village - Spaz Start",
       "Medieval Kineval - Start",
       "Hare Scare - Start",
       "Gargoyles Lair - Start",
@@ -77,7 +79,8 @@
   },
   "Episode: Flashback": {
     "connects_to": [
-      "A Diamondus Forever - Start"
+      "A Diamondus Forever - Jazz Start",
+      "A Diamondus Forever - Spaz Start"
     ],
     "requires": "|A Diamondus Forever Unlock| or |Flashback Progressive Level Unlock:1|"
   },
@@ -1629,20 +1632,243 @@
 
   "Marinated Rabbit - Exit": {
     "connects_to": [
-      "A Diamondus Forever - Start"
+      "A Diamondus Forever - Jazz Start",
+      "A Diamondus Forever - Spaz Start"
     ]
   },
-  "A Diamondus Forever - Start": {
+  "A Diamondus Forever - Jazz Start": {
+    "connects_to": [
+      "A Diamondus Forever - Jazz Lower Path Middle Part",
+      "A Diamondus Forever - Jazz Spring Tunnel Behind Destructible Blocks",
+      "A Diamondus Forever - Jazz Toaster Ammo and Gold Coin Below Start Secret"
+    ],
+    "requires": "(|Jazz Unlock| or |Lori Unlock|) and (|A Diamondus Forever Unlock| or |Flashback Progressive Level Unlock:1|)",
+    "_comment": "R:J0"
+  },
+  "A Diamondus Forever - Jazz Toaster Ammo and Gold Coin Below Start Secret": {
+    "connects_to": [
+      "A Diamondus Forever - Jazz Start"
+    ],
+    "_comment": "R:A1"
+  },
+  "A Diamondus Forever - Jazz Lower Path Middle Part": {
+    "connects_to": [
+      "A Diamondus Forever - Jazz Start",
+      "A Diamondus Forever - Jazz Lower Path Lower Part",
+      "A Diamondus Forever - Jazz Lower Path Upper Part"
+    ],
+    "exit_requires": {
+      "A Diamondus Forever - Jazz Start": "{canUppercut()}",
+      "A Diamondus Forever - Jazz Lower Path Upper Part": "|Toaster Permit|"
+    },
+    "_comment": "R:J1"
+  },
+  "A Diamondus Forever - Jazz Lower Path Lower Part": {
+    "connects_to": [
+      "A Diamondus Forever - Jazz Lower Path Middle Part",
+      "A Diamondus Forever - Jazz Upper to Lower Path Alternate Chute",
+      "A Diamondus Forever - Shared Path Start"
+    ],
+    "exit_requires": {
+      "A Diamondus Forever - Jazz Upper to Lower Path Alternate Chute": "{canUppercut()}"
+    },
+    "_comment": "R:J2"
+  },
+  "A Diamondus Forever - Jazz Spring Tunnel Behind Destructible Blocks": {
+    "connects_to": [
+      "A Diamondus Forever - Jazz Start",
+      "A Diamondus Forever - Jazz After Spring Tunnel"
+    ],
+    "requires": "{canDestroyBouncerBlocks()}",
+    "exit_requires": {
+      "A Diamondus Forever - Jazz Start": "|Freezer Permit|"
+    },
+    "_comment": "R:J3"
+  },
+  "A Diamondus Forever - Jazz After Spring Tunnel": {
+    "connects_to": [
+      "A Diamondus Forever - Jazz Lower Path Upper Part",
+      "A Diamondus Forever - Jazz Upper to Lower Path Alternate Chute",
+      "A Diamondus Forever - Jazz Silly Sign Detour First Room"
+    ],
+    "_comment": "R:J4"
+  },
+  "A Diamondus Forever - Jazz Silly Sign Detour First Room": {
+    "connects_to": [
+      "A Diamondus Forever - Jazz After Spring Tunnel",
+      "A Diamondus Forever - Jazz Silly Sign Detour Second Room"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A2"
+  },
+  "A Diamondus Forever - Jazz Silly Sign Detour Second Room": {
+    "connects_to": [
+      "A Diamondus Forever - Jazz Silly Sign Detour First Room",
+      "A Diamondus Forever - Jazz Silly Sign Detour Third Room"
+    ],
+    "exit_requires": {
+      "A Diamondus Forever - Jazz Silly Sign Detour First Room": "{canUppercut()}"
+    },
+    "_comment": "R:A3"
+  },
+  "A Diamondus Forever - Jazz Silly Sign Detour Third Room": {
+    "connects_to": [
+      "A Diamondus Forever - Jazz Silly Sign Detour Fourth Room",
+      "A Diamondus Forever - Shared Path Start"
+    ],
+    "_comment": "R:A4"
+  },
+  "A Diamondus Forever - Jazz Silly Sign Detour Fourth Room": {
+    "connects_to": [
+      "A Diamondus Forever - Shared Path Start"
+    ],
+    "_comment": "R:A5"
+  },
+  "A Diamondus Forever - Jazz Lower Path Upper Part": {
+    "connects_to": [
+      "A Diamondus Forever - Jazz Lower Path Middle Part"
+    ],
+    "_comment": "R:J5"
+  },
+  "A Diamondus Forever - Jazz Upper to Lower Path Alternate Chute": {
+    "connects_to": [
+      "A Diamondus Forever - Jazz Lower Path Lower Part"
+    ],
+    "_comment": "R:J6"
+  },
+  "A Diamondus Forever - Spaz Start": {
+    "connects_to": [
+      "A Diamondus Forever - Exit",
+      "A Diamondus Forever - Spaz Vines Below First Room",
+      "A Diamondus Forever - Spaz Cave Upper Section"
+    ],
+    "requires": "|Spaz Unlock| and (|A Diamondus Forever Unlock| or |Flashback Progressive Level Unlock:1|)",
+    "_comment": "R:S0"
+  },
+  "A Diamondus Forever - Spaz Vines Below First Room": {
+    "connects_to": [
+      "A Diamondus Forever - Spaz Start",
+      "A Diamondus Forever - Spaz Buttstomp Cavern Below First Room"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A6"
+  },
+  "A Diamondus Forever - Spaz Buttstomp Cavern Below First Room": {
+    "connects_to": [
+      "A Diamondus Forever - Spaz Vines Below First Room"
+    ],
+    "requires": "{canDestroyButtstompBlocks()}",
+    "_comment": "R:A7"
+  },
+  "A Diamondus Forever - Spaz Cave Upper Section": {
+    "connects_to": [
+      "A Diamondus Forever - Spaz Start",
+      "A Diamondus Forever - Spaz Cave Middle Section"
+    ],
+    "exit_requires": {
+      "A Diamondus Forever - Spaz Start": "{canDoubleJump()}"
+    },
+    "_comment": "R:S1"
+  },
+  "A Diamondus Forever - Spaz Cave Middle Section": {
+    "connects_to": [
+      "A Diamondus Forever - Spaz Cave Upper Section",
+      "A Diamondus Forever - Spaz Final Part"
+    ],
+    "exit_requires": {
+      "A Diamondus Forever - Spaz Cave Upper Section": "{canDoubleJump()}"
+    },
+    "_comment": "R:S2"
+  },
+  "A Diamondus Forever - Spaz Final Part": {
+    "connects_to": [
+      "A Diamondus Forever - Spaz Fruit, Gems and Two Gold Coins Secret",
+      "A Diamondus Forever - Spaz Cave Middle Section",
+      "A Diamondus Forever - Shared Path Start"
+    ],
+    "requires": "{canDestroyButtstompBlocks()}",
+    "_comment": "R:S3"
+  },
+  "A Diamondus Forever - Spaz Fruit, Gems and Two Gold Coins Secret": {
+    "connects_to": [
+      "A Diamondus Forever - Spaz Final Part"
+    ],
+    "requires": "{canDestroyBouncerBlocks()}",
+    "_comment": "R:A8"
+  },
+  "A Diamondus Forever - Shared Path Start": {
+    "connects_to": [
+      "A Diamondus Forever - Extra Life Behind Uppercut Blocks Secret",
+      "A Diamondus Forever - Carrot Crates and Two Gold Coins Secret",
+      "A Diamondus Forever - Around Second Shared Save Point"
+    ],
+    "_comment": "R:M1"
+  },
+  "A Diamondus Forever - Extra Life Behind Uppercut Blocks Secret": {
+    "connects_to": [
+      "A Diamondus Forever - Shared Path Start"
+    ],
+    "requires": "{canUppercut()} or ({canDestroyButtstompBlocks()} and |TNT Permit| and {CanReachLocation(Marinated Rabbit - Level Complete)})",
+    "_comment": "R:A9    Using TNT here requires bringing it from a previous level, in this case the directly preceding one."
+  },
+  "A Diamondus Forever - Carrot Crates and Two Gold Coins Secret": {
+    "connects_to": [
+      "A Diamondus Forever - Shared Path Start"
+    ],
+    "_comment": "R:A10"
+  },
+  "A Diamondus Forever - Around Second Shared Save Point": {
+    "connects_to": [
+      "A Diamondus Forever - Near Bonus Warp"
+    ],
+    "_comment": "R:M2"
+  },
+  "A Diamondus Forever - Near Bonus Warp": {
+    "connects_to": [
+      "A Diamondus Forever - After Destructible Blocks Near Bonus Warp",
+      "A Diamondus Forever - Gold Coins Beneath Horizontal Spring Secret",
+      "A Diamondus Forever - Bonus Warp Area"
+    ],
+    "exit_requires": {
+      "A Diamondus Forever - After Destructible Blocks Near Bonus Warp": "{canDestroyWildcardBlocks()}"
+    },
+    "_comment": "R:M3"
+  },
+  "A Diamondus Forever - Gold Coins Beneath Horizontal Spring Secret": {
+    "connects_to": [
+      "A Diamondus Forever - Around Second Shared Save Point"
+    ],
+    "requires": "|Freezer Permit|",
+    "_comment": "R:A11"
+  },
+  "A Diamondus Forever - Bonus Warp Area": {
+    "connects_to": [
+      "A Diamondus Forever - After Destructible Blocks Near Bonus Warp"
+    ],
+    "_comment": "R:B1    Requirement TBD"
+  },
+  "A Diamondus Forever - After Destructible Blocks Near Bonus Warp": {
+    "connects_to": [
+      "A Diamondus Forever - Near Bonus Warp",
+      "A Diamondus Forever - Two Green Gems Accessible With Pushable Rock Secret",
+      "A Diamondus Forever - Final Room"
+    ],
+    "_comment": "R:M4"
+  },
+  "A Diamondus Forever - Two Green Gems Accessible With Pushable Rock Secret": {
+    "connects_to": [
+      "A Diamondus Forever - After Destructible Blocks Near Bonus Warp"
+    ],
+    "requires": "{canUppercut()} or {canDoubleJump()}",
+    "_comment": "R:A12"
+  },
+  "A Diamondus Forever - Final Room": {
     "connects_to": [
       "A Diamondus Forever - Exit"
     ],
-    "requires": "|A Diamondus Forever Unlock| or |Flashback Progressive Level Unlock:1|"
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M5"
   },
-
-
-
-
-
   "A Diamondus Forever - Exit": {
     "connects_to": [
       "Fourteen Carrot - Start"
@@ -1650,15 +1876,137 @@
   },
   "Fourteen Carrot - Start": {
     "connects_to": [
+      "Fourteen Carrot - Middle Spring Section",
+      "Fourteen Carrot - Character Morph Power-Up Below Buttstomp Block Secret",
+      "Fourteen Carrot - Extra Life Crate Above Frozen Spring Secret",
+      "Fourteen Carrot - Fire Shield Secret",
+      "Fourteen Carrot - Gold Coin Behind Destructible Blocks Secret",
+      "Fourteen Carrot - Extra Shield Time Below Buttstomp Block Secret",
+      "Fourteen Carrot - Gold Coin Blocked By Spring Secret",
+      "Fourteen Carrot - Six Silver Coins and Super Gem Above Frozen Spring Secret"
+    ],
+    "requires": "|Fourteen Carrot Unlock| or |Flashback Progressive Level Unlock:2|",
+    "_comment": "R:M0"
+  },
+  "Fourteen Carrot - Character Morph Power-Up Below Buttstomp Block Secret": {
+    "connects_to": [
+      "Fourteen Carrot - Start"
+    ],
+    "requires": "{canDestroyButtstompBlocks()}",
+    "_comment": "R:A1"
+  },
+  "Fourteen Carrot - Extra Life Crate Above Frozen Spring Secret": {
+    "connects_to": [
+      "Fourteen Carrot - Start"
+    ],
+    "requires": "|Toaster Permit| and {CanReachLocation(A Diamondus Forever - Level Complete)}",
+    "_comment": "R:A2    No toaster ammo in this level before this point, so it has to be brought from a preceding level"
+  },
+  "Fourteen Carrot - Fire Shield Secret": {
+    "connects_to": [
+      "Fourteen Carrot - Start"
+    ],
+    "requires": "{canDoubleJump()} or {canCopter()} or {canUppercut()}",
+    "_comment": "R:A3"
+  },
+  "Fourteen Carrot - Gold Coin Behind Destructible Blocks Secret": {
+    "connects_to": [
+      "Fourteen Carrot - Start"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A4"
+  },
+  "Fourteen Carrot - Extra Shield Time Below Buttstomp Block Secret": {
+    "connects_to": [
+      "Fourteen Carrot - Start"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A5"
+  },
+  "Fourteen Carrot - Gold Coin Blocked By Spring Secret": {
+    "connects_to": [
+      "Fourteen Carrot - Start"
+    ],
+    "requires": "|Freezer Permit|",
+    "_comment": "R:A6"
+  },
+  "Fourteen Carrot - Six Silver Coins and Super Gem Above Frozen Spring Secret": {
+    "connects_to": [
+      "Fourteen Carrot - Start"
+    ],
+    "requires": "|Toaster Permit| and {CanReachLocation(A Diamondus Forever - Level Complete)}",
+    "_comment": "R:A7    No toaster ammo in this level before this point, so it has to be brought from a preceding level"
+  },
+  "Fourteen Carrot - Middle Spring Section": {
+    "connects_to": [
+      "Fourteen Carrot - Middle Section Around Second Save Point"
+    ],
+    "_comment": "R:M1"
+  },
+  "Fourteen Carrot - Middle Section Around Second Save Point": {
+    "connects_to": [
+      "Fourteen Carrot - Middle Section at and After Trigger Crate"
+    ],
+    "_comment": "R:M2"
+  },
+  "Fourteen Carrot - Middle Section at and After Trigger Crate": {
+    "connects_to": [
+      "Fourteen Carrot - Middle Section Around Second Save Point",
+      "Fourteen Carrot - Spring Section Before Bonus Warp"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M3"
+  },
+  "Fourteen Carrot - Spring Section Before Bonus Warp": {
+    "connects_to": [
+      "Fourteen Carrot - Room with Bonus Warp"
+    ],
+    "_comment": "R:M4"
+  },
+  "Fourteen Carrot - Room with Bonus Warp": {
+    "connects_to": [
+      "Fourteen Carrot - Lower Section with Third Save Point",
+      "Fourteen Carrot - Bonus Warp Area"
+    ],
+    "_comment": "R:M5"
+  },
+  "Fourteen Carrot - Bonus Warp Area": {
+    "connects_to": [
+      "Fourteen Carrot - Lower Section with Third Save Point"
+    ],
+    "_comment": "R:B1    Requirement TBD"
+  },
+  "Fourteen Carrot - Lower Section with Third Save Point": {
+    "connects_to": [
+      "Fourteen Carrot - Spring Section Before Final Room",
+      "Fourteen Carrot - Small Cave Between One Ways Above Third Save Point Secret"
+    ],
+    "_comment": "R:M6"
+  },
+  "Fourteen Carrot - Small Cave Between One Ways Above Third Save Point Secret": {
+    "connects_to": [
+      "Fourteen Carrot - Above One Ways Above Third Save Point"
+    ],
+    "_comment": "R:A8"
+  },
+  "Fourteen Carrot - Above One Ways Above Third Save Point": {
+    "connects_to": [
+      "Fourteen Carrot - Lower Section with Third Save Point"
+    ],
+    "_comment": "R:A9"
+  },
+  "Fourteen Carrot - Spring Section Before Final Room": {
+    "connects_to": [
+      "Fourteen Carrot - Final Room"
+    ],
+    "_comment": "R:M7"
+  },
+  "Fourteen Carrot - Final Room": {
+    "connects_to": [
       "Fourteen Carrot - Exit"
     ],
-    "requires": "|Fourteen Carrot Unlock| or |Flashback Progressive Level Unlock:2|"
+    "_comment": "R:M8"
   },
-
-
-
-
-
   "Fourteen Carrot - Exit": {
     "connects_to": [
       "Electric Boogaloo - Start"
@@ -1666,31 +2014,326 @@
   },
   "Electric Boogaloo - Start": {
     "connects_to": [
-      "Electric Boogaloo - Exit"
+      "Electric Boogaloo - Above and In First Pinball Room"
     ],
-    "requires": "|Electric Boogaloo Unlock| or |Flashback Progressive Level Unlock:3|"
+    "requires": "|Electric Boogaloo Unlock| or |Flashback Progressive Level Unlock:3|",
+    "_comment": "R:M0"
   },
-
-
-
-
-
+  "Electric Boogaloo - Above and In First Pinball Room": {
+    "connects_to": [
+      "Electric Boogaloo - Four Silver Coins in Room Accessed with Pipe Secret",
+      "Electric Boogaloo - Bouncer Ammo In Enclosed Area Secret",
+      "Electric Boogaloo - Freezer Ammo Behind Bouncer Blocks Secret",
+      "Electric Boogaloo - After Chute Near Start"
+    ],
+    "_comment": "R:M1"
+  },
+  "Electric Boogaloo - Four Silver Coins in Room Accessed with Pipe Secret": {
+    "connects_to": [
+      "Electric Boogaloo - Above and In First Pinball Room"
+    ],
+    "_comment": "R:A1"
+  },
+  "Electric Boogaloo - Bouncer Ammo In Enclosed Area Secret": {
+    "connects_to": [
+      "Electric Boogaloo - Above and In First Pinball Room"
+    ],
+    "_comment": "R:A2"
+  },
+  "Electric Boogaloo - Freezer Ammo Behind Bouncer Blocks Secret": {
+    "connects_to": [
+      "Electric Boogaloo - Above and In First Pinball Room"
+    ],
+    "requires": "{canDestroyBouncerBlocks()}",
+    "_comment": "R:A3"
+  },
+  "Electric Boogaloo - After Chute Near Start": {
+    "connects_to": [
+      "Electric Boogaloo - Small Room After Upwards Pipe",
+      "Electric Boogaloo - Two Gold Coins Blocked By Horizontal Spring Secret",
+      "Electric Boogaloo - Carrots Behind Sturdy Blocks Secret",
+      "Electric Boogaloo - Gem Barrels Behind Sidekick Blocks"
+    ],
+    "_comment": "R:M2"
+  },
+  "Electric Boogaloo - Two Gold Coins Blocked By Horizontal Spring Secret": {
+    "connects_to": [
+      "Electric Boogaloo - After Chute Near Start"
+    ],
+    "requires": "|Freezer Permit|",
+    "_comment": "R:A4"
+  },
+  "Electric Boogaloo - Carrots Behind Sturdy Blocks Secret": {
+    "connects_to": [
+      "Electric Boogaloo - After Chute Near Start"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A5"
+  },
+  "Electric Boogaloo - Gem Barrels Behind Sidekick Blocks": {
+    "connects_to": [
+      "Electric Boogaloo - After Chute Near Start"
+    ],
+    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {CanReachLocation(Fourteen Carrot - Level Complete)} and {CanReachLocation(A Diamondus Forever - Level Complete)} and {CanReachLocation(Marinated Rabbit - Level Complete)} and {CanReachLocation(Beach Bunny Bingo - Level Complete)} and {CanReachLocation(Funky Grooveathon - Level Complete)})",
+    "_comment": "R:A6    TNT has to be brought here from several levels back, and vine traversal is required to get the ammo from there."
+  },
+  "Electric Boogaloo - Small Room After Upwards Pipe": {
+    "connects_to": [
+      "Electric Boogaloo - Middle Section"
+    ],
+    "_comment": "R:M3"
+  },
+  "Electric Boogaloo - Middle Section": {
+    "connects_to": [
+      "Electric Boogaloo - Small Room After Upwards Pipe",
+      "Electric Boogaloo - Second Pinball Section",
+      "Electric Boogaloo - Freezer Ammo Behind Destructible Barrier Secret",
+      "Electric Boogaloo - Six Silver Coins and Fruit and Gems in Shape of 'YO' Secret",
+      "Electric Boogaloo - Red Gems Behind Blocks Secret",
+      "Electric Boogaloo - First Freezer Power Up Behind Sidekick Blocks Secret",
+      "Electric Boogaloo - Bouncer Power Up Behind Uppercut Blocks Secret"
+    ],
+    "exit_requires": {
+      "Electric Boogaloo - Small Room After Upwards Pipe": "|Freezer Permit|"
+    },
+    "_comment": "R:M4"
+  },
+  "Electric Boogaloo - Freezer Ammo Behind Destructible Barrier Secret": {
+    "connects_to": [
+      "Electric Boogaloo - Middle Section"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A7"
+  },
+  "Electric Boogaloo - Six Silver Coins and Fruit and Gems in Shape of 'YO' Secret": {
+    "connects_to": [
+      "Electric Boogaloo - Middle Section"
+    ],
+    "requires": "{canDestroyButtstompBlocks()}",
+    "_comment": "R:A8"
+  },
+  "Electric Boogaloo - Red Gems Behind Blocks Secret": {
+    "connects_to": [
+      "Electric Boogaloo - Middle Section"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A9"
+  },
+  "Electric Boogaloo - First Freezer Power Up Behind Sidekick Blocks Secret": {
+    "connects_to": [
+      "Electric Boogaloo - Middle Section"
+    ],
+    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {CanReachLocation(Fourteen Carrot - Level Complete)} and {CanReachLocation(A Diamondus Forever - Level Complete)} and {CanReachLocation(Marinated Rabbit - Level Complete)} and {CanReachLocation(Beach Bunny Bingo - Level Complete)} and {CanReachLocation(Funky Grooveathon - Level Complete)})",
+    "_comment": "R:A10    TNT has to be brought here from several levels back, and vine traversal is required to get the ammo from there."
+  },
+  "Electric Boogaloo - Bouncer Power Up Behind Uppercut Blocks Secret": {
+    "connects_to": [
+      "Electric Boogaloo - Middle Section"
+    ],
+    "requires": "{canUppercut()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {CanReachLocation(Fourteen Carrot - Level Complete)} and {CanReachLocation(A Diamondus Forever - Level Complete)} and {CanReachLocation(Marinated Rabbit - Level Complete)} and {CanReachLocation(Beach Bunny Bingo - Level Complete)} and {CanReachLocation(Funky Grooveathon - Level Complete)})",
+    "_comment": "R:A11    TNT has to be brought here from several levels back, and vine traversal is required to get the ammo from there."
+  },
+  "Electric Boogaloo - Second Pinball Section": {
+    "connects_to": [
+      "Electric Boogaloo - Final Section"
+    ],
+    "_comment": "R:M5"
+  },
+  "Electric Boogaloo - Final Section": {
+    "connects_to": [
+      "Electric Boogaloo - Exit",
+      "Electric Boogaloo - Bonus Warp Area",
+      "Electric Boogaloo - Second Freezer Power Up Behind Sidekick Blocks Secret",
+      "Electric Boogaloo - Six Silver Coins Surrounded by Breakable Blocks Secret",
+      "Electric Boogaloo - Extra Life Above Uppercut Blocks Secret",
+      "Electric Boogaloo - Fruit Behind Sidekick Blocks Secret"
+    ],
+    "_comment": "R:M6"
+  },
+  "Electric Boogaloo - Bonus Warp Area": {
+    "connects_to": [
+      "Electric Boogaloo - Final Section"
+    ],
+    "_comment": "R:B1    Requirement TBD"
+  },
+  "Electric Boogaloo - Second Freezer Power Up Behind Sidekick Blocks Secret": {
+    "connects_to": [
+      "Electric Boogaloo - Final Section"
+    ],
+    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {CanReachLocation(Fourteen Carrot - Level Complete)} and {CanReachLocation(A Diamondus Forever - Level Complete)} and {CanReachLocation(Marinated Rabbit - Level Complete)} and {CanReachLocation(Beach Bunny Bingo - Level Complete)} and {CanReachLocation(Funky Grooveathon - Level Complete)})",
+    "_comment": "R:A12    TNT has to be brought here from several levels back, and vine traversal is required to get the ammo from there."
+  },
+  "Electric Boogaloo - Six Silver Coins Surrounded by Breakable Blocks Secret": {
+    "connects_to": [
+      "Electric Boogaloo - Final Section"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A13"
+  },
+  "Electric Boogaloo - Extra Life Above Uppercut Blocks Secret": {
+    "connects_to": [
+      "Electric Boogaloo - Final Section"
+    ],
+    "_comment": "R:A14"
+  },
+  "Electric Boogaloo - Fruit Behind Sidekick Blocks Secret": {
+    "connects_to": [
+      "Electric Boogaloo - Final Section"
+    ],
+    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {CanReachLocation(Fourteen Carrot - Level Complete)} and {CanReachLocation(A Diamondus Forever - Level Complete)} and {CanReachLocation(Marinated Rabbit - Level Complete)} and {CanReachLocation(Beach Bunny Bingo - Level Complete)} and {CanReachLocation(Funky Grooveathon - Level Complete)})",
+    "_comment": "R:A15    TNT has to be brought here from several levels back, and vine traversal is required to get the ammo from there."
+  },
   "Electric Boogaloo - Exit": {
     "connects_to": [
-      "Voltage Village - Start"
+      "Voltage Village - Jazz Start",
+      "Voltage Village - Spaz Start"
     ]
   },
-  "Voltage Village - Start": {
+  "Voltage Village - Jazz Start": {
+    "connects_to": [
+      "Voltage Village - Shared Path Start",
+      "Voltage Village - Jazz Only TNT Ammo Behind Uppercut Blocks Secret"
+    ],
+    "requires": "(|Jazz Unlock| or |Lori Unlock|) and (|Voltage Village Unlock| or |Flashback Progressive Level Unlock:4|)",
+    "_comment": "R:J0"
+  },
+  "Voltage Village - Jazz Only TNT Ammo Behind Uppercut Blocks Secret": {
+    "connects_to": [
+      "Voltage Village - Jazz Start"
+    ],
+    "requires": "{canUppercut()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {CanReachLocation(Electric Boogaloo - Level Complete)} and {CanReachLocation(Fourteen Carrot - Level Complete)} and {CanReachLocation(A Diamondus Forever - Level Complete)} and {CanReachLocation(Marinated Rabbit - Level Complete)} and {CanReachLocation(Beach Bunny Bingo - Level Complete)} and {CanReachLocation(Funky Grooveathon - Level Complete)})",
+    "_comment": "R:A1    Again, if uppercut is blocked, TNT has to be brought here from several levels back, and vine traversal is required to get the ammo from there."
+  },
+  "Voltage Village - Spaz Start": {
+    "connects_to": [
+      "Voltage Village - Spaz After First Destructible Blocks"
+    ],
+    "requires": "|Spaz Unlock| and (|Voltage Village Unlock| or |Flashback Progressive Level Unlock:4|)",
+    "_comment": "R:S0"
+  },
+  "Voltage Village - Spaz After First Destructible Blocks": {
+    "connects_to": [
+      "Voltage Village - Spaz Start",
+      "Voltage Village - Spaz After Second Destructible Blocks"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:S1"
+  },
+  "Voltage Village - Spaz After Second Destructible Blocks": {
+    "connects_to": [
+      "Voltage Village - Spaz After First Destructible Blocks",
+      "Voltage Village - Spaz After Third Destructible Blocks",
+      "Voltage Village - Spaz Only Toaster Ammo Above Main Path Secret"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:S2"
+  },
+  "Voltage Village - Spaz Only Toaster Ammo Above Main Path Secret": {
+    "connects_to": [
+      "Voltage Village - Spaz After Second Destructible Blocks"
+    ],
+    "_comment": "R:A2"
+  },
+  "Voltage Village - Spaz After Third Destructible Blocks": {
+    "connects_to": [
+      "Voltage Village - Spaz After Second Destructible Blocks",
+      "Voltage Village - Shared Path Start"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:S3"
+  },
+  "Voltage Village - Shared Path Start": {
+    "connects_to": [
+      "Voltage Village - Pinball Section and Beyond",
+      "Voltage Village - Four Silver Coins and Extra Life Below TNT Blocks Secret",
+      "Voltage Village - Fruit Behind Uppercut Blocks Secret",
+      "Voltage Village - Two Gold Coins Behind Multiple Obstacles Secret",
+      "Voltage Village - Four Silver Coins Behind Breakable Blocks Secret",
+      "Voltage Village - Red Gems Above Uppercut Blocks Secret"
+    ],
+    "_comment": "R:M1"
+  },
+  "Voltage Village - Four Silver Coins and Extra Life Below TNT Blocks Secret": {
+    "connects_to": [
+      "Voltage Village - Shared Path Start"
+    ],
+    "requires": "{canDestroyTNTBlocks()}",
+    "_comment": "R:A3    TNT is available early on on the shared path, so bringing some from another level is no longer necessary."
+  },
+  "Voltage Village - Fruit Behind Uppercut Blocks Secret": {
+    "connects_to": [
+      "Voltage Village - Shared Path Start"
+    ],
+    "requires": "{canUppercut()} or ({canDestroyButtstompBlocks()} and |TNT Permit|)",
+    "_comment": "R:A4"
+  },
+  "Voltage Village - Two Gold Coins Behind Multiple Obstacles Secret": {
+    "connects_to": [
+      "Voltage Village - Shared Path Start"
+    ],
+    "requires": "{canDestroyTNTBlocks()} and {canDestroyWildcardBlocks()} and |Toaster Permit|",
+    "_comment": "R:A5"
+  },
+  "Voltage Village - Four Silver Coins Behind Breakable Blocks Secret": {
+    "connects_to": [
+      "Voltage Village - Shared Path Start"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A6"
+  },
+  "Voltage Village - Red Gems Above Uppercut Blocks Secret": {
+    "connects_to": [
+      "Voltage Village - Shared Path Start"
+    ],
+    "requires": "{canUppercut()} or ({canDestroyButtstompBlocks()} and |TNT Permit|)",
+    "_comment": "R:A7"
+  },
+  "Voltage Village - Pinball Section and Beyond": {
+    "connects_to": [
+      "Voltage Village - Small Room After Warp",
+      "Voltage Village - Bonus Warp Area"
+    ],
+    "_comment": "R:M2"
+  },
+  "Voltage Village - Bonus Warp Area": {
+    "connects_to": [
+      "Voltage Village - Pinball Section and Beyond"
+    ],
+    "_comment": "R:B1    Requirement TBD"
+  },
+  "Voltage Village - Small Room After Warp": {
+    "connects_to": [
+      "Voltage Village - Room With Vine and Fruit"
+    ],
+    "_comment": "R:M3"
+  },
+  "Voltage Village - Room With Vine and Fruit": {
+    "connects_to": [
+      "Voltage Village - Room After Breakable Blocks Near Exit",
+      "Voltage Village - Fruit Above Vine"
+    ],
+    "_comment": "R:M4"
+  },
+  "Voltage Village - Fruit Above Vine": {
+    "connects_to": [
+      "Voltage Village - Room After Breakable Blocks Near Exit"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A8"
+  },
+  "Voltage Village - Room After Breakable Blocks Near Exit": {
+    "connects_to": [
+      "Voltage Village - Room With Vine and Fruit",
+      "Voltage Village - Final Section"
+    ],
+    "_comment": "R:M5"
+  },
+  "Voltage Village - Final Section": {
     "connects_to": [
       "Voltage Village - Exit"
     ],
-    "requires": "|Voltage Village Unlock| or |Flashback Progressive Level Unlock:4|"
+    "_comment": "R:M6"
   },
-
-
-
-
-
   "Voltage Village - Exit": {
     "connects_to": [
       "Medieval Kineval - Start"

@@ -857,7 +857,7 @@
       "sort-key": "02-06-01-SavePoint"
     },
     {
-      "name": "Marinated Rabbit - Bonus Warp Area",
+      "name": "Marinated Rabbit - Bonus Warp",
       "category": [
         "Episode: Jazz in Time",
         "Marinated Rabbit",
@@ -885,6 +885,96 @@
       "sort-key": "02-06-99-Complete"
     },
     {
+      "name": "A Diamondus Forever - Save Point 1 (80, 33)",
+      "category": [
+        "Episode: Flashback",
+        "A Diamondus Forever",
+        "Save Point Locations"
+      ],
+      "region": "A Diamondus Forever - Spaz Cave Upper Section",
+      "sort-key": "03-01-00-SavePoint"
+    },
+    {
+      "name": "A Diamondus Forever - Save Point 2 (133, 23)",
+      "category": [
+        "Episode: Flashback",
+        "A Diamondus Forever",
+        "Save Point Locations"
+      ],
+      "region": "A Diamondus Forever - Shared Path Start",
+      "sort-key": "03-01-01-SavePoint"
+    },
+    {
+      "name": "A Diamondus Forever - Save Point 3 (228, 35)",
+      "category": [
+        "Episode: Flashback",
+        "A Diamondus Forever",
+        "Save Point Locations"
+      ],
+      "region": "A Diamondus Forever - Around Second Shared Save Point",
+      "sort-key": "03-01-01-SavePoint"
+    },
+    {
+      "name": "A Diamondus Forever - Sign 1 (118, 20)",
+      "category": [
+        "Episode: Flashback",
+        "A Diamondus Forever",
+        "Sign Locations"
+      ],
+      "region": "A Diamondus Forever - Jazz Silly Sign Detour Third Room",
+      "sort-key": "03-01-20-Sign"
+    },
+    {
+      "name": "A Diamondus Forever - Sign 2 (106, 4)",
+      "category": [
+        "Episode: Flashback",
+        "A Diamondus Forever",
+        "Sign Locations"
+      ],
+      "region": "A Diamondus Forever - Jazz Silly Sign Detour Fourth Room",
+      "sort-key": "03-01-21-Sign"
+    },
+    {
+      "name": "A Diamondus Forever - Sign 3 (38, 50)",
+      "category": [
+        "Episode: Flashback",
+        "A Diamondus Forever",
+        "Sign Locations"
+      ],
+      "region": "A Diamondus Forever - Spaz Buttstomp Cavern Below First Room",
+      "sort-key": "03-01-22-Sign"
+    },
+    {
+      "name": "A Diamondus Forever - Sign 4 (111, 62)",
+      "category": [
+        "Episode: Flashback",
+        "A Diamondus Forever",
+        "Sign Locations"
+      ],
+      "region": "A Diamondus Forever - Spaz Fruit, Gems and Two Gold Coins Secret",
+      "sort-key": "03-01-23-Sign"
+    },
+    {
+      "name": "A Diamondus Forever - Sign 5 (155, 30)",
+      "category": [
+        "Episode: Flashback",
+        "A Diamondus Forever",
+        "Sign Locations"
+      ],
+      "region": "A Diamondus Forever - Shared Path Start",
+      "sort-key": "03-01-24-Sign"
+    },
+    {
+      "name": "A Diamondus Forever - Bonus Warp",
+      "category": [
+        "Episode: Flashback",
+        "A Diamondus Forever",
+        "Bonus Warp Locations"
+      ],
+      "region": "A Diamondus Forever - Bonus Warp Area",
+      "sort-key": "03-01-90-Bonus"
+    },
+    {
       "name": "A Diamondus Forever - Level Complete",
       "category": [
         "Episode: Flashback",
@@ -892,6 +982,86 @@
       ],
       "region": "A Diamondus Forever - Exit",
       "sort-key": "03-01-99-Complete"
+    },
+    {
+      "name": "Fourteen Carrot - Save Point 1 (55, 27)",
+      "category": [
+        "Episode: Flashback",
+        "Fourteen Carrot",
+        "Save Point Locations"
+      ],
+      "region": "Fourteen Carrot - Start",
+      "sort-key": "03-02-00-SavePoint"
+    },
+    {
+      "name": "Fourteen Carrot - Save Point 2 (137, 35)",
+      "category": [
+        "Episode: Flashback",
+        "Fourteen Carrot",
+        "Save Point Locations"
+      ],
+      "region": "Fourteen Carrot - Middle Section Around Second Save Point",
+      "sort-key": "03-02-01-SavePoint"
+    },
+    {
+      "name": "Fourteen Carrot - Save Point 3 (60, 57)",
+      "category": [
+        "Episode: Flashback",
+        "Fourteen Carrot",
+        "Save Point Locations"
+      ],
+      "region": "Fourteen Carrot - Lower Section with Third Save Point",
+      "sort-key": "03-02-02-SavePoint"
+    },
+    {
+      "name": "Fourteen Carrot - Sign 1 (69, 3)",
+      "category": [
+        "Episode: Flashback",
+        "Fourteen Carrot",
+        "Sign Locations"
+      ],
+      "region": "Fourteen Carrot - Gold Coin Behind Destructible Blocks Secret",
+      "sort-key": "03-02-20-Sign"
+    },
+    {
+      "name": "Fourteen Carrot - Sign 2 (186, 6)",
+      "category": [
+        "Episode: Flashback",
+        "Fourteen Carrot",
+        "Sign Locations"
+      ],
+      "region": "Fourteen Carrot - Six Silver Coins and Super Gem Above Frozen Spring Secret",
+      "sort-key": "03-02-21-Sign"
+    },
+    {
+      "name": "Fourteen Carrot - Sign 3 (63, 52)",
+      "category": [
+        "Episode: Flashback",
+        "Fourteen Carrot",
+        "Sign Locations"
+      ],
+      "region": "Fourteen Carrot - Small Cave Between One Ways Above Third Save Point Secret",
+      "sort-key": "03-02-22-Sign"
+    },
+    {
+      "name": "Fourteen Carrot - Sign 4 (105, 62)",
+      "category": [
+        "Episode: Flashback",
+        "Fourteen Carrot",
+        "Sign Locations"
+      ],
+      "region": "Fourteen Carrot - Lower Section with Third Save Point",
+      "sort-key": "03-02-23-Sign"
+    },
+    {
+      "name": "Fourteen Carrot - Bonus Warp",
+      "category": [
+        "Episode: Flashback",
+        "Fourteen Carrot",
+        "Bonus Warp Locations"
+      ],
+      "region": "Fourteen Carrot - Bonus Warp Area",
+      "sort-key": "03-02-90-Bonus"
     },
     {
       "name": "Fourteen Carrot - Level Complete",
@@ -903,6 +1073,36 @@
       "sort-key": "03-02-99-Complete"
     },
     {
+      "name": "Electric Boogaloo - Save Point 1 (147, 57)",
+      "category": [
+        "Episode: Flashback",
+        "Electric Boogaloo",
+        "Save Point Locations"
+      ],
+      "region": "Electric Boogaloo - Middle Section",
+      "sort-key": "03-03-00-SavePoint"
+    },
+    {
+      "name": "Electric Boogaloo - Save Point 2 (212, 55)",
+      "category": [
+        "Episode: Flashback",
+        "Electric Boogaloo",
+        "Save Point Locations"
+      ],
+      "region": "Electric Boogaloo - Final Section",
+      "sort-key": "03-03-01-SavePoint"
+    },
+    {
+      "name": "Electric Boogaloo - Bonus Warp",
+      "category": [
+        "Episode: Flashback",
+        "Electric Boogaloo",
+        "Bonus Warp Locations"
+      ],
+      "region": "Electric Boogaloo - Bonus Warp Area",
+      "sort-key": "03-03-90-Bonus"
+    },
+    {
       "name": "Electric Boogaloo - Level Complete",
       "category": [
         "Episode: Flashback",
@@ -910,6 +1110,26 @@
       ],
       "region": "Electric Boogaloo - Exit",
       "sort-key": "03-03-99-Complete"
+    },
+    {
+      "name": "Voltage Village - Save Point 1 (124, 25)",
+      "category": [
+        "Episode: Flashback",
+        "Voltage Village",
+        "Save Point Locations"
+      ],
+      "region": "Voltage Village - Shared Path Start",
+      "sort-key": "03-04-00-SavePoint"
+    },
+    {
+      "name": "Voltage Village - Bonus Warp",
+      "category": [
+        "Episode: Flashback",
+        "Voltage Village",
+        "Bonus Warp Locations"
+      ],
+      "region": "Voltage Village - Bonus Warp Area",
+      "sort-key": "03-04-90-Bonus"
     },
     {
       "name": "Voltage Village - Level Complete",

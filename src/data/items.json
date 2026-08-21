@@ -89,7 +89,7 @@
       "category": [
         "Weapon Unlock"
       ],
-      "useful": true
+      "progression": true
     },
     {
       "count": 1,
@@ -169,7 +169,7 @@
       "category": [
         "Level Movement Ability"
       ],
-      "useful": true
+      "progression": true
     },
     {
       "count": 1,
