@@ -40,14 +40,16 @@
       "Medieval Kineval - Start",
       "Hare Scare - Start",
       "Gargoyles Lair - Start",
-      "Thriller Gorilla - Start",
+      "Thriller Gorilla - Jazz Start",
+      "Thriller Gorilla - Spaz Start",
       "Jungle Jump - Start",
       "A Cold Day in Heck - Start",
       "Rabbit Roast - Start",
       "Burnin Biscuits - Start",
       "Bad Pitt - Start",
       "Darn Ratz - Start",
-      "Retro Rabbit - Start",
+      "Retro Rabbit - Jazz Start",
+      "Retro Rabbit - Spaz Start",
       "Frog Stomp - Start",
       "Easter Bunny - Start",
       "Spring Chickens - Start",
@@ -59,7 +61,8 @@
       "Suburbia Commando - Start",
       "Urban Brawl - Start",
       "Snow Bunnies - Start",
-      "Dashing thru the snow.. - Start",
+      "Dashing thru the snow.. - Jazz Start",
+      "Dashing thru the snow.. - Spaz Start",
       "Tinsel Town - Start"
     ],
     "requires": "{YamlEnabled(allow_levels_out_of_order)}"
@@ -86,7 +89,8 @@
   },
   "Episode: Funky Monkeys": {
     "connects_to": [
-      "Thriller Gorilla - Start"
+      "Thriller Gorilla - Jazz Start",
+      "Thriller Gorilla - Spaz Start"
     ],
     "requires": "|Thriller Gorilla Unlock| or |Funky Monkeys Progressive Level Unlock:1|"
   },
@@ -2361,6 +2365,11 @@
       "Gargoyles Lair - Start"
     ]
   },
+  "Medieval Kineval - After Return From Secret Level": {
+    "connects_to": [
+      "Medieval Kineval - Start"
+    ]
+  },
   "Hare Scare - Start": {
     "connects_to": [
       "Hare Scare - Exit"
@@ -2374,7 +2383,8 @@
 
   "Hare Scare - Exit": {
     "connects_to": [
-      "Thriller Gorilla - Start"
+      "Thriller Gorilla - Jazz Start",
+      "Thriller Gorilla - Spaz Start"
     ]
   },
   "Gargoyles Lair - Start": {
@@ -2390,14 +2400,20 @@
 
   "Gargoyles Lair - Exit": {
     "connects_to": [
-      "Medieval Kineval - Start"
+      "Medieval Kineval - After Return From Secret Level"
     ]
   },
-  "Thriller Gorilla - Start": {
+  "Thriller Gorilla - Jazz Start": {
     "connects_to": [
       "Thriller Gorilla - Exit"
     ],
-    "requires": "|Thriller Gorilla Unlock| or |Funky Monkeys Progressive Level Unlock:1|"
+    "requires": "(|Jazz Unlock| or |Lori Unlock|) and (|Thriller Gorilla Unlock| or |Funky Monkeys Progressive Level Unlock:1|)"
+  },
+  "Thriller Gorilla - Spaz Start": {
+    "connects_to": [
+      "Thriller Gorilla - Exit"
+    ],
+    "requires": "|Spaz Unlock| and (|Thriller Gorilla Unlock| or |Funky Monkeys Progressive Level Unlock:1|)"
   },
 
 
@@ -2500,14 +2516,21 @@
 
   "Darn Ratz - Exit": {
     "connects_to": [
-      "Retro Rabbit - Start"
+      "Retro Rabbit - Jazz Start",
+      "Retro Rabbit - Spaz Start"
     ]
   },
-  "Retro Rabbit - Start": {
+  "Retro Rabbit - Jazz Start": {
     "connects_to": [
       "Retro Rabbit - Exit"
     ],
-    "requires": "|Retro Rabbit Unlock| or |Shareware Demo Progressive Level Unlock:2|"
+    "requires": "(|Jazz Unlock| or |Lori Unlock|) and (|Retro Rabbit Unlock| or |Shareware Demo Progressive Level Unlock:2|)"
+  },
+  "Retro Rabbit - Spaz Start": {
+    "connects_to": [
+      "Retro Rabbit - Exit"
+    ],
+    "requires": "|Spaz Unlock| and (|Retro Rabbit Unlock| or |Shareware Demo Progressive Level Unlock:2|)"
   },
 
 
@@ -2689,14 +2712,21 @@
 
   "Snow Bunnies - Exit": {
     "connects_to": [
-      "Dashing thru the snow.. - Start"
+      "Dashing thru the snow.. - Jazz Start",
+      "Dashing thru the snow.. - Spaz Start"
     ]
   },
-  "Dashing thru the snow.. - Start": {
+  "Dashing thru the snow.. - Jazz Start": {
     "connects_to": [
       "Dashing thru the snow.. - Exit"
     ],
-    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and (|Dashing thru the snow.. Unlock| or |Christmas Chronicles Progressive Level Unlock:2|)"
+    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and (|Jazz Unlock| or |Lori Unlock|) and (|Dashing thru the snow.. Unlock| or |Christmas Chronicles Progressive Level Unlock:2|)"
+  },
+  "Dashing thru the snow.. - Spaz Start": {
+    "connects_to": [
+      "Dashing thru the snow.. - Exit"
+    ],
+    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and |Spaz Unlock| and (|Dashing thru the snow.. Unlock| or |Christmas Chronicles Progressive Level Unlock:2|)"
   },
 
 
