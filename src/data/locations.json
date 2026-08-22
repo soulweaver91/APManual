@@ -1141,6 +1141,56 @@
       "sort-key": "03-04-99-Complete"
     },
     {
+      "name": "Medieval Kineval - Save Point 1 (184, 52)",
+      "category": [
+        "Episode: Flashback",
+        "Medieval Kineval",
+        "Save Point Locations"
+      ],
+      "region": "Medieval Kineval - Around Save Point",
+      "sort-key": "03-05-00-SavePoint"
+    },
+    {
+      "name": "Medieval Kineval - Sign 1 (178, 52)",
+      "category": [
+        "Episode: Flashback",
+        "Medieval Kineval",
+        "Sign Locations"
+      ],
+      "region": "Medieval Kineval - After Either Trigger Crate or Vine",
+      "sort-key": "03-02-20-Sign"
+    },
+    {
+      "name": "Medieval Kineval - Sign 2 (176, 30)",
+      "category": [
+        "Episode: Flashback",
+        "Medieval Kineval",
+        "Sign Locations"
+      ],
+      "region": "Medieval Kineval - Gold Coins After Trigger Crate Detour Secret",
+      "sort-key": "03-02-21-Sign"
+    },
+    {
+      "name": "Medieval Kineval - Sign 3 (206, 24)",
+      "category": [
+        "Episode: Flashback",
+        "Medieval Kineval",
+        "Sign Locations"
+      ],
+      "region": "Medieval Kineval - Secret Level Exit",
+      "sort-key": "03-02-22-Sign"
+    },
+    {
+      "name": "Medieval Kineval - Bonus Warp",
+      "category": [
+        "Episode: Flashback",
+        "Medieval Kineval",
+        "Bonus Warp Locations"
+      ],
+      "region": "Medieval Kineval - Bonus Warp Area",
+      "sort-key": "03-05-90-Bonus"
+    },
+    {
       "name": "Medieval Kineval - Level Complete",
       "category": [
         "Episode: Flashback",
@@ -1148,6 +1198,36 @@
       ],
       "region": "Medieval Kineval - Exit",
       "sort-key": "03-05-99-Complete"
+    },
+    {
+      "name": "Hare Scare - Save Point 1 (19, 25)",
+      "category": [
+        "Episode: Flashback",
+        "Hare Scare",
+        "Save Point Locations"
+      ],
+      "region": "Hare Scare - First Drop Near First Save Point",
+      "sort-key": "03-06-00-SavePoint"
+    },
+    {
+      "name": "Hare Scare - Save Point 2 (34, 8)",
+      "category": [
+        "Episode: Flashback",
+        "Hare Scare",
+        "Save Point Locations"
+      ],
+      "region": "Hare Scare - Second Climb Top Room to Second Fall to Third Climb First Windowsills Section",
+      "sort-key": "03-06-01-SavePoint"
+    },
+    {
+      "name": "Hare Scare - Bonus Warp",
+      "category": [
+        "Episode: Flashback",
+        "Hare Scare",
+        "Bonus Warp Locations"
+      ],
+      "region": "Hare Scare - Bonus Warp Area",
+      "sort-key": "03-06-90-Bonus"
     },
     {
       "name": "Hare Scare - Bolly Defeated",
@@ -1166,6 +1246,56 @@
       ],
       "region": "Hare Scare - Exit",
       "sort-key": "03-06-99-Complete"
+    },
+    {
+      "name": "Gargoyles Lair - Sign 1 (49, 19)",
+      "category": [
+        "Episode: Flashback",
+        "Gargoyles Lair",
+        "Sign Locations"
+      ],
+      "region": "Gargoyles Lair - Start",
+      "sort-key": "03-07-20-Sign"
+    },
+    {
+      "name": "Gargoyles Lair - Sign 2 (119, 18)",
+      "category": [
+        "Episode: Flashback",
+        "Gargoyles Lair",
+        "Sign Locations"
+      ],
+      "region": "Gargoyles Lair - Main Section",
+      "sort-key": "03-07-21-Sign"
+    },
+    {
+      "name": "Gargoyles Lair - Sign 3 (92, 39)",
+      "category": [
+        "Episode: Flashback",
+        "Gargoyles Lair",
+        "Sign Locations"
+      ],
+      "region": "Gargoyles Lair - Room with Green Gems and Gold Coin Secret",
+      "sort-key": "03-07-22-Sign"
+    },
+    {
+      "name": "Gargoyles Lair - Sign 4 (99, 39)",
+      "category": [
+        "Episode: Flashback",
+        "Gargoyles Lair",
+        "Sign Locations"
+      ],
+      "region": "Gargoyles Lair - Room with Green Gems and Gold Coin Secret",
+      "sort-key": "03-07-23-Sign"
+    },
+    {
+      "name": "Gargoyles Lair - Bonus Warp",
+      "category": [
+        "Episode: Flashback",
+        "Gargoyles Lair",
+        "Bonus Warp Locations"
+      ],
+      "region": "Gargoyles Lair - Bonus Warp Area",
+      "sort-key": "03-07-90-Bonus"
     },
     {
       "name": "Gargoyles Lair - Level Complete",

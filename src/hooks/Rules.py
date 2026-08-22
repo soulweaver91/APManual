@@ -67,3 +67,9 @@ def canGrabHooks():
 
 def canSwim():
     return "|Swimming Unlock| or {YamlDisabled(basic_movement_in_pool)}"
+
+def CanReachRegion(state: CollectionState, player: int, location: str) -> bool:
+    """Can the player reach the given region?"""
+    if state.can_reach_region(location, player):
+        return True
+    return False

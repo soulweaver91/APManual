@@ -2345,42 +2345,273 @@
   },
   "Medieval Kineval - Start": {
     "connects_to": [
-      "Medieval Kineval - Exit",
-      "Medieval Kineval - Secret Level Exit"
+      "Medieval Kineval - After Either Trigger Crate or Vine",
+      "Medieval Kineval - Birdy and Two Gold Coins Below Rope Bridge Secret"
     ],
-    "requires": "|Medieval Kineval Unlock| or |Flashback Progressive Level Unlock:5|"
+    "requires": "|Medieval Kineval Unlock| or |Flashback Progressive Level Unlock:5|",
+    "_comment": "R:M0"
   },
-
-
-
-
-
+  "Medieval Kineval - Birdy and Two Gold Coins Below Rope Bridge Secret": {
+    "connects_to": [
+      "Medieval Kineval - Start"
+    ],
+    "_comment": "R:A1"
+  },
+  "Medieval Kineval - After Either Trigger Crate or Vine": {
+    "connects_to": [
+      "Medieval Kineval - Start",
+      "Medieval Kineval - Around Save Point",
+      "Medieval Kineval - Secret Level Exit",
+      "Medieval Kineval - Electro Blaster Ammo Above Vine",
+      "Medieval Kineval - Green Gems, Extra Life Crate and Gem Crate Behind Blocks Secret"
+    ],
+    "_comment": "R:M1"
+  },
+  "Medieval Kineval - Electro Blaster Ammo Above Vine": {
+    "connects_to": [
+      "Medieval Kineval - After Either Trigger Crate or Vine"
+    ],
+    "_comment": "R:A2"
+  },
+  "Medieval Kineval - Green Gems, Extra Life Crate and Gem Crate Behind Blocks Secret": {
+    "connects_to": [
+      "Medieval Kineval - After Either Trigger Crate or Vine"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A3"
+  },
+  "Medieval Kineval - Around Save Point": {
+    "connects_to": [
+      "Medieval Kineval - After Either Trigger Crate or Vine",
+      "Medieval Kineval - Trigger Crate Detour First Room",
+      "Medieval Kineval - Bonus Warp Area"
+    ],
+    "_comment": "R:M2"
+  },
+  "Medieval Kineval - Trigger Crate Detour First Room": {
+    "connects_to": [
+      "Medieval Kineval - Trigger Crate Detour Second Room"
+    ],
+    "_comment": "R:A4"
+  },
+  "Medieval Kineval - Trigger Crate Detour Second Room": {
+    "connects_to": [
+      "Medieval Kineval - Around Save Point",
+      "Medieval Kineval - Gold Coins After Trigger Crate Detour Secret"
+    ],
+    "_comment": "R:A5"
+  },
+  "Medieval Kineval - Gold Coins After Trigger Crate Detour Secret": {
+    "connects_to": [
+      "Medieval Kineval - Around Save Point"
+    ],
+    "_comment": "R:A6"
+  },
+  "Medieval Kineval - Secret Level Exit": {
+    "connects_to": [
+      "Gargoyles Lair - Start"
+    ],
+    "_comment": "R:A7    Can be reached with dashing only as long as the trigger scenery blocks haven't been removed. Otherwise likely requires DJ/UC+CE."
+  },
+  "Medieval Kineval - After Return From Secret Level": {
+    "connects_to": [
+      "Medieval Kineval - After Either Trigger Crate or Vine"
+    ],
+    "_comment": "R:C1    Technically the region connections here make it possible to loop back to the secret level warp again, which is something that vanilla JJ2 allows (to the detriment of possibly getting stuck in a secret level loop). JJ2+ fixes this AFAIK. Then again, this shouldn't have any consequences as far as AP is concerned."
+  },
+  "Medieval Kineval - Hooks Near Bonus Warp": {
+    "connects_to": [
+      "Medieval Kineval - Around Save Point",
+      "Medieval Kineval - Room With Double Warp Entrance",
+      "Medieval Kineval - Triple Crates Behind Blocks Secret"
+    ],
+    "_comment": "R:M3"
+  },
+  "Medieval Kineval - Triple Crates Behind Blocks Secret": {
+    "connects_to": [
+      "Medieval Kineval - Hooks Near Bonus Warp"
+    ],
+    "_comment": "R:A8"
+  },
+  "Medieval Kineval - Room With Double Warp Entrance": {
+    "connects_to": [
+      "Medieval Kineval - Hooks Near Bonus Warp",
+      "Medieval Kineval - Room with Gargoyle Statue Between Warps"
+    ],
+    "_comment": "R:M4"
+  },
+  "Medieval Kineval - Room with Gargoyle Statue Between Warps": {
+    "connects_to": [
+      "Medieval Kineval - After Double Warp"
+    ],
+    "_comment": "R:M5"
+  },
+  "Medieval Kineval - After Double Warp": {
+    "connects_to": [
+      "Medieval Kineval - Above Hooks and Alternating Platforms"
+    ],
+    "_comment": "R:M6"
+  },
+  "Medieval Kineval - Bonus Warp Area": {
+    "connects_to": [
+      "Medieval Kineval - After Double Warp"
+    ],
+    "_comment": "R:B1    Requirement TBD"
+  },
+  "Medieval Kineval - Above Hooks and Alternating Platforms": {
+    "connects_to": [
+      "Medieval Kineval - After Double Warp",
+      "Medieval Kineval - Between Ascending Vines"
+    ],
+    "requires": "{canGrabHooks()}",
+    "_comment": "R:M7"
+  },
+  "Medieval Kineval - Between Ascending Vines": {
+    "connects_to": [
+      "Medieval Kineval - Above Hooks and Alternating Platforms",
+      "Medieval Kineval - Above Ascending Vines"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M8"
+  },
+  "Medieval Kineval - Above Ascending Vines": {
+    "connects_to": [
+      "Medieval Kineval - Between Ascending Vines",
+      "Medieval Kineval - Final Section"
+    ],
+    "_comment": "R:M9"
+  },
+  "Medieval Kineval - Final Section": {
+    "connects_to": [
+      "Medieval Kineval - Exit"
+    ],
+    "_comment": "R:M10"
+  },
   "Medieval Kineval - Exit": {
     "connects_to": [
       "Hare Scare - Start"
     ]
   },
-  "Medieval Kineval - Secret Level Exit": {
-    "connects_to": [
-      "Gargoyles Lair - Start"
-    ]
-  },
-  "Medieval Kineval - After Return From Secret Level": {
-    "connects_to": [
-      "Medieval Kineval - Start"
-    ]
-  },
   "Hare Scare - Start": {
+    "connects_to": [
+      "Hare Scare - First Climb RF Ammo Over Spikes Section"
+    ],
+    "requires": "|Hare Scare Unlock| or |Flashback Progressive Level Unlock:6|",
+    "_comment": "R:M0"
+  },
+  "Hare Scare - First Climb RF Ammo Over Spikes Section": {
+    "connects_to": [
+      "Hare Scare - Start",
+      "Hare Scare - First Climb Windowsills Section"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M1"
+  },
+  "Hare Scare - First Climb Windowsills Section": {
+    "connects_to": [
+      "Hare Scare - First Climb RF Ammo Over Spikes Section",
+      "Hare Scare - First Climb Red Spring and Helmuts Section",
+      "Hare Scare - Two Silver Coins Below Vines Secret",
+      "Hare Scare - Two Silver Coins High Above Room Secret"
+    ],
+    "_comment": "R:M2"
+  },
+  "Hare Scare - Two Silver Coins Below Vines Secret": {
+    "connects_to": [
+      "Hare Scare - First Climb Windowsills Section"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A1"
+  },
+  "Hare Scare - Two Silver Coins High Above Room Secret": {
+    "connects_to": [
+      "Hare Scare - First Climb Red Spring and Helmuts Section"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A2"
+  },
+  "Hare Scare - First Climb Red Spring and Helmuts Section": {
+    "connects_to": [
+      "Hare Scare - First Climb Windowsills Section",
+      "Hare Scare - First Climb Top Room"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M3"
+  },
+  "Hare Scare - First Climb Top Room": {
+    "connects_to": [
+      "Hare Scare - First Climb Red Spring and Helmuts Section",
+      "Hare Scare - First Drop Near First Save Point"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M4"
+  },
+  "Hare Scare - First Drop Near First Save Point": {
+    "connects_to": [
+      "Hare Scare - First Drop Between Vines"
+    ],
+    "_comment": "R:M5"
+  },
+  "Hare Scare - First Drop Between Vines": {
+    "connects_to": [
+      "Hare Scare - Second Climb Windowsills Near Bottom Section"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M6"
+  },
+  "Hare Scare - Second Climb Windowsills Near Bottom Section": {
+    "connects_to": [
+      "Hare Scare - Second Climb 3D Boll Room"
+    ],
+    "_comment": "R:M7"
+  },
+  "Hare Scare - Second Climb 3D Boll Room": {
+    "connects_to": [
+      "Hare Scare - Second Climb Windowsills Near Bottom Section",
+      "Hare Scare - Second Climb Top Room to Second Fall to Third Climb First Windowsills Section"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M8"
+  },
+  "Hare Scare - Second Climb Top Room to Second Fall to Third Climb First Windowsills Section": {
+    "connects_to": [
+      "Hare Scare - Second Climb 3D Boll Room",
+      "Hare Scare - Third Climb Gem Crate Section",
+      "Hare Scare - Bonus Warp Area"
+    ],
+    "exit_requires": {
+      "Hare Scare - Second Climb 3D Boll Room": "{canDoubleJump()} or {canUppercut()}"
+    },
+    "_comment": "R:M9    The entire second fall can be backtracked by riding on the 3D Bolls with sufficient movement abilities."
+  },
+  "Hare Scare - Bonus Warp Area": {
+    "connects_to": [
+      "Hare Scare - Second Climb Top Room to Second Fall to Third Climb First Windowsills Section"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:B1"
+  },
+  "Hare Scare - Third Climb Gem Crate Section": {
+    "connects_to": [
+      "Hare Scare - Second Climb Top Room to Second Fall to Third Climb First Windowsills Section",
+      "Hare Scare - Third Climb Second Windowsills Section"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M10"
+  },
+  "Hare Scare - Third Climb Second Windowsills Section": {
+    "connects_to": [
+      "Hare Scare - Third Climb Gem Crate Section",
+      "Hare Scare - Boss Room"
+    ],
+    "_comment": "R:M11"
+  },
+  "Hare Scare - Boss Room": {
     "connects_to": [
       "Hare Scare - Exit"
     ],
-    "requires": "|Hare Scare Unlock| or |Flashback Progressive Level Unlock:6|"
+    "_comment": "R:M11"
   },
-
-
-
-
-
   "Hare Scare - Exit": {
     "connects_to": [
       "Thriller Gorilla - Jazz Start",
@@ -2389,15 +2620,109 @@
   },
   "Gargoyles Lair - Start": {
     "connects_to": [
+      "Gargoyles Lair - First Trigger Crate Enclave",
+      "Gargoyles Lair - Cakes Above Vine"
+    ],
+    "requires": "|Gargoyles Lair Unlock| or |Flashback Progressive Level Unlock:7|",
+    "_comment": "R:M0"
+  },
+  "Gargoyles Lair - Cakes Above Vine": {
+    "connects_to": [
+      "Gargoyles Lair - Start"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A1"
+  },
+  "Gargoyles Lair - First Trigger Crate Enclave": {
+    "connects_to": [
+      "Gargoyles Lair - Start",
+      "Gargoyles Lair - Second Trigger Crate Enclave"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M1"
+  },
+  "Gargoyles Lair - Second Trigger Crate Enclave": {
+    "connects_to": [
+      "Gargoyles Lair - Tunnel After Trigger Crates"
+    ],
+    "requires": "|Buttstomp Unlock| or {canSidekick()} or (|TNT Permit| and {CanReachLocation(Voltage Village - Level Complete)} and {CanReachRegion(Medieval Kineval - Secret Level Exit)})",
+    "_comment": "R:M2"
+  },
+  "Gargoyles Lair - Tunnel After Trigger Crates": {
+    "connects_to": [
+      "Gargoyles Lair - Main Section"
+    ],
+    "requires": "|Buttstomp Unlock| or {canSidekick()} or (|TNT Permit| and {CanReachLocation(Voltage Village - Level Complete)} and {CanReachRegion(Medieval Kineval - Secret Level Exit)})",
+    "_comment": "R:M3"
+  },
+  "Gargoyles Lair - Main Section": {
+    "connects_to": [
+      "Gargoyles Lair - After Final Trigger Crate",
+      "Gargoyles Lair - Room with Trigger Crate for Blue Spring Access Secret",
+      "Gargoyles Lair - Green Gems Behind Sidekick Blocks Secret",
+      "Gargoyles Lair - Room with Green Gems and Gold Coin Secret",
+      "Gargoyles Lair - Near Bonus Warp",
+      "Gargoyles Lair - Green Gems Behind Uppercut Blocks Secret"
+    ],
+    "_comment": "R:M4"
+  },
+  "Gargoyles Lair - Room with Trigger Crate for Blue Spring Access Secret": {
+    "connects_to": [
+      "Gargoyles Lair - Main Section",
+      "Gargoyles Lair - Extra Life Above Blue Spring Secret"
+    ],
+    "_comment": "R:A2"
+  },
+  "Gargoyles Lair - Extra Life Above Blue Spring Secret": {
+    "connects_to": [
+      "Gargoyles Lair - Main Section"
+    ],
+    "_comment": "R:A3"
+  },
+  "Gargoyles Lair - Green Gems Behind Sidekick Blocks Secret": {
+    "connects_to": [
+      "Gargoyles Lair - Main Section"
+    ],
+    "requires": "{canSidekick()} or (|TNT Permit| and {CanReachLocation(Voltage Village - Level Complete)} and {CanReachRegion(Medieval Kineval - Secret Level Exit)})",
+    "_comment": "R:A4"
+  },
+  "Gargoyles Lair - Room with Green Gems and Gold Coin Secret": {
+    "connects_to": [
+      "Gargoyles Lair - Main Section"
+    ],
+    "exit_requires": {
+      "Gargoyles Lair - Main Section": "|Toaster Permit|"
+    },
+    "_comment": "R:A5"
+  },
+  "Gargoyles Lair - Near Bonus Warp": {
+    "connects_to": [
+      "Gargoyles Lair - Main Section"
+    ],
+    "requires": "|Bouncer Permit| or {canUppercut()} or ({canGrabHooks()} and ({canCopter()} or {canDoubleJump()})) or (|TNT Permit| and {CanReachLocation(Voltage Village - Level Complete)} and {CanReachRegion(Medieval Kineval - Secret Level Exit)})",
+    "_comment": "R:A6"
+  },
+  "Gargoyles Lair - Green Gems Behind Uppercut Blocks Secret": {
+    "connects_to": [
+      "Gargoyles Lair - Main Section",
+      "Gargoyles Lair - Bonus Warp Area"
+    ],
+    "requires": "{canUppercut()} or (|TNT Permit| and {CanReachLocation(Voltage Village - Level Complete)} and {CanReachRegion(Medieval Kineval - Secret Level Exit)})",
+    "_comment": "R:A7"
+  },
+  "Gargoyles Lair - Bonus Warp Area": {
+    "connects_to": [
+      "Gargoyles Lair - Main Section"
+    ],
+    "_comment": "R:B1    Requirement TBD"
+  },
+  "Gargoyles Lair - After Final Trigger Crate": {
+    "connects_to": [
       "Gargoyles Lair - Exit"
     ],
-    "requires": "|Gargoyles Lair Unlock| or |Flashback Progressive Level Unlock:7|"
+    "requires": "{canDestroyWildcardBlocks()} or (|TNT Permit| and {CanReachLocation(Voltage Village - Level Complete)} and {CanReachRegion(Medieval Kineval - Secret Level Exit)})",
+    "_comment": "R:M5"
   },
-
-
-
-
-
   "Gargoyles Lair - Exit": {
     "connects_to": [
       "Medieval Kineval - After Return From Secret Level"
