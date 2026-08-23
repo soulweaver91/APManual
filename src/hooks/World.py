@@ -4,7 +4,7 @@ from worlds.AutoWorld import World
 from BaseClasses import MultiWorld, CollectionState, Item
 
 # Object classes from Manual -- extending AP core -- representing items and locations that are used in generation
-from ..Items import ManualItem, item_name_to_item
+from ..Items import ManualItem
 from ..Locations import ManualLocation
 from ..Helpers import get_option_value
 
@@ -74,7 +74,7 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
     # By default, only the first levels (plus the tutorial level) of each episode are eligible to be available at the start.
     # If levels are allowed to done in any order, any level is eligible to be a starting level, though.
     if get_option_value(multiworld, player, 'allow_levels_out_of_order') and get_option_value(multiworld, player, 'individual_level_unlock_keys'):
-        for item in item_name_to_item.values():
+        for item in item_table:
             if (
                 'category' in item.keys()
                 and 'Individual Level Unlocks' in item['category']
