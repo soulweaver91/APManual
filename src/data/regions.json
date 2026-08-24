@@ -2730,21 +2730,140 @@
   },
   "Thriller Gorilla - Jazz Start": {
     "connects_to": [
-      "Thriller Gorilla - Exit"
+      "Thriller Gorilla - Jazz Between First Two Trees"
     ],
-    "requires": "(|Jazz Unlock| or |Lori Unlock|) and (|Thriller Gorilla Unlock| or |Funky Monkeys Progressive Level Unlock:1|)"
+    "requires": "(|Jazz Unlock| or |Lori Unlock|) and (|Thriller Gorilla Unlock| or |Funky Monkeys Progressive Level Unlock:1|)",
+    "_comment": "R:J0"
+  },
+  "Thriller Gorilla - Jazz Between First Two Trees": {
+    "connects_to": [
+      "Thriller Gorilla - Jazz Start",
+      "Thriller Gorilla - Jazz Only Gold Coin Secret",
+      "Thriller Gorilla - Jazz After Second Tree"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:J1"
+  },
+  "Thriller Gorilla - Jazz Only Gold Coin Secret": {
+    "connects_to": [
+      "Thriller Gorilla - Jazz Between First Two Trees",
+      "Thriller Gorilla - Jazz After Second Tree"
+    ],
+    "_comment": "R:A1"
+  },
+  "Thriller Gorilla - Jazz After Second Tree": {
+    "connects_to": [
+      "Thriller Gorilla - Jazz Between First Two Trees",
+      "Thriller Gorilla - Jazz Only Detour Above Destructible Blocks Start",
+      "Thriller Gorilla - Shared Path Start"
+    ],
+    "_comment": "R:J2"
+  },
+  "Thriller Gorilla - Jazz Only Detour Above Destructible Blocks Start": {
+    "connects_to": [
+      "Thriller Gorilla - Jazz Between First Two Trees",
+      "Thriller Gorilla - Jazz Only Detour Above Destructible Blocks After Vine"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A2"
+  },
+  "Thriller Gorilla - Jazz Only Detour Above Destructible Blocks After Vine": {
+    "connects_to": [
+      "Thriller Gorilla - Jazz Only Detour Above Destructible Blocks Start",
+      "Thriller Gorilla - Around First Save Point"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A3"
   },
   "Thriller Gorilla - Spaz Start": {
     "connects_to": [
+      "Thriller Gorilla - Shared Path Start",
+      "Thriller Gorilla - Spaz Only Four Silver Coins Above Vine Secret"
+    ],
+    "requires": "|Spaz Unlock| and (|Thriller Gorilla Unlock| or |Funky Monkeys Progressive Level Unlock:1|)",
+    "_comment": "R:S0"
+  },
+  "Thriller Gorilla - Spaz Only Four Silver Coins Above Vine Secret": {
+    "connects_to": [
+      "Thriller Gorilla - Spaz Start"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A4"
+  },
+  "Thriller Gorilla - Shared Path Start": {
+    "connects_to": [
+      "Thriller Gorilla - After First Destructible Blocks in Rolling Rock Tunnel"
+    ],
+    "_comment": "R:M1"
+  },
+  "Thriller Gorilla - After First Destructible Blocks in Rolling Rock Tunnel": {
+    "connects_to": [
+      "Thriller Gorilla - Shared Path Start",
+      "Thriller Gorilla - After Second Destructible Blocks in Rolling Rock Tunnel"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M2"
+  },
+  "Thriller Gorilla - After Second Destructible Blocks in Rolling Rock Tunnel": {
+    "connects_to": [
+      "Thriller Gorilla - After First Destructible Blocks in Rolling Rock Tunnel",
+      "Thriller Gorilla - Around First Save Point"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M3"
+  },
+  "Thriller Gorilla - Around First Save Point": {
+    "connects_to": [
+      "Thriller Gorilla - Bonus Warp Behind Destructible Blocks",
+      "Thriller Gorilla - Extra Life Crate Between Trees Secret",
+      "Thriller Gorilla - Near Water Pool"
+    ],
+    "_comment": "R:M4"
+  },
+  "Thriller Gorilla - Bonus Warp Behind Destructible Blocks": {
+    "connects_to": [
+      "Thriller Gorilla - Around First Save Point",
+      "Thriller Gorilla - Bonus Warp Area"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A5"
+  },
+  "Thriller Gorilla - Bonus Warp Area": {
+    "connects_to": [
+      "Thriller Gorilla - Around First Save Point"
+    ],
+    "_comment": "R:B1    Requirement TBD"
+  },
+  "Thriller Gorilla - Extra Life Crate Between Trees Secret": {
+    "connects_to": [
+      "Thriller Gorilla - Around First Save Point"
+    ],
+    "_comment": "R:A6    Vine can be bypassed by going through the tree tunnel."
+  },
+  "Thriller Gorilla - Near Water Pool": {
+    "connects_to": [
+      "Thriller Gorilla - Around First Save Point",
+      "Thriller Gorilla - After Second Save Point"
+    ],
+    "exit_requires": {
+      "Thriller Gorilla - Around First Save Point": "{canUppercut()} or {canDoubleJump()}"
+    },
+    "_comment": "R:M5"
+  },
+  "Thriller Gorilla - After Second Save Point": {
+    "connects_to": [
+      "Thriller Gorilla - Exit Room"
+    ],
+    "_comment": "R:M6"
+  },
+  "Thriller Gorilla - Exit Room": {
+    "connects_to": [
+      "Thriller Gorilla - After Second Save Point",
       "Thriller Gorilla - Exit"
     ],
-    "requires": "|Spaz Unlock| and (|Thriller Gorilla Unlock| or |Funky Monkeys Progressive Level Unlock:1|)"
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M7"
   },
-
-
-
-
-
   "Thriller Gorilla - Exit": {
     "connects_to": [
       "Jungle Jump - Start"
@@ -2752,15 +2871,94 @@
   },
   "Jungle Jump - Start": {
     "connects_to": [
+      "Jungle Jump - Climb After Destructible Blocks Near Start"
+    ],
+    "requires": "|Jungle Jump Unlock| or |Funky Monkeys Progressive Level Unlock:2|",
+    "_comment": "R:M0"
+  },
+  "Jungle Jump - Climb After Destructible Blocks Near Start": {
+    "connects_to": [
+      "Jungle Jump - Start",
+      "Jungle Jump - Room with Rolling Rock After Super Gem",
+      "Jungle Jump - Extra Life and Bomb Crates Above Totems Secret"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M1"
+  },
+  "Jungle Jump - Extra Life and Bomb Crates Above Totems Secret": {
+    "connects_to": [
+      "Jungle Jump - Climb After Destructible Blocks Near Start"
+    ],
+    "requires": "{canGrabVines()} or {canUppercut()} or {canDoubleJump()}",
+    "_comment": "R:A1"
+  },
+  "Jungle Jump - Room with Rolling Rock After Super Gem": {
+    "connects_to": [
+      "Jungle Jump - Rolling Rock Tunnel After First Destructible Blocks"
+    ],
+    "_comment": "R:M2"
+  },
+  "Jungle Jump - Rolling Rock Tunnel After First Destructible Blocks": {
+    "connects_to": [
+      "Jungle Jump - Room with Rolling Rock After Super Gem",
+      "Jungle Jump - Rolling Rock Tunnel After Second Destructible Blocks"
+    ],
+    "exit_requires": {
+      "Jungle Jump - Room with Rolling Rock After Super Gem": "{canUppercut()} or {canDoubleJump()}"
+    },
+    "_comment": "R:M3"
+  },
+  "Jungle Jump - Rolling Rock Tunnel After Second Destructible Blocks": {
+    "connects_to": [
+      "Jungle Jump - Rolling Rock Tunnel After First Destructible Blocks",
+      "Jungle Jump - Around Save Point"
+    ],
+    "exit_requires": {
+      "Jungle Jump - Rolling Rock Tunnel After First Destructible Blocks": "|Freezer Permit|"
+    },
+    "_comment": "R:M4"
+  },
+  "Jungle Jump - Around Save Point": {
+    "connects_to": [
+      "Jungle Jump - After Chute After Save Point"
+    ],
+    "_comment": "R:M5"
+  },
+  "Jungle Jump - After Chute After Save Point": {
+    "connects_to": [
+      "Jungle Jump - Bonus Warp Area",
+      "Jungle Jump - Middle Level Section Near Exit"
+    ],
+    "_comment": "R:M6"
+  },
+  "Jungle Jump - Bonus Warp Area": {
+    "connects_to": [
+      "Jungle Jump - Around Save Point"
+    ],
+    "_comment": "R:B1    Requirement TBD"
+  },
+  "Jungle Jump - Middle Level Section Near Exit": {
+    "connects_to": [
+      "Jungle Jump - After Chute After Save Point",
+      "Jungle Jump - Green Gems High Above Secret",
+      "Jungle Jump - Final Section"
+    ],
+    "_comment": "R:M7"
+  },
+  "Jungle Jump - Green Gems High Above Secret": {
+    "connects_to": [
+      "Jungle Jump - Middle Level Section Near Exit"
+    ],
+    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and |Special Move Destructible Scenery| and {CanReachLocation(Thriller Gorilla - Level Complete)} and {CanReachLocation(Hare Scare - Level Complete)} and {CanReachLocation(Medieval Kineval - Level Complete)} and {CanReachLocation(Voltage Village - Level Complete)})",
+    "_comment": "R:M7"
+  },
+  "Jungle Jump - Final Section": {
+    "connects_to": [
+      "Jungle Jump - Middle Level Section Near Exit",
       "Jungle Jump - Exit"
     ],
-    "requires": "|Jungle Jump Unlock| or |Funky Monkeys Progressive Level Unlock:2|"
+    "_comment": "R:M8"
   },
-
-
-
-
-
   "Jungle Jump - Exit": {
     "connects_to": [
       "A Cold Day in Heck - Start"
@@ -2768,15 +2966,88 @@
   },
   "A Cold Day in Heck - Start": {
     "connects_to": [
+      "A Cold Day in Heck - Near Save Point",
+      "A Cold Day in Heck - Extra Life Behind Frozen Blocks Secret"
+    ],
+    "requires": "|A Cold Day in Heck Unlock| or |Funky Monkeys Progressive Level Unlock:3|",
+    "_comment": "R:M0"
+  },
+  "A Cold Day in Heck - Extra Life Behind Frozen Blocks Secret": {
+    "connects_to": [
+      "A Cold Day in Heck - Start"
+    ],
+    "requires": "{canDestroyToasterBlocks()}",
+    "_comment": "R:A1"
+  },
+  "A Cold Day in Heck - Near Save Point": {
+    "connects_to": [
+      "A Cold Day in Heck - Start",
+      "A Cold Day in Heck - Room with Large Skull",
+      "A Cold Day in Heck - Four Silver Coins Behind Frozen Blocks Secret",
+      "A Cold Day in Heck - Bonus Warp Area"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M1"
+  },
+  "A Cold Day in Heck - Four Silver Coins Behind Frozen Blocks Secret": {
+    "connects_to": [
+      "A Cold Day in Heck - Near Save Point"
+    ],
+    "requires": "{canDestroyToasterBlocks()}",
+    "_comment": "R:A2"
+  },
+  "A Cold Day in Heck - Bonus Warp Area": {
+    "connects_to": [
+      "A Cold Day in Heck - Near Save Point"
+    ],
+    "requires": "{canDestroyToasterBlocks()}",
+    "_comment": "R:B1    20 coins required; 21 are available, of which 4 require toaster."
+  },
+  "A Cold Day in Heck - Room with Large Skull": {
+    "connects_to": [
+      "A Cold Day in Heck - Near Save Point",
+      "A Cold Day in Heck - Bottom Level Section Before One Ways",
+      "A Cold Day in Heck - Fire Shield Secret"
+    ],
+    "_comment": "R:M2"
+  },
+  "A Cold Day in Heck - Fire Shield Secret": {
+    "connects_to": [
+      "A Cold Day in Heck - Room with Large Skull"
+    ],
+    "_comment": "R:A3"
+  },
+  "A Cold Day in Heck - Bottom Level Section Before One Ways": {
+    "connects_to": [
+      "A Cold Day in Heck - Room with Large Skull",
+      "A Cold Day in Heck - After One Ways",
+      "A Cold Day in Heck - Green Gems Above Uppercut Blocks Secret"
+    ],
+    "exit_requires": {
+      "A Cold Day in Heck - Room with Large Skull": "{canUppercut()} or {canDoubleJump()}"
+    },
+    "_comment": "R:M3"
+  },
+  "A Cold Day in Heck - Green Gems Above Uppercut Blocks Secret": {
+    "connects_to": [
+      "A Cold Day in Heck - Bottom Level Section Before One Ways"
+    ],
+    "requires": "{canUppercut()} or (|TNT Permit| and {CanReachLocation(Jungle Jump - Level Complete)} and {CanReachLocation(Thriller Gorilla - Level Complete)} and {CanReachLocation(Hare Scare - Level Complete)} and {CanReachLocation(Medieval Kineval - Level Complete)} and {CanReachLocation(Voltage Village - Level Complete)})",
+    "_comment": "R:A4"
+  },
+  "A Cold Day in Heck - After One Ways": {
+    "connects_to": [
+      "A Cold Day in Heck - Boss Room"
+    ],
+    "_comment": "R:M4"
+  },
+  "A Cold Day in Heck - Boss Room": {
+    "connects_to": [
       "A Cold Day in Heck - Exit"
     ],
-    "requires": "|A Cold Day in Heck Unlock| or |Funky Monkeys Progressive Level Unlock:3|"
+    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {CanReachLocation(Jungle Jump - Level Complete)} and {CanReachLocation(Thriller Gorilla - Level Complete)} and {CanReachLocation(Hare Scare - Level Complete)} and {CanReachLocation(Medieval Kineval - Level Complete)} and {CanReachLocation(Voltage Village - Level Complete)})",
+    "_comment": "R:M4"
   },
-
-
-
-
-
   "A Cold Day in Heck - Exit": {
     "connects_to": [
       "Rabbit Roast - Start"

@@ -1307,6 +1307,66 @@
       "sort-key": "03-07-99-Complete"
     },
     {
+      "name": "Thriller Gorilla - Save Point 1 (208, 46)",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Thriller Gorilla",
+        "Save Point Locations"
+      ],
+      "region": "Thriller Gorilla - Around First Save Point",
+      "sort-key": "04-01-00-SavePoint"
+    },
+    {
+      "name": "Thriller Gorilla - Save Point 2 (157, 18)",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Thriller Gorilla",
+        "Save Point Locations"
+      ],
+      "region": "Thriller Gorilla - After Second Save Point",
+      "sort-key": "04-01-01-SavePoint"
+    },
+    {
+      "name": "Thriller Gorilla - Sign 1 (12, 41)",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Thriller Gorilla",
+        "Sign Locations"
+      ],
+      "region": "Thriller Gorilla - Jazz Start",
+      "sort-key": "04-01-20-Sign"
+    },
+    {
+      "name": "Thriller Gorilla - Sign 2 (5, 57)",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Thriller Gorilla",
+        "Sign Locations"
+      ],
+      "region": "Thriller Gorilla - Spaz Start",
+      "sort-key": "04-01-21-Sign"
+    },
+    {
+      "name": "Thriller Gorilla - Sign 3 (111, 50)",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Thriller Gorilla",
+        "Sign Locations"
+      ],
+      "region": "Thriller Gorilla - Shared Path Start",
+      "sort-key": "04-01-22-Sign"
+    },
+    {
+      "name": "Thriller Gorilla - Bonus Warp",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Thriller Gorilla",
+        "Bonus Warp Locations"
+      ],
+      "region": "Thriller Gorilla - Bonus Warp Area",
+      "sort-key": "04-01-90-Bonus"
+    },
+    {
       "name": "Thriller Gorilla - Level Complete",
       "category": [
         "Episode: Funky Monkeys",
@@ -1316,6 +1376,26 @@
       "sort-key": "04-01-99-Complete"
     },
     {
+      "name": "Jungle Jump - Save Point 1 (170, 34)",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Jungle Jump",
+        "Save Point Locations"
+      ],
+      "region": "Jungle Jump - Around Save Point",
+      "sort-key": "04-02-00-SavePoint"
+    },
+    {
+      "name": "Jungle Jump - Bonus Warp",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Jungle Jump",
+        "Bonus Warp Locations"
+      ],
+      "region": "Jungle Jump - Bonus Warp Area",
+      "sort-key": "04-02-90-Bonus"
+    },
+    {
       "name": "Jungle Jump - Level Complete",
       "category": [
         "Episode: Funky Monkeys",
@@ -1323,6 +1403,36 @@
       ],
       "region": "Jungle Jump - Exit",
       "sort-key": "04-02-99-Complete"
+    },
+    {
+      "name": "A Cold Day in Heck - Save Point 1 (193, 41)",
+      "category": [
+        "Episode: Funky Monkeys",
+        "A Cold Day in Heck",
+        "Save Point Locations"
+      ],
+      "region": "A Cold Day in Heck - Near Save Point",
+      "sort-key": "04-03-00-SavePoint"
+    },
+    {
+      "name": "A Cold Day in Heck - Sign 1 (111, 5)",
+      "category": [
+        "Episode: Funky Monkeys",
+        "A Cold Day in Heck",
+        "Sign Locations"
+      ],
+      "region": "A Cold Day in Heck - Start",
+      "sort-key": "04-03-20-Sign"
+    },
+    {
+      "name": "A Cold Day in Heck - Bonus Warp",
+      "category": [
+        "Episode: Funky Monkeys",
+        "A Cold Day in Heck",
+        "Bonus Warp Locations"
+      ],
+      "region": "A Cold Day in Heck - Bonus Warp Area",
+      "sort-key": "04-03-90-Bonus"
     },
     {
       "name": "A Cold Day in Heck - Bubba Defeated",

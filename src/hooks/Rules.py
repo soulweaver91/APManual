@@ -50,6 +50,9 @@ def canDestroySeekerBlocks():
 def canDestroyRFMissileBlocks():
     return "(|RF Missile Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}) and |RF Missile Permit|"
 
+def canDestroyToasterBlocks():
+    return "(|Toaster Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}) and |Toaster Permit|"
+
 def canDestroyTNTBlocks():
     return "(|TNT Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}) and |TNT Permit|"
 
