@@ -1,29 +1,42 @@
-# Manual for Archipelago
+# Archipelago Manual Implementation for Jazz Jackrabbit 2
 
-Manual is a customizable APWorld template for [Archipelago](https://github.com/ArchipelagoMW/Archipelago) that can be applied to any game. 
+This repository branch contains the implementation of a new custom Manual game
+for the Archipelago multiworld project. Like all other Manual games,
+it operates on a "honor system" principle where there's no game mod,
+and instead you'll operate with a dedicated Manual client that helps with
+keeping track of what you've received from the multiworld and communicates
+the checks you're doing in-game back to the host.
 
-You tell it what locations you want to be able to check and what items you want randomized, and it gets rolled into a multiworld as normal. Using the ManualClient program, you can manually check off locations that you've checked, and the client will tell you what items you now have access to use. **Limiting what items you use is done manually by you until you see the item in the list.** The victory condition is also up to you and, once you've completed it, there's a "Victory!" location at the bottom of the location list that you can click to end your seed.
+For more information about Manual itself, please see its 
+[documentation](https://github.com/ManualForArchipelago/Manual).
+The specifics of how this particular manual implementation works can be
+similarly found in its own [introduction](src/docs/en_Manual_JazzJackrabbit2_Soulweaver.md)
+and its [setup guide](src/docs/setup_en.md) of sorts.
 
-Some people call it "the honor system"!
+## Currently known issues
+So far, the majority of work has gone towards getting the four main base 
+game episodes into a decent enough state. The Shareware, the Secret Files, and
+Christmas Chronicles episodes only have a skeleton implementation so far.
 
-## Learn More
-For more information about Manual, please see our [Documentation](docs/README.md).
+While some parts of logic have been fleshed out for the more developed 
+episodes, these parts of logic in specific are acknowledged to be lacking
+at the moment:
 
-## Asking for Help
-We have a [support channel in our community Discord](https://discord.com/channels/1097532591650910289/1098306155492687892)!
+- Trigger crates have inconsistent logic around them. It is expected that the
+  player can either destroy them with a special move, if they have obtained it,
+  or break it with TNT, but for the most part these restrictions currently
+  don't apply.
+- Weapon access in any specific level is handled inconsistently. In particular,
+  TNT can be used for destroying buttstomp scenery blocks, but ammo for it
+  must in most cases be brought over from an earlier level that the player is
+  able to travel from without missing access for any levels in between.
+- Bonus warp logic is incomplete. Some levels with simpler coin placements
+  have been set up properly, but more complex ones require careful
+  consideration of when the player has access to enough coins.
 
-## Reporting Bugs
-We primarily track bugs with the Manual project in [our community Discord's bug reports forum](https://discord.com/channels/1097532591650910289/1233529152615743508). 
-
-## Contributing
-As an open-source project powered by volunteers, we're always grateful for volunteer contributions!
-
-- If you'd like to contribute code or documentation, please submit pull requests to this project or any related Manual project.
-- If you'd like to contribute to our community, join [our community Discord here](https://discord.gg/T5bcsVHByx). We're always looking for more staff and general help.
-
-**Please note:** All contributions fall under the MIT License of the Manual project and its related projects, and will be made available to the public and maintained by the Manual project accordingly.
-
-## Disclaimer
-Manual is a fan project for use with the Archipelago multiworld project. 
-
-Manual is not affiliated with or endorsed by the Archipelago project in any way.
+## AI usage disclosure
+No AI tools have been used in any part of the development of this custom game
+implementation, including for code or asset generation, consulting, analysis,
+or for any other reason. I'm not aware if this is also the case with the
+underlying Manual client itself, so please check this with its authors
+separately.
