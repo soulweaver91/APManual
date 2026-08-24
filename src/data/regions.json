@@ -3046,7 +3046,7 @@
       "A Cold Day in Heck - Exit"
     ],
     "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {CanReachLocation(Jungle Jump - Level Complete)} and {CanReachLocation(Thriller Gorilla - Level Complete)} and {CanReachLocation(Hare Scare - Level Complete)} and {CanReachLocation(Medieval Kineval - Level Complete)} and {CanReachLocation(Voltage Village - Level Complete)})",
-    "_comment": "R:M4"
+    "_comment": "R:M5"
   },
   "A Cold Day in Heck - Exit": {
     "connects_to": [
@@ -3055,15 +3055,73 @@
   },
   "Rabbit Roast - Start": {
     "connects_to": [
+      "Rabbit Roast - After First Save Point",
+      "Rabbit Roast - Plasma Shield Secret"
+    ],
+    "requires": "|Rabbit Roast Unlock| or |Funky Monkeys Progressive Level Unlock:4|",
+    "_comment": "R:M0"
+  },
+  "Rabbit Roast - Plasma Shield Secret": {
+    "connects_to": [
+      "Rabbit Roast - After First Save Point"
+    ],
+    "_comment": "R:A1"
+  },
+  "Rabbit Roast - After First Save Point": {
+    "connects_to": [
+      "Rabbit Roast - After Destructible Blocks"
+    ],
+    "_comment": "R:M1"
+  },
+  "Rabbit Roast - After Destructible Blocks": {
+    "connects_to": [
+      "Rabbit Roast - After First Save Point",
+      "Rabbit Roast - Around Second and Third Save Points"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M2"
+  },
+  "Rabbit Roast - Around Second and Third Save Points": {
+    "connects_to": [
+      "Rabbit Roast - After Destructible Blocks",
+      "Rabbit Roast - Final Section After First Drop",
+      "Rabbit Roast - Bonus Warp Area"
+    ],
+    "_comment": "R:M3"
+  },
+  "Rabbit Roast - Bonus Warp Area": {
+    "connects_to": [
+      "Rabbit Roast - Around Second and Third Save Points"
+    ],
+    "_comment": "R:B1    All coins are accessible, as long as you can get to this warp."
+  },
+  "Rabbit Roast - Final Section After First Drop": {
+    "connects_to": [
+      "Rabbit Roast - Final Section After Second Drop"
+    ],
+    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {CanReachLocation(A Cold Day in Heck - Level Complete)} and {CanReachLocation(Jungle Jump - Level Complete)} and {CanReachLocation(Thriller Gorilla - Level Complete)} and {CanReachLocation(Hare Scare - Level Complete)} and {CanReachLocation(Medieval Kineval - Level Complete)} and {CanReachLocation(Voltage Village - Level Complete)})",
+    "_comment": "R:M4"
+  },
+  "Rabbit Roast - Final Section After Second Drop": {
+    "connects_to": [
+      "Rabbit Roast - Final Section After First Drop",
+      "Rabbit Roast - Final Section After Final Drop"
+    ],
+    "exit_requires": {
+      "Rabbit Roast - Final Section After First Drop": "{canUppercut()} or {canDoubleJump()}"
+    },
+    "_comment": "R:M5"
+  },
+  "Rabbit Roast - Final Section After Final Drop": {
+    "connects_to": [
+      "Rabbit Roast - Final Section After Second Drop",
       "Rabbit Roast - Exit"
     ],
-    "requires": "|Rabbit Roast Unlock| or |Funky Monkeys Progressive Level Unlock:4|"
+    "exit_requires": {
+      "Rabbit Roast - Final Section After Second Drop": "{canUppercut()} or {canDoubleJump()}"
+    },
+    "_comment": "R:M6"
   },
-
-
-
-
-
   "Rabbit Roast - Exit": {
     "connects_to": [
       "Burnin Biscuits - Start"
@@ -3071,15 +3129,77 @@
   },
   "Burnin Biscuits - Start": {
     "connects_to": [
+      "Burnin Biscuits - Around Save Point",
+      "Burnin Biscuits - Bonus Warp Area",
+      "Burnin Biscuits - Four Silver Coins Behind Sidekick Blocks Secret",
+      "Burnin Biscuits - Four Silver Coins in a Corner High Above Main Path Secret",
+      "Burnin Biscuits - Ammo and Extra Life Crates Accessed by Spring Below Buttstomp Blocks Secret"
+    ],
+    "requires": "|Burnin Biscuits Unlock| or |Funky Monkeys Progressive Level Unlock:5|",
+    "_comment": "R:M0"
+  },
+  "Burnin Biscuits - Four Silver Coins Behind Sidekick Blocks Secret": {
+    "connects_to": [
+      "Burnin Biscuits - Start"
+    ],
+    "requires": "{canSidekick()} or (|TNT Permit| and {CanReachLocation(Rabbit Roast - Level Complete)} and {CanReachLocation(A Cold Day in Heck - Level Complete)} and {CanReachLocation(Jungle Jump - Level Complete)} and {CanReachLocation(Thriller Gorilla - Level Complete)} and {CanReachLocation(Hare Scare - Level Complete)} and {CanReachLocation(Medieval Kineval - Level Complete)} and {CanReachLocation(Voltage Village - Level Complete)})",
+    "_comment": "R:A1"
+  },
+  "Burnin Biscuits - Four Silver Coins in a Corner High Above Main Path Secret": {
+    "connects_to": [
+      "Burnin Biscuits - Start"
+    ],
+    "requires": "{canDoubleJump()} or {canCopter()}",
+    "_comment": "R:A2"
+  },
+  "Burnin Biscuits - Ammo and Extra Life Crates Accessed by Spring Below Buttstomp Blocks Secret": {
+    "connects_to": [
+      "Burnin Biscuits - Start"
+    ],
+    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {CanReachLocation(Rabbit Roast - Level Complete)} and {CanReachLocation(A Cold Day in Heck - Level Complete)} and {CanReachLocation(Jungle Jump - Level Complete)} and {CanReachLocation(Thriller Gorilla - Level Complete)} and {CanReachLocation(Hare Scare - Level Complete)} and {CanReachLocation(Medieval Kineval - Level Complete)} and {CanReachLocation(Voltage Village - Level Complete)})",
+    "_comment": "R:A3"
+  },
+  "Burnin Biscuits - Bonus Warp Area": {
+    "connects_to": [
+      "Burnin Biscuits - Start"
+    ],
+    "_comment": "R:B1    10 coins needed, and 10 coins are available without any extra tools."
+  },
+  "Burnin Biscuits - Around Save Point": {
+    "connects_to": [
+      "Burnin Biscuits - Start",
+      "Burnin Biscuits - Spring Section",
+      "Burnin Biscuits - Gold Coin Below Buttstomp Blocks Secret"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M1"
+  },
+  "Burnin Biscuits - Gold Coin Below Buttstomp Blocks Secret": {
+    "connects_to": [
+      "Burnin Biscuits - Around Save Point"
+    ],
+    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {CanReachLocation(Rabbit Roast - Level Complete)} and {CanReachLocation(A Cold Day in Heck - Level Complete)} and {CanReachLocation(Jungle Jump - Level Complete)} and {CanReachLocation(Thriller Gorilla - Level Complete)} and {CanReachLocation(Hare Scare - Level Complete)} and {CanReachLocation(Medieval Kineval - Level Complete)} and {CanReachLocation(Voltage Village - Level Complete)})",
+    "_comment": "R:A4"
+  },
+  "Burnin Biscuits - Spring Section": {
+    "connects_to": [
+      "Burnin Biscuits - Room After Spring Section"
+    ],
+    "_comment": "R:M2"
+  },
+  "Burnin Biscuits - Room After Spring Section": {
+    "connects_to": [
+      "Burnin Biscuits - Final Section"
+    ],
+    "_comment": "R:M3"
+  },
+  "Burnin Biscuits - Final Section": {
+    "connects_to": [
       "Burnin Biscuits - Exit"
     ],
-    "requires": "|Burnin Biscuits Unlock| or |Funky Monkeys Progressive Level Unlock:5|"
+    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {CanReachLocation(Rabbit Roast - Level Complete)} and {CanReachLocation(A Cold Day in Heck - Level Complete)} and {CanReachLocation(Jungle Jump - Level Complete)} and {CanReachLocation(Thriller Gorilla - Level Complete)} and {CanReachLocation(Hare Scare - Level Complete)} and {CanReachLocation(Medieval Kineval - Level Complete)} and {CanReachLocation(Voltage Village - Level Complete)})",
+    "_comment": "R:M4"
   },
-
-
-
-
-
   "Burnin Biscuits - Exit": {
     "connects_to": [
       "Bad Pitt - Start"
@@ -3087,15 +3207,112 @@
   },
   "Bad Pitt - Start": {
     "connects_to": [
+      "Bad Pitt - After Buttstomp Blocks Near Start"
+    ],
+    "requires": "|Bad Pitt Unlock| or |Funky Monkeys Progressive Level Unlock:6|",
+    "_comment": "R:M0"
+  },
+  "Bad Pitt - After Buttstomp Blocks Near Start": {
+    "connects_to": [
+      "Bad Pitt - After Destructible Blocks Near Start"
+    ],
+    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {CanReachLocation(Burnin Biscuits - Level Complete)} and {CanReachLocation(Rabbit Roast - Level Complete)} and {CanReachLocation(A Cold Day in Heck - Level Complete)} and {CanReachLocation(Jungle Jump - Level Complete)} and {CanReachLocation(Thriller Gorilla - Level Complete)} and {CanReachLocation(Hare Scare - Level Complete)} and {CanReachLocation(Medieval Kineval - Level Complete)} and {CanReachLocation(Voltage Village - Level Complete)})",
+    "_comment": "R:M1"
+  },
+  "Bad Pitt - After Destructible Blocks Near Start": {
+    "connects_to": [
+      "Bad Pitt - Room With Several Spring Platforms"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M2"
+  },
+  "Bad Pitt - Room With Several Spring Platforms": {
+    "connects_to": [
+      "Bad Pitt - After Destructible Blocks Near Start",
+      "Bad Pitt - After Upwards Destructible Blocks"
+    ],
+    "exit_requires": {
+      "Bad Pitt - After Destructible Blocks Near Start": "{canUppercut()} or {canDoubleJump()}"
+    },
+    "_comment": "R:M3"
+  },
+  "Bad Pitt - After Upwards Destructible Blocks": {
+    "connects_to": [
+      "Bad Pitt - Room With Several Spring Platforms",
+      "Bad Pitt - After Destructible Blocks Obstructing Spring"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M4"
+  },
+  "Bad Pitt - After Destructible Blocks Obstructing Spring": {
+    "connects_to": [
+      "Bad Pitt - After Upwards Destructible Blocks",
+      "Bad Pitt - Room With Several Lava Pools",
+      "Bad Pitt - Gold Coin Below Broken Bridge Secret",
+      "Bad Pitt - Red Gems Behind Destructible Blocks Secret"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M5"
+  },
+  "Bad Pitt - Gold Coin Below Broken Bridge Secret": {
+    "connects_to": [
+      "Bad Pitt - Room With Several Spring Platforms"
+    ],
+    "_comment": "R:A1"
+  },
+  "Bad Pitt - Red Gems Behind Destructible Blocks Secret": {
+    "connects_to": [
+      "Bad Pitt - After Destructible Blocks Obstructing Spring"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A2"
+  },
+  "Bad Pitt - Room With Several Lava Pools": {
+    "connects_to": [
+      "Bad Pitt - After Destructible Blocks Obstructing Spring",
+      "Bad Pitt - Large Destructible Block Section"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M6"
+  },
+  "Bad Pitt - Large Destructible Block Section": {
+    "connects_to": [
+      "Bad Pitt - Around First Save Point"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M7"
+  },
+  "Bad Pitt - Around First Save Point": {
+    "connects_to": [
+      "Bad Pitt - Around Bonus Warp and Second Save Point"
+    ],
+    "_comment": "R:M8"
+  },
+  "Bad Pitt - Around Bonus Warp and Second Save Point": {
+    "connects_to": [
+      "Bad Pitt - Before Boss Room",
+      "Bad Pitt - Bonus Warp Area"
+    ],
+    "_comment": "R:M9"
+  },
+  "Bad Pitt - Bonus Warp Area": {
+    "connects_to": [
+      "Bad Pitt - Around Bonus Warp and Second Save Point"
+    ],
+    "_comment": "R:B1    Requirement TBD"
+  },
+  "Bad Pitt - Before Boss Room": {
+    "connects_to": [
+      "Bad Pitt - Boss Room"
+    ],
+    "_comment": "R:M10"
+  },
+  "Bad Pitt - Boss Room": {
+    "connects_to": [
       "Bad Pitt - Exit"
     ],
-    "requires": "|Bad Pitt Unlock| or |Funky Monkeys Progressive Level Unlock:6|"
+    "_comment": "R:M11"
   },
-
-
-
-
-
   "Bad Pitt - Exit": {
     "connects_to": []
   },

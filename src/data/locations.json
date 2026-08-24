@@ -1453,6 +1453,46 @@
       "sort-key": "04-03-99-Complete"
     },
     {
+      "name": "Rabbit Roast - Save Point 1 (13, 56)",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Rabbit Roast",
+        "Save Point Locations"
+      ],
+      "region": "Rabbit Roast - After First Save Point",
+      "sort-key": "04-04-00-SavePoint"
+    },
+    {
+      "name": "Rabbit Roast - Save Point 2 (101, 27)",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Rabbit Roast",
+        "Save Point Locations"
+      ],
+      "region": "Rabbit Roast - Around Second and Third Save Points",
+      "sort-key": "04-04-01-SavePoint"
+    },
+    {
+      "name": "Rabbit Roast - Save Point 3 (140, 10)",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Rabbit Roast",
+        "Save Point Locations"
+      ],
+      "region": "Rabbit Roast - Around Second and Third Save Points",
+      "sort-key": "04-04-02-SavePoint"
+    },
+    {
+      "name": "Rabbit Roast - Bonus Warp",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Rabbit Roast",
+        "Bonus Warp Locations"
+      ],
+      "region": "Rabbit Roast - Bonus Warp Area",
+      "sort-key": "04-04-90-Bonus"
+    },
+    {
       "name": "Rabbit Roast - Level Complete",
       "category": [
         "Episode: Funky Monkeys",
@@ -1462,6 +1502,26 @@
       "sort-key": "04-04-99-Complete"
     },
     {
+      "name": "Burnin Biscuits - Save Point 1 (102, 19)",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Burnin Biscuits",
+        "Save Point Locations"
+      ],
+      "region": "Burnin Biscuits - Around Save Point",
+      "sort-key": "04-05-00-SavePoint"
+    },
+    {
+      "name": "Burnin Biscuits - Bonus Warp",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Burnin Biscuits",
+        "Bonus Warp Locations"
+      ],
+      "region": "Burnin Biscuits - Bonus Warp Area",
+      "sort-key": "04-05-90-Bonus"
+    },
+    {
       "name": "Burnin Biscuits - Level Complete",
       "category": [
         "Episode: Funky Monkeys",
@@ -1469,6 +1529,36 @@
       ],
       "region": "Burnin Biscuits - Exit",
       "sort-key": "04-05-99-Complete"
+    },
+    {
+      "name": "Bad Pitt - Save Point 1 (193, 56)",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Bad Pitt",
+        "Save Point Locations"
+      ],
+      "region": "Bad Pitt - Around First Save Point",
+      "sort-key": "04-06-00-SavePoint"
+    },
+    {
+      "name": "Bad Pitt - Save Point 2 (225, 37)",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Bad Pitt",
+        "Save Point Locations"
+      ],
+      "region": "Bad Pitt - Around Bonus Warp and Second Save Point",
+      "sort-key": "04-06-01-SavePoint"
+    },
+    {
+      "name": "Bad Pitt - Bonus Warp",
+      "category": [
+        "Episode: Funky Monkeys",
+        "Bad Pitt",
+        "Bonus Warp Locations"
+      ],
+      "region": "Bad Pitt - Bonus Warp Area",
+      "sort-key": "04-06-90-Bonus"
     },
     {
       "name": "Bad Pitt - Devil Devan Defeated",
