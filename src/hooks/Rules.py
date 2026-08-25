@@ -4,6 +4,7 @@ from ..Helpers import clamp, get_items_with_value
 from BaseClasses import MultiWorld, CollectionState
 
 import re
+from enum import StrEnum
 
 # # Sometimes you have a requirement that is just too messy or repetitive to write out with boolean logic.
 # # Define a function here, and you can use it in a requires string with {function_name()}.
@@ -75,4 +76,149 @@ def CanReachRegion(state: CollectionState, player: int, location: str) -> bool:
     """Can the player reach the given region?"""
     if state.can_reach_region(location, player):
         return True
+    return False
+
+class Levels(StrEnum):
+    RABBIT_IN_TRAINING = 'Rabbit in Training'
+    DUNGEON_DILEMMA = 'Dungeon Dilemma'
+    KNIGHT_CAP = 'Knight Cap'
+    TOSSED_SALAD = 'Tossed Salad'
+    CARROT_JUICE = 'Carrot Juice'
+    WEIRDER_SCIENCE = 'Weirder Science'
+    LOOSE_SCREWS = 'Loose Screws'
+    VICTORIAN_SECRET = 'Victorian Secret'
+    COLONIAL_CHAOS = 'Colonial Chaos'
+    PURPLE_HAZE_MAZE = 'Purple Haze Maze'
+    FUNKY_GROOVEATHON = 'Funky Grooveathon'
+    BEACH_BUNNY_BINGO = 'Beach Bunny Bingo'
+    MARINATED_RABBIT = 'Marinated Rabbit'
+    A_DIAMONDUS_FOREVER = 'A Diamondus Forever'
+    FOURTEEN_CARROT = 'Fourteen Carrot'
+    ELECTRIC_BOOGALOO = 'Electric Boogaloo'
+    VOLTAGE_VILLAGE = 'Voltage Village'
+    MEDIEVAL_KINEVAL = 'Medieval Kineval'
+    HARE_SCARE = 'Hare Scare'
+    GARGOYLES_LAIR = 'Gargoyles Lair'
+    THRILLER_GORILLA = 'Thriller Gorilla'
+    JUNGLE_JUMP = 'Jungle Jump'
+    A_COLD_DAY_IN_HECK = 'A Cold Day in Heck'
+    RABBIT_ROAST = 'Rabbit Roast'
+    BURNIN_BISCUITS = 'Burnin Biscuits'
+    BAD_PITT = 'Bad Pitt'
+    DARN_RATZ = 'Darn Ratz'
+    RETRO_RABBIT = 'Retro Rabbit'
+    FROG_STOMP = 'Frog Stomp'
+    EASTER_BUNNY = 'Easter Bunny'
+    SPRING_CHICKENS = 'Spring Chickens'
+    SCRAMBLED_EGGS = 'Scrambled Eggs'
+    GHOSTLY_ANTICS = 'Ghostly Antics'
+    SKELETONS_TURF = 'Skeletons Turf'
+    GRAVEYARD_SHIFT = 'Graveyard Shift'
+    TURTLE_TOWN = 'Turtle Town'
+    SUBURBIA_COMMANDO = 'Suburbia Commando'
+    URBAN_BRAWL = 'Urban Brawl'
+    SNOW_BUNNIES = 'Snow Bunnies'
+    DASHING_THRU_THE_SNOW = 'Dashing thru the snow..'
+    TINSEL_TOWN = 'Tinsel Town'
+
+LEVEL_ORDER_LOOKUP = [
+    None,
+    # Base game episodes
+    Levels.RABBIT_IN_TRAINING,
+    Levels.DUNGEON_DILEMMA,
+    Levels.KNIGHT_CAP,
+    Levels.TOSSED_SALAD,
+    Levels.CARROT_JUICE,
+    Levels.VICTORIAN_SECRET,
+    Levels.COLONIAL_CHAOS,
+    Levels.PURPLE_HAZE_MAZE,
+    Levels.FUNKY_GROOVEATHON,
+    Levels.BEACH_BUNNY_BINGO,
+    Levels.MARINATED_RABBIT,
+    Levels.A_DIAMONDUS_FOREVER,
+    Levels.FOURTEEN_CARROT,
+    Levels.ELECTRIC_BOOGALOO,
+    Levels.VOLTAGE_VILLAGE,
+    Levels.MEDIEVAL_KINEVAL,
+    Levels.HARE_SCARE,
+    Levels.THRILLER_GORILLA,
+    Levels.JUNGLE_JUMP,
+    Levels.A_COLD_DAY_IN_HECK,
+    Levels.RABBIT_ROAST,
+    Levels.BURNIN_BISCUITS,
+    Levels.BAD_PITT,
+    None,
+    # Alternate lookup for Gargoyles Lair
+    Levels.RABBIT_IN_TRAINING,
+    Levels.DUNGEON_DILEMMA,
+    Levels.KNIGHT_CAP,
+    Levels.TOSSED_SALAD,
+    Levels.CARROT_JUICE,
+    Levels.VICTORIAN_SECRET,
+    Levels.COLONIAL_CHAOS,
+    Levels.PURPLE_HAZE_MAZE,
+    Levels.FUNKY_GROOVEATHON,
+    Levels.BEACH_BUNNY_BINGO,
+    Levels.MARINATED_RABBIT,
+    Levels.A_DIAMONDUS_FOREVER,
+    Levels.FOURTEEN_CARROT,
+    Levels.ELECTRIC_BOOGALOO,
+    Levels.VOLTAGE_VILLAGE,
+    Levels.MEDIEVAL_KINEVAL,
+    Levels.GARGOYLES_LAIR,
+    None,
+    # Shareware Episode
+    Levels.DARN_RATZ,
+    Levels.RETRO_RABBIT,
+    Levels.FROG_STOMP,
+    None,
+    # The Secret Files
+    Levels.EASTER_BUNNY,
+    Levels.SPRING_CHICKENS,
+    Levels.SCRAMBLED_EGGS,
+    Levels.GHOSTLY_ANTICS,
+    Levels.SKELETONS_TURF,
+    Levels.GRAVEYARD_SHIFT,
+    Levels.TURTLE_TOWN,
+    Levels.SUBURBIA_COMMANDO,
+    Levels.URBAN_BRAWL,
+    None,
+    # Holiday Hare/Christmas Chronicles
+    Levels.SNOW_BUNNIES,
+    Levels.DASHING_THRU_THE_SNOW,
+    Levels.TINSEL_TOWN,
+    None
+]
+
+def hasContinuousLevelAccess(state: CollectionState, player: int, from_level: str, to_level: str) -> bool:
+    from ..Rules import CanReachLocation
+    import logging
+
+    end_index = 0
+    try:
+        end_index = LEVEL_ORDER_LOOKUP.index(to_level)
+    except ValueError:
+        logging.error(f'hasContinuousLevelAccess: invalid target level {to_level}')
+        return False
+
+    cursor_index = end_index
+    while cursor_index > 0:
+        cursor_index = cursor_index - 1
+        prev_level = LEVEL_ORDER_LOOKUP[cursor_index]
+
+        if prev_level is None:
+            logging.error(f'hasContinuousLevelAccess: no valid path from {from_level} to {to_level}')
+            return False
+
+        try:
+            next_level_access = CanReachLocation(state, player, f'{prev_level} - Level Complete')
+
+            if prev_level == from_level:
+                return next_level_access
+            elif not next_level_access:
+                return False
+        except ValueError:
+            logging.error(f'hasContinuousLevelAccess: unexpected error when checking if level completion location for {prev_level} could be reached')
+            return False
+
     return False

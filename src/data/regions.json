@@ -2078,7 +2078,7 @@
     "connects_to": [
       "Electric Boogaloo - After Chute Near Start"
     ],
-    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {CanReachLocation(Fourteen Carrot - Level Complete)} and {CanReachLocation(A Diamondus Forever - Level Complete)} and {CanReachLocation(Marinated Rabbit - Level Complete)} and {CanReachLocation(Beach Bunny Bingo - Level Complete)} and {CanReachLocation(Funky Grooveathon - Level Complete)})",
+    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {hasContinuousLevelAccess(Funky Grooveathon, Electric Boogaloo)})",
     "_comment": "R:A6    TNT has to be brought here from several levels back, and vine traversal is required to get the ammo from there."
   },
   "Electric Boogaloo - Small Room After Upwards Pipe": {
@@ -2127,14 +2127,14 @@
     "connects_to": [
       "Electric Boogaloo - Middle Section"
     ],
-    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {CanReachLocation(Fourteen Carrot - Level Complete)} and {CanReachLocation(A Diamondus Forever - Level Complete)} and {CanReachLocation(Marinated Rabbit - Level Complete)} and {CanReachLocation(Beach Bunny Bingo - Level Complete)} and {CanReachLocation(Funky Grooveathon - Level Complete)})",
+    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {hasContinuousLevelAccess(Funky Grooveathon, Electric Boogaloo)})",
     "_comment": "R:A10    TNT has to be brought here from several levels back, and vine traversal is required to get the ammo from there."
   },
   "Electric Boogaloo - Bouncer Power Up Behind Uppercut Blocks Secret": {
     "connects_to": [
       "Electric Boogaloo - Middle Section"
     ],
-    "requires": "{canUppercut()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {CanReachLocation(Fourteen Carrot - Level Complete)} and {CanReachLocation(A Diamondus Forever - Level Complete)} and {CanReachLocation(Marinated Rabbit - Level Complete)} and {CanReachLocation(Beach Bunny Bingo - Level Complete)} and {CanReachLocation(Funky Grooveathon - Level Complete)})",
+    "requires": "{canUppercut()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {hasContinuousLevelAccess(Funky Grooveathon, Electric Boogaloo)})",
     "_comment": "R:A11    TNT has to be brought here from several levels back, and vine traversal is required to get the ammo from there."
   },
   "Electric Boogaloo - Second Pinball Section": {
@@ -2164,7 +2164,7 @@
     "connects_to": [
       "Electric Boogaloo - Final Section"
     ],
-    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {CanReachLocation(Fourteen Carrot - Level Complete)} and {CanReachLocation(A Diamondus Forever - Level Complete)} and {CanReachLocation(Marinated Rabbit - Level Complete)} and {CanReachLocation(Beach Bunny Bingo - Level Complete)} and {CanReachLocation(Funky Grooveathon - Level Complete)})",
+    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {hasContinuousLevelAccess(Funky Grooveathon, Electric Boogaloo)})",
     "_comment": "R:A12    TNT has to be brought here from several levels back, and vine traversal is required to get the ammo from there."
   },
   "Electric Boogaloo - Six Silver Coins Surrounded by Breakable Blocks Secret": {
@@ -2184,7 +2184,7 @@
     "connects_to": [
       "Electric Boogaloo - Final Section"
     ],
-    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {CanReachLocation(Fourteen Carrot - Level Complete)} and {CanReachLocation(A Diamondus Forever - Level Complete)} and {CanReachLocation(Marinated Rabbit - Level Complete)} and {CanReachLocation(Beach Bunny Bingo - Level Complete)} and {CanReachLocation(Funky Grooveathon - Level Complete)})",
+    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {hasContinuousLevelAccess(Funky Grooveathon, Electric Boogaloo)})",
     "_comment": "R:A15    TNT has to be brought here from several levels back, and vine traversal is required to get the ammo from there."
   },
   "Electric Boogaloo - Exit": {
@@ -2205,7 +2205,7 @@
     "connects_to": [
       "Voltage Village - Jazz Start"
     ],
-    "requires": "{canUppercut()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {CanReachLocation(Electric Boogaloo - Level Complete)} and {CanReachLocation(Fourteen Carrot - Level Complete)} and {CanReachLocation(A Diamondus Forever - Level Complete)} and {CanReachLocation(Marinated Rabbit - Level Complete)} and {CanReachLocation(Beach Bunny Bingo - Level Complete)} and {CanReachLocation(Funky Grooveathon - Level Complete)})",
+    "requires": "{canUppercut()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {hasContinuousLevelAccess(Funky Grooveathon, Voltage Village)})",
     "_comment": "R:A1    Again, if uppercut is blocked, TNT has to be brought here from several levels back, and vine traversal is required to get the ammo from there."
   },
   "Voltage Village - Spaz Start": {
@@ -2645,14 +2645,14 @@
     "connects_to": [
       "Gargoyles Lair - Tunnel After Trigger Crates"
     ],
-    "requires": "|Buttstomp Unlock| or {canSidekick()} or (|TNT Permit| and {CanReachLocation(Voltage Village - Level Complete)} and {CanReachRegion(Medieval Kineval - Secret Level Exit)})",
+    "requires": "|Buttstomp Unlock| or {canSidekick()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Gargoyles Lair)})",
     "_comment": "R:M2"
   },
   "Gargoyles Lair - Tunnel After Trigger Crates": {
     "connects_to": [
       "Gargoyles Lair - Main Section"
     ],
-    "requires": "|Buttstomp Unlock| or {canSidekick()} or (|TNT Permit| and {CanReachLocation(Voltage Village - Level Complete)} and {CanReachRegion(Medieval Kineval - Secret Level Exit)})",
+    "requires": "|Buttstomp Unlock| or {canSidekick()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Gargoyles Lair)})",
     "_comment": "R:M3"
   },
   "Gargoyles Lair - Main Section": {
@@ -2683,7 +2683,7 @@
     "connects_to": [
       "Gargoyles Lair - Main Section"
     ],
-    "requires": "{canSidekick()} or (|TNT Permit| and {CanReachLocation(Voltage Village - Level Complete)} and {CanReachRegion(Medieval Kineval - Secret Level Exit)})",
+    "requires": "{canSidekick()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Gargoyles Lair)})",
     "_comment": "R:A4"
   },
   "Gargoyles Lair - Room with Green Gems and Gold Coin Secret": {
@@ -2699,7 +2699,7 @@
     "connects_to": [
       "Gargoyles Lair - Main Section"
     ],
-    "requires": "|Bouncer Permit| or {canUppercut()} or ({canGrabHooks()} and ({canCopter()} or {canDoubleJump()})) or (|TNT Permit| and {CanReachLocation(Voltage Village - Level Complete)} and {CanReachRegion(Medieval Kineval - Secret Level Exit)})",
+    "requires": "|Bouncer Permit| or {canUppercut()} or ({canGrabHooks()} and ({canCopter()} or {canDoubleJump()})) or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Gargoyles Lair)})",
     "_comment": "R:A6"
   },
   "Gargoyles Lair - Green Gems Behind Uppercut Blocks Secret": {
@@ -2707,7 +2707,7 @@
       "Gargoyles Lair - Main Section",
       "Gargoyles Lair - Bonus Warp Area"
     ],
-    "requires": "{canUppercut()} or (|TNT Permit| and {CanReachLocation(Voltage Village - Level Complete)} and {CanReachRegion(Medieval Kineval - Secret Level Exit)})",
+    "requires": "{canUppercut()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Gargoyles Lair)})",
     "_comment": "R:A7"
   },
   "Gargoyles Lair - Bonus Warp Area": {
@@ -2720,7 +2720,7 @@
     "connects_to": [
       "Gargoyles Lair - Exit"
     ],
-    "requires": "{canDestroyWildcardBlocks()} or (|TNT Permit| and {CanReachLocation(Voltage Village - Level Complete)} and {CanReachRegion(Medieval Kineval - Secret Level Exit)})",
+    "requires": "{canDestroyWildcardBlocks()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Gargoyles Lair)})",
     "_comment": "R:M5"
   },
   "Gargoyles Lair - Exit": {
@@ -2949,7 +2949,7 @@
     "connects_to": [
       "Jungle Jump - Middle Level Section Near Exit"
     ],
-    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and |Special Move Destructible Scenery| and {CanReachLocation(Thriller Gorilla - Level Complete)} and {CanReachLocation(Hare Scare - Level Complete)} and {CanReachLocation(Medieval Kineval - Level Complete)} and {CanReachLocation(Voltage Village - Level Complete)})",
+    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and |Special Move Destructible Scenery| and {hasContinuousLevelAccess(Voltage Village, Jungle Jump)})",
     "_comment": "R:M7"
   },
   "Jungle Jump - Final Section": {
@@ -3032,7 +3032,7 @@
     "connects_to": [
       "A Cold Day in Heck - Bottom Level Section Before One Ways"
     ],
-    "requires": "{canUppercut()} or (|TNT Permit| and {CanReachLocation(Jungle Jump - Level Complete)} and {CanReachLocation(Thriller Gorilla - Level Complete)} and {CanReachLocation(Hare Scare - Level Complete)} and {CanReachLocation(Medieval Kineval - Level Complete)} and {CanReachLocation(Voltage Village - Level Complete)})",
+    "requires": "{canUppercut()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, A Cold Day in Heck)})",
     "_comment": "R:A4"
   },
   "A Cold Day in Heck - After One Ways": {
@@ -3045,7 +3045,7 @@
     "connects_to": [
       "A Cold Day in Heck - Exit"
     ],
-    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {CanReachLocation(Jungle Jump - Level Complete)} and {CanReachLocation(Thriller Gorilla - Level Complete)} and {CanReachLocation(Hare Scare - Level Complete)} and {CanReachLocation(Medieval Kineval - Level Complete)} and {CanReachLocation(Voltage Village - Level Complete)})",
+    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, A Cold Day in Heck)})",
     "_comment": "R:M5"
   },
   "A Cold Day in Heck - Exit": {
@@ -3099,7 +3099,7 @@
     "connects_to": [
       "Rabbit Roast - Final Section After Second Drop"
     ],
-    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {CanReachLocation(A Cold Day in Heck - Level Complete)} and {CanReachLocation(Jungle Jump - Level Complete)} and {CanReachLocation(Thriller Gorilla - Level Complete)} and {CanReachLocation(Hare Scare - Level Complete)} and {CanReachLocation(Medieval Kineval - Level Complete)} and {CanReachLocation(Voltage Village - Level Complete)})",
+    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Rabbit Roast)})",
     "_comment": "R:M4"
   },
   "Rabbit Roast - Final Section After Second Drop": {
@@ -3142,7 +3142,7 @@
     "connects_to": [
       "Burnin Biscuits - Start"
     ],
-    "requires": "{canSidekick()} or (|TNT Permit| and {CanReachLocation(Rabbit Roast - Level Complete)} and {CanReachLocation(A Cold Day in Heck - Level Complete)} and {CanReachLocation(Jungle Jump - Level Complete)} and {CanReachLocation(Thriller Gorilla - Level Complete)} and {CanReachLocation(Hare Scare - Level Complete)} and {CanReachLocation(Medieval Kineval - Level Complete)} and {CanReachLocation(Voltage Village - Level Complete)})",
+    "requires": "{canSidekick()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Burnin Biscuits)})",
     "_comment": "R:A1"
   },
   "Burnin Biscuits - Four Silver Coins in a Corner High Above Main Path Secret": {
@@ -3156,7 +3156,7 @@
     "connects_to": [
       "Burnin Biscuits - Start"
     ],
-    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {CanReachLocation(Rabbit Roast - Level Complete)} and {CanReachLocation(A Cold Day in Heck - Level Complete)} and {CanReachLocation(Jungle Jump - Level Complete)} and {CanReachLocation(Thriller Gorilla - Level Complete)} and {CanReachLocation(Hare Scare - Level Complete)} and {CanReachLocation(Medieval Kineval - Level Complete)} and {CanReachLocation(Voltage Village - Level Complete)})",
+    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Burnin Biscuits)})",
     "_comment": "R:A3"
   },
   "Burnin Biscuits - Bonus Warp Area": {
@@ -3178,7 +3178,7 @@
     "connects_to": [
       "Burnin Biscuits - Around Save Point"
     ],
-    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {CanReachLocation(Rabbit Roast - Level Complete)} and {CanReachLocation(A Cold Day in Heck - Level Complete)} and {CanReachLocation(Jungle Jump - Level Complete)} and {CanReachLocation(Thriller Gorilla - Level Complete)} and {CanReachLocation(Hare Scare - Level Complete)} and {CanReachLocation(Medieval Kineval - Level Complete)} and {CanReachLocation(Voltage Village - Level Complete)})",
+    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Burnin Biscuits)})",
     "_comment": "R:A4"
   },
   "Burnin Biscuits - Spring Section": {
@@ -3197,7 +3197,7 @@
     "connects_to": [
       "Burnin Biscuits - Exit"
     ],
-    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {CanReachLocation(Rabbit Roast - Level Complete)} and {CanReachLocation(A Cold Day in Heck - Level Complete)} and {CanReachLocation(Jungle Jump - Level Complete)} and {CanReachLocation(Thriller Gorilla - Level Complete)} and {CanReachLocation(Hare Scare - Level Complete)} and {CanReachLocation(Medieval Kineval - Level Complete)} and {CanReachLocation(Voltage Village - Level Complete)})",
+    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Burnin Biscuits)})",
     "_comment": "R:M4"
   },
   "Burnin Biscuits - Exit": {
@@ -3216,7 +3216,7 @@
     "connects_to": [
       "Bad Pitt - After Destructible Blocks Near Start"
     ],
-    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {CanReachLocation(Burnin Biscuits - Level Complete)} and {CanReachLocation(Rabbit Roast - Level Complete)} and {CanReachLocation(A Cold Day in Heck - Level Complete)} and {CanReachLocation(Jungle Jump - Level Complete)} and {CanReachLocation(Thriller Gorilla - Level Complete)} and {CanReachLocation(Hare Scare - Level Complete)} and {CanReachLocation(Medieval Kineval - Level Complete)} and {CanReachLocation(Voltage Village - Level Complete)})",
+    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Bad Pitt)})",
     "_comment": "R:M1"
   },
   "Bad Pitt - After Destructible Blocks Near Start": {
