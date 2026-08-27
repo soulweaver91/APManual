@@ -791,6 +791,7 @@
   },
   "Weirder Science - Spaz Start": {
     "connects_to": [
+      "Weirder Science - Spaz Gold Coin Below Start Secret",
       "Weirder Science - Spaz Silver Coins Warp Secret",
       "Weirder Science - Spaz Silver Coins Behind Blocks Secret",
       "Weirder Science - Spaz Only Below Silver Coins Behind Blocks"
@@ -798,11 +799,18 @@
     "requires": "(|Weirder Science Unlock| or |Formerly a Prince Progressive Level Unlock:6|) and (|Spaz Unlock|)",
     "_comment": "R:S0"
   },
+  "Weirder Science - Spaz Gold Coin Below Start Secret": {
+    "connects_to": [
+      "Weirder Science - Spaz Start"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A2"
+  },
   "Weirder Science - Spaz Silver Coins Warp Secret": {
     "connects_to": [
       "Weirder Science - Spaz Start"
     ],
-    "_comment": "R:A2"
+    "_comment": "R:A3"
   },
   "Weirder Science - Spaz Silver Coins Behind Blocks Secret": {
     "connects_to": [
@@ -810,7 +818,7 @@
       "Weirder Science - Spaz Only Below Silver Coins Behind Blocks"
     ],
     "requires": "{canDestroyWildcardBlocks()}",
-    "_comment": "R:A3"
+    "_comment": "R:A4"
   },
   "Weirder Science - Spaz Only Below Silver Coins Behind Blocks": {
     "connects_to": [
@@ -848,7 +856,7 @@
       "Weirder Science - Shared Path Start"
     ],
     "requires": "{canDestroyButtstompBlocks()}",
-    "_comment": "R:A4"
+    "_comment": "R:A5"
   },
   "Weirder Science - After Shared Sucker Tube": {
     "connects_to": [
@@ -863,14 +871,14 @@
       "Weirder Science - After Shared Sucker Tube"
     ],
     "requires": "|Toaster Permit|",
-    "_comment": "R:A5"
+    "_comment": "R:A6"
   },
   "Weirder Science - Gold Coin Among Breakable Blocks Secret": {
     "connects_to": [
       "Weirder Science - After Shared Sucker Tube"
     ],
     "requires": "{canDestroyWildcardBlocks()} and {canDestroyBouncerBlocks()}",
-    "_comment": "R:A6"
+    "_comment": "R:A7"
   },
   "Weirder Science - Around First Save Point": {
     "connects_to": [
@@ -903,7 +911,7 @@
       "Weirder Science - After Ascending Hooks"
     ],
     "requires": "{canDestroyButtstompBlocks()}",
-    "_comment": "R:A7"
+    "_comment": "R:A8"
   },
   "Weirder Science - After Poles": {
     "connects_to": [
