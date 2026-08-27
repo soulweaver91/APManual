@@ -2086,8 +2086,8 @@
     "connects_to": [
       "Electric Boogaloo - After Chute Near Start"
     ],
-    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {hasContinuousLevelAccess(Funky Grooveathon, Electric Boogaloo)})",
-    "_comment": "R:A6    TNT has to be brought here from several levels back, and vine traversal is required to get the ammo from there."
+    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {hasContinuousLevelAccess(Beach Bunny Bingo, Electric Boogaloo)})",
+    "_comment": "R:A6"
   },
   "Electric Boogaloo - Small Room After Upwards Pipe": {
     "connects_to": [
@@ -2135,15 +2135,15 @@
     "connects_to": [
       "Electric Boogaloo - Middle Section"
     ],
-    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {hasContinuousLevelAccess(Funky Grooveathon, Electric Boogaloo)})",
-    "_comment": "R:A10    TNT has to be brought here from several levels back, and vine traversal is required to get the ammo from there."
+    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {hasContinuousLevelAccess(Beach Bunny Bingo, Electric Boogaloo)})",
+    "_comment": "R:A10"
   },
   "Electric Boogaloo - Bouncer Power Up Behind Uppercut Blocks Secret": {
     "connects_to": [
       "Electric Boogaloo - Middle Section"
     ],
-    "requires": "{canUppercut()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {hasContinuousLevelAccess(Funky Grooveathon, Electric Boogaloo)})",
-    "_comment": "R:A11    TNT has to be brought here from several levels back, and vine traversal is required to get the ammo from there."
+    "requires": "{canUppercut()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {hasContinuousLevelAccess(Beach Bunny Bingo, Electric Boogaloo)})",
+    "_comment": "R:A11"
   },
   "Electric Boogaloo - Second Pinball Section": {
     "connects_to": [
@@ -2172,8 +2172,8 @@
     "connects_to": [
       "Electric Boogaloo - Final Section"
     ],
-    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {hasContinuousLevelAccess(Funky Grooveathon, Electric Boogaloo)})",
-    "_comment": "R:A12    TNT has to be brought here from several levels back, and vine traversal is required to get the ammo from there."
+    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {hasContinuousLevelAccess(Beach Bunny Bingo, Electric Boogaloo)})",
+    "_comment": "R:A12"
   },
   "Electric Boogaloo - Six Silver Coins Surrounded by Breakable Blocks Secret": {
     "connects_to": [
@@ -2192,8 +2192,8 @@
     "connects_to": [
       "Electric Boogaloo - Final Section"
     ],
-    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {hasContinuousLevelAccess(Funky Grooveathon, Electric Boogaloo)})",
-    "_comment": "R:A15    TNT has to be brought here from several levels back, and vine traversal is required to get the ammo from there."
+    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {hasContinuousLevelAccess(Beach Bunny Bingo, Electric Boogaloo)})",
+    "_comment": "R:A15"
   },
   "Electric Boogaloo - Exit": {
     "connects_to": [
@@ -2213,8 +2213,8 @@
     "connects_to": [
       "Voltage Village - Jazz Start"
     ],
-    "requires": "{canUppercut()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {canGrabVines()} and {hasContinuousLevelAccess(Funky Grooveathon, Voltage Village)})",
-    "_comment": "R:A1    Again, if uppercut is blocked, TNT has to be brought here from several levels back, and vine traversal is required to get the ammo from there."
+    "requires": "{canUppercut()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {hasContinuousLevelAccess(Beach Bunny Bingo, Voltage Village)})",
+    "_comment": "R:A1"
   },
   "Voltage Village - Spaz Start": {
     "connects_to": [
