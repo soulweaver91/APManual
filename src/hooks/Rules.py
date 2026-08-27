@@ -120,6 +120,16 @@ class Levels(StrEnum):
     SNOW_BUNNIES = 'Snow Bunnies'
     DASHING_THRU_THE_SNOW = 'Dashing thru the snow..'
     TINSEL_TOWN = 'Tinsel Town'
+    
+class Weapons(StrEnum):
+    BOUNCER = 'Bouncer'
+    FREEZER = 'Freezer'
+    SEEKER = 'Seeker'
+    RF = 'RF Missile'
+    TOASTER = 'Toaster'
+    TNT = 'TNT'
+    PEPPER = 'Pepper Spray'
+    ELECTRO = 'Electro Blaster'
 
 LEVEL_ORDER_LOOKUP = [
     None,
@@ -190,6 +200,118 @@ LEVEL_ORDER_LOOKUP = [
     None
 ]
 
+# For each level, which weapons are available and how.
+# If the value is true, the weapon can be obtained if the main path can be followed to the end.
+# Otherwise, the list specifies the regions that, if accessible, can all provide access to the weapon.
+LEVEL_WEAPON_ACCESS_LOOKUP: dict[str, dict[Weapons, bool | list[str]]] = {
+    Levels.RABBIT_IN_TRAINING: {},
+    Levels.DUNGEON_DILEMMA: { 
+        Weapons.BOUNCER: True 
+    },
+    Levels.KNIGHT_CAP: {
+        Weapons.BOUNCER: True,
+        Weapons.FREEZER: ['Jazz Main Area']
+    },
+    Levels.TOSSED_SALAD: {
+        Weapons.TOASTER: True
+    },
+    Levels.CARROT_JUICE: {
+        Weapons.BOUNCER: True,
+        Weapons.TOASTER: True
+    },
+    Levels.WEIRDER_SCIENCE: {
+        Weapons.BOUNCER: True,
+        Weapons.TOASTER: True
+    },
+    Levels.LOOSE_SCREWS: {
+        Weapons.BOUNCER: True,
+        Weapons.TOASTER: True
+    },
+    Levels.VICTORIAN_SECRET: {
+        Weapons.SEEKER: True
+    },
+    Levels.COLONIAL_CHAOS: {
+        Weapons.FREEZER: True,
+        Weapons.SEEKER: True
+    },
+    Levels.PURPLE_HAZE_MAZE: {
+        Weapons.RF: True,
+        Weapons.TOASTER: ['Toaster Ammo Crate Behind RF Blocks Secret']
+    },
+    Levels.FUNKY_GROOVEATHON: {
+        Weapons.BOUNCER: True,
+        Weapons.RF: True,
+        Weapons.TOASTER: True,
+        Weapons.TNT: ['TNT Ammo Above Vine Near Start']
+    },
+    Levels.BEACH_BUNNY_BINGO: {
+        Weapons.BOUNCER: True,
+        Weapons.TOASTER: ['Bonus Warp Area'],
+        Weapons.TNT: True
+    },
+    Levels.MARINATED_RABBIT: {
+        Weapons.SEEKER: True,
+        Weapons.RF: ['Bonus Warp Area']
+    },
+    Levels.A_DIAMONDUS_FOREVER: {
+        Weapons.BOUNCER: True,
+        Weapons.FREEZER: True,
+        Weapons.SEEKER: ['Spaz Start'],
+        Weapons.TOASTER: True
+    },
+    Levels.FOURTEEN_CARROT: {
+        Weapons.BOUNCER: ['Character Morph Power-Up Below Buttstomp Block Secret'],
+        Weapons.FREEZER: True,
+        Weapons.TOASTER: True,
+        Weapons.PEPPER: True
+    },
+    Levels.ELECTRIC_BOOGALOO: {
+        Weapons.BOUNCER: True,
+        Weapons.FREEZER: [
+            'Freezer Ammo Behind Bouncer Blocks Secret',
+            'Freezer Ammo Behind Destructible Barrier Secret',
+            'First Freezer Power Up Behind Sidekick Blocks Secret',
+            'Second Freezer Power Up Behind Sidekick Blocks Secret'
+        ]
+    },
+    Levels.VOLTAGE_VILLAGE: {
+        Weapons.TOASTER: ['Spaz Only Toaster Ammo Above Main Path Secret', 'Bonus Warp Area'],
+        Weapons.TNT: True
+    },
+    Levels.MEDIEVAL_KINEVAL: {
+        Weapons.ELECTRO: True
+    },
+    Levels.HARE_SCARE: {
+        Weapons.RF: True
+    },
+    Levels.GARGOYLES_LAIR: {
+        Weapons.BOUNCER: True,
+        Weapons.SEEKER: True,
+        Weapons.RF: True,
+        Weapons.TOASTER: True
+    },
+    Levels.THRILLER_GORILLA: {
+        Weapons.TOASTER: True
+    },
+    Levels.JUNGLE_JUMP: {
+        Weapons.FREEZER: True
+    },
+    Levels.A_COLD_DAY_IN_HECK: {
+        Weapons.TOASTER: True
+    },
+    Levels.RABBIT_ROAST: {
+        Weapons.FREEZER: True
+    },
+    Levels.BURNIN_BISCUITS: {
+        Weapons.TOASTER: True,
+        Weapons.PEPPER: True
+    },
+    Levels.BAD_PITT: {
+        Weapons.TOASTER: True,
+        Weapons.TNT: True
+    }
+}
+
 def hasContinuousLevelAccess(state: CollectionState, player: int, from_level: str, to_level: str) -> bool:
     from ..Rules import CanReachLocation
     import logging
@@ -222,3 +344,58 @@ def hasContinuousLevelAccess(state: CollectionState, player: int, from_level: st
             return False
 
     return False
+
+def hasWeaponAccess(state: CollectionState, player: int, level: str, weapon: str) -> bool:
+    from ..Rules import CanReachLocation
+    import logging
+
+    if not weapon in Weapons:
+        logging.error(f'hasWeaponAccess: invalid weapon {weapon}')
+        return False
+
+    end_index = None
+    try:
+        end_index = LEVEL_ORDER_LOOKUP.index(level)
+    except ValueError:
+        logging.error(f'hasWeaponAccess: invalid target level {level}')
+        return False
+
+    unconditional_last_level = None
+    conditional_last_locations: list[tuple[str, str]] = []
+            
+    cursor_index = end_index
+    while cursor_index > 0:
+        cursor_index = cursor_index - 1
+        prev_level = LEVEL_ORDER_LOOKUP[cursor_index]
+
+        if prev_level is None:
+            break
+
+        if prev_level in LEVEL_WEAPON_ACCESS_LOOKUP.keys() and weapon in LEVEL_WEAPON_ACCESS_LOOKUP[prev_level].keys():
+            if LEVEL_WEAPON_ACCESS_LOOKUP[prev_level][Weapons(weapon)] == True:
+                unconditional_last_level = prev_level
+                break
+            else:
+                for location in LEVEL_WEAPON_ACCESS_LOOKUP[weapon]:
+                    conditional_last_locations.append((prev_level, location))
+
+    if unconditional_last_level is not None:
+        if hasContinuousLevelAccess(state, player, unconditional_last_level, level):
+            logging.debug(f'hasWeaponAccess: can access unconditional weapon {weapon} location in {unconditional_last_level}')
+            return True
+        logging.debug(f'hasWeaponAccess: unconditional weapon {weapon} location in {unconditional_last_level} is inaccessible')
+    else:
+        logging.debug(f'hasWeaponAccess: no unconditional weapon {weapon} location available')
+
+    for weapon_level, location in conditional_last_locations:
+        if not hasContinuousLevelAccess(state, player, weapon_level, level):
+            continue
+
+        if CanReachLocation(state, player, f'{weapon_level} - {location}'):
+            logging.debug(f'hasWeaponAccess: can access conditional weapon {weapon} location in {weapon_level} - {location}')
+            return True
+        logging.debug(f'hasWeaponAccess: conditional weapon {weapon} location in {weapon_level} - {location} is inaccessible')
+
+    logging.debug(f'hasWeaponAccess: cannot access any weapon {weapon} locations from {level}')
+    return False
+    

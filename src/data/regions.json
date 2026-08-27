@@ -192,12 +192,8 @@
   },
   "Dungeon Dilemma - Spring Sequence after Save Point One": {
     "connects_to": [
-      "Dungeon Dilemma - Before and Around Save Point One",
       "Dungeon Dilemma - Between Spring Section and Vines After Save Point Two"
     ],
-    "exit_requires": {
-      "Dungeon Dilemma - Before and Around Save Point One": "|Freezer Permit| and {canDoubleJump()} or {canUppercut()}"
-    },
     "_comment": "R:M3"
   },
   "Dungeon Dilemma - Between Spring Section and Vines After Save Point Two": {
@@ -460,12 +456,8 @@
   },
   "Tossed Salad - Spaz Only Final Part": {
     "connects_to": [
-      "Tossed Salad - Spaz Start",
       "Tossed Salad - Shared Path Start"
     ],
-    "exit_requires": {
-      "Tossed Salad - Spaz Start": "|Freezer Permit| and {canDoubleJump()}"
-    },
     "_comment": "R:S1"
   },
   "Tossed Salad - One Up High Above Frozen Spring Secret": {
@@ -610,7 +602,7 @@
       "Carrot Juice - Left Path Last Section"
     ],
     "exit_requires": {
-      "Carrot Juice - Left Path After Third Fall": "|Freezer Permit| and ({canUppercut()} or {canDoubleJump()})"
+      "Carrot Juice - Left Path After Third Fall": "|Freezer Permit| and {hasWeaponAccess(Carrot Juice, Freezer)} and ({canUppercut()} or {canDoubleJump()})"
     },
     "_comment": "R:M4"
   },
@@ -641,7 +633,7 @@
       "Carrot Juice - Paths Convergence"
     ],
     "exit_requires": {
-      "Carrot Juice - Start": "|Freezer Permit|"
+      "Carrot Juice - Start": "|Freezer Permit| and {hasWeaponAccess(Carrot Juice, Freezer)}"
     },
     "_comment": "R:M6"
   },
@@ -667,7 +659,7 @@
       "Carrot Juice - After Poles One Way"
     ],
     "exit_requires": {
-      "Carrot Juice - After First Drop after Convergence": "|Freezer Permit|"
+      "Carrot Juice - After First Drop after Convergence": "|Freezer Permit| and {hasWeaponAccess(Carrot Juice, Freezer)}"
     },
     "_comment": "R:M9"
   },
@@ -704,7 +696,7 @@
       "Carrot Juice - After East Upper Spring One Way"
     ],
     "exit_requires": {
-      "Carrot Juice - Around Second Save Point": "|Freezer Permit|"
+      "Carrot Juice - Around Second Save Point": "|Freezer Permit| and {hasWeaponAccess(Carrot Juice, Freezer)}"
     },
     "_comment": "R:M12"
   },
@@ -828,12 +820,8 @@
   },
   "Weirder Science - Spaz Only After Springs": {
     "connects_to": [
-      "Weirder Science - Spaz Only Below Silver Coins Behind Blocks",
       "Weirder Science - Spaz Only After Hooks"
     ],
-    "exit_requires": {
-      "Weirder Science - Spaz Only Below Silver Coins Behind Blocks": "|Freezer Permit|"
-    },
     "_comment": "R:S2"
   },
   "Weirder Science - Spaz Only After Hooks": {
@@ -1503,8 +1491,8 @@
     "connects_to": [
       "Funky Grooveathon - Main Section"
     ],
-    "requires": "{canSidekick()} or ({canDestroyButtstompBlocks()} and {canGrabVines()} and |TNT Permit|)",
-    "_comment": "R:A4   The only TNT pickups in this level are behind the vines. (Bringing TNT from a different level is as of now out of logic.)"
+    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and ({canGrabVines()} or {hasWeaponAccess(Funky Grooveathon, TNT)}))",
+    "_comment": "R:A4"
   },
   "Funky Grooveathon - Five Sandwiches Behind Destructible Blocks Secret": {
     "connects_to": [
@@ -1524,7 +1512,7 @@
     "connects_to": [
       "Funky Grooveathon - Main Section"
     ],
-    "requires": "{canUppercut()} or ({canDestroyButtstompBlocks()} and {canGrabVines()} and |TNT Permit|)",
+    "requires": "{canUppercut()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and ({canGrabVines()} or {hasWeaponAccess(Funky Grooveathon, TNT)}))",
     "_comment": "R:A7"
   },
   "Funky Grooveathon - Exit": {
@@ -1693,7 +1681,7 @@
     ],
     "requires": "{canDestroyBouncerBlocks()}",
     "exit_requires": {
-      "A Diamondus Forever - Jazz Start": "|Freezer Permit|"
+      "A Diamondus Forever - Jazz Start": "|Freezer Permit| and {hasWeaponAccess(A Diamondus Forever, Freezer)})"
     },
     "_comment": "R:J3"
   },
@@ -1820,8 +1808,8 @@
     "connects_to": [
       "A Diamondus Forever - Shared Path Start"
     ],
-    "requires": "{canUppercut()} or ({canDestroyButtstompBlocks()} and |TNT Permit| and {CanReachLocation(Marinated Rabbit - Level Complete)})",
-    "_comment": "R:A9    Using TNT here requires bringing it from a previous level, in this case the directly preceding one."
+    "requires": "{canUppercut()} or ({canDestroyButtstompBlocks()} and |TNT Permit| and {hasWeaponAccess(A Diamondus Forever, TNT)})",
+    "_comment": "R:A9"
   },
   "A Diamondus Forever - Carrot Crates and Two Gold Coins Secret": {
     "connects_to": [
@@ -1911,8 +1899,8 @@
     "connects_to": [
       "Fourteen Carrot - Start"
     ],
-    "requires": "|Toaster Permit| and {CanReachLocation(A Diamondus Forever - Level Complete)}",
-    "_comment": "R:A2    No toaster ammo in this level before this point, so it has to be brought from a preceding level"
+    "requires": "|Toaster Permit| and {hasWeaponAccess(Fourteen Carrot, Toaster)}",
+    "_comment": "R:A2    There is toaster ammo in this level, but it's not possible to backtrack from there to here."
   },
   "Fourteen Carrot - Fire Shield Secret": {
     "connects_to": [
@@ -1946,8 +1934,8 @@
     "connects_to": [
       "Fourteen Carrot - Start"
     ],
-    "requires": "|Toaster Permit| and {CanReachLocation(A Diamondus Forever - Level Complete)}",
-    "_comment": "R:A7    No toaster ammo in this level before this point, so it has to be brought from a preceding level"
+    "requires": "|Toaster Permit| and {hasWeaponAccess(Fourteen Carrot, Toaster)}",
+    "_comment": "R:A7    There is toaster ammo in this level, but it's not possible to backtrack from there to here."
   },
   "Fourteen Carrot - Middle Spring Section": {
     "connects_to": [
@@ -2072,7 +2060,7 @@
     "connects_to": [
       "Electric Boogaloo - After Chute Near Start"
     ],
-    "requires": "|Freezer Permit|",
+    "requires": "|Freezer Permit| and '({canDestroyBouncerBlocks()} or {hasWeaponAccess(Electric Boogaloo, Freezer)})",
     "_comment": "R:A4"
   },
   "Electric Boogaloo - Carrots Behind Sturdy Blocks Secret": {
@@ -2086,7 +2074,7 @@
     "connects_to": [
       "Electric Boogaloo - After Chute Near Start"
     ],
-    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {hasContinuousLevelAccess(Beach Bunny Bingo, Electric Boogaloo)})",
+    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {hasWeaponAccess(Electric Boogaloo, TNT)})",
     "_comment": "R:A6"
   },
   "Electric Boogaloo - Small Room After Upwards Pipe": {
@@ -2106,7 +2094,7 @@
       "Electric Boogaloo - Bouncer Power Up Behind Uppercut Blocks Secret"
     ],
     "exit_requires": {
-      "Electric Boogaloo - Small Room After Upwards Pipe": "|Freezer Permit|"
+      "Electric Boogaloo - Small Room After Upwards Pipe": "|Freezer Permit| and '({canDestroyBouncerBlocks()} or {canDestroyWildcardBlocks()} or {CanReachLocation(Electric Boogaloo - First Freezer Power Up Behind Sidekick Blocks Secret)} or {hasWeaponAccess(Electric Boogaloo, Freezer)})"
     },
     "_comment": "R:M4"
   },
@@ -2135,14 +2123,14 @@
     "connects_to": [
       "Electric Boogaloo - Middle Section"
     ],
-    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {hasContinuousLevelAccess(Beach Bunny Bingo, Electric Boogaloo)})",
+    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {hasWeaponAccess(Electric Boogaloo, TNT)})",
     "_comment": "R:A10"
   },
   "Electric Boogaloo - Bouncer Power Up Behind Uppercut Blocks Secret": {
     "connects_to": [
       "Electric Boogaloo - Middle Section"
     ],
-    "requires": "{canUppercut()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {hasContinuousLevelAccess(Beach Bunny Bingo, Electric Boogaloo)})",
+    "requires": "{canUppercut()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {hasWeaponAccess(Electric Boogaloo, TNT)})",
     "_comment": "R:A11"
   },
   "Electric Boogaloo - Second Pinball Section": {
@@ -2172,7 +2160,7 @@
     "connects_to": [
       "Electric Boogaloo - Final Section"
     ],
-    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {hasContinuousLevelAccess(Beach Bunny Bingo, Electric Boogaloo)})",
+    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {hasWeaponAccess(Electric Boogaloo, TNT)})",
     "_comment": "R:A12"
   },
   "Electric Boogaloo - Six Silver Coins Surrounded by Breakable Blocks Secret": {
@@ -2192,7 +2180,7 @@
     "connects_to": [
       "Electric Boogaloo - Final Section"
     ],
-    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {hasContinuousLevelAccess(Beach Bunny Bingo, Electric Boogaloo)})",
+    "requires": "{canSidekick()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {hasWeaponAccess(Electric Boogaloo, TNT)})",
     "_comment": "R:A15"
   },
   "Electric Boogaloo - Exit": {
@@ -2213,7 +2201,7 @@
     "connects_to": [
       "Voltage Village - Jazz Start"
     ],
-    "requires": "{canUppercut()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {hasContinuousLevelAccess(Beach Bunny Bingo, Voltage Village)})",
+    "requires": "{canUppercut()} or (|TNT Permit| and {canDestroyButtstompBlocks()} and {hasWeaponAccess(Voltage Village, TNT)})",
     "_comment": "R:A1"
   },
   "Voltage Village - Spaz Start": {
@@ -2653,14 +2641,14 @@
     "connects_to": [
       "Gargoyles Lair - Tunnel After Trigger Crates"
     ],
-    "requires": "|Buttstomp Unlock| or {canSidekick()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Gargoyles Lair)})",
+    "requires": "|Buttstomp Unlock| or {canSidekick()} or (|TNT Permit| and {hasWeaponAccess(Gargoyles Lair, TNT)})",
     "_comment": "R:M2"
   },
   "Gargoyles Lair - Tunnel After Trigger Crates": {
     "connects_to": [
       "Gargoyles Lair - Main Section"
     ],
-    "requires": "|Buttstomp Unlock| or {canSidekick()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Gargoyles Lair)})",
+    "requires": "|Buttstomp Unlock| or {canSidekick()} or (|TNT Permit| and {hasWeaponAccess(Gargoyles Lair, TNT)})",
     "_comment": "R:M3"
   },
   "Gargoyles Lair - Main Section": {
@@ -2691,7 +2679,7 @@
     "connects_to": [
       "Gargoyles Lair - Main Section"
     ],
-    "requires": "{canSidekick()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Gargoyles Lair)})",
+    "requires": "{canSidekick()} or (|TNT Permit| and {hasWeaponAccess(Gargoyles Lair, TNT)})",
     "_comment": "R:A4"
   },
   "Gargoyles Lair - Room with Green Gems and Gold Coin Secret": {
@@ -2707,7 +2695,7 @@
     "connects_to": [
       "Gargoyles Lair - Main Section"
     ],
-    "requires": "|Bouncer Permit| or {canUppercut()} or ({canGrabHooks()} and ({canCopter()} or {canDoubleJump()})) or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Gargoyles Lair)})",
+    "requires": "|Bouncer Permit| or {canUppercut()} or ({canGrabHooks()} and ({canCopter()} or {canDoubleJump()})) or (|TNT Permit| and {hasWeaponAccess(Gargoyles Lair, TNT)})",
     "_comment": "R:A6"
   },
   "Gargoyles Lair - Green Gems Behind Uppercut Blocks Secret": {
@@ -2728,7 +2716,7 @@
     "connects_to": [
       "Gargoyles Lair - Exit"
     ],
-    "requires": "{canDestroyWildcardBlocks()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Gargoyles Lair)})",
+    "requires": "{canDestroyWildcardBlocks()} or (|TNT Permit| and {hasWeaponAccess(Gargoyles Lair, TNT)})",
     "_comment": "R:M5"
   },
   "Gargoyles Lair - Exit": {
@@ -2957,7 +2945,7 @@
     "connects_to": [
       "Jungle Jump - Middle Level Section Near Exit"
     ],
-    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and |Special Move Destructible Scenery| and {hasContinuousLevelAccess(Voltage Village, Jungle Jump)})",
+    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and |Special Move Destructible Scenery| and {hasWeaponAccess(Jungle Jump, TNT)})",
     "_comment": "R:M7"
   },
   "Jungle Jump - Final Section": {
@@ -3009,7 +2997,7 @@
       "A Cold Day in Heck - Near Save Point"
     ],
     "requires": "{canDestroyToasterBlocks()}",
-    "_comment": "R:B1    20 coins required; 21 are available, of which 4 require toaster."
+    "_comment": "R:B1    20 coins required; 24 are available, of which 7 require toaster."
   },
   "A Cold Day in Heck - Room with Large Skull": {
     "connects_to": [
@@ -3040,7 +3028,7 @@
     "connects_to": [
       "A Cold Day in Heck - Bottom Level Section Before One Ways"
     ],
-    "requires": "{canUppercut()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, A Cold Day in Heck)})",
+    "requires": "{canUppercut()} or (|TNT Permit| and {hasWeaponAccess(A Cold Day in Heck, TNT)})",
     "_comment": "R:A4"
   },
   "A Cold Day in Heck - After One Ways": {
@@ -3053,7 +3041,7 @@
     "connects_to": [
       "A Cold Day in Heck - Exit"
     ],
-    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, A Cold Day in Heck)})",
+    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {hasWeaponAccess(A Cold Day in Heck, TNT)})",
     "_comment": "R:M5"
   },
   "A Cold Day in Heck - Exit": {
@@ -3107,7 +3095,7 @@
     "connects_to": [
       "Rabbit Roast - Final Section After Second Drop"
     ],
-    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Rabbit Roast)})",
+    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {hasWeaponAccess(Rabbit Roast, TNT)})",
     "_comment": "R:M4"
   },
   "Rabbit Roast - Final Section After Second Drop": {
@@ -3150,7 +3138,7 @@
     "connects_to": [
       "Burnin Biscuits - Start"
     ],
-    "requires": "{canSidekick()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Burnin Biscuits)})",
+    "requires": "{canSidekick()} or (|TNT Permit| and {hasWeaponAccess(Burnin Biscuits, TNT)})",
     "_comment": "R:A1"
   },
   "Burnin Biscuits - Four Silver Coins in a Corner High Above Main Path Secret": {
@@ -3164,7 +3152,7 @@
     "connects_to": [
       "Burnin Biscuits - Start"
     ],
-    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Burnin Biscuits)})",
+    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {hasWeaponAccess(Burnin Biscuits, TNT)})",
     "_comment": "R:A3"
   },
   "Burnin Biscuits - Bonus Warp Area": {
@@ -3186,7 +3174,7 @@
     "connects_to": [
       "Burnin Biscuits - Around Save Point"
     ],
-    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Burnin Biscuits)})",
+    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {hasWeaponAccess(Burnin Biscuits, TNT)})",
     "_comment": "R:A4"
   },
   "Burnin Biscuits - Spring Section": {
@@ -3205,7 +3193,7 @@
     "connects_to": [
       "Burnin Biscuits - Exit"
     ],
-    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Burnin Biscuits)})",
+    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {hasWeaponAccess(Burnin Biscuits, TNT)})",
     "_comment": "R:M4"
   },
   "Burnin Biscuits - Exit": {
@@ -3224,7 +3212,7 @@
     "connects_to": [
       "Bad Pitt - After Destructible Blocks Near Start"
     ],
-    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {hasContinuousLevelAccess(Voltage Village, Bad Pitt)})",
+    "requires": "{canDestroyButtstompBlocks()} or (|TNT Permit| and {hasWeaponAccess(Bad Pitt, TNT)})",
     "_comment": "R:M1"
   },
   "Bad Pitt - After Destructible Blocks Near Start": {
