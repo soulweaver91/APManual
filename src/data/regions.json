@@ -273,7 +273,7 @@
       "Knight Cap - Jazz Main Area",
       "Knight Cap - Jazz Left Path Left Branch After Chute"
     ],
-    "requires": "{canDestroyBouncerBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(Bouncer)}",
     "_comment": "R:J2"
   },
   "Knight Cap - Jazz Left Path Left Branch After Chute": {
@@ -345,14 +345,14 @@
     "connects_to": [
       "Knight Cap - Spaz Only After Chute"
     ],
-    "requires": "{canDestroyBouncerBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(Bouncer)}",
     "_comment": "R:A4"
   },
   "Knight Cap - Spaz Only Two Gold Coins Secret": {
     "connects_to": [
       "Knight Cap - Spaz Only After Chute"
     ],
-    "requires": "{canDestroyBouncerBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(Bouncer)}",
     "_comment": "R:A5"
   },
   "Knight Cap - Shared Path Start From Left": {
@@ -778,7 +778,7 @@
     "connects_to": [
       "Weirder Science - Jazz Start"
     ],
-    "requires": "{canDestroyBouncerBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(Bouncer)}",
     "_comment": "R:A1"
   },
   "Weirder Science - Spaz Start": {
@@ -865,7 +865,7 @@
     "connects_to": [
       "Weirder Science - After Shared Sucker Tube"
     ],
-    "requires": "{canDestroyWildcardBlocks()} and {canDestroyBouncerBlocks()}",
+    "requires": "{canDestroyWildcardBlocks()} and {canDestroyWeaponBlocks(Bouncer)}",
     "_comment": "R:A7"
   },
   "Weirder Science - Around First Save Point": {
@@ -997,7 +997,7 @@
     "connects_to": [
       "Loose Screws - After First Spring Sequence"
     ],
-    "requires": "{canDestroyBouncerBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(Bouncer)}",
     "_comment": "R:A3"
   },
   "Loose Screws - After One Way Near First Save Point": {
@@ -1129,14 +1129,14 @@
     "connects_to": [
       "Victorian Secret - In and After First Sewer Section"
     ],
-    "requires": "{canDestroySeekerBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(Seeker)}",
     "_comment": "R:A2"
   },
   "Victorian Secret - Gold Coin on the Roof Behind Blocks Secret": {
     "connects_to": [
       "Victorian Secret - In and After First Sewer Section"
     ],
-    "requires": "{canDestroySeekerBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(Seeker)}",
     "_comment": "R:A3"
   },
   "Victorian Secret - After Clothesline Across the Chasm": {
@@ -1245,7 +1245,7 @@
     "connects_to": [
       "Colonial Chaos - Final Section"
     ],
-    "requires": "{canDestroySeekerBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(Seeker)}",
     "_comment": "R:A3"
   },
   "Colonial Chaos - Exit": {
@@ -1280,7 +1280,7 @@
     "connects_to": [
       "Purple Haze Maze - Large Room Before First Save Point"
     ],
-    "requires": "{canDestroyRFMissileBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(RF Missile)}",
     "_comment": "R:A1"
   },
   "Purple Haze Maze - Above Vine in Large Room Before First Save Point": {
@@ -1296,7 +1296,7 @@
       "Purple Haze Maze - Six Silver Coins Behind Breakable Wall Before First Save Point",
       "Purple Haze Maze - Large Room Before First Save Point"
     ],
-    "requires": "{canDestroyRFMissileBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(RF Missile)}",
     "_comment": "R:A3"
   },
   "Purple Haze Maze - Tunnel Section Around Bonus Warp": {
@@ -1310,7 +1310,7 @@
     "connects_to": [
       "Purple Haze Maze - Around First Save Point"
     ],
-    "requires": "{canDestroyRFMissileBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(RF Missile)}",
     "_comment": "R:B1    Two sets of six silver coins, both behind RF destructible scenery"
   },
   "Purple Haze Maze - Around First Save Point": {
@@ -1328,7 +1328,7 @@
     "connects_to": [
       "Purple Haze Maze - Around First Save Point"
     ],
-    "requires": "{canDestroyRFMissileBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(RF Missile)}",
     "_comment": "R:A4"
   },
   "Purple Haze Maze - Bottom Section After First Save Point": {
@@ -1344,7 +1344,7 @@
     "connects_to": [
       "Purple Haze Maze - Bottom Section After First Save Point"
     ],
-    "requires": "{canDestroyRFMissileBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(RF Missile)}",
     "_comment": "R:A5"
   },
   "Purple Haze Maze - RF Ammo Above Vine in Bottom Section": {
@@ -1380,7 +1380,7 @@
     "connects_to": [
       "Purple Haze Maze - Above Singular Hook After One Way"
     ],
-    "requires": "{canDestroyRFMissileBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(RF Missile)}",
     "_comment": "R:A7"
   },
   "Purple Haze Maze - Ascending Hooks Room": {
@@ -1407,7 +1407,7 @@
     "connects_to": [
       "Purple Haze Maze - After Vines in Ascending Hooks Room"
     ],
-    "requires": "{canDestroyRFMissileBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(RF Missile)}",
     "_comment": "R:A8"
   },
   "Purple Haze Maze - After Final Hooks": {
@@ -1539,7 +1539,7 @@
     "connects_to": [
       "Beach Bunny Bingo - After One Ways"
     ],
-    "requires": "{canDestroyTNTBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(TNT)}",
     "_comment": "R:A1"
   },
   "Beach Bunny Bingo - Bonus Warp Area": {
@@ -1679,7 +1679,7 @@
       "A Diamondus Forever - Jazz Start",
       "A Diamondus Forever - Jazz After Spring Tunnel"
     ],
-    "requires": "{canDestroyBouncerBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(Bouncer)}",
     "exit_requires": {
       "A Diamondus Forever - Jazz Start": "|Freezer Permit| and {hasWeaponAccess(A Diamondus Forever, Freezer)})"
     },
@@ -1793,7 +1793,7 @@
     "connects_to": [
       "A Diamondus Forever - Spaz Final Part"
     ],
-    "requires": "{canDestroyBouncerBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(Bouncer)}",
     "_comment": "R:A8"
   },
   "A Diamondus Forever - Shared Path Start": {
@@ -2044,7 +2044,7 @@
     "connects_to": [
       "Electric Boogaloo - Above and In First Pinball Room"
     ],
-    "requires": "{canDestroyBouncerBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(Bouncer)}",
     "_comment": "R:A3"
   },
   "Electric Boogaloo - After Chute Near Start": {
@@ -2060,7 +2060,7 @@
     "connects_to": [
       "Electric Boogaloo - After Chute Near Start"
     ],
-    "requires": "|Freezer Permit| and '({canDestroyBouncerBlocks()} or {hasWeaponAccess(Electric Boogaloo, Freezer)})",
+    "requires": "|Freezer Permit| and '({canDestroyWeaponBlocks(Bouncer)} or {hasWeaponAccess(Electric Boogaloo, Freezer)})",
     "_comment": "R:A4"
   },
   "Electric Boogaloo - Carrots Behind Sturdy Blocks Secret": {
@@ -2094,7 +2094,7 @@
       "Electric Boogaloo - Bouncer Power Up Behind Uppercut Blocks Secret"
     ],
     "exit_requires": {
-      "Electric Boogaloo - Small Room After Upwards Pipe": "|Freezer Permit| and '({canDestroyBouncerBlocks()} or {canDestroyWildcardBlocks()} or {CanReachLocation(Electric Boogaloo - First Freezer Power Up Behind Sidekick Blocks Secret)} or {hasWeaponAccess(Electric Boogaloo, Freezer)})"
+      "Electric Boogaloo - Small Room After Upwards Pipe": "|Freezer Permit| and '({canDestroyWeaponBlocks(Bouncer)} or {canDestroyWildcardBlocks()} or {CanReachLocation(Electric Boogaloo - First Freezer Power Up Behind Sidekick Blocks Secret)} or {hasWeaponAccess(Electric Boogaloo, Freezer)})"
     },
     "_comment": "R:M4"
   },
@@ -2257,7 +2257,7 @@
     "connects_to": [
       "Voltage Village - Shared Path Start"
     ],
-    "requires": "{canDestroyTNTBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(TNT)}",
     "_comment": "R:A3    TNT is available early on on the shared path, so bringing some from another level is no longer necessary."
   },
   "Voltage Village - Fruit Behind Uppercut Blocks Secret": {
@@ -2271,7 +2271,7 @@
     "connects_to": [
       "Voltage Village - Shared Path Start"
     ],
-    "requires": "{canDestroyTNTBlocks()} and {canDestroyWildcardBlocks()} and |Toaster Permit|",
+    "requires": "{canDestroyWeaponBlocks(TNT)} and {canDestroyWildcardBlocks()} and |Toaster Permit|",
     "_comment": "R:A5"
   },
   "Voltage Village - Four Silver Coins Behind Breakable Blocks Secret": {
@@ -2972,7 +2972,7 @@
     "connects_to": [
       "A Cold Day in Heck - Start"
     ],
-    "requires": "{canDestroyToasterBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(Toaster)}",
     "_comment": "R:A1"
   },
   "A Cold Day in Heck - Near Save Point": {
@@ -2989,14 +2989,14 @@
     "connects_to": [
       "A Cold Day in Heck - Near Save Point"
     ],
-    "requires": "{canDestroyToasterBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(Toaster)}",
     "_comment": "R:A2"
   },
   "A Cold Day in Heck - Bonus Warp Area": {
     "connects_to": [
       "A Cold Day in Heck - Near Save Point"
     ],
-    "requires": "{canDestroyToasterBlocks()}",
+    "requires": "{canDestroyWeaponBlocks(Toaster)}",
     "_comment": "R:B1    20 coins required; 24 are available, of which 7 require toaster."
   },
   "A Cold Day in Heck - Room with Large Skull": {

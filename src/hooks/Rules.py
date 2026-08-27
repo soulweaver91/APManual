@@ -1,82 +1,10 @@
 from typing import Optional
 from worlds.AutoWorld import World
-from ..Helpers import clamp, get_items_with_value
+from ..Helpers import is_option_enabled
 from BaseClasses import MultiWorld, CollectionState
 
 import re
 from enum import StrEnum
-
-# # Sometimes you have a requirement that is just too messy or repetitive to write out with boolean logic.
-# # Define a function here, and you can use it in a requires string with {function_name()}.
-# def overfishedAnywhere(world: World, state: CollectionState, player: int):
-#     """Has the player collected all fish from any fishing log?"""
-#     for cat, items in world.item_name_groups:
-#         if cat.endswith("Fishing Log") and state.has_all(items, player):
-#             return True
-#     return False
-# 
-# # You can also pass an argument to your function, like {function_name(15)}
-# # Note that all arguments are strings, so you'll need to convert them to ints if you want to do math.
-# def anyClassLevel(state: CollectionState, player: int, level: str):
-#     """Has the player reached the given level in any class?"""
-#     for item in ["Figher Level", "Black Belt Level", "Thief Level", "Red Mage Level", "White Mage Level", "Black Mage Level"]:
-#         if state.count(item, player) >= int(level):
-#             return True
-#     return False
-
-def canDoubleJump():
-    return "|Spaz Unlock| and (|Double Jump Unlock| or {YamlDisabled(basic_movement_in_pool)})"
-
-def canCopter():
-    return "(|Jazz Unlock| or |Lori Unlock|) and (|Copter Ears Unlock| or {YamlDisabled(basic_movement_in_pool)})"
-
-def canUppercut():
-    return "|Jazz Unlock| and (|Uppercut Unlock| or {YamlDisabled(basic_movement_in_pool)})"
-
-def canSidekick():
-    return "(|Spaz Unlock| or |Lori Unlock|) and (|Sidekick Unlock| or {YamlDisabled(basic_movement_in_pool)})"
-
-def canButtstomp():
-    return "|Buttstomp Unlock| or {YamlDisabled(basic_movement_in_pool)}"
-
-def canDestroyWildcardBlocks():
-    return "|Wildcard Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}"
-
-def canDestroyBouncerBlocks():
-    return "(|Bouncer Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}) and |Bouncer Permit|"
-
-def canDestroySeekerBlocks():
-    return "(|Seeker Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}) and |Seeker Permit|"
-
-def canDestroyRFMissileBlocks():
-    return "(|RF Missile Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}) and |RF Missile Permit|"
-
-def canDestroyToasterBlocks():
-    return "(|Toaster Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}) and |Toaster Permit|"
-
-def canDestroyTNTBlocks():
-    return "(|TNT Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}) and |TNT Permit|"
-
-def canDestroyButtstompBlocks():
-    return "(|Special Move Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}) and (|Buttstomp Unlock| or {YamlDisabled(basic_movement_in_pool)})"
-
-def canDestroySpeedBlocks():
-    return "|Speed Destructible Scenery| or {YamlDisabled(block_destruction_in_pool)}"
-
-def canGrabVines():
-    return "|Vine Traversal| or {YamlDisabled(basic_movement_in_pool)}"
-
-def canGrabHooks():
-    return "|Hook Traversal| or {YamlDisabled(basic_movement_in_pool)}"
-
-def canSwim():
-    return "|Swimming Unlock| or {YamlDisabled(basic_movement_in_pool)}"
-
-def CanReachRegion(state: CollectionState, player: int, location: str) -> bool:
-    """Can the player reach the given region?"""
-    if state.can_reach_region(location, player):
-        return True
-    return False
 
 class Levels(StrEnum):
     RABBIT_IN_TRAINING = 'Rabbit in Training'
@@ -312,6 +240,102 @@ LEVEL_WEAPON_ACCESS_LOOKUP: dict[str, dict[Weapons, bool | list[str]]] = {
     }
 }
 
+
+def hasMovementUnlock(multiworld: MultiWorld, state: CollectionState, player: int, unlockItem: str):
+    if not is_option_enabled(multiworld, player, 'basic_movement_in_pool'):
+        return True
+
+    return state.has(unlockItem, player)
+
+
+def canDoubleJump(multiworld: MultiWorld, state: CollectionState, player: int):
+    if not state.has('Spaz Unlock', player):
+        return False
+
+    return hasMovementUnlock(multiworld, state, player, 'Double Jump Unlock')
+
+
+def canCopter(multiworld: MultiWorld, state: CollectionState, player: int):
+    if not state.has('Jazz Unlock', player) and not state.has('Lori Unlock', player):
+        return False
+
+    return hasMovementUnlock(multiworld, state, player, 'Copter Ears Unlock')
+
+
+def canUppercut(multiworld: MultiWorld, state: CollectionState, player: int):
+    if not state.has('Jazz Unlock', player):
+        return False
+
+    return hasMovementUnlock(multiworld, state, player, 'Uppercut Unlock')
+
+
+def canSidekick(multiworld: MultiWorld, state: CollectionState, player: int):
+    if not state.has('Spaz Unlock', player) and not state.has('Lori Unlock', player):
+        return False
+
+    return hasMovementUnlock(multiworld, state, player, 'Sidekick Unlock')
+
+
+def canButtstomp(multiworld: MultiWorld, state: CollectionState, player: int):
+    return hasMovementUnlock(multiworld, state, player, 'Buttstomp Unlock')
+
+
+def canGrabVines(multiworld: MultiWorld, state: CollectionState, player: int):
+    return hasMovementUnlock(multiworld, state, player, 'Vine Traversal')
+
+
+def canGrabHooks(multiworld: MultiWorld, state: CollectionState, player: int):
+    return hasMovementUnlock(multiworld, state, player, 'Hook Traversal')
+
+
+def canSwim(multiworld: MultiWorld, state: CollectionState, player: int):
+    return hasMovementUnlock(multiworld, state, player, 'Swimming Unlock')
+
+
+def canDestroyWildcardBlocks(multiworld: MultiWorld, state: CollectionState, player: int):
+    if not is_option_enabled(multiworld, player, 'block_destruction_in_pool'):
+        return True
+    
+    return state.has('Wildcard Destructible Scenery', player)
+
+
+def canDestroyWeaponBlocks(multiworld: MultiWorld, state: CollectionState, player: int, weapon: str):
+    import logging
+
+    if not weapon in Weapons:
+        logging.error(f'canDestroyWeaponBlocks: invalid weapon {weapon}')
+        return False
+
+    if not state.has(f'{weapon} Permit', player):
+        return False
+    
+    if not is_option_enabled(multiworld, player, 'block_destruction_in_pool'):
+        return True
+    
+    return state.has(f'{weapon} Destructible Scenery', player)
+
+
+def canDestroyButtstompBlocks(multiworld: MultiWorld, state: CollectionState, player: int):
+    if is_option_enabled(multiworld, player, 'block_destruction_in_pool') and not state.has('Special Move Destructible Scenery', player):
+        return False
+    
+    return canButtstomp(multiworld, state, player)
+
+
+def canDestroySpeedBlocks(multiworld: MultiWorld, state: CollectionState, player: int):
+    if not is_option_enabled(multiworld, player, 'block_destruction_in_pool'):
+        return True
+    
+    return state.has('Speed Destructible Scenery', player)
+
+
+def CanReachRegion(state: CollectionState, player: int, location: str) -> bool:
+    """Can the player reach the given region?"""
+    if state.can_reach_region(location, player):
+        return True
+    return False
+
+
 def hasContinuousLevelAccess(state: CollectionState, player: int, from_level: str, to_level: str) -> bool:
     from ..Rules import CanReachLocation
     import logging
@@ -344,6 +368,7 @@ def hasContinuousLevelAccess(state: CollectionState, player: int, from_level: st
             return False
 
     return False
+
 
 def hasWeaponAccess(state: CollectionState, player: int, level: str, weapon: str) -> bool:
     from ..Rules import CanReachLocation
