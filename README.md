@@ -25,10 +25,6 @@ While some parts of logic have been fleshed out for the more developed
 episodes, these parts of logic in specific are acknowledged to be lacking
 at the moment:
 
-- Trigger crates have inconsistent logic around them. It is expected that the
-  player can either destroy them with a special move, if they have obtained it,
-  or break it with TNT, but for the most part these restrictions currently
-  don't apply.
 - Bonus warp logic is incomplete. Some levels with simpler coin placements
   have been set up properly, but more complex ones require careful
   consideration of when the player has access to enough coins.

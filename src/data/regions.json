@@ -310,16 +310,32 @@
   },
   "Knight Cap - Jazz Left Path End": {
     "connects_to": [
-      "Knight Cap - Shared Path Start From Left"
+      "Knight Cap - Shared Path Start From Left",
+      "Knight Cap - Jazz Only Red Gems Behind Trigger Scenery Secret"
     ],
     "_comment": "R:J5"
   },
+  "Knight Cap - Jazz Only Red Gems Behind Trigger Scenery Secret": {
+    "connects_to": [
+      "Knight Cap - Jazz Left Path End"
+    ],
+    "requires": "{canDestroyTriggerCrates(Knight Cap, above/sides)}",
+    "_comment": "R:A3"
+  },
   "Knight Cap - Spaz Start": {
     "connects_to": [
-      "Knight Cap - Spaz Only After Chute"
+      "Knight Cap - Spaz Only After Chute",
+      "Knight Cap - Spaz Only Four Silver Coins Behind Trigger Scenery Secret"
     ],
     "requires": "(|Knight Cap Unlock| or |Formerly a Prince Progressive Level Unlock:3|) and |Spaz Unlock|",
     "_comment": "R:S0"
+  },
+  "Knight Cap - Spaz Only Four Silver Coins Behind Trigger Scenery Secret": {
+    "connects_to": [
+      "Knight Cap - Spaz Start"
+    ],
+    "requires": "{canDestroyTriggerCrates(Knight Cap, above/sides)}",
+    "_comment": "R:A4"
   },
   "Knight Cap - Spaz Only After Chute": {
     "connects_to": [
@@ -334,26 +350,26 @@
     },
     "_comment": "R:S1"
   },
-  "Knight Cap - Spaz Only Extra Life Secret": {
-    "connects_to": [
-      "Knight Cap - Spaz Only After Chute"
-    ],
-    "requires": "{canDestroySpecialMoveBlocks(Knight Cap, sides)}",
-    "_comment": "R:A3"
-  },
-  "Knight Cap - Spaz Only Gold Coin Secret": {
-    "connects_to": [
-      "Knight Cap - Spaz Only After Chute"
-    ],
-    "requires": "{canDestroyWeaponBlocks(Bouncer)}",
-    "_comment": "R:A4"
-  },
   "Knight Cap - Spaz Only Two Gold Coins Secret": {
     "connects_to": [
       "Knight Cap - Spaz Only After Chute"
     ],
     "requires": "{canDestroyWeaponBlocks(Bouncer)}",
     "_comment": "R:A5"
+  },
+  "Knight Cap - Spaz Only Extra Life Secret": {
+    "connects_to": [
+      "Knight Cap - Spaz Only After Chute"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Knight Cap, sides)}",
+    "_comment": "R:A6"
+  },
+  "Knight Cap - Spaz Only Gold Coin Secret": {
+    "connects_to": [
+      "Knight Cap - Spaz Only After Chute"
+    ],
+    "requires": "{canDestroyWeaponBlocks(Bouncer)}",
+    "_comment": "R:A7"
   },
   "Knight Cap - Shared Path Start From Left": {
     "connects_to": [
@@ -369,24 +385,33 @@
   },
   "Knight Cap - Shared Path Start": {
     "connects_to": [
+      "Knight Cap - Gold Coin Behind Trigger Scenery Secret",
       "Knight Cap - After Vine",
       "Knight Cap - Gem Ring Secret",
       "Knight Cap - Bonus Warp Area"
     ],
     "_comment": "R:M3"
   },
+  "Knight Cap - Gold Coin Behind Trigger Scenery Secret": {
+    "connects_to": [
+      "Knight Cap - Shared Path Start"
+    ],
+    "requires": "{canDestroyTriggerCrates(Knight Cap, above/sides)}",
+    "_comment": "R:A8"
+  },
   "Knight Cap - Gem Ring Secret": {
     "connects_to": [
       "Knight Cap - Shared Path Start"
     ],
     "requires": "{canDestroySpecialMoveBlocks(Knight Cap, above)}",
-    "_comment": "R:A5"
+    "_comment": "R:A9"
   },
   "Knight Cap - Bonus Warp Area": {
     "connects_to": [
       "Knight Cap - Shared Path Start"
     ],
-    "_comment": "R:B1    Every character can get to the bonus by default: shared path has 9 coins available, and Jazz/Lori additionally has 25 and Spaz has 12 coins, meaning no tools are needed for the 20 coin warp fee."
+    "requires": "|Jazz Unlock| or |Lori Unlock| or {canDestroySpecialMoveBlocks(Knight Cap, above)} or {canDestroyTriggerCrates(Knight Cap, above/sides)}",
+    "_comment": "R:B1    Cost: 20 coins. Shared path has 4 without extra requirements, Jazz has 25, and Spaz has 8. Thus, Jazz can get this whenever, while Spaz needs some tools to collect extra coins."
   },
   "Knight Cap - After Vine": {
     "connects_to": [
@@ -410,20 +435,20 @@
       "Knight Cap - Silly Message Secret"
     ],
     "requires": "{canDoubleJump()} or {canUppercut()}",
-    "_comment": "R:A6"
+    "_comment": "R:A10"
   },
   "Knight Cap - Extra Life Secret": {
     "connects_to": [
       "Knight Cap - After One Way"
     ],
     "requires": "{canDestroySpecialMoveBlocks(Knight Cap, above)}",
-    "_comment": "R:A7"
+    "_comment": "R:A11"
   },
   "Knight Cap - Silly Message Secret": {
     "connects_to": [
       "Knight Cap - After One Way"
     ],
-    "_comment": "R:A8"
+    "_comment": "R:A12"
   },
   "Knight Cap - Boss Area": {
     "connects_to": [
@@ -440,7 +465,8 @@
   "Tossed Salad - Jazz Start": {
     "connects_to": [
       "Tossed Salad - Shared Path Start",
-      "Tossed Salad - One Up High Above Frozen Spring Secret"
+      "Tossed Salad - Extra Life High Above Frozen Spring Secret",
+      "Tossed Salad - Five Silver Coins Above Trigger Scenery Blocks Secret"
     ],
     "requires": "|Tossed Salad Unlock| or |Formerly a Prince Progressive Level Unlock:4|",
     "_comment": "R:J0    Spaz can drop down here by not shooting down the tree bridges"
@@ -459,12 +485,19 @@
     ],
     "_comment": "R:S1"
   },
-  "Tossed Salad - One Up High Above Frozen Spring Secret": {
+  "Tossed Salad - Extra Life High Above Frozen Spring Secret": {
     "connects_to": [
       "Tossed Salad - Jazz Start"
     ],
     "requires": "|Toaster Permit|",
     "_comment": "R:A1"
+  },
+  "Tossed Salad - Five Silver Coins Above Trigger Scenery Blocks Secret": {
+    "connects_to": [
+      "Tossed Salad - Jazz Start"
+    ],
+    "requires": "{canDestroyTriggerCrates(Tossed Salad, sides/above)}",
+    "_comment": "R:A2"
   },
   "Tossed Salad - Shared Path Start": {
     "connects_to": [
@@ -481,7 +514,7 @@
   "Tossed Salad - Shared Path Lower Section": {
     "connects_to": [
       "Tossed Salad - After First Save Point",
-      "Tossed Salad - Around Second Save Point",
+      "Tossed Salad - After Main Path Trigger Crate",
       "Tossed Salad - East Gold Coin Area"
     ],
     "exit_requires": {
@@ -494,7 +527,15 @@
       "Tossed Salad - Shared Path Lower Section"
     ],
     "requires": "{canDestroyWildcardBlocks()}",
-    "_comment": "R:A2"
+    "_comment": "R:A3"
+  },
+  "Tossed Salad - After Main Path Trigger Crate": {
+    "connects_to": [
+      "Tossed Salad - Shared Path Lower Section",
+      "Tossed Salad - Around Second Save Point"
+    ],
+    "requires": "{canDestroyTriggerCrates(Tossed Salad, sides/above)}",
+    "_comment": "R:M4"
   },
   "Tossed Salad - Around Second Save Point": {
     "connects_to": [
@@ -502,27 +543,27 @@
       "Tossed Salad - Under Jazz Section Bridge",
       "Tossed Salad - Two Silver Coins After Second Save Point Secret"
     ],
-    "_comment": "R:M4"
+    "_comment": "R:M5"
   },
   "Tossed Salad - Under Jazz Section Bridge": {
     "connects_to": [
       "Tossed Salad - Around Second Save Point"
     ],
     "requires": "{canDestroyWildcardBlocks()}",
-    "_comment": "R:A3"
+    "_comment": "R:A4"
   },
   "Tossed Salad - Two Silver Coins After Second Save Point Secret": {
     "connects_to": [
       "Tossed Salad - Before Final Chute"
     ],
-    "_comment": "R:A4"
+    "_comment": "R:A5"
   },
   "Tossed Salad - Before Final Chute": {
     "connects_to": [
       "Tossed Salad - Final Part",
       "Tossed Salad - Bonus Warp Area"
     ],
-    "_comment": "R:M5"
+    "_comment": "R:M6"
   },
   "Tossed Salad - Bonus Warp Area": {
     "connects_to": [
@@ -534,7 +575,7 @@
     "connects_to": [
       "Tossed Salad - Exit"
     ],
-    "_comment": "R:M6"
+    "_comment": "R:M7"
   },
   "Tossed Salad - Exit": {
     "connects_to": [
@@ -703,6 +744,7 @@
     "connects_to": [
       "Carrot Juice - Lizard Copter Extra Life Secret",
       "Carrot Juice - Gold Coin And Bouncer Ammo Warp Secret",
+      "Carrot Juice - Toaster Ammo and Gem Crates Behind Trigger Scenery Secret",
       "Carrot Juice - Gold Coin Warp Secret",
       "Carrot Juice - After Fall Near End of Level"
     ],
@@ -720,11 +762,18 @@
     ],
     "_comment": "R:A8"
   },
+  "Carrot Juice - Toaster Ammo and Gem Crates Behind Trigger Scenery Secret": {
+    "connects_to": [
+      "Carrot Juice - After East Upper Spring One Way"
+    ],
+    "requires": "{canDestroyTriggerCrates(Carrot Juice, above/sides)}",
+    "_comment": "R:A9"
+  },
   "Carrot Juice - Gold Coin Warp Secret": {
     "connects_to": [
       "Carrot Juice - After East Upper Spring One Way"
     ],
-    "_comment": "R:A9"
+    "_comment": "R:A10"
   },
   "Carrot Juice - After Fall Near End of Level": {
     "connects_to": [
@@ -750,7 +799,7 @@
     "connects_to": [
       "Carrot Juice - One Way After Fall Near End of Level"
     ],
-    "_comment": "R:A10"
+    "_comment": "R:A11"
   },
   "Carrot Juice - Boss Area": {
     "connects_to": [
@@ -767,18 +816,32 @@
   },
   "Weirder Science - Jazz Start": {
     "connects_to": [
-      "Weirder Science - Jazz Gold Coin Secret",
-      "Weirder Science - Shared Path Start"
+      "Weirder Science - Jazz After First Room"
     ],
     "requires": "(|Weirder Science Unlock| or |Formerly a Prince Progressive Level Unlock:6|) and (|Jazz Unlock| or |Lori Unlock|)",
     "_comment": "R:J0"
   },
+  "Weirder Science - Jazz After First Room": {
+    "connects_to": [
+      "Weirder Science - Jazz Super Gem and Five Silver Coins Above Trigger Scenery Secret",
+      "Weirder Science - Jazz Gold Coin Secret",
+      "Weirder Science - Shared Path Start"
+    ],
+    "_comment": "R:J1"
+  },
+  "Weirder Science - Jazz Super Gem and Five Silver Coins Above Trigger Scenery Secret": {
+    "connects_to": [
+      "Weirder Science - Jazz After First Room"
+    ],
+    "requires": "{canDestroyTriggerCrates(Weirder Science, above/sides)}",
+    "_comment": "R:A1"
+  },
   "Weirder Science - Jazz Gold Coin Secret": {
     "connects_to": [
-      "Weirder Science - Jazz Start"
+      "Weirder Science - Jazz After First Room"
     ],
     "requires": "{canDestroyWeaponBlocks(Bouncer)}",
-    "_comment": "R:A1"
+    "_comment": "R:A2"
   },
   "Weirder Science - Spaz Start": {
     "connects_to": [
@@ -795,13 +858,13 @@
       "Weirder Science - Spaz Start"
     ],
     "requires": "{canDestroyWildcardBlocks()}",
-    "_comment": "R:A2"
+    "_comment": "R:A3"
   },
   "Weirder Science - Spaz Silver Coins Warp Secret": {
     "connects_to": [
       "Weirder Science - Spaz Start"
     ],
-    "_comment": "R:A3"
+    "_comment": "R:A4"
   },
   "Weirder Science - Spaz Silver Coins Behind Blocks Secret": {
     "connects_to": [
@@ -809,7 +872,7 @@
       "Weirder Science - Spaz Only Below Silver Coins Behind Blocks"
     ],
     "requires": "{canDestroyWildcardBlocks()}",
-    "_comment": "R:A4"
+    "_comment": "R:A5"
   },
   "Weirder Science - Spaz Only Below Silver Coins Behind Blocks": {
     "connects_to": [
@@ -843,11 +906,12 @@
       "Weirder Science - Shared Path Start"
     ],
     "requires": "{canDestroySpecialMoveBlocks(Weirder Science, above)}",
-    "_comment": "R:A5"
+    "_comment": "R:A6"
   },
   "Weirder Science - After Shared Sucker Tube": {
     "connects_to": [
       "Weirder Science - Gold Coin and Super Gem Above Frozen Spring Secret",
+      "Weirder Science - Six Green Gems Above Trigger Scenery Secret",
       "Weirder Science - Gold Coin Among Breakable Blocks Secret",
       "Weirder Science - Around First Save Point"
     ],
@@ -858,18 +922,26 @@
       "Weirder Science - After Shared Sucker Tube"
     ],
     "requires": "|Toaster Permit|",
-    "_comment": "R:A6"
+    "_comment": "R:A7"
+  },
+  "Weirder Science - Six Green Gems Above Trigger Scenery Secret": {
+    "connects_to": [
+      "Weirder Science - After Shared Sucker Tube"
+    ],
+    "requires": "{canDestroyTriggerCrates(Weirder Science, above/sides)}",
+    "_comment": "R:A8"
   },
   "Weirder Science - Gold Coin Among Breakable Blocks Secret": {
     "connects_to": [
       "Weirder Science - After Shared Sucker Tube"
     ],
     "requires": "{canDestroyWildcardBlocks()} and {canDestroyWeaponBlocks(Bouncer)}",
-    "_comment": "R:A7"
+    "_comment": "R:A9"
   },
   "Weirder Science - Around First Save Point": {
     "connects_to": [
       "Weirder Science - Gold Coin Among Breakable Blocks Secret",
+      "Weirder Science - Two Gold Coins Above Trigger Scenery Secret",
       "Weirder Science - After Shared Sucker Tube",
       "Weirder Science - Before Ascending Hooks"
     ],
@@ -877,6 +949,13 @@
       "Weirder Science - After Shared Sucker Tube": "{canDestroyWildcardBlocks()}"
     },
     "_comment": "R:M3"
+  },
+  "Weirder Science - Two Gold Coins Above Trigger Scenery Secret": {
+    "connects_to": [
+      "Weirder Science - After Shared Sucker Tube"
+    ],
+    "requires": "{canDestroyTriggerCrates(Weirder Science, above/sides)}",
+    "_comment": "R:A10"
   },
   "Weirder Science - Before Ascending Hooks": {
     "connects_to": [
@@ -898,7 +977,7 @@
       "Weirder Science - After Ascending Hooks"
     ],
     "requires": "{canDestroySpecialMoveBlocks(Weirder Science, above)}",
-    "_comment": "R:A8"
+    "_comment": "R:A11"
   },
   "Weirder Science - After Poles": {
     "connects_to": [
@@ -1721,6 +1800,7 @@
     "connects_to": [
       "A Diamondus Forever - Shared Path Start"
     ],
+    "requires": "{canDestroyTriggerCrates(Weirder Science, above/sides)}",
     "_comment": "R:A5"
   },
   "A Diamondus Forever - Jazz Lower Path Upper Part": {
@@ -1818,9 +1898,17 @@
   },
   "A Diamondus Forever - Around Second Shared Save Point": {
     "connects_to": [
+      "A Diamondus Forever - Freezer Ammo Above Trigger Scenery Secret",
       "A Diamondus Forever - Near Bonus Warp"
     ],
     "_comment": "R:M2"
+  },
+  "A Diamondus Forever - Freezer Ammo Above Trigger Scenery Secret": {
+    "connects_to": [
+      "A Diamondus Forever - Around Second Shared Save Point"
+    ],
+    "requires": "{canDestroyTriggerCrates(A Diamondus Forever, above/sides)}",
+    "_comment": "R:A11"
   },
   "A Diamondus Forever - Near Bonus Warp": {
     "connects_to": [
@@ -1837,8 +1925,8 @@
     "connects_to": [
       "A Diamondus Forever - Around Second Shared Save Point"
     ],
-    "requires": "|Freezer Permit|",
-    "_comment": "R:A11"
+    "requires": "|Freezer Permit| and ({hasWeaponAccess(A Diamondus Forever, Freezer)} or {canDestroyTriggerCrates(A Diamondus Forever, above/sides)})",
+    "_comment": "R:A12"
   },
   "A Diamondus Forever - Bonus Warp Area": {
     "connects_to": [
@@ -1859,7 +1947,7 @@
       "A Diamondus Forever - After Destructible Blocks Near Bonus Warp"
     ],
     "requires": "{canUppercut()} or {canDoubleJump()}",
-    "_comment": "R:A12"
+    "_comment": "R:A13"
   },
   "A Diamondus Forever - Final Room": {
     "connects_to": [
@@ -1875,6 +1963,7 @@
   },
   "Fourteen Carrot - Start": {
     "connects_to": [
+      "Fourteen Carrot - Pepper Spray Ammo Above Trigger Scenery at Start Secret",
       "Fourteen Carrot - Middle Spring Section",
       "Fourteen Carrot - Character Morph Power-Up Below Buttstomp Block Secret",
       "Fourteen Carrot - Extra Life Crate Above Frozen Spring Secret",
@@ -1887,54 +1976,61 @@
     "requires": "|Fourteen Carrot Unlock| or |Flashback Progressive Level Unlock:2|",
     "_comment": "R:M0"
   },
+  "Fourteen Carrot - Pepper Spray Ammo Above Trigger Scenery at Start Secret": {
+    "connects_to": [
+      "Fourteen Carrot - Start"
+    ],
+    "requires": "{canDestroyTriggerCrates(Fourteen Carrot, above/sides)}",
+    "_comment": "R:A1"
+  },
   "Fourteen Carrot - Character Morph Power-Up Below Buttstomp Block Secret": {
     "connects_to": [
       "Fourteen Carrot - Start"
     ],
     "requires": "{canDestroySpecialMoveBlocks(Fourteen Carrot, above)}",
-    "_comment": "R:A1"
+    "_comment": "R:A2"
   },
   "Fourteen Carrot - Extra Life Crate Above Frozen Spring Secret": {
     "connects_to": [
       "Fourteen Carrot - Start"
     ],
     "requires": "|Toaster Permit| and {hasWeaponAccess(Fourteen Carrot, Toaster)}",
-    "_comment": "R:A2    There is toaster ammo in this level, but it's not possible to backtrack from there to here."
+    "_comment": "R:A3    There is toaster ammo in this level, but it's not possible to backtrack from there to here."
   },
   "Fourteen Carrot - Fire Shield Secret": {
     "connects_to": [
       "Fourteen Carrot - Start"
     ],
     "requires": "{canDoubleJump()} or {canCopter()} or {canUppercut()}",
-    "_comment": "R:A3"
+    "_comment": "R:A4"
   },
   "Fourteen Carrot - Gold Coin Behind Destructible Blocks Secret": {
     "connects_to": [
       "Fourteen Carrot - Start"
     ],
     "requires": "{canDestroyWildcardBlocks()}",
-    "_comment": "R:A4"
+    "_comment": "R:A5"
   },
   "Fourteen Carrot - Extra Shield Time Below Buttstomp Block Secret": {
     "connects_to": [
       "Fourteen Carrot - Start"
     ],
     "requires": "{canDestroyWildcardBlocks()}",
-    "_comment": "R:A5"
+    "_comment": "R:A6"
   },
   "Fourteen Carrot - Gold Coin Blocked By Spring Secret": {
     "connects_to": [
       "Fourteen Carrot - Start"
     ],
     "requires": "|Freezer Permit|",
-    "_comment": "R:A6"
+    "_comment": "R:A7"
   },
   "Fourteen Carrot - Six Silver Coins and Super Gem Above Frozen Spring Secret": {
     "connects_to": [
       "Fourteen Carrot - Start"
     ],
     "requires": "|Toaster Permit| and {hasWeaponAccess(Fourteen Carrot, Toaster)}",
-    "_comment": "R:A7    There is toaster ammo in this level, but it's not possible to backtrack from there to here."
+    "_comment": "R:A8    There is toaster ammo in this level, but it's not possible to backtrack from there to here."
   },
   "Fourteen Carrot - Middle Spring Section": {
     "connects_to": [
@@ -1986,13 +2082,13 @@
     "connects_to": [
       "Fourteen Carrot - Above One Ways Above Third Save Point"
     ],
-    "_comment": "R:A8"
+    "_comment": "R:A9"
   },
   "Fourteen Carrot - Above One Ways Above Third Save Point": {
     "connects_to": [
       "Fourteen Carrot - Lower Section with Third Save Point"
     ],
-    "_comment": "R:A9"
+    "_comment": "R:A10"
   },
   "Fourteen Carrot - Spring Section Before Final Room": {
     "connects_to": [
@@ -2385,28 +2481,37 @@
   },
   "Medieval Kineval - Trigger Crate Detour First Room": {
     "connects_to": [
-      "Medieval Kineval - Trigger Crate Detour Second Room"
+      "Medieval Kineval - Trigger Crate Detour First Room After First Trigger Crate"
     ],
     "_comment": "R:A4"
+  },
+  "Medieval Kineval - Trigger Crate Detour First Room After First Trigger Crate": {
+    "connects_to": [
+      "Medieval Kineval - Trigger Crate Detour Second Room"
+    ],
+    "requires": "{canDestroyTriggerCrates(Medieval Kineval, above/sides)}",
+    "_comment": "R:A5"
   },
   "Medieval Kineval - Trigger Crate Detour Second Room": {
     "connects_to": [
       "Medieval Kineval - Around Save Point",
       "Medieval Kineval - Gold Coins After Trigger Crate Detour Secret"
     ],
-    "_comment": "R:A5"
+    "requires": "{canDestroyTriggerCrates(Medieval Kineval, above/sides)}",
+    "_comment": "R:A6"
   },
   "Medieval Kineval - Gold Coins After Trigger Crate Detour Secret": {
     "connects_to": [
       "Medieval Kineval - Around Save Point"
     ],
-    "_comment": "R:A6"
+    "requires": "{canDestroyTriggerCrates(Medieval Kineval, above/sides)}",
+    "_comment": "R:A7"
   },
   "Medieval Kineval - Secret Level Exit": {
     "connects_to": [
       "Gargoyles Lair - Start"
     ],
-    "_comment": "R:A7    Can be reached with dashing only as long as the trigger scenery blocks haven't been removed. Otherwise likely requires DJ/UC+CE."
+    "_comment": "R:A8    Can be reached with dashing only as long as the trigger scenery blocks haven't been removed. Otherwise likely requires DJ/UC+CE."
   },
   "Medieval Kineval - After Return From Secret Level": {
     "connects_to": [
@@ -2426,7 +2531,7 @@
     "connects_to": [
       "Medieval Kineval - Hooks Near Bonus Warp"
     ],
-    "_comment": "R:A8"
+    "_comment": "R:A9"
   },
   "Medieval Kineval - Room With Double Warp Entrance": {
     "connects_to": [
@@ -2640,14 +2745,14 @@
     "connects_to": [
       "Gargoyles Lair - Tunnel After Trigger Crates"
     ],
-    "requires": "|Buttstomp Unlock| or {canSidekick()} or (|TNT Permit| and {hasWeaponAccess(Gargoyles Lair, TNT)})",
+    "requires": "{canDestroyTriggerCrates(Gargoyles Lair, above/sides)}",
     "_comment": "R:M2"
   },
   "Gargoyles Lair - Tunnel After Trigger Crates": {
     "connects_to": [
       "Gargoyles Lair - Main Section"
     ],
-    "requires": "|Buttstomp Unlock| or {canSidekick()} or (|TNT Permit| and {hasWeaponAccess(Gargoyles Lair, TNT)})",
+    "requires": "{canDestroyTriggerCrates(Gargoyles Lair, above/sides)}",
     "_comment": "R:M3"
   },
   "Gargoyles Lair - Main Section": {
@@ -2672,6 +2777,7 @@
     "connects_to": [
       "Gargoyles Lair - Main Section"
     ],
+    "requires": "{canDestroyTriggerCrates(Gargoyles Lair, above/sides)}",
     "_comment": "R:A3"
   },
   "Gargoyles Lair - Green Gems Behind Sidekick Blocks Secret": {
@@ -2694,7 +2800,7 @@
     "connects_to": [
       "Gargoyles Lair - Main Section"
     ],
-    "requires": "|Bouncer Permit| or ({canGrabHooks()} and ({canCopter()} or {canDoubleJump()})) or {canDestroySpecialMoveBlocks(Gargoyles Lair, below)}",
+    "requires": "(|Bouncer Permit| and {canDestroyTriggerCrates(Gargoyles Lair, above/sides)}) or ({canGrabHooks()} and ({canCopter()} or {canDoubleJump()})) or {canDestroySpecialMoveBlocks(Gargoyles Lair, below)}",
     "_comment": "R:A6"
   },
   "Gargoyles Lair - Green Gems Behind Uppercut Blocks Secret": {
@@ -2715,8 +2821,8 @@
     "connects_to": [
       "Gargoyles Lair - Exit"
     ],
-    "requires": "{canDestroyWildcardBlocks()} or (|TNT Permit| and {hasWeaponAccess(Gargoyles Lair, TNT)})",
-    "_comment": "R:M5"
+    "requires": "{canDestroyTriggerCrates(Gargoyles Lair, above/sides)}",
+    "_comment": "R:M5    There's enough room to buttstomp the crate even without pushing it out from the right."
   },
   "Gargoyles Lair - Exit": {
     "connects_to": [
@@ -3066,7 +3172,8 @@
     "connects_to": [
       "Rabbit Roast - After Destructible Blocks"
     ],
-    "_comment": "R:M1"
+    "requires": "{canDestroyTriggerCrates(Rabbit Roast, above/below/sides)}",
+    "_comment": "R:M1    The crate can be pushed down to the slope below, where an uppercut is possible."
   },
   "Rabbit Roast - After Destructible Blocks": {
     "connects_to": [
@@ -3082,7 +3189,8 @@
       "Rabbit Roast - Final Section After First Drop",
       "Rabbit Roast - Bonus Warp Area"
     ],
-    "_comment": "R:M3"
+    "requires": "{canDestroyTriggerCrates(Rabbit Roast, above/below/sides)}",
+    "_comment": "R:M3    The crate is on a slope where it can be destroyed with an uppercut."
   },
   "Rabbit Roast - Bonus Warp Area": {
     "connects_to": [

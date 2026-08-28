@@ -188,7 +188,7 @@ LEVEL_WEAPON_ACCESS_LOOKUP: dict[str, dict[Weapons, bool | list[str]]] = {
     },
     Levels.A_DIAMONDUS_FOREVER: {
         Weapons.BOUNCER: True,
-        Weapons.FREEZER: True,
+        Weapons.FREEZER: ['Freezer Ammo Above Trigger Scenery Secret'],
         Weapons.SEEKER: ['Spaz Start'],
         Weapons.TOASTER: True
     },
@@ -340,7 +340,7 @@ def canDestroyWeaponBlocks(multiworld: MultiWorld, state: CollectionState, playe
     return state.has(f'{weapon} Destructible Scenery', player)
 
 
-def canDestroyWithSpecialMove(multiworld: MultiWorld, state: CollectionState, player: int, directions: str = ''):
+def canUseSpecialMoveByDirection(multiworld: MultiWorld, state: CollectionState, player: int, directions: str = ''):
     direction_set = set(['above', 'below', 'sides'])
     if directions and len(directions) > 0:
         direction_set = set(directions.split('/'))
@@ -360,16 +360,13 @@ def canDestroyWithSpecialMove(multiworld: MultiWorld, state: CollectionState, pl
     return False
 
 
-def canDestroySpecialMoveBlocks(multiworld: MultiWorld, state: CollectionState, player: int, level: str, directions: str = ''):
+def canDestroySpecialMoveBlockOrTriggerCrate(multiworld: MultiWorld, state: CollectionState, player: int, level: str, directions: str = ''):
     level_subdivision_index = 0
     if level.find('@') > 0:
         level, level_subdivision_index = level.split('@', 2)
         level_subdivision_index = int(level_subdivision_index)
 
-    if is_option_enabled(multiworld, player, 'block_destruction_in_pool') and not state.has('Special Move Destructible Scenery', player):
-        return False
-
-    if canDestroyWithSpecialMove(multiworld, state, player, directions):
+    if canUseSpecialMoveByDirection(multiworld, state, player, directions):
         return True
 
     if state.has('TNT Permit', player):
@@ -389,6 +386,18 @@ def canDestroySpecialMoveBlocks(multiworld: MultiWorld, state: CollectionState, 
             pass
     
     return False
+
+
+def canDestroySpecialMoveBlocks(multiworld: MultiWorld, state: CollectionState, player: int, level: str, directions: str = ''):
+    if is_option_enabled(multiworld, player, 'block_destruction_in_pool') and not state.has('Special Move Destructible Scenery', player):
+        return False
+
+    return canDestroySpecialMoveBlockOrTriggerCrate(multiworld, state, player, level, directions)
+
+
+def canDestroyTriggerCrates(multiworld: MultiWorld, state: CollectionState, player: int, level: str, directions: str = ''):
+    # Trigger crates could be an additional unlockable in the future. But, as is, this is just a passthrough to the common parts.
+    return canDestroySpecialMoveBlockOrTriggerCrate(multiworld, state, player, level, directions)
 
 
 def canDestroySpeedBlocks(multiworld: MultiWorld, state: CollectionState, player: int):
