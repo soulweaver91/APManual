@@ -24,7 +24,8 @@ if TYPE_CHECKING:
     from . import ManualWorld
 
 # At some point in the future, we should depreciate the non-RB codepath.  But that's not until at least 0.7.X
-use_rulebuilder = version_tuple >= (0, 6, 7)
+# use_rulebuilder = version_tuple >= (0, 6, 7)
+use_rulebuilder = False
 
 if TYPE_CHECKING and use_rulebuilder:
     import rule_builder.rules
