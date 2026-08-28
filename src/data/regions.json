@@ -168,7 +168,7 @@
     "connects_to": [
       "Dungeon Dilemma - After Drop at Start",
       "Dungeon Dilemma - Full Health Carrot Secret",
-      "Dungeon Dilemma - One Up Crate Secret",
+      "Dungeon Dilemma - Extra Life Crate Secret",
       "Dungeon Dilemma - Spring Sequence after Save Point One"
     ],
     "exit_requires": {
@@ -183,7 +183,7 @@
     "requires": "{canDestroyWildcardBlocks()}",
     "_comment": "R:A1"
   },
-  "Dungeon Dilemma - One Up Crate Secret": {
+  "Dungeon Dilemma - Extra Life Crate Secret": {
     "connects_to": [
       "Dungeon Dilemma - Before and Around Save Point One"
     ],
@@ -586,12 +586,12 @@
     "connects_to": [
       "Carrot Juice - Left Path After First Fall",
       "Carrot Juice - Right Path",
-      "Carrot Juice - One Up High Above Start Secret"
+      "Carrot Juice - Extra Life High Above Start Secret"
     ],
     "requires": "|Carrot Juice Unlock| or |Formerly a Prince Progressive Level Unlock:5|",
     "_comment": "R:M0"
   },
-  "Carrot Juice - One Up High Above Start Secret": {
+  "Carrot Juice - Extra Life High Above Start Secret": {
     "connects_to": [
       "Carrot Juice - Start"
     ],
