@@ -67,6 +67,8 @@ LEVEL_ORDER_LOOKUP = [
     Levels.KNIGHT_CAP,
     Levels.TOSSED_SALAD,
     Levels.CARROT_JUICE,
+    Levels.WEIRDER_SCIENCE,
+    Levels.LOOSE_SCREWS,
     Levels.VICTORIAN_SECRET,
     Levels.COLONIAL_CHAOS,
     Levels.PURPLE_HAZE_MAZE,
@@ -92,6 +94,8 @@ LEVEL_ORDER_LOOKUP = [
     Levels.KNIGHT_CAP,
     Levels.TOSSED_SALAD,
     Levels.CARROT_JUICE,
+    Levels.WEIRDER_SCIENCE,
+    Levels.LOOSE_SCREWS,
     Levels.VICTORIAN_SECRET,
     Levels.COLONIAL_CHAOS,
     Levels.PURPLE_HAZE_MAZE,
@@ -131,6 +135,7 @@ LEVEL_ORDER_LOOKUP = [
 # For each level, which weapons are available and how.
 # If the value is true, the weapon can be obtained if the main path can be followed to the end.
 # Otherwise, the list specifies the regions that, if accessible, can all provide access to the weapon.
+# Note that for locations in the same level, this doesn't account for backtracking at the moment.
 LEVEL_WEAPON_ACCESS_LOOKUP: dict[str, dict[Weapons, bool | list[str]]] = {
     Levels.RABBIT_IN_TRAINING: {},
     Levels.DUNGEON_DILEMMA: { 
@@ -240,6 +245,26 @@ LEVEL_WEAPON_ACCESS_LOOKUP: dict[str, dict[Weapons, bool | list[str]]] = {
     }
 }
 
+# Tuples of level and an arbitrary number, splitting the level into region groups
+# based on whether TNT can be brought there from within itself or an earlier
+# part of the level
+IN_LEVEL_TNT_RULES: dict[tuple[Levels, int], list[str] | bool] = {
+    # Funky Grooveathon #0: The entire level
+    (Levels.FUNKY_GROOVEATHON, 0): ['TNT Ammo Above Vine Near Start'],
+    # Beach Bunny Bingo #0: The entire level
+    (Levels.BEACH_BUNNY_BINGO, 0): True,
+    # Voltage Village #0: Jazz's path until the paths meet
+    (Levels.VOLTAGE_VILLAGE, 0): True,
+    # Voltage Village #1: Spaz's path until the paths meet
+    (Levels.VOLTAGE_VILLAGE, 1): False,
+    # Voltage Village #2: The rest of the level
+    (Levels.VOLTAGE_VILLAGE, 2): True,
+    # Bad Pitt #0: From start to after the first wildcard blocks
+    (Levels.BAD_PITT, 0): False,
+    # Bad Pitt #1: From start to after the first wildcard blocks
+    (Levels.BAD_PITT, 1): True
+}
+
 
 def hasMovementUnlock(multiworld: MultiWorld, state: CollectionState, player: int, unlockItem: str):
     if not is_option_enabled(multiworld, player, 'basic_movement_in_pool'):
@@ -315,11 +340,55 @@ def canDestroyWeaponBlocks(multiworld: MultiWorld, state: CollectionState, playe
     return state.has(f'{weapon} Destructible Scenery', player)
 
 
-def canDestroyButtstompBlocks(multiworld: MultiWorld, state: CollectionState, player: int):
+def canDestroyWithSpecialMove(multiworld: MultiWorld, state: CollectionState, player: int, directions: str = ''):
+    direction_set = set(['above', 'below', 'sides'])
+    if directions and len(directions) > 0:
+        direction_set = set(directions.split('/'))
+
+    if 'above' in direction_set:
+        if canButtstomp(multiworld, state, player):
+            return True
+    
+    if 'below' in direction_set:
+        if canUppercut(multiworld, state, player):
+            return True
+        
+    if 'sides' in direction_set:
+        if canSidekick(multiworld, state, player):
+            return True
+        
+    return False
+
+
+def canDestroyButtstompBlocks(multiworld: MultiWorld, state: CollectionState, player: int, level: str, directions: str = ''):
+    level_subdivision_index = 0
+    if level.find('@') > 0:
+        level, level_subdivision_index = level.split('@', 2)
+        level_subdivision_index = int(level_subdivision_index)
+
     if is_option_enabled(multiworld, player, 'block_destruction_in_pool') and not state.has('Special Move Destructible Scenery', player):
         return False
+
+    if canDestroyWithSpecialMove(multiworld, state, player, directions):
+        return True
+
+    if state.has('TNT Permit', player):
+        if hasWeaponAccess(state, player, level, Weapons.TNT):
+            return True
+
+        try:
+            if (level, level_subdivision_index) in IN_LEVEL_TNT_RULES:
+                in_level_rule = IN_LEVEL_TNT_RULES[(Levels(level), level_subdivision_index)]
+                if isinstance(in_level_rule, list):
+                    for location in in_level_rule:
+                        if CanReachRegion(state, player, f'{level} - {location}'):
+                            return True
+                elif in_level_rule is True:
+                    return True
+        except ValueError:
+            pass
     
-    return canButtstomp(multiworld, state, player)
+    return False
 
 
 def canDestroySpeedBlocks(multiworld: MultiWorld, state: CollectionState, player: int):
