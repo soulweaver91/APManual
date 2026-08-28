@@ -10,7 +10,7 @@ from worlds.LauncherComponents import Component, SuffixIdentifier, components, T
 from .Data import item_table, location_table, event_table, category_table
 from .Game import game_name, filler_item_name, starting_items, unused_goals_are_locations
 from .Meta import world_description, world_webworld
-from .Locations import location_id_to_name, location_name_to_id, location_name_to_location, location_name_groups, victory_names, event_name_to_event
+from .Locations import location_id_to_name, location_name_to_id, location_name_to_location, location_name_groups, victory_names, event_name_to_event, event_name_groups
 from .Items import item_id_to_name, item_name_to_id, item_name_to_item, item_name_groups
 from .DataValidation import runGenerationDataValidation, runPreFillDataValidation
 
@@ -68,14 +68,29 @@ class ManualWorld(World):
     victory_names = victory_names
 
     event_name_to_event = event_name_to_event
+    event_name_groups = event_name_groups
+    item_and_event_name_groups: dict[str, set[str]] = dict(item_name_groups)
+    for name, category in event_name_groups.items():
+        if name in item_and_event_name_groups.keys():
+            item_and_event_name_groups[name] = item_name_groups[name].union(category)
+        else:
+            item_and_event_name_groups[name] = category
 
     # UT (the universal-est of trackers) can now generate without a YAML
     ut_can_gen_without_yaml = True
-
     origin_region_name = "Manual"
 
     def get_filler_item_name(self) -> str:
-        return hook_get_filler_item_name(self, self.multiworld, self.player) or self.filler_item_name
+        hook_result = hook_get_filler_item_name(self, self.multiworld, self.player)
+        if hook_result and isinstance(hook_result, str):
+            return hook_result
+        elif hook_result and isinstance(hook_result, list):
+            return self.random.choice(hook_result)
+        elif isinstance(filler_item_name, str):
+            return self.filler_item_name
+        else:
+            random_filler_name = self.random.choice(filler_item_name)
+            return random_filler_name
 
     def interpret_slot_data(self, slot_data: dict[str, Any]) -> dict[str, Any]:
         #this is called by tools like UT
@@ -126,7 +141,11 @@ class ManualWorld(World):
         items_config: dict[str, int|dict[ItemClassification | str | int, int]] = {}
         for name in configured_item_names.values():
             if name == "__Victory__": continue
-            if name == filler_item_name: continue # intentionally using the Game.py filler_item_name here because it's a non-Items item
+            # intentionally using the Game.py filler_item_name here because it can be a non-Items item
+            if isinstance(filler_item_name, str):
+                if name == filler_item_name: continue
+            elif isinstance(filler_item_name, list):
+                if name in filler_item_name: continue
 
             item = self.item_name_to_item[name]
             item_count = int(item.get("count", 1))
@@ -260,8 +279,12 @@ class ManualWorld(World):
                 items_iter = iter([i for i in precollected_items if i.name == item])
                 for _ in range(count):
                     precollected_items.remove(next(items_iter))
+        # Placed items:
+        placed_pool: list[Item] = []
+        for location in self.multiworld.get_filled_locations(self.player):
+            placed_pool.append(location.item)
 
-        real_pool = pool + precollected_items
+        real_pool = pool + precollected_items + placed_pool
         self.item_counts[self.player] = self.get_item_counts(pool=real_pool)
         self.item_counts_progression[self.player] = self.get_item_counts(pool=real_pool, only_progression=True)
 
@@ -418,6 +441,7 @@ class ManualWorld(World):
 
         # slot_data["DeathLink"] = bool(self.multiworld.death_link[self.player].value)
         common_options = set(PerGameCommonOptions.type_hints.keys())
+        common_options |= set(["generate_region_diagram", "start_inventory_from_pool"])
         for option_key, _ in self.options_dataclass.type_hints.items():
             if option_key in common_options:
                 continue
@@ -571,7 +595,7 @@ class VersionedComponent(Component):
         self.version = version
 
 def add_client_to_launcher() -> None:
-    version = 2026_04_04 # YYYYMMDD
+    version = 2026_04_07 # YYYYMMDD
     found = False
 
     if "manual" not in icon_paths:
