@@ -16,7 +16,10 @@ and its [setup guide](src/docs/setup_en.md) of sorts.
 ## Currently known issues
 So far, the majority of work has gone towards getting the four main base 
 game episodes into a decent enough state. The Shareware, the Secret Files, and
-Christmas Chronicles episodes only have a skeleton implementation so far.
+Christmas Chronicles episodes only have a skeleton implementation so far that
+assumes that you're able to complete every level from start to finish as long
+as you have access to that level (i.e. no logic for missing weapon, permission
+or ability unlocks).
 
 While some parts of logic have been fleshed out for the more developed 
 episodes, these parts of logic in specific are acknowledged to be lacking
@@ -26,10 +29,6 @@ at the moment:
   player can either destroy them with a special move, if they have obtained it,
   or break it with TNT, but for the most part these restrictions currently
   don't apply.
-- Weapon access in any specific level is handled inconsistently. In particular,
-  TNT can be used for destroying buttstomp scenery blocks, but ammo for it
-  must in most cases be brought over from an earlier level that the player is
-  able to travel from without missing access for any levels in between.
 - Bonus warp logic is incomplete. Some levels with simpler coin placements
   have been set up properly, but more complex ones require careful
   consideration of when the player has access to enough coins.
