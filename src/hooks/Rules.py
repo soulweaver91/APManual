@@ -360,7 +360,7 @@ def canDestroyWithSpecialMove(multiworld: MultiWorld, state: CollectionState, pl
     return False
 
 
-def canDestroyButtstompBlocks(multiworld: MultiWorld, state: CollectionState, player: int, level: str, directions: str = ''):
+def canDestroySpecialMoveBlocks(multiworld: MultiWorld, state: CollectionState, player: int, level: str, directions: str = ''):
     level_subdivision_index = 0
     if level.find('@') > 0:
         level, level_subdivision_index = level.split('@', 2)

@@ -139,7 +139,7 @@
     "connects_to": [
       "Rabbit in Training - Exit"
     ],
-    "requires": "{canDestroyButtstompBlocks(Rabbit in Training, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(Rabbit in Training, above)}",
     "_comment": "R:M3"
   },
   "Rabbit in Training - Exit": {
@@ -210,14 +210,14 @@
     "connects_to": [
       "Dungeon Dilemma - Between Spring Section and Vines After Save Point Two"
     ],
-    "requires": "{canDestroyButtstompBlocks(Dungeon Dilemma, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(Dungeon Dilemma, above)}",
     "_comment": "R:A3"
   },
   "Dungeon Dilemma - Silver Coin Tunnel into Spring Leading to Extra Life": {
     "connects_to": [
       "Dungeon Dilemma - Between Spring Section and Vines After Save Point Two"
     ],
-    "requires": "{canDestroyButtstompBlocks(Dungeon Dilemma, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(Dungeon Dilemma, above)}",
     "_comment": "R:A4"
   },
   "Dungeon Dilemma - Gem Chute Next to Bonus Warp": {
@@ -231,7 +231,7 @@
     "connects_to": [
       "Dungeon Dilemma - Between Spring Section and Vines After Save Point Two"
     ],
-    "requires": "{canDestroyButtstompBlocks(Dungeon Dilemma, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(Dungeon Dilemma, above)}",
     "_comment": "R:B1    18 coins along the main path, 8 in region R:A4"
   },
   "Dungeon Dilemma - Final Section": {
@@ -264,7 +264,7 @@
       "Knight Cap - Shared Path Start From Right"
     ],
     "exit_requires": {
-      "Knight Cap - Jazz Left Path Convergence": "{canDestroyButtstompBlocks(Knight Cap, above)}"
+      "Knight Cap - Jazz Left Path Convergence": "{canDestroySpecialMoveBlocks(Knight Cap, above)}"
     },
     "_comment": "R:J1"
   },
@@ -286,7 +286,7 @@
     "connects_to": [
       "Knight Cap - Jazz Main Area"
     ],
-    "requires": "{canDestroyButtstompBlocks(Knight Cap, below)}",
+    "requires": "{canDestroySpecialMoveBlocks(Knight Cap, below)}",
     "_comment": "R:A1"
   },
   "Knight Cap - Jazz Only Gold Coin Secret": {
@@ -303,7 +303,7 @@
       "Knight Cap - Jazz Left Path End"
     ],
     "exit_requires": {
-      "Knight Cap - Jazz Main Area": "{canDestroyButtstompBlocks(Knight Cap, below)}",
+      "Knight Cap - Jazz Main Area": "{canDestroySpecialMoveBlocks(Knight Cap, below)}",
       "Knight Cap - Jazz Left Path Left Branch After Chute": "{canUppercut()}"
     },
     "_comment": "R:J4"
@@ -338,7 +338,7 @@
     "connects_to": [
       "Knight Cap - Spaz Only After Chute"
     ],
-    "requires": "{canDestroyButtstompBlocks(Knight Cap, sides)}",
+    "requires": "{canDestroySpecialMoveBlocks(Knight Cap, sides)}",
     "_comment": "R:A3"
   },
   "Knight Cap - Spaz Only Gold Coin Secret": {
@@ -379,7 +379,7 @@
     "connects_to": [
       "Knight Cap - Shared Path Start"
     ],
-    "requires": "{canDestroyButtstompBlocks(Knight Cap, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(Knight Cap, above)}",
     "_comment": "R:A5"
   },
   "Knight Cap - Bonus Warp Area": {
@@ -416,7 +416,7 @@
     "connects_to": [
       "Knight Cap - After One Way"
     ],
-    "requires": "{canDestroyButtstompBlocks(Knight Cap, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(Knight Cap, above)}",
     "_comment": "R:A7"
   },
   "Knight Cap - Silly Message Secret": {
@@ -756,7 +756,7 @@
     "connects_to": [
       "Carrot Juice - Exit"
     ],
-    "requires": "{canDestroyButtstompBlocks(Carrot Juice, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(Carrot Juice, above)}",
     "_comment": "R:M16"
   },
   "Carrot Juice - Exit": {
@@ -842,7 +842,7 @@
     "connects_to": [
       "Weirder Science - Shared Path Start"
     ],
-    "requires": "{canDestroyButtstompBlocks(Weirder Science, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(Weirder Science, above)}",
     "_comment": "R:A5"
   },
   "Weirder Science - After Shared Sucker Tube": {
@@ -897,7 +897,7 @@
     "connects_to": [
       "Weirder Science - After Ascending Hooks"
     ],
-    "requires": "{canDestroyButtstompBlocks(Weirder Science, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(Weirder Science, above)}",
     "_comment": "R:A8"
   },
   "Weirder Science - After Poles": {
@@ -926,7 +926,7 @@
     "connects_to": [
       "Weirder Science - After Sucker Tube Below Buttstomp Blocks"
     ],
-    "requires": "{canDestroyButtstompBlocks(Weirder Science, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(Weirder Science, above)}",
     "_comment": "R:M9"
   },
   "Weirder Science - After Sucker Tube Below Buttstomp Blocks": {
@@ -981,7 +981,7 @@
     "connects_to": [
       "Loose Screws - After Speed Blocks"
     ],
-    "requires": "{canGrabVines()} and {canDestroyButtstompBlocks(Loose Screws, above)}",
+    "requires": "{canGrabVines()} and {canDestroySpecialMoveBlocks(Loose Screws, above)}",
     "_comment": "R:A2"
   },
   "Loose Screws - After First Spring Sequence": {
@@ -1035,7 +1035,7 @@
       "Loose Screws - Airboard Backtrack Silver Coins Behind Blocks Secret",
       "Loose Screws - After Airboard Section"
     ],
-    "requires": "{canDestroyButtstompBlocks(Loose Screws, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(Loose Screws, above)}",
     "_comment": "R:M6"
   },
   "Loose Screws - Airboard Backtrack Silver Coins Behind Blocks Secret": {
@@ -1105,7 +1105,7 @@
     ],
     "requires": "|Victorian Secret Unlock| or |Jazz in Time Progressive Level Unlock:1|",
     "exit_requires": {
-      "Victorian Secret - In and After First Sewer Section": "{canDestroyButtstompBlocks(Victorian Secret, above)}"
+      "Victorian Secret - In and After First Sewer Section": "{canDestroySpecialMoveBlocks(Victorian Secret, above)}"
     },
     "_comment": "R:M0"
   },
@@ -1190,7 +1190,7 @@
     "connects_to": [
       "Colonial Chaos - After Drop Between Buildings"
     ],
-    "requires": "{canDestroyButtstompBlocks(Victorian Secret, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(Victorian Secret, above)}",
     "_comment": "R:M1"
   },
   "Colonial Chaos - After Drop Between Buildings": {
@@ -1490,7 +1490,7 @@
     "connects_to": [
       "Funky Grooveathon - Main Section"
     ],
-    "requires": "{canDestroyButtstompBlocks(Funky Grooveathon, sides)}",
+    "requires": "{canDestroySpecialMoveBlocks(Funky Grooveathon, sides)}",
     "_comment": "R:A4"
   },
   "Funky Grooveathon - Five Sandwiches Behind Destructible Blocks Secret": {
@@ -1511,7 +1511,7 @@
     "connects_to": [
       "Funky Grooveathon - Main Section"
     ],
-    "requires": "{canDestroyButtstompBlocks(Funky Grooveathon, below)}",
+    "requires": "{canDestroySpecialMoveBlocks(Funky Grooveathon, below)}",
     "_comment": "R:A7"
   },
   "Funky Grooveathon - Exit": {
@@ -1756,7 +1756,7 @@
     "connects_to": [
       "A Diamondus Forever - Spaz Vines Below First Room"
     ],
-    "requires": "{canDestroyButtstompBlocks(A Diamondus Forever, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(A Diamondus Forever, above)}",
     "_comment": "R:A7"
   },
   "A Diamondus Forever - Spaz Cave Upper Section": {
@@ -1785,7 +1785,7 @@
       "A Diamondus Forever - Spaz Cave Middle Section",
       "A Diamondus Forever - Shared Path Start"
     ],
-    "requires": "{canDestroyButtstompBlocks(A Diamondus Forever, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(A Diamondus Forever, above)}",
     "_comment": "R:S3"
   },
   "A Diamondus Forever - Spaz Fruit, Gems and Two Gold Coins Secret": {
@@ -1807,7 +1807,7 @@
     "connects_to": [
       "A Diamondus Forever - Shared Path Start"
     ],
-    "requires": "{canDestroyButtstompBlocks(A Diamondus Forever, below)}",
+    "requires": "{canDestroySpecialMoveBlocks(A Diamondus Forever, below)}",
     "_comment": "R:A9"
   },
   "A Diamondus Forever - Carrot Crates and Two Gold Coins Secret": {
@@ -1891,7 +1891,7 @@
     "connects_to": [
       "Fourteen Carrot - Start"
     ],
-    "requires": "{canDestroyButtstompBlocks(Fourteen Carrot, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(Fourteen Carrot, above)}",
     "_comment": "R:A1"
   },
   "Fourteen Carrot - Extra Life Crate Above Frozen Spring Secret": {
@@ -2073,7 +2073,7 @@
     "connects_to": [
       "Electric Boogaloo - After Chute Near Start"
     ],
-    "requires": "{canDestroyButtstompBlocks(Electric Boogaloo, sides)}",
+    "requires": "{canDestroySpecialMoveBlocks(Electric Boogaloo, sides)}",
     "_comment": "R:A6"
   },
   "Electric Boogaloo - Small Room After Upwards Pipe": {
@@ -2108,7 +2108,7 @@
     "connects_to": [
       "Electric Boogaloo - Middle Section"
     ],
-    "requires": "{canDestroyButtstompBlocks(Electric Boogaloo, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(Electric Boogaloo, above)}",
     "_comment": "R:A8"
   },
   "Electric Boogaloo - Red Gems Behind Blocks Secret": {
@@ -2122,14 +2122,14 @@
     "connects_to": [
       "Electric Boogaloo - Middle Section"
     ],
-    "requires": "{canDestroyButtstompBlocks(Electric Boogaloo, sides)}",
+    "requires": "{canDestroySpecialMoveBlocks(Electric Boogaloo, sides)}",
     "_comment": "R:A10"
   },
   "Electric Boogaloo - Bouncer Power Up Behind Uppercut Blocks Secret": {
     "connects_to": [
       "Electric Boogaloo - Middle Section"
     ],
-    "requires": "{canDestroyButtstompBlocks(Electric Boogaloo, below)}",
+    "requires": "{canDestroySpecialMoveBlocks(Electric Boogaloo, below)}",
     "_comment": "R:A11"
   },
   "Electric Boogaloo - Second Pinball Section": {
@@ -2159,7 +2159,7 @@
     "connects_to": [
       "Electric Boogaloo - Final Section"
     ],
-    "requires": "{canDestroyButtstompBlocks(Electric Boogaloo, sides)}",
+    "requires": "{canDestroySpecialMoveBlocks(Electric Boogaloo, sides)}",
     "_comment": "R:A12"
   },
   "Electric Boogaloo - Six Silver Coins Surrounded by Breakable Blocks Secret": {
@@ -2179,7 +2179,7 @@
     "connects_to": [
       "Electric Boogaloo - Final Section"
     ],
-    "requires": "{canDestroyButtstompBlocks(Electric Boogaloo, sides)}",
+    "requires": "{canDestroySpecialMoveBlocks(Electric Boogaloo, sides)}",
     "_comment": "R:A15"
   },
   "Electric Boogaloo - Exit": {
@@ -2200,7 +2200,7 @@
     "connects_to": [
       "Voltage Village - Jazz Start"
     ],
-    "requires": "{canDestroyButtstompBlocks(Voltage Village@0, below)}",
+    "requires": "{canDestroySpecialMoveBlocks(Voltage Village@0, below)}",
     "_comment": "R:A1"
   },
   "Voltage Village - Spaz Start": {
@@ -2215,7 +2215,7 @@
       "Voltage Village - Spaz Start",
       "Voltage Village - Spaz After Second Sidekick Blocks"
     ],
-    "requires": "{canDestroyButtstompBlocks(Voltage Village@1, sides)}",
+    "requires": "{canDestroySpecialMoveBlocks(Voltage Village@1, sides)}",
     "_comment": "R:S1"
   },
   "Voltage Village - Spaz After Second Sidekick Blocks": {
@@ -2224,7 +2224,7 @@
       "Voltage Village - Spaz After Destructible Blocks",
       "Voltage Village - Spaz Only Toaster Ammo Above Main Path Secret"
     ],
-    "requires": "{canDestroyButtstompBlocks(Voltage Village@1, sides)}",
+    "requires": "{canDestroySpecialMoveBlocks(Voltage Village@1, sides)}",
     "_comment": "R:S2"
   },
   "Voltage Village - Spaz Only Toaster Ammo Above Main Path Secret": {
@@ -2263,7 +2263,7 @@
     "connects_to": [
       "Voltage Village - Shared Path Start"
     ],
-    "requires": "{canDestroyButtstompBlocks(Voltage Village@2, below)}",
+    "requires": "{canDestroySpecialMoveBlocks(Voltage Village@2, below)}",
     "_comment": "R:A4"
   },
   "Voltage Village - Two Gold Coins Behind Multiple Obstacles Secret": {
@@ -2284,7 +2284,7 @@
     "connects_to": [
       "Voltage Village - Shared Path Start"
     ],
-    "requires": "{canDestroyButtstompBlocks(Voltage Village@2, below)}",
+    "requires": "{canDestroySpecialMoveBlocks(Voltage Village@2, below)}",
     "_comment": "R:A7"
   },
   "Voltage Village - Pinball Section and Beyond": {
@@ -2678,7 +2678,7 @@
     "connects_to": [
       "Gargoyles Lair - Main Section"
     ],
-    "requires": "{canDestroyButtstompBlocks(Gargoyles Lair, sides)}",
+    "requires": "{canDestroySpecialMoveBlocks(Gargoyles Lair, sides)}",
     "_comment": "R:A4"
   },
   "Gargoyles Lair - Room with Green Gems and Gold Coin Secret": {
@@ -2694,7 +2694,7 @@
     "connects_to": [
       "Gargoyles Lair - Main Section"
     ],
-    "requires": "|Bouncer Permit| or ({canGrabHooks()} and ({canCopter()} or {canDoubleJump()})) or {canDestroyButtstompBlocks(Gargoyles Lair, below)}",
+    "requires": "|Bouncer Permit| or ({canGrabHooks()} and ({canCopter()} or {canDoubleJump()})) or {canDestroySpecialMoveBlocks(Gargoyles Lair, below)}",
     "_comment": "R:A6"
   },
   "Gargoyles Lair - Green Gems Behind Uppercut Blocks Secret": {
@@ -2702,7 +2702,7 @@
       "Gargoyles Lair - Main Section",
       "Gargoyles Lair - Bonus Warp Area"
     ],
-    "requires": "{canDestroyButtstompBlocks(Gargoyles Lair, below)}",
+    "requires": "{canDestroySpecialMoveBlocks(Gargoyles Lair, below)}",
     "_comment": "R:A7"
   },
   "Gargoyles Lair - Bonus Warp Area": {
@@ -2944,7 +2944,7 @@
     "connects_to": [
       "Jungle Jump - Middle Level Section Near Exit"
     ],
-    "requires": "{canDestroyButtstompBlocks(Jungle Jump, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(Jungle Jump, above)}",
     "_comment": "R:A2"
   },
   "Jungle Jump - Final Section": {
@@ -3027,7 +3027,7 @@
     "connects_to": [
       "A Cold Day in Heck - Bottom Level Section Before One Ways"
     ],
-    "requires": "{canDestroyButtstompBlocks(A Cold Day in Heck, below)}",
+    "requires": "{canDestroySpecialMoveBlocks(A Cold Day in Heck, below)}",
     "_comment": "R:A4"
   },
   "A Cold Day in Heck - After One Ways": {
@@ -3040,7 +3040,7 @@
     "connects_to": [
       "A Cold Day in Heck - Exit"
     ],
-    "requires": "{canDestroyButtstompBlocks(A Cold Day in Heck, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(A Cold Day in Heck, above)}",
     "_comment": "R:M5"
   },
   "A Cold Day in Heck - Exit": {
@@ -3094,7 +3094,7 @@
     "connects_to": [
       "Rabbit Roast - Final Section After Second Drop"
     ],
-    "requires": "{canDestroyButtstompBlocks(Rabbit Roast, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(Rabbit Roast, above)}",
     "_comment": "R:M4"
   },
   "Rabbit Roast - Final Section After Second Drop": {
@@ -3137,7 +3137,7 @@
     "connects_to": [
       "Burnin Biscuits - Start"
     ],
-    "requires": "{canDestroyButtstompBlocks(Burnin Biscuits, sides)}",
+    "requires": "{canDestroySpecialMoveBlocks(Burnin Biscuits, sides)}",
     "_comment": "R:A1"
   },
   "Burnin Biscuits - Four Silver Coins in a Corner High Above Main Path Secret": {
@@ -3151,7 +3151,7 @@
     "connects_to": [
       "Burnin Biscuits - Start"
     ],
-    "requires": "{canDestroyButtstompBlocks(Burnin Biscuits, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(Burnin Biscuits, above)}",
     "_comment": "R:A3"
   },
   "Burnin Biscuits - Bonus Warp Area": {
@@ -3173,7 +3173,7 @@
     "connects_to": [
       "Burnin Biscuits - Around Save Point"
     ],
-    "requires": "{canDestroyButtstompBlocks(Burnin Biscuits, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(Burnin Biscuits, above)}",
     "_comment": "R:A4"
   },
   "Burnin Biscuits - Spring Section": {
@@ -3192,7 +3192,7 @@
     "connects_to": [
       "Burnin Biscuits - Exit"
     ],
-    "requires": "{canDestroyButtstompBlocks(Burnin Biscuits, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(Burnin Biscuits, above)}",
     "_comment": "R:M4"
   },
   "Burnin Biscuits - Exit": {
@@ -3211,7 +3211,7 @@
     "connects_to": [
       "Bad Pitt - After Destructible Blocks Near Start"
     ],
-    "requires": "{canDestroyButtstompBlocks(Bad Pitt@0, above)}",
+    "requires": "{canDestroySpecialMoveBlocks(Bad Pitt@0, above)}",
     "_comment": "R:M1"
   },
   "Bad Pitt - After Destructible Blocks Near Start": {
