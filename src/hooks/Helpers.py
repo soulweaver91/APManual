@@ -7,7 +7,14 @@ def enabled_if_either_hh_or_cc(multiworld: MultiWorld, player: int, thing: dict[
     enable_cc = get_option_value(multiworld, player, 'enable_cc') == True
     enable_hh = get_option_value(multiworld, player, 'enable_hh') == True
 
+    individual_level_unlock_keys = get_option_value(multiworld, player, 'individual_level_unlock_keys') == True
+
     if 'category' in thing.keys():
+        if 'Individual Level Unlocks' in thing['category'] and not individual_level_unlock_keys:
+            return False
+        elif 'Progressive Level Unlocks' in thing['category'] and individual_level_unlock_keys:
+            return False
+
         if 'Holiday Hare Content' in thing['category'] and 'Christmas Chronicles Content' in thing['category']:
             return enable_cc or enable_hh
 
