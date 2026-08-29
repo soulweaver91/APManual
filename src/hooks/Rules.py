@@ -716,12 +716,67 @@ COIN_ACCESS_BY_LEVEL_LOOKUP: dict[Levels, CoinPathGroup] = {
         # A6     gold:   (191, 23) (191, 24)
         CN(10, 'Gold Coins Above Second Save Point Secret')
     ]),
-    Levels.VICTORIAN_SECRET: CG(Levels.VICTORIAN_SECRET).seq([]),
-    Levels.COLONIAL_CHAOS: CG(Levels.COLONIAL_CHAOS).seq([]),
-    Levels.PURPLE_HAZE_MAZE: CG(Levels.PURPLE_HAZE_MAZE).seq([]),
-    Levels.FUNKY_GROOVEATHON: CG(Levels.FUNKY_GROOVEATHON).seq([]),
-    Levels.BEACH_BUNNY_BINGO: CG(Levels.BEACH_BUNNY_BINGO).seq([]),
-    Levels.MARINATED_RABBIT: CG(Levels.MARINATED_RABBIT).seq([]),
+    Levels.VICTORIAN_SECRET: CG(Levels.VICTORIAN_SECRET).seq([
+        # M0     gold:   (55, 39)
+        #        silver: (104, 34) (105, 34) (104, 35) (105, 35)
+        CN(9),
+        # A1     silver: (9, 35) (10, 35) (9, 36) (10, 36)
+        CN(4, 'Coins in Window Above Start Secret'),
+        # M1     gold:   (111, 21)
+        CN(5),
+        # A3     gold:   (145, 12)
+        CN(5, 'Gold Coin on the Roof Behind Blocks Secret'),
+        # M2     silver: (216, 38) (217, 38) (216, 39) (217, 39)
+        CN(4),
+        # M3     gold:   (230, 61) (214, 60) (201, 62) (172, 57)
+        CN(20),
+        # M4     silver: (0, 16) (1, 16) (0, 17) (1, 17) (52, 15) (53, 15) (57, 15) (58, 15)
+        CN(8)
+    ]),
+    Levels.COLONIAL_CHAOS: CG(Levels.COLONIAL_CHAOS).seq([
+        # M0     gold:   (69, 33)
+        CN(5),
+        # A1     silver: (14, 30) (15, 30) (14, 31) (15, 31)
+        CN(4, 'Silver Coins in Window Above Start'),
+        # M1     gold:   (102, 31)
+        #        silver: (118, 18) (119, 18) (118, 19) (119, 19) (153, 13) (154, 13) (153, 14) (154, 14)
+        CN(13),
+        # M2     silver: (147, 22) (148, 22) (147, 23) (148, 23)
+        CN(4)
+    ]),
+    Levels.PURPLE_HAZE_MAZE: CG(Levels.PURPLE_HAZE_MAZE).seq([
+        # A1     silver: (76, 51) (77, 51) (78, 51) (76, 52) (77, 52) (78, 52)
+        CN(6, 'Six Silver Coins Behind RF Blocks Secret'),
+        # A3     silver: (43, 21) (44, 21) (45, 21) (43, 22) (44, 22) (45, 22)
+        CN(6, 'Six Silver Coins Behind Breakable Wall Before First Save Point')
+    ]),
+    Levels.FUNKY_GROOVEATHON: CG(Levels.FUNKY_GROOVEATHON).seq([
+        # M0     silver: (98, 40) (99, 40) (100, 40) (98, 41) (99, 41)
+        CN(5),
+        # M2     gold:   (208, 44)
+        CN(5),
+        # A6     silver: (223, 54) (223, 55) (223, 56) (223, 57) (223, 58)
+        CN(5, 'Five Silver Coins Behind Destructible Blocks Secret')
+    ]),
+    Levels.BEACH_BUNNY_BINGO: CG(Levels.BEACH_BUNNY_BINGO).seq([
+        # M0     gold:   (146, 20)
+        #        silver: (39, 27) (40, 27) (39, 28) (40, 28) (100, 29) (101, 29) (100, 30) (101, 30)
+        CN(13),
+        # M1     gold:   (164, 22)
+        #        silver: (148, 16) (149, 16) (148, 17) (149, 17)
+        CN(9),
+        # A1     silver: (192, 32) (193, 32) (192, 33) (193, 33)
+        CN(4, 'Four Silver Coins Behind TNT Blocks Secret')
+    ]),
+    Levels.MARINATED_RABBIT: CG(Levels.MARINATED_RABBIT).seq([
+        # M0     gold:   (61, 13)
+        #        silver: (74, 10) (74, 11) (74, 12)
+        CN(8),
+        # A1     silver: (128, 13) (129, 13) (128, 14) (129, 14)
+        CN(4),
+        # M2     gold:   (59, 45) (66, 57)
+        CN(10),
+    ]),
     Levels.A_DIAMONDUS_FOREVER: CG(Levels.A_DIAMONDUS_FOREVER).seq([]),
     Levels.FOURTEEN_CARROT: CG(Levels.FOURTEEN_CARROT).seq([]),
     Levels.ELECTRIC_BOOGALOO: CG(Levels.ELECTRIC_BOOGALOO).seq([]),

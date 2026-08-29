@@ -1230,8 +1230,12 @@
   },
   "Victorian Secret - After Clothesline Across the Chasm": {
     "connects_to": [
+      "Victorian Secret - In and After First Sewer Section",
       "Victorian Secret - Second Sewer Section"
     ],
+    "exit_requires": {
+      "Victorian Secret - In and After First Sewer Section": "{canUppercut()} or {canDoubleJump()}"
+    },
     "requires": "{canGrabVines()}",
     "_comment": "R:M2"
   },
@@ -1253,7 +1257,8 @@
     "connects_to": [
       "Victorian Secret - Exit"
     ],
-    "_comment": "R:B1    Requirement TBD"
+    "requires": "{canCollectEnoughCoins(Victorian Secret, 50)}",
+    "_comment": "R:B1"
   },
   "Victorian Secret - Exit": {
     "connects_to": [
@@ -1301,7 +1306,8 @@
     "connects_to": [
       "Colonial Chaos - Above Clotheslines Near Second Sewer Section"
     ],
-    "_comment": "R:B1    Requirement TBD"
+    "requires": "{canCollectEnoughCoins(Colonial Chaos, 20)}",
+    "_comment": "R:B1"
   },
   "Colonial Chaos - Chute at the Start of Second Sewer Section": {
     "connects_to": [
@@ -1399,8 +1405,8 @@
     "connects_to": [
       "Purple Haze Maze - Around First Save Point"
     ],
-    "requires": "{canDestroyWeaponBlocks(RF Missile)}",
-    "_comment": "R:B1    Two sets of six silver coins, both behind RF destructible scenery"
+    "requires": "{canCollectEnoughCoins(Purple Haze Maze, 10)}",
+    "_comment": "R:B1"
   },
   "Purple Haze Maze - Around First Save Point": {
     "connects_to": [
@@ -1574,7 +1580,8 @@
     "connects_to": [
       "Funky Grooveathon - Main Section"
     ],
-    "_comment": "R:B1    No requirements, the required 10 coins are available without any limited regions"
+    "requires": "{canCollectEnoughCoins(Funky Grooveathon, 10)}",
+    "_comment": "R:B1"
   },
   "Funky Grooveathon - Bouncer Ammo Behind Stomp Blocks Secret": {
     "connects_to": [
@@ -1635,7 +1642,8 @@
     "connects_to": [
       "Beach Bunny Bingo - After One Ways"
     ],
-    "_comment": "R:B1    Enough coins are available without the TNT secret."
+    "requires": "{canCollectEnoughCoins(Beach Bunny Bingo, 20)}",
+    "_comment": "R:B1"
   },
   "Beach Bunny Bingo - Around Late Save Point": {
     "connects_to": [
@@ -1688,7 +1696,7 @@
     "connects_to": [
       "Marinated Rabbit - Main Water Section"
     ],
-    "requires": "{canSwim()}",
+    "requires": "{canCollectEnoughCoins(Marinated Rabbit, 20)}",
     "_comment": "R:B1"
   },
   "Marinated Rabbit - Cavern Between Water Sections": {
