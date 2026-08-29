@@ -74,13 +74,20 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
     # By default, only the first levels (plus the tutorial level) of each episode are eligible to be available at the start.
     # If levels are allowed to done in any order, any level is eligible to be a starting level, though.
     if get_option_value(multiworld, player, 'allow_levels_out_of_order') and get_option_value(multiworld, player, 'individual_level_unlock_keys'):
+        # Some levels could get the player stuck from the very beginning depending on their options,
+        # as they have the potential to have every check locked behind a movement or block destruction unlock.
+        # Thus, force the starting level in that case to be Rabbit in Training, which always has three checks
+        # available at the start.
         for item in item_table:
             if (
                 'category' in item.keys()
                 and 'Individual Level Unlocks' in item['category']
-                and not 'Starting Levels' in item['category']
+                and 'Starting Levels' in item['category']
+                and not item['name'] == 'Rabbit in Training Unlock'
             ):
-                item['category'].append('Starting Levels')
+                item['category'].remove('Starting Levels')
+                logging.info(f'removed {item['name']} from starting levels')
+
             
     return item_config
 

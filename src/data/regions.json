@@ -65,7 +65,7 @@
       "Dashing thru the snow.. - Spaz Start",
       "Tinsel Town - Start"
     ],
-    "requires": "{YamlEnabled(allow_levels_out_of_order)}"
+    "requires": "{YamlEnabled(allow_levels_out_of_order)} and {YamlEnabled(individual_level_unlock_keys)}"
   },
   "Episode: Formerly a Prince": {
     "connects_to": [
