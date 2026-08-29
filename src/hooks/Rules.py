@@ -679,7 +679,9 @@ COIN_ACCESS_BY_LEVEL_LOOKUP: dict[Levels, CoinPathGroup] = {
                 # A4     silver: (29, 30) (30, 30) (29, 31) (30, 31) (29, 32) (30, 32)
                 CN(6, 'Spaz Silver Coins Warp Secret'),
                 # A5     silver: (37, 42)
-                CN(1, 'Spaz Silver Coins Behind Blocks Secret')
+                CN(1, 'Spaz Silver Coins Behind Blocks Secret'),
+                # S1     silver: (36, 42) (36, 43) (36, 44) (36, 45)
+                CN(4)
             ])
         ),
         CG('Shared path').seq([
