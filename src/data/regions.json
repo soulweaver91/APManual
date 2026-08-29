@@ -687,7 +687,7 @@
   },
   "Carrot Juice - Paths Convergence": {
     "connects_to": [
-      "Carrot Juice - After Poles One Way"
+      "Carrot Juice - After First Drop after Convergence"
     ],
     "_comment": "R:M7"
   },
@@ -2494,6 +2494,7 @@
     "connects_to": [
       "Medieval Kineval - After Either Trigger Crate or Vine",
       "Medieval Kineval - Trigger Crate Detour First Room",
+      "Medieval Kineval - Hooks Near Bonus Warp",
       "Medieval Kineval - Bonus Warp Area"
     ],
     "_comment": "R:M2"
