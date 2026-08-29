@@ -505,8 +505,8 @@ type StartPositionCharacterName = Literal['Jazz', 'Spaz']
 
 
 class CoinPathNode:
-    region: str | None = None
-    amount: int = 0
+    amount: int
+    region: str | None
 
     def __init__(self, amount, region = None) -> None:
         self.amount = amount
@@ -521,9 +521,9 @@ class CoinPathGroup:
     sequence: list['CoinPathNode | CoinPathGroup']
     min_mode: bool
 
-    minimum_coins_from_branches = 0
-    minimum_coins_from_sequence = 0
-    minimum_coins = 0
+    minimum_coins_from_branches: int
+    minimum_coins_from_sequence: int
+    minimum_coins: int
 
     def __init__(self, name: str, character: StartPositionCharacterName | None = None, min_mode: bool = False) -> None:
         logging.debug(f'')
@@ -534,6 +534,11 @@ class CoinPathGroup:
         self.min_mode = min_mode
         self.sequence = []
         self.branches = []
+
+        
+        self.minimum_coins_from_branches = 0
+        self.minimum_coins_from_sequence = 0
+        self.minimum_coins = 0
 
     def branch(self, subpath: 'CoinPathGroup') -> Self:
         self.branches.append(subpath)
