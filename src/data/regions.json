@@ -231,8 +231,8 @@
     "connects_to": [
       "Dungeon Dilemma - Between Spring Section and Vines After Save Point Two"
     ],
-    "requires": "{canDestroySpecialMoveBlocks(Dungeon Dilemma, above)}",
-    "_comment": "R:B1    18 coins along the main path, 8 in region R:A4"
+    "requires": "{canCollectEnoughCoins(Dungeon Dilemma, 20)}",
+    "_comment": "R:B1"
   },
   "Dungeon Dilemma - Final Section": {
     "connects_to": [
@@ -341,6 +341,7 @@
     "connects_to": [
       "Knight Cap - Spaz Start",
       "Knight Cap - Shared Path Start From Left",
+      "Knight Cap - Spaz Only Four Silver Coins in Secluded Room Secret",
       "Knight Cap - Spaz Only Extra Life Secret",
       "Knight Cap - Spaz Only Two Gold Coins Secret",
       "Knight Cap - Spaz Only Gold Coin Secret"
@@ -350,26 +351,32 @@
     },
     "_comment": "R:S1"
   },
+  "Knight Cap - Spaz Only Four Silver Coins in Secluded Room Secret": {
+    "connects_to": [
+      "Knight Cap - Spaz Only After Chute"
+    ],
+    "_comment": "R:A5"
+  },
   "Knight Cap - Spaz Only Two Gold Coins Secret": {
     "connects_to": [
       "Knight Cap - Spaz Only After Chute"
     ],
     "requires": "{canDestroyWeaponBlocks(Bouncer)}",
-    "_comment": "R:A5"
+    "_comment": "R:A6"
   },
   "Knight Cap - Spaz Only Extra Life Secret": {
     "connects_to": [
       "Knight Cap - Spaz Only After Chute"
     ],
     "requires": "{canDestroySpecialMoveBlocks(Knight Cap, sides)}",
-    "_comment": "R:A6"
+    "_comment": "R:A7"
   },
   "Knight Cap - Spaz Only Gold Coin Secret": {
     "connects_to": [
       "Knight Cap - Spaz Only After Chute"
     ],
     "requires": "{canDestroyWeaponBlocks(Bouncer)}",
-    "_comment": "R:A7"
+    "_comment": "R:A8"
   },
   "Knight Cap - Shared Path Start From Left": {
     "connects_to": [
@@ -397,21 +404,21 @@
       "Knight Cap - Shared Path Start"
     ],
     "requires": "{canDestroyTriggerCrates(Knight Cap, above/sides)}",
-    "_comment": "R:A8"
+    "_comment": "R:A9"
   },
   "Knight Cap - Gem Ring Secret": {
     "connects_to": [
       "Knight Cap - Shared Path Start"
     ],
     "requires": "{canDestroySpecialMoveBlocks(Knight Cap, above)}",
-    "_comment": "R:A9"
+    "_comment": "R:A10"
   },
   "Knight Cap - Bonus Warp Area": {
     "connects_to": [
       "Knight Cap - Shared Path Start"
     ],
-    "requires": "|Jazz Unlock| or |Lori Unlock| or {canDestroySpecialMoveBlocks(Knight Cap, above)} or {canDestroyTriggerCrates(Knight Cap, above/sides)}",
-    "_comment": "R:B1    Cost: 20 coins. Shared path has 4 without extra requirements, Jazz has 25, and Spaz has 8. Thus, Jazz can get this whenever, while Spaz needs some tools to collect extra coins."
+    "requires": "{canCollectEnoughCoins(Knight Cap, 20)}",
+    "_comment": "R:B1"
   },
   "Knight Cap - After Vine": {
     "connects_to": [
@@ -435,20 +442,20 @@
       "Knight Cap - Silly Message Secret"
     ],
     "requires": "{canDoubleJump()} or {canUppercut()}",
-    "_comment": "R:A10"
+    "_comment": "R:A11"
   },
   "Knight Cap - Extra Life Secret": {
     "connects_to": [
       "Knight Cap - After One Way"
     ],
     "requires": "{canDestroySpecialMoveBlocks(Knight Cap, above)}",
-    "_comment": "R:A11"
+    "_comment": "R:A12"
   },
   "Knight Cap - Silly Message Secret": {
     "connects_to": [
       "Knight Cap - After One Way"
     ],
-    "_comment": "R:A12"
+    "_comment": "R:A13"
   },
   "Knight Cap - Boss Area": {
     "connects_to": [
@@ -569,7 +576,8 @@
     "connects_to": [
       "Tossed Salad - Before Final Chute"
     ],
-    "_comment": "R:B1    Requirement TBD"
+    "requires": "{canCollectEnoughCoins(Tossed Salad, 20)}",
+    "_comment": "R:B1"
   },
   "Tossed Salad - Final Part": {
     "connects_to": [
@@ -786,7 +794,8 @@
     "connects_to": [
       "Carrot Juice - After Fall Near End of Level"
     ],
-    "_comment": "R:B1    Requirement TBD"
+    "requires": "{canCollectEnoughCoins(Carrot Juice, 20)}",
+    "_comment": "R:B1"
   },
   "Carrot Juice - One Way After Fall Near End of Level": {
     "connects_to": [
@@ -872,7 +881,7 @@
       "Weirder Science - Spaz Only Below Silver Coins Behind Blocks"
     ],
     "requires": "{canDestroyWildcardBlocks()}",
-    "_comment": "R:A5"
+    "_comment": "R:A5    All but one coin in this secret area can be collected with a double jump from the exit side."
   },
   "Weirder Science - Spaz Only Below Silver Coins Behind Blocks": {
     "connects_to": [
@@ -1019,7 +1028,8 @@
     "connects_to": [
       "Weirder Science - After Main Path Buttstomp Blocks"
     ],
-    "_comment": "R:B1    Requirement TBD"
+    "requires": "{canCollectEnoughCoins(Weirder Science, 50)}",
+    "_comment": "R:B1"
   },
   "Weirder Science - Room with Exit": {
     "connects_to": [
@@ -1151,7 +1161,8 @@
     "connects_to": [
       "Loose Screws - After Downward Vine Sequence"
     ],
-    "_comment": "R:B1    Requirement TBD"
+    "requires": "{canCollectEnoughCoins(Loose Screws, 20)}",
+    "_comment": "R:B1"
   },
   "Loose Screws - Before Final Speed Blocks": {
     "connects_to": [
