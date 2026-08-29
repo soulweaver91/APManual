@@ -86,7 +86,6 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
                 and not item['name'] == 'Rabbit in Training Unlock'
             ):
                 item['category'].remove('Starting Levels')
-                logging.info(f'removed {item['name']} from starting levels')
 
             
     return item_config
