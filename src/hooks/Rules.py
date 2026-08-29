@@ -268,6 +268,10 @@ IN_LEVEL_TNT_RULES: dict[tuple[Levels, int], list[str] | bool] = {
 }
 
 
+def levelFreeSelectEnabled(multiworld: MultiWorld, state: CollectionState, player: int):
+    return is_option_enabled(multiworld, player, 'allow_levels_out_of_order') and is_option_enabled(multiworld, player, 'individual_level_unlock_keys')
+
+
 def hasMovementUnlock(multiworld: MultiWorld, state: CollectionState, player: int, unlockItem: str):
     if not is_option_enabled(multiworld, player, 'basic_movement_in_pool'):
         return True
@@ -534,7 +538,6 @@ class CoinPathGroup:
         self.min_mode = min_mode
         self.sequence = []
         self.branches = []
-
         
         self.minimum_coins_from_branches = 0
         self.minimum_coins_from_sequence = 0

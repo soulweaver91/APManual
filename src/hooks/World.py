@@ -43,7 +43,17 @@ def before_generate_early(world: World, multiworld: MultiWorld, player: int) -> 
     This is the earliest hook called during generation, before anything else is done.
     Use it to check or modify incompatible options, or to set up variables for later use.
     """
-    pass
+
+    # Various access rules in this world rely on checking if specific locations or regions can be reached,
+    # especially the bonus warp logic.
+    # For now, this setting is set off to make those work at the expense of generation performance.
+    # In the future, the connections could possibly be specified explicitly.
+    world.explicit_indirect_conditions = False
+
+    # Progressive levels are unlocked in order by design, so allowing levels out of order doesn't do anything.
+    if is_option_enabled(multiworld, player, 'allow_levels_out_of_order') and not is_option_enabled(multiworld, player, 'individual_level_unlock_keys'):
+        logging.debug('before_generate_early: turning allow_levels_out_of_order off as individual_level_unlock_keys is off')
+        world.options.allow_levels_out_of_order.value = False # type: ignore
 
 # Called before regions and locations are created. Not clear why you'd want this, but it's here. Victory location is included, but Victory event is not placed yet.
 def before_create_regions(world: World, multiworld: MultiWorld, player: int):
