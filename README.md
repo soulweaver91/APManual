@@ -28,6 +28,11 @@ at the moment:
 - Bonus warp logic is incomplete. Some levels with simpler coin placements
   have been set up properly, but more complex ones require careful
   consideration of when the player has access to enough coins.
+- Due to some levels having quite restrictive locations available, players
+  using minimal accessibility may rarely lead into generation failures.
+  This might be something that [this pull request in Archipelago core](
+    https://github.com/ArchipelagoMW/Archipelago/pull/4225) could fix
+  when merged.
 
 ## AI usage disclosure
 No AI tools have been used in any part of the development of this custom game
