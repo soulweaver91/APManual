@@ -21,18 +21,11 @@ assumes that you're able to complete every level from start to finish as long
 as you have access to that level (i.e. no logic for missing weapon, permission
 or ability unlocks).
 
-While some parts of logic have been fleshed out for the more developed 
-episodes, these parts of logic in specific are acknowledged to be lacking
-at the moment:
-
-- Bonus warp logic is incomplete. Some levels with simpler coin placements
-  have been set up properly, but more complex ones require careful
-  consideration of when the player has access to enough coins.
-- Due to some levels having quite restrictive locations available, players
-  using minimal accessibility may rarely lead into generation failures.
-  This might be something that [this pull request in Archipelago core](
-    https://github.com/ArchipelagoMW/Archipelago/pull/4225) could fix
-  when merged.
+Due to some levels having quite restrictive locations available, players
+using minimal accessibility may rarely lead into generation failures.
+This might be something that [this pull request in Archipelago core](
+  https://github.com/ArchipelagoMW/Archipelago/pull/4225) could fix
+when merged.
 
 ## AI usage disclosure
 No AI tools have been used in any part of the development of this custom game

@@ -3529,15 +3529,180 @@
   },
   "Darn Ratz - Start": {
     "connects_to": [
+      "Darn Ratz - Room With Wildcard Destructible Block Tutorial",
+      "Darn Ratz - Red Gems Above Vine Secret",
+      "Darn Ratz - Four Silver Coins and Gem Crate Secret"
+    ],
+    "exit_requires": {
+      "Darn Ratz - Room With Wildcard Destructible Block Tutorial": "{canGrabVines()}"
+    },
+    "requires": "|Darn Ratz Unlock| or |Shareware Demo Progressive Level Unlock:1|",
+    "_comment": "R:M0"
+  },
+  "Darn Ratz - Red Gems Above Vine Secret": {
+    "connects_to": [
+      "Darn Ratz - Start"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A1"
+  },
+  "Darn Ratz - Four Silver Coins and Gem Crate Secret": {
+    "connects_to": [
+      "Darn Ratz - Room With Wildcard Destructible Block Tutorial"
+    ],
+    "_comment": "R:A2"
+  },
+  "Darn Ratz - Room With Wildcard Destructible Block Tutorial": {
+    "connects_to": [
+      "Darn Ratz - After Wildcard Destructible Block Tutorial"
+    ],
+    "_comment": "R:M1"
+  },
+  "Darn Ratz - After Wildcard Destructible Block Tutorial": {
+    "connects_to": [
+      "Darn Ratz - Room With Wildcard Destructible Block Tutorial",
+      "Darn Ratz - Section Before Buttstomp Tutorial"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M2"
+  },
+  "Darn Ratz - Section Before Buttstomp Tutorial": {
+    "connects_to": [
+      "Darn Ratz - After Wildcard Destructible Block Tutorial",
+      "Darn Ratz - Between Buttstomp and Speed Blocks"
+    ],
+    "_comment": "R:M3"
+  },
+  "Darn Ratz - Between Buttstomp and Speed Blocks": {
+    "connects_to": [
+      "Darn Ratz - Section Before Buttstomp Tutorial",
+      "Darn Ratz - After Speed Blocks"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Darn Ratz, above)}",
+    "_comment": "R:M4"
+  },
+  "Darn Ratz - After Speed Blocks": {
+    "connects_to": [
+      "Darn Ratz - After Trigger Crate Bridge",
+      "Darn Ratz - Six Silver Coins Only Accessible Before Trigger Crate Secret"
+    ],
+    "requires": "{canDestroySpeedBlocks()}",
+    "_comment": "R:M5"
+  },
+  "Darn Ratz - Six Silver Coins Only Accessible Before Trigger Crate Secret": {
+    "connects_to": [
+      "Darn Ratz - After Speed Blocks"
+    ],
+    "_comment": "R:A3"
+  },
+  "Darn Ratz - After Trigger Crate Bridge": {
+    "connects_to": [
+      "Darn Ratz - Triple Sucker Tube Middle Path",
+      "Darn Ratz - Extra Life Behind Sidekick Blocks Secret",
+      "Darn Ratz - Triple Sucker Tube Left Path",
+      "Darn Ratz - Triple Sucker Tube Right Path"
+    ],
+    "requires": "{canDestroyTriggerCrates(Darn Ratz, above/sides)}",
+    "_comment": "R:M6"
+  },
+  "Darn Ratz - Extra Life Behind Sidekick Blocks Secret": {
+    "connects_to": [
+      "Darn Ratz - After Trigger Crate Bridge"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Darn Ratz, sides)}",
+    "_comment": "R:A4"
+  },
+  "Darn Ratz - Triple Sucker Tube Middle Path": {
+    "connects_to": [
+      "Darn Ratz - Around Save Point"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Darn Ratz, above)}",
+    "_comment": "R:M7"
+  },
+  "Darn Ratz - Triple Sucker Tube Left Path": {
+    "connects_to": [
+      "Darn Ratz - Around Save Point"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Darn Ratz, above)}",
+    "_comment": "R:A5"
+  },
+  "Darn Ratz - Triple Sucker Tube Right Path": {
+    "connects_to": [
+      "Darn Ratz - Around Save Point"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Darn Ratz, above)}",
+    "_comment": "R:A6"
+  },
+  "Darn Ratz - Around Save Point": {
+    "connects_to": [
+      "Darn Ratz - After Hooks"
+    ],
+    "_comment": "R:M8"
+  },
+  "Darn Ratz - After Hooks": {
+    "connects_to": [
+      "Darn Ratz - After First Fall After Bonus Warp",
+      "Darn Ratz - Bonus Warp Area"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M9"
+  },
+  "Darn Ratz - Bonus Warp Area": {
+    "connects_to": [
+      "Darn Ratz - After Hooks"
+    ],
+    "requires": "{canCollectEnoughCoins(Darn Ratz, 20)}",
+    "_comment": "R:B1"
+  },
+  "Darn Ratz - After First Fall After Bonus Warp": {
+    "connects_to": [
+      "Darn Ratz - After Second Fall After Bonus Warp",
+      "Darn Ratz - Blue Gems Above Uppercut Blocks Secret",
+      "Darn Ratz - Extra Life and Apples Above Vine"
+    ],
+    "_comment": "R:M10"
+  },
+  "Darn Ratz - Blue Gems Above Uppercut Blocks Secret": {
+    "connects_to": [
+      "Darn Ratz - After First Fall After Bonus Warp"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Darn Ratz, below)}",
+    "_comment": "R:A7"
+  },
+  "Darn Ratz - Extra Life and Apples Above Vine": {
+    "connects_to": [
+      "Darn Ratz - After First Fall After Bonus Warp"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A8"
+  },
+  "Darn Ratz - After Second Fall After Bonus Warp": {
+    "connects_to": [
+      "Darn Ratz - After First Fall After Bonus Warp",
+      "Darn Ratz - After Third Fall After Bonus Warp"
+    ],
+    "exit_requires": {
+      "Darn Ratz - After First Fall After Bonus Warp": "{canDoubleJump()} or {canUppercut()}"
+    },
+    "_comment": "R:M11"
+  },
+  "Darn Ratz - After Third Fall After Bonus Warp": {
+    "connects_to": [
+      "Darn Ratz - Final Section"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Darn Ratz, below)}",
+    "_comment": "R:M12"
+  },
+  "Darn Ratz - Final Section": {
+    "connects_to": [
+      "Darn Ratz - After Third Fall After Bonus Warp",
       "Darn Ratz - Exit"
     ],
-    "requires": "|Darn Ratz Unlock| or |Shareware Demo Progressive Level Unlock:1|"
+    "exit_requires": {
+      "Darn Ratz - After Third Fall After Bonus Warp": "{canDoubleJump()} or {canUppercut()}"
+    },
+    "_comment": "R:M13"
   },
-
-
-
-
-
   "Darn Ratz - Exit": {
     "connects_to": [
       "Retro Rabbit - Jazz Start",
@@ -3546,21 +3711,105 @@
   },
   "Retro Rabbit - Jazz Start": {
     "connects_to": [
-      "Retro Rabbit - Exit"
+      "Retro Rabbit - Jazz After Buttstomp Blocks"
     ],
-    "requires": "(|Jazz Unlock| or |Lori Unlock|) and (|Retro Rabbit Unlock| or |Shareware Demo Progressive Level Unlock:2|)"
+    "requires": "(|Jazz Unlock| or |Lori Unlock|) and (|Retro Rabbit Unlock| or |Shareware Demo Progressive Level Unlock:2|)",
+    "_comment": "R:J0"
+  },
+  "Retro Rabbit - Jazz After Buttstomp Blocks": {
+    "connects_to": [
+      "Retro Rabbit - Jazz Start",
+      "Retro Rabbit - Shared Path Start"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(above)}",
+    "exit_requires": {  
+      "Retro Rabbit - Jazz Start": "{canDoubleJump()} or {canUppercut()}"
+    },
+    "_comment": "R:J1"
   },
   "Retro Rabbit - Spaz Start": {
     "connects_to": [
+      "Retro Rabbit - Spaz Platforms Above Jazz Path"
+    ],
+    "requires": "|Spaz Unlock| and (|Retro Rabbit Unlock| or |Shareware Demo Progressive Level Unlock:2|)",
+    "_comment": "R:S0"
+  },
+  "Retro Rabbit - Spaz Platforms Above Jazz Path": {
+    "connects_to": [
+      "Retro Rabbit - Jazz Start",
+      "Retro Rabbit - Jazz After Buttstomp Blocks",
+      "Retro Rabbit - Shared Path Start"
+    ],
+    "_comment": "R:S1"
+  },
+  "Retro Rabbit - Shared Path Start": {
+    "connects_to": [
+      "Retro Rabbit - Room With Rope Bridges"
+    ],
+    "_comment": "R:M1"
+  },
+  "Retro Rabbit - Room With Rope Bridges": {
+    "connects_to": [
+      "Retro Rabbit - Shared Path Start",
+      "Retro Rabbit - Trigger Crate Room",
+      "Retro Rabbit - Blue Gems High Above Secret"
+    ],
+    "exit_requires": {
+      "Retro Rabbit - Shared Path Start": "{canDoubleJump()} or {canUppercut()}"
+    },
+    "_comment": "R:M2"
+  },
+  "Retro Rabbit - Blue Gems High Above Secret": {
+    "connects_to": [
+      "Retro Rabbit - Room With Rope Bridges"
+    ],
+    "requires": "{canGrabHooks()}",
+    "_comment": "R:A1"
+  },
+  "Retro Rabbit - Trigger Crate Room": {
+    "connects_to": [
+      "Retro Rabbit - Chute With Coins After Destroying Trigger Crate",
+      "Retro Rabbit - Gold Coin Above Speed Blocks Secret"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Retro Rabbit, above)}",
+    "_comment": "R:M3"
+  },
+  "Retro Rabbit - Gold Coin Above Speed Blocks Secret": {
+    "connects_to": [
+      "Retro Rabbit - Trigger Crate Room"
+    ],
+    "requires": "{canDestroySpeedBlocks()}",
+    "_comment": "R:A2"
+  },
+  "Retro Rabbit - Chute With Coins After Destroying Trigger Crate": {
+    "connects_to": [
+      "Retro Rabbit - Vine Connected Platforms Room"
+    ],
+    "requires": "{canDestroyTriggerCrates(Retro Rabbit, above/sides)}",
+    "_comment": "R:M4"
+  },
+  "Retro Rabbit - Vine Connected Platforms Room": {
+    "connects_to": [
+      "Retro Rabbit - Exit Room",
+      "Retro Rabbit - Bonus Warp Area"
+    ],
+    "_comment": "R:M5"
+  },
+  "Retro Rabbit - Bonus Warp Area": {
+    "connects_to": [
+      "Retro Rabbit - Trigger Crate Room"
+    ],
+    "requires": "{canCollectEnoughCoins(Retro Rabbit, 20)}",
+    "_comment": "R:M6"
+  },
+  "Retro Rabbit - Exit Room": {
+    "connects_to": [
+      "Retro Rabbit - Vine Connected Platforms Room",
       "Retro Rabbit - Exit"
     ],
-    "requires": "|Spaz Unlock| and (|Retro Rabbit Unlock| or |Shareware Demo Progressive Level Unlock:2|)"
+    "requires": "{canDestroySpeedBlocks()}",
+    "_comment": "R:M6"
   },
-
-
-
-
-
   "Retro Rabbit - Exit": {
     "connects_to": [
       "Frog Stomp - Start"
@@ -3568,15 +3817,73 @@
   },
   "Frog Stomp - Start": {
     "connects_to": [
+      "Frog Stomp - Tunnel After Destructible Blocks on First Visit"
+    ],
+    "requires": "|Frog Stomp Unlock| or |Shareware Demo Progressive Level Unlock:3|",
+    "_comment": "R:M0"
+  },
+  "Frog Stomp - Tunnel After Destructible Blocks on First Visit": {
+    "connects_to": [
+      "Frog Stomp - Start",
+      "Frog Stomp - Trigger Crate Loop Upper Section",
+      "Frog Stomp - Fire Shield Available Before Trigger Crate Secret"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M1"
+  },
+  "Frog Stomp - Fire Shield Available Before Trigger Crate Secret": {
+    "connects_to": [
+      "Frog Stomp - Tunnel After Destructible Blocks on First Visit"
+    ],
+    "_comment": "R:A1"
+  },
+  "Frog Stomp - Trigger Crate Loop Upper Section": {
+    "connects_to": [
+      "Frog Stomp - Trigger Crate Loop Lower Section"
+    ],
+    "_comment": "R:M2"
+  },
+  "Frog Stomp - Trigger Crate Loop Lower Section": {
+    "connects_to": [
+      "Frog Stomp - Around Second Save Point"
+    ],
+    "_comment": "R:M3"
+  },
+  "Frog Stomp - Around Second Save Point": {
+    "connects_to": [
+      "Frog Stomp - Trigger Crate Loop Upper Section",
+      "Frog Stomp - Wind Tunnel Room"
+    ],
+    "requires": "{canDestroyTriggerCrates(Frog Stomp, above/sides)}",
+    "_comment": "R:M4"
+  },
+  "Frog Stomp - Wind Tunnel Room": {
+    "connects_to": [
+      "Frog Stomp - Around Second Save Point",
+      "Frog Stomp - Spring Section"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M5"
+  },
+  "Frog Stomp - Spring Section": {
+    "connects_to": [
+      "Frog Stomp - Before Boss Room"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(above)}",
+    "_comment": "R:M6"
+  },
+  "Frog Stomp - Before Boss Room": {
+    "connects_to": [
+      "Frog Stomp - Boss Room"
+    ],
+    "_comment": "R:M7"
+  },
+  "Frog Stomp - Boss Room": {
+    "connects_to": [
       "Frog Stomp - Exit"
     ],
-    "requires": "|Frog Stomp Unlock| or |Shareware Demo Progressive Level Unlock:3|"
+    "_comment": "R:M8"
   },
-
-
-
-
-
   "Frog Stomp - Exit": {
     "connects_to": []
   },

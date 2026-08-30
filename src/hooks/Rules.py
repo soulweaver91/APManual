@@ -244,6 +244,13 @@ LEVEL_WEAPON_ACCESS_LOOKUP: dict[str, dict[Weapons, bool | list[str]]] = {
     Levels.BAD_PITT: {
         Weapons.TOASTER: True,
         Weapons.TNT: True
+    },
+    Levels.DARN_RATZ: {
+        Weapons.BOUNCER: True
+    },
+    Levels.RETRO_RABBIT: {
+        Weapons.FREEZER: True,
+        Weapons.TOASTER: True
     }
 }
 
@@ -990,6 +997,36 @@ COIN_ACCESS_BY_LEVEL_LOOKUP: dict[Levels, CoinPathGroup] = {
         # M9     gold:   (230, 30)
         CN(5)
     ]),
+    Levels.DARN_RATZ: CG(Levels.DARN_RATZ).seq([
+        # M0     silver: (63, 35) (64, 35)
+        CN(2),
+        # A2     silver: (66, 49) (67, 49) (66, 50) (67, 50)
+        CN(4, 'Four Silver Coins and Gem Crate Secret'),
+        # M3     silver: (98, 33) (98, 34) (98, 35) (98, 36)
+        CN(4),
+        # M5     gold:   (27, 26)
+        CN(5),
+        # A3     silver: (108, 25) (109, 25) (108, 26) (109, 26) (108, 27) (109, 27)
+        CN(6, 'Six Silver Coins Only Accessible Before Trigger Crate Secret'),
+        # M6     gold:   (144, 18)
+        CN(5)
+    ]),
+    Levels.RETRO_RABBIT: CG(Levels.RETRO_RABBIT).seq([
+        # J0     silver: (54, 39) (55, 39) (54, 40) (55, 40)
+        # Despite it being a Jazz area, Spaz can drop down here. Spaz doesn't have any exclusive coins.
+        CN(4),
+        # M1     silver: (108, 28) (109, 28) (108, 29) (109, 29)
+        CN(4),
+        # M2     silver: (179, 43) (180, 43) (179, 44) (180, 44)
+        CN(4),
+        # A2     gold:   (214, 39)
+        CN(5, 'Gold Coin Above Speed Blocks Secret'),
+        # M4     silver: (206, 41) (206, 42) (206, 43) (206, 44)
+        CN(4)
+    ]),
+    Levels.FROG_STOMP: CG(Levels.FROG_STOMP).seq([
+        # No bonus warp or loose coins in this level
+    ])
 }
 
 def canCollectEnoughCoins(state: CollectionState, player: int, level: str, cost: int) -> bool:

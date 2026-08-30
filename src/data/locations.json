@@ -1579,6 +1579,96 @@
       "sort-key": "04-06-99-Complete"
     },
     {
+      "name": "Darn Ratz - Save Point 1 (121, 39)",
+      "category": [
+        "Episode: Shareware Demo",
+        "Darn Ratz",
+        "Save Point Locations"
+      ],
+      "region": "Darn Ratz - Around Save Point",
+      "sort-key": "05-01-00-SavePoint"
+    },
+    {
+      "name": "Darn Ratz - Sign 1 (59, 35)",
+      "category": [
+        "Episode: Shareware Demo",
+        "Darn Ratz",
+        "Sign Locations"
+      ],
+      "region": "Darn Ratz - Start",
+      "sort-key": "05-01-20-Sign"
+    },
+    {
+      "name": "Darn Ratz - Sign 2 (82, 43)",
+      "category": [
+        "Episode: Shareware Demo",
+        "Darn Ratz",
+        "Sign Locations"
+      ],
+      "region": "Darn Ratz - Room With Wildcard Destructible Block Tutorial",
+      "sort-key": "05-01-21-Sign"
+    },
+    {
+      "name": "Darn Ratz - Sign 3 (50, 25)",
+      "category": [
+        "Episode: Shareware Demo",
+        "Darn Ratz",
+        "Sign Locations"
+      ],
+      "region": "Darn Ratz - Section Before Buttstomp Tutorial",
+      "sort-key": "05-01-22-Sign"
+    },
+    {
+      "name": "Darn Ratz - Sign 4 (106, 17)",
+      "category": [
+        "Episode: Shareware Demo",
+        "Darn Ratz",
+        "Sign Locations"
+      ],
+      "region": "Darn Ratz - After Speed Blocks",
+      "sort-key": "05-01-23-Sign"
+    },
+    {
+      "name": "Darn Ratz - Sign 5 (118, 27)",
+      "category": [
+        "Episode: Shareware Demo",
+        "Darn Ratz",
+        "Sign Locations"
+      ],
+      "region": "Darn Ratz - Six Silver Coins Only Accessible Before Trigger Crate Secret",
+      "sort-key": "05-01-24-Sign"
+    },
+    {
+      "name": "Darn Ratz - Sign 6 (176, 18)",
+      "category": [
+        "Episode: Shareware Demo",
+        "Darn Ratz",
+        "Sign Locations"
+      ],
+      "region": "Darn Ratz - After Hooks",
+      "sort-key": "05-01-25-Sign"
+    },
+    {
+      "name": "Darn Ratz - Sign 7 (179, 58)",
+      "category": [
+        "Episode: Shareware Demo",
+        "Darn Ratz",
+        "Sign Locations"
+      ],
+      "region": "Darn Ratz - Final Section",
+      "sort-key": "05-01-26-Sign"
+    },
+    {
+      "name": "Darn Ratz - Bonus Warp",
+      "category": [
+        "Episode: Shareware Demo",
+        "Darn Ratz",
+        "Bonus Warp Locations"
+      ],
+      "region": "Darn Ratz - Bonus Warp Area",
+      "sort-key": "05-01-90-Bonus"
+    },
+    {
       "name": "Darn Ratz - Level Complete",
       "category": [
         "Episode: Shareware Demo",
@@ -1588,6 +1678,46 @@
       "sort-key": "05-01-99-Complete"
     },
     {
+      "name": "Retro Rabbit - Sign 1 (75, 62)",
+      "category": [
+        "Episode: Shareware Demo",
+        "Retro Rabbit",
+        "Sign Locations"
+      ],
+      "region": "Retro Rabbit - Shared Path Start",
+      "sort-key": "05-02-20-Sign"
+    },
+    {
+      "name": "Retro Rabbit - Sign 2 (89, 50)",
+      "category": [
+        "Episode: Shareware Demo",
+        "Retro Rabbit",
+        "Sign Locations"
+      ],
+      "region": "Retro Rabbit - Shared Path Start",
+      "sort-key": "05-02-21-Sign"
+    },
+    {
+      "name": "Retro Rabbit - Sign 3 (204, 62)",
+      "category": [
+        "Episode: Shareware Demo",
+        "Retro Rabbit",
+        "Sign Locations"
+      ],
+      "region": "Retro Rabbit - Vine Connected Platforms Room",
+      "sort-key": "05-02-22-Sign"
+    },
+    {
+      "name": "Retro Rabbit - Bonus Warp",
+      "category": [
+        "Episode: Shareware Demo",
+        "Retro Rabbit",
+        "Bonus Warp Locations"
+      ],
+      "region": "Retro Rabbit - Bonus Warp Area",
+      "sort-key": "05-02-90-Bonus"
+    },
+    {
       "name": "Retro Rabbit - Level Complete",
       "category": [
         "Episode: Shareware Demo",
@@ -1595,6 +1725,46 @@
       ],
       "region": "Retro Rabbit - Exit",
       "sort-key": "05-02-99-Complete"
+    },
+    {
+      "name": "Frog Stomp - Save Point 1 (75, 52)",
+      "category": [
+        "Episode: Shareware Demo",
+        "Frog Stomp",
+        "Save Point Locations"
+      ],
+      "region": "Frog Stomp - Trigger Crate Loop Upper Section",
+      "sort-key": "05-03-00-SavePoint"
+    },
+    {
+      "name": "Frog Stomp - Save Point 2 (98, 33)",
+      "category": [
+        "Episode: Shareware Demo",
+        "Frog Stomp",
+        "Save Point Locations"
+      ],
+      "region": "Frog Stomp - Around Second Save Point",
+      "sort-key": "05-03-01-SavePoint"
+    },
+    {
+      "name": "Frog Stomp - Sign 1 (8, 26)",
+      "category": [
+        "Episode: Shareware Demo",
+        "Frog Stomp",
+        "Sign Locations"
+      ],
+      "region": "Frog Stomp - Start",
+      "sort-key": "05-03-20-Sign"
+    },
+    {
+      "name": "Frog Stomp - Sign 2 (40, 26)",
+      "category": [
+        "Episode: Shareware Demo",
+        "Frog Stomp",
+        "Sign Locations"
+      ],
+      "region": "Frog Stomp - Start",
+      "sort-key": "05-03-21-Sign"
     },
     {
       "name": "Frog Stomp - Bubba Defeated",
