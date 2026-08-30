@@ -3020,7 +3020,8 @@
     "connects_to": [
       "Thriller Gorilla - Around First Save Point"
     ],
-    "_comment": "R:B1    Requirement TBD"
+    "requires": "{canCollectEnoughCoins(Thriller Gorilla, 10)}",
+    "_comment": "R:B1"
   },
   "Thriller Gorilla - Extra Life Crate Between Trees Secret": {
     "connects_to": [
@@ -3091,6 +3092,7 @@
       "Jungle Jump - Room with Rolling Rock After Super Gem",
       "Jungle Jump - Rolling Rock Tunnel After Second Destructible Blocks"
     ],
+    "requires": "{canDestroyWildcardBlocks()}",
     "exit_requires": {
       "Jungle Jump - Room with Rolling Rock After Super Gem": "{canUppercut()} or {canDoubleJump()}"
     },
@@ -3099,31 +3101,47 @@
   "Jungle Jump - Rolling Rock Tunnel After Second Destructible Blocks": {
     "connects_to": [
       "Jungle Jump - Rolling Rock Tunnel After First Destructible Blocks",
+      "Jungle Jump - Spring Section After Rolling Rock Tunnel"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M4"
+  },
+  "Jungle Jump - Spring Section After Rolling Rock Tunnel": {
+    "connects_to": [
+      "Jungle Jump - Rolling Rock Tunnel After Second Destructible Blocks",
+      "Jungle Jump - Warp Room Before Save Point"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "exit_requires": {
+      "Jungle Jump - Rolling Rock Tunnel After Second Destructible Blocks": "|Freezer Permit|"
+    },
+    "_comment": "R:M5"
+  },
+  "Jungle Jump - Warp Room Before Save Point": {
+    "connects_to": [
       "Jungle Jump - Around Save Point"
     ],
-    "exit_requires": {
-      "Jungle Jump - Rolling Rock Tunnel After First Destructible Blocks": "|Freezer Permit|"
-    },
-    "_comment": "R:M4"
+    "_comment": "R:M6"
   },
   "Jungle Jump - Around Save Point": {
     "connects_to": [
       "Jungle Jump - After Chute After Save Point"
     ],
-    "_comment": "R:M5"
+    "_comment": "R:M7"
   },
   "Jungle Jump - After Chute After Save Point": {
     "connects_to": [
       "Jungle Jump - Bonus Warp Area",
       "Jungle Jump - Middle Level Section Near Exit"
     ],
-    "_comment": "R:M6"
+    "_comment": "R:M8"
   },
   "Jungle Jump - Bonus Warp Area": {
     "connects_to": [
       "Jungle Jump - Around Save Point"
     ],
-    "_comment": "R:B1    Requirement TBD"
+    "requires": "{canCollectEnoughCoins(Jungle Jump, 20)}",
+    "_comment": "R:B1"
   },
   "Jungle Jump - Middle Level Section Near Exit": {
     "connects_to": [
@@ -3131,7 +3149,7 @@
       "Jungle Jump - Green Gems High Above Secret",
       "Jungle Jump - Final Section"
     ],
-    "_comment": "R:M7"
+    "_comment": "R:M9"
   },
   "Jungle Jump - Green Gems High Above Secret": {
     "connects_to": [
@@ -3145,7 +3163,7 @@
       "Jungle Jump - Middle Level Section Near Exit",
       "Jungle Jump - Exit"
     ],
-    "_comment": "R:M8"
+    "_comment": "R:M10"
   },
   "Jungle Jump - Exit": {
     "connects_to": [
@@ -3188,8 +3206,8 @@
     "connects_to": [
       "A Cold Day in Heck - Near Save Point"
     ],
-    "requires": "{canDestroyWeaponBlocks(Toaster)}",
-    "_comment": "R:B1    20 coins required; 24 are available, of which 7 require toaster."
+    "requires": "{canCollectEnoughCoins(A Cold Day in Heck, 20)}",
+    "_comment": "R:B1"
   },
   "A Cold Day in Heck - Room with Large Skull": {
     "connects_to": [
@@ -3283,7 +3301,8 @@
     "connects_to": [
       "Rabbit Roast - Around Second and Third Save Points"
     ],
-    "_comment": "R:B1    All coins are accessible, as long as you can get to this warp."
+    "requires": "{canCollectEnoughCoins(Rabbit Roast, 20)}",
+    "_comment": "R:B1"
   },
   "Rabbit Roast - Final Section After First Drop": {
     "connects_to": [
@@ -3353,7 +3372,8 @@
     "connects_to": [
       "Burnin Biscuits - Start"
     ],
-    "_comment": "R:B1    10 coins needed, and 10 coins are available without any extra tools."
+    "requires": "{canCollectEnoughCoins(Burnin Biscuits, 10)}",
+    "_comment": "R:B1"
   },
   "Burnin Biscuits - Around Save Point": {
     "connects_to": [
@@ -3489,7 +3509,8 @@
     "connects_to": [
       "Bad Pitt - Around Bonus Warp and Second Save Point"
     ],
-    "_comment": "R:B1    Requirement TBD"
+    "requires": "{canCollectEnoughCoins(Burnin Biscuits, 20)}",
+    "_comment": "R:B1"
   },
   "Bad Pitt - Before Boss Room": {
     "connects_to": [

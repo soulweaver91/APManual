@@ -904,12 +904,92 @@ COIN_ACCESS_BY_LEVEL_LOOKUP: dict[Levels, CoinPathGroup] = {
         # A6     gold:   (133, 0)
         CN(5)
     ]),
-    Levels.THRILLER_GORILLA: CG(Levels.THRILLER_GORILLA).seq([]),
-    Levels.JUNGLE_JUMP: CG(Levels.JUNGLE_JUMP).seq([]),
-    Levels.A_COLD_DAY_IN_HECK: CG(Levels.A_COLD_DAY_IN_HECK).seq([]),
-    Levels.RABBIT_ROAST: CG(Levels.RABBIT_ROAST).seq([]),
-    Levels.BURNIN_BISCUITS: CG(Levels.BURNIN_BISCUITS).seq([]),
-    Levels.BAD_PITT: CG(Levels.BAD_PITT).seq([]),
+    Levels.THRILLER_GORILLA: CG(Levels.THRILLER_GORILLA).seq([
+        CG('Start position branch', min_mode=True).branch(
+            CG('Jazz branch', 'Jazz').seq([
+                # A1     gold:   (82, 42)
+                CN(5, 'Jazz Only Gold Coin Secret'),
+                # J2     silver: (102, 29) (102, 30) (102, 31) (102, 32)
+                CN(4)
+            ])
+        ).branch(
+            CG('Spaz branch', 'Spaz').seq([
+                # S0     gold: (31, 55)
+                CN(5),
+                # A4     silver: (52, 50) (53, 50) (54, 50) (55, 50)
+                CN(4, 'Spaz Only Four Silver Coins Above Vine Secret')
+            ])
+        ),
+        CG('Shared path').seq([
+            CG('Up and down branches, up Jazz only', min_mode=True).branch(
+                CG('Up path', 'Jazz').seq([
+                    # A3     silver: (108, 8) (147, 9) (148, 9) (149, 9) (127, 25) (127, 26)
+                    CN(6, 'Jazz Only Detour Above Destructible Blocks After Vine')
+                ])
+            ).branch(
+                CG('Down path').seq([
+                    # M1     silver: (64, 49) (83, 56)
+                    CN(2),
+                    # M2     silver: (134, 52) (135, 52) (136, 52)
+                    CN(3)
+                ])
+            )
+        ])
+    ]),
+    Levels.JUNGLE_JUMP: CG(Levels.JUNGLE_JUMP).seq([
+        # M1     silver: (43, 30) (43, 31) (74, 7) (75, 7) (74, 8) (75, 8)
+        CN(6),
+        # M2     gold:   (123, 17)
+        CN(5),
+        # M3     silver: (123, 30) (124, 30)
+        CN(2),
+        # M4     silver: (115, 23) (116, 23)
+        CN(2),
+        # M5     silver: (129, 36) (130, 36) (129, 37) (130, 37) (156, 15) (156, 16)
+        CN(6),
+        # M8     silver: (211, 37) (212, 37) (211, 38) (212, 38)
+        CN(4)
+    ]),
+    Levels.A_COLD_DAY_IN_HECK: CG(Levels.A_COLD_DAY_IN_HECK).seq([
+        # M0     silver: (36, 14) (37, 14) (36, 15) (37, 15) (106, 7) (107, 7) (106, 8) (107, 8) (118, 22) (119, 22) (118, 23) (119, 23)
+        CN(12),
+        # M1     gold:   (192, 44)
+        CN(5),
+        # A2     silver: (191, 31) (192, 31) (191, 32) (192, 32)
+        CN(4, 'Four Silver Coins Behind Frozen Blocks Secret'),
+        # M2     silver: (232, 52) (233, 52) (234, 52)
+        # This one requires a region check even if it's on the main path because it's possible to get to the warp before having Toaster access.
+        CN(3, 'Room with Large Skull')
+    ]),
+    Levels.RABBIT_ROAST: CG(Levels.RABBIT_ROAST).seq([
+        # M0     gold:   (3, 11)
+        #        silver: (20, 33) (22, 33) (24, 33) (26, 33) (28, 33)
+        CN(10),
+        # M1     gold:   (35, 49)
+        CN(5),
+        # M3     silver: (111, 2) (112, 1) (112, 2) (112, 3) (113, 2)
+        CN(5)
+    ]),
+    Levels.BURNIN_BISCUITS: CG(Levels.BURNIN_BISCUITS).seq([
+        # M0     silver: (3, 34) (4, 34) (16, 46) (17, 46) (16, 47) (17, 47) (15, 4) (16, 4) (15, 5) (16, 5)
+        CN(10),
+        # A1     silver: (8, 60) (9, 60) (8, 61) (9, 61)
+        CN(4, 'Four Silver Coins Behind Sidekick Blocks Secret'),
+        # A2     silver: (37, 41) (38, 41) (37, 42) (38, 42)
+        CN(4, 'Four Silver Coins in a Corner High Above Main Path Secret'),
+        # A4     gold:   (93, 21)
+        CN(5, 'Gold Coin Below Buttstomp Blocks Secret')
+    ]),
+    Levels.BAD_PITT: CG(Levels.BAD_PITT).seq([
+        # M1     gold:   (42, 53)
+        CN(5),
+        # A1     gold:   (89, 24)
+        CN(5),
+        # M7     gold:   (143, 42) (175, 51)
+        CN(10),
+        # M9     gold:   (230, 30)
+        CN(5)
+    ]),
 }
 
 def canCollectEnoughCoins(state: CollectionState, player: int, level: str, cost: int) -> bool:
