@@ -165,5 +165,11 @@
   },
   "Starting Levels": {
     "hidden": true
+  },
+  "Basic Movement Ability": {
+    "yaml_option": ["basic_movement_in_pool"]
+  },
+  "Level Movement Ability": {
+    "yaml_option": ["block_destruction_in_pool"]
   }
 }
