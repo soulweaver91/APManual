@@ -49,6 +49,6 @@ jobs:
         with:
           name: "Jazz Jackrabbit 2 Manual Archipelago World v${{ env.CURRENT_WORLD_VERSION }}"
           bodyFile: bodyFile.md
-          tag: "v${{ env.CURRENT_WORLD_VERSION }}"
+          tag: "jazz2-v${{ env.CURRENT_WORLD_VERSION }}"
           commit: ${{ env.GITHUB_REF }}
           artifacts: "${{ env.BASENAME }}.apworld"

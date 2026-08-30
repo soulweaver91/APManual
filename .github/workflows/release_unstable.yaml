@@ -51,7 +51,7 @@ jobs:
         with:
           name: "Jazz Jackrabbit 2 Manual Archipelago World v${{ env.CURRENT_WORLD_VERSION }}-${{ env.CURRENT_DATETIME }} (Unstable)"
           bodyFile: bodyFile.md
-          tag: "unstable-v${{ env.CURRENT_WORLD_VERSION }}-${{ env.CURRENT_DATETIME }}"
+          tag: "jazz2-unstable-v${{ env.CURRENT_WORLD_VERSION }}-${{ env.CURRENT_DATETIME }}"
           commit: ${{ env.GITHUB_REF }}
           artifacts: "${{ env.BASENAME }}.apworld"
           prerelease: true
