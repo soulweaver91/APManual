@@ -2001,7 +2001,8 @@
     "connects_to": [
       "A Diamondus Forever - After Destructible Blocks Near Bonus Warp"
     ],
-    "_comment": "R:B1    Requirement TBD"
+    "requires": "{canCollectEnoughCoins(A Diamondus Forever, 50)}",
+    "_comment": "R:B1"
   },
   "A Diamondus Forever - After Destructible Blocks Near Bonus Warp": {
     "connects_to": [
@@ -2138,7 +2139,8 @@
     "connects_to": [
       "Fourteen Carrot - Lower Section with Third Save Point"
     ],
-    "_comment": "R:B1    Requirement TBD"
+    "requires": "{canCollectEnoughCoins(Fourteen Carrot, 10)}",
+    "_comment": "R:B1"
   },
   "Fourteen Carrot - Lower Section with Third Save Point": {
     "connects_to": [
@@ -2318,7 +2320,8 @@
     "connects_to": [
       "Electric Boogaloo - Final Section"
     ],
-    "_comment": "R:B1    Requirement TBD"
+    "requires": "{canCollectEnoughCoins(Electric Boogaloo, 20)}",
+    "_comment": "R:B1"
   },
   "Electric Boogaloo - Second Freezer Power Up Behind Sidekick Blocks Secret": {
     "connects_to": [
@@ -2463,7 +2466,8 @@
     "connects_to": [
       "Voltage Village - Pinball Section and Beyond"
     ],
-    "_comment": "R:B1    Requirement TBD"
+    "requires": "{canCollectEnoughCoins(Voltage Village, 20)}",
+    "_comment": "R:B1"
   },
   "Voltage Village - Small Room After Warp": {
     "connects_to": [
@@ -2506,16 +2510,25 @@
   "Medieval Kineval - Start": {
     "connects_to": [
       "Medieval Kineval - After Either Trigger Crate or Vine",
+      "Medieval Kineval - Two Gold Coins Behind Destructible Pillar Secret",
       "Medieval Kineval - Birdy and Two Gold Coins Below Rope Bridge Secret"
     ],
     "requires": "|Medieval Kineval Unlock| or |Flashback Progressive Level Unlock:5|",
     "_comment": "R:M0"
   },
+  "Medieval Kineval - Two Gold Coins Behind Destructible Pillar Secret": {
+    "connects_to": [
+      "Medieval Kineval - Start"
+    ],
+    "requires": "{canDestroyWildcardBlocks()} or {canCopter()}",
+    "_comment": "R:A2"
+  },
   "Medieval Kineval - Birdy and Two Gold Coins Below Rope Bridge Secret": {
     "connects_to": [
       "Medieval Kineval - Start"
     ],
-    "_comment": "R:A1"
+    "requires": "{canDestroySpecialMoveBlocks(Medieval Kineval, above)}",
+    "_comment": "R:A2"
   },
   "Medieval Kineval - After Either Trigger Crate or Vine": {
     "connects_to": [
@@ -2532,14 +2545,14 @@
     "connects_to": [
       "Medieval Kineval - After Either Trigger Crate or Vine"
     ],
-    "_comment": "R:A2"
+    "_comment": "R:A3"
   },
   "Medieval Kineval - Green Gems, Extra Life Crate and Gem Crate Behind Blocks Secret": {
     "connects_to": [
       "Medieval Kineval - After Either Trigger Crate or Vine"
     ],
     "requires": "{canDestroyWildcardBlocks()}",
-    "_comment": "R:A3"
+    "_comment": "R:A4"
   },
   "Medieval Kineval - Around Save Point": {
     "connects_to": [
@@ -2554,14 +2567,14 @@
     "connects_to": [
       "Medieval Kineval - Trigger Crate Detour First Room After First Trigger Crate"
     ],
-    "_comment": "R:A4"
+    "_comment": "R:A5"
   },
   "Medieval Kineval - Trigger Crate Detour First Room After First Trigger Crate": {
     "connects_to": [
       "Medieval Kineval - Trigger Crate Detour Second Room"
     ],
     "requires": "{canDestroyTriggerCrates(Medieval Kineval, above/sides)}",
-    "_comment": "R:A5"
+    "_comment": "R:A6"
   },
   "Medieval Kineval - Trigger Crate Detour Second Room": {
     "connects_to": [
@@ -2569,20 +2582,20 @@
       "Medieval Kineval - Gold Coins After Trigger Crate Detour Secret"
     ],
     "requires": "{canDestroyTriggerCrates(Medieval Kineval, above/sides)}",
-    "_comment": "R:A6"
+    "_comment": "R:A7"
   },
   "Medieval Kineval - Gold Coins After Trigger Crate Detour Secret": {
     "connects_to": [
       "Medieval Kineval - Around Save Point"
     ],
     "requires": "{canDestroyTriggerCrates(Medieval Kineval, above/sides)}",
-    "_comment": "R:A7"
+    "_comment": "R:A8"
   },
   "Medieval Kineval - Secret Level Exit": {
     "connects_to": [
       "Gargoyles Lair - Start"
     ],
-    "_comment": "R:A8    Can be reached with dashing only as long as the trigger scenery blocks haven't been removed. Otherwise likely requires DJ/UC+CE."
+    "_comment": "R:A9    Can be reached with dashing only as long as the trigger scenery blocks haven't been removed. Otherwise likely requires DJ/UC+CE."
   },
   "Medieval Kineval - After Return From Secret Level": {
     "connects_to": [
@@ -2602,7 +2615,7 @@
     "connects_to": [
       "Medieval Kineval - Hooks Near Bonus Warp"
     ],
-    "_comment": "R:A9"
+    "_comment": "R:A10"
   },
   "Medieval Kineval - Room With Double Warp Entrance": {
     "connects_to": [
@@ -2627,7 +2640,8 @@
     "connects_to": [
       "Medieval Kineval - After Double Warp"
     ],
-    "_comment": "R:B1    Requirement TBD"
+    "requires": "{canCollectEnoughCoins(Medieval Kineval, 100)}",
+    "_comment": "R:B1"
   },
   "Medieval Kineval - Above Hooks and Alternating Platforms": {
     "connects_to": [
@@ -2759,7 +2773,7 @@
     "connects_to": [
       "Hare Scare - Second Climb Top Room to Second Fall to Third Climb First Windowsills Section"
     ],
-    "requires": "{canGrabVines()}",
+    "requires": "{canCollectEnoughCoins(Hare Scare, 10)}",
     "_comment": "R:B1"
   },
   "Hare Scare - Third Climb Gem Crate Section": {
@@ -2829,13 +2843,14 @@
   "Gargoyles Lair - Main Section": {
     "connects_to": [
       "Gargoyles Lair - After Final Trigger Crate",
+      "Gargoyles Lair - Tunnel After Trigger Crates",
       "Gargoyles Lair - Room with Trigger Crate for Blue Spring Access Secret",
       "Gargoyles Lair - Green Gems Behind Sidekick Blocks Secret",
       "Gargoyles Lair - Room with Green Gems and Gold Coin Secret",
       "Gargoyles Lair - Near Bonus Warp",
       "Gargoyles Lair - Green Gems Behind Uppercut Blocks Secret"
     ],
-    "_comment": "R:M4"
+    "_comment": "R:M4    M3 can be backtracked to via the gem secret in the wall at the very start of M4. Both gold coins can be obtained without special moves."
   },
   "Gargoyles Lair - Room with Trigger Crate for Blue Spring Access Secret": {
     "connects_to": [
@@ -2886,7 +2901,8 @@
     "connects_to": [
       "Gargoyles Lair - Main Section"
     ],
-    "_comment": "R:B1    Requirement TBD"
+    "requires": "{canCollectEnoughCoins(Gargoyles Lair, 20)}",
+    "_comment": "R:B1"
   },
   "Gargoyles Lair - After Final Trigger Crate": {
     "connects_to": [

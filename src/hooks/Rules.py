@@ -210,7 +210,7 @@ LEVEL_WEAPON_ACCESS_LOOKUP: dict[str, dict[Weapons, bool | list[str]]] = {
         ]
     },
     Levels.VOLTAGE_VILLAGE: {
-        Weapons.TOASTER: ['Spaz Only Toaster Ammo Above Main Path Secret', 'Bonus Warp Area'],
+        Weapons.TOASTER: True,
         Weapons.TNT: True
     },
     Levels.MEDIEVAL_KINEVAL: {
@@ -785,13 +785,125 @@ COIN_ACCESS_BY_LEVEL_LOOKUP: dict[Levels, CoinPathGroup] = {
         # M2     gold:   (59, 45) (66, 57)
         CN(10),
     ]),
-    Levels.A_DIAMONDUS_FOREVER: CG(Levels.A_DIAMONDUS_FOREVER).seq([]),
-    Levels.FOURTEEN_CARROT: CG(Levels.FOURTEEN_CARROT).seq([]),
-    Levels.ELECTRIC_BOOGALOO: CG(Levels.ELECTRIC_BOOGALOO).seq([]),
-    Levels.VOLTAGE_VILLAGE: CG(Levels.VOLTAGE_VILLAGE).seq([]),
-    Levels.MEDIEVAL_KINEVAL: CG(Levels.MEDIEVAL_KINEVAL).seq([]),
-    Levels.HARE_SCARE: CG(Levels.HARE_SCARE).seq([]),
-    Levels.GARGOYLES_LAIR: CG(Levels.GARGOYLES_LAIR).seq([]),
+    Levels.A_DIAMONDUS_FOREVER: CG(Levels.A_DIAMONDUS_FOREVER).seq([
+        CG('Start position branch', min_mode=True).branch(
+            CG('Jazz branch', 'Jazz').seq([
+                # A1     gold:   (8, 14)
+                CN(5, 'Jazz Toaster Ammo and Gold Coin Below Start Secret'),
+                CG('Upper and lower branches').branch(
+                    CG('Upper branch').seq([
+                        # A2     gold:   (115, 10) (116, 10)
+                        CN(10, 'Jazz Silly Sign Detour First Room'),
+                        # A5     gold:   (109, 2)
+                        CN(5, 'Jazz Silly Sign Detour Fourth Room'),
+                    ])
+                ).branch(
+                    CG('Lower branch').seq([])
+                )
+            ])
+        ).branch(
+            CG('Spaz branch', 'Spaz').seq([
+                # A6     gold:   (19, 37)
+                CN(5, 'Spaz Vines Below First Room'),
+                # A7     gold:   (37, 50)
+                CN(5, 'Spaz Buttstomp Cavern Below First Room'),
+                # S3     gold:   (85, 46) (85, 47)
+                CN(10),
+                # A8     gold:   (111, 58) (111, 59)
+                CN(10, 'Spaz Fruit, Gems and Two Gold Coins Secret')
+            ])
+        ),
+        CG('Shared path').seq([
+            # M1     gold:   (182, 20) (155, 33)
+            CN(10),
+            # A10    gold:   (187, 27) (188, 27)
+            CN(10, 'Carrot Crates and Two Gold Coins Secret'),
+            # A12    gold:   (253, 58) (253, 59)
+            CN(10, 'Gold Coins Beneath Horizontal Spring Secret')
+        ])
+    ]),
+    Levels.FOURTEEN_CARROT: CG(Levels.FOURTEEN_CARROT).seq([
+        # M0     gold:   (57, 19)
+        #        silver: (109, 4) (110, 3) (110, 4) (110, 5) (111, 4) (199, 21) (200, 21) (199, 22) (200, 22)
+        CN(14),
+        # A5     gold:   (77, 3)
+        CN(5, 'Gold Coin Behind Destructible Blocks Secret'),
+        # A8     silver: (161, 6) (162, 6) (163, 6) (161, 7) (162, 7) (163, 7)
+        CN(6, 'Six Silver Coins and Super Gem Above Frozen Spring Secret')
+    ]),
+    Levels.ELECTRIC_BOOGALOO: CG(Levels.ELECTRIC_BOOGALOO).seq([
+        # A1     silver: (3, 35) (5, 35) (3, 36) (5, 36)
+        CN(4, 'Four Silver Coins in Room Accessed with Pipe Secret'),
+        # A4     gold:   (33, 46) (35, 46)
+        CN(10, 'Two Gold Coins Blocked By Horizontal Spring Secret'),
+        # A8     silver: (119, 49) (120, 49) (121, 49) (122, 49) (123, 49) (124, 49)
+        CN(6, 'Six Silver Coins and Fruit and Gems in Shape of \'YO\' Secret'),
+        # M4     silver: (163, 33) (164, 33) (163, 34) (164, 34)
+        CN(4),
+        # A13    silvere: (250, 37) (251, 37) (250, 38) (251, 38) (250, 39) (251, 39)
+        CN(6, 'Six Silver Coins Surrounded by Breakable Blocks Secret')
+    ]),
+    Levels.VOLTAGE_VILLAGE: CG(Levels.VOLTAGE_VILLAGE).seq([
+        CG('Start position branch', min_mode=True).branch(
+            CG('Jazz branch', 'Jazz').seq([
+                # Nothing over here
+            ])
+        ).branch(
+            CG('Spaz branch', 'Spaz').seq([
+                # S3     gold:   (53, 59)
+                CN(5)
+            ])
+        ),
+        CG('Shared path').seq([
+            # M1     silver: (96, 15) (97, 15) (104, 15) (105, 15)
+            CN(4),
+            # A3     silver: (117, 32) (118, 32) (117, 33) (118, 33)
+            CN(4, 'Four Silver Coins and Extra Life Below TNT Blocks Secret'),
+            # A5     gold:   (90, 1) (98, 1)
+            CN(10, 'Two Gold Coins Behind Multiple Obstacles Secret'),
+            # A6     silver: (61, 1) (62, 1) (63, 1) (64, 1)
+            CN(4, 'Four Silver Coins Behind Breakable Blocks Secret'),
+            # M2     silver: (36, 32) (37, 32) (38, 32)
+            CN(3)
+        ])
+    ]),
+    Levels.MEDIEVAL_KINEVAL: CG(Levels.MEDIEVAL_KINEVAL).seq([
+        # M0     gold:   (0, 56) (0, 57) (52, 46) (53, 46) (96, 37) (96, 38) (96, 39) (96, 40)
+        CN(30),
+        # A1     gold:   (88, 42) (88, 43)
+        CN(10, 'Two Gold Coins Behind Destructible Pillar Secret'),
+        # A2     gold:   (104, 59) (104, 60)
+        CN(10, 'Birdy and Two Gold Coins Below Rope Bridge Secret'),
+        # A7     gold:   (172, 55) (173, 55) (174, 55) (175, 55)
+        CN(20, 'Trigger Crate Detour Second Room'),
+        # A8     gold:   (178, 29) (178, 30)
+        CN(10, 'Gold Coins After Trigger Crate Detour Secret'),
+        # M2     gold:   (208, 46) (209, 46) (208, 47) (209, 47) (199, 44) (200, 44)
+        CN(30)
+    ]),
+    Levels.HARE_SCARE: CG(Levels.HARE_SCARE).seq([
+        # M0     silver: (16, 59) (16, 60)
+        CN(2),
+        # A1     silver: (15, 45) (16, 45)
+        CN(2, 'Two Silver Coins Below Vines Secret'),
+        # A2     silver: (3, 10) (3, 11)
+        CN(2, 'Two Silver Coins High Above Room Secret'),
+        # M9     silver: (53, 9) (53, 10) (3, 2) (3, 3) (4, 2) (4, 3)
+        CN(6)
+    ]),
+    Levels.GARGOYLES_LAIR: CG(Levels.GARGOYLES_LAIR).seq([
+        # M0     gold:   (18, 12)
+        #        silver: (55, 1) (55, 2)
+        CN(7),
+        # M3     silver: (12, 28) (13, 28) (12, 29) (13, 29)
+        CN(4),
+        # M4     gold:   (81, 5) (99, 2)
+        CN(10),
+        # A5     gold:   (89, 34)
+        CN(5, 'Room with Green Gems and Gold Coin Secret'),
+        # A6     gold:   (133, 0)
+        CN(5)
+    ]),
     Levels.THRILLER_GORILLA: CG(Levels.THRILLER_GORILLA).seq([]),
     Levels.JUNGLE_JUMP: CG(Levels.JUNGLE_JUMP).seq([]),
     Levels.A_COLD_DAY_IN_HECK: CG(Levels.A_COLD_DAY_IN_HECK).seq([]),
