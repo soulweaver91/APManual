@@ -10,7 +10,18 @@
     },
     {
       "item_categories": ["Starting Levels"],
-      "random": 1
+      "random": 1,
+      "yaml_option": ["!individual_level_unlock_keys"]
+    },
+    {
+      "item_categories": ["Starting Levels"],
+      "random": 1,
+      "yaml_option": ["individual_level_unlock_keys", "!allow_levels_out_of_order"]
+    },
+    {
+      "item_categories": ["Safe Free Select Starting Levels"],
+      "random": 3,
+      "yaml_option": ["individual_level_unlock_keys", "allow_levels_out_of_order"]
     }
   ]
 }

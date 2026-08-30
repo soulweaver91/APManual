@@ -166,6 +166,9 @@
   "Starting Levels": {
     "hidden": true
   },
+  "Safe Free Select Starting Levels": {
+    "hidden": true
+  },
   "Basic Movement Ability": {
     "yaml_option": ["basic_movement_in_pool"]
   },
