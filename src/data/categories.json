@@ -155,12 +155,15 @@
     "yaml_option": ["!individual_level_unlock_keys"]
   },
   "The Secret Files Content": {
+    "hidden": true,
     "yaml_option": ["enable_tsf"]
   },
   "Christmas Chronicles Content": {
+    "hidden": true,
     "yaml_option": ["enable_cc"]
   },
   "Holiday Hare Content": {
+    "hidden": true,
     "yaml_option": ["enable_hh"]
   },
   "Starting Levels": {
