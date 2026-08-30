@@ -2525,6 +2525,7 @@
       "Medieval Kineval - Electro Blaster Ammo Above Vine",
       "Medieval Kineval - Green Gems, Extra Life Crate and Gem Crate Behind Blocks Secret"
     ],
+    "requires": "{canGrabVines()} or {canDestroyTriggerCrates(Medieval Kineval, above/sides)} or ({canDestroyWildcardBlocks()} and {canDestroyTriggerCrates(Medieval Kineval, above/below/sides)})",
     "_comment": "R:M1"
   },
   "Medieval Kineval - Electro Blaster Ammo Above Vine": {
