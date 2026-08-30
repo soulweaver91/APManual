@@ -1,9 +1,9 @@
 name: Create Manifest Template
 
 on: 
-  workflow_run:     # mainly called after create stable/unstable release workflows
-    workflows: [Create Release - Stable, Create Release - Unstable]
-    types: [completed]
+  # workflow_run:     # mainly called after create stable/unstable release workflows
+  #   workflows: [Create Release - Stable, Create Release - Unstable]
+  #   types: [completed]
   workflow_dispatch: # ... also allows manually running
 
 env:
