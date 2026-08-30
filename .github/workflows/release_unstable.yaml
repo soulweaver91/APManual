@@ -28,10 +28,10 @@ jobs:
           echo 'EOF' >> "$GITHUB_ENV"
       - name: Checkout repo
         uses: actions/checkout@v3
-      - name: Set current version and date to env
+      - name: Set current version and datetime to env
         run: |
           echo "CURRENT_WORLD_VERSION=$(jq -r '.world_version' src/archipelago.json)" >> "$GITHUB_ENV"
-          echo "CURRENT_DATE=$(date +'%Y%m%d')" >> "$GITHUB_ENV"
+          echo "CURRENT_DATETIME=$(date +'%Y%m%d%H%M%S')" >> "$GITHUB_ENV"
       - name: Create apworld file
         # rename src folder, zip it, change extension
         run: |
@@ -49,9 +49,9 @@ jobs:
       - name: Create an unstable release
         uses: ncipollo/release-action@v1
         with:
-          name: "Jazz Jackrabbit 2 Manual Archipelago World v${{ env.CURRENT_WORLD_VERSION }}-${{ env.CURRENT_DATE }} (Unstable)"
+          name: "Jazz Jackrabbit 2 Manual Archipelago World v${{ env.CURRENT_WORLD_VERSION }}-${{ env.CURRENT_DATETIME }} (Unstable)"
           bodyFile: bodyFile.md
-          tag: ${{ env.BASENAME }}
+          tag: "unstable-v${{ env.CURRENT_WORLD_VERSION }}-${{ env.CURRENT_DATETIME }}"
           commit: ${{ env.GITHUB_REF }}
           artifacts: "${{ env.BASENAME }}.apworld"
           prerelease: true
