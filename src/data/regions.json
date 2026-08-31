@@ -3891,7 +3891,8 @@
     "connects_to": [
       "Easter Bunny - Exit"
     ],
-    "requires": "{YamlEnabled(enable_tsf)} and (|Easter Bunny Unlock| or |The Secret Files Progressive Level Unlock:1|)"
+    "requires": "{YamlEnabled(enable_tsf)} and (|Easter Bunny Unlock| or |The Secret Files Progressive Level Unlock:1|)",
+    "_comment": "R:M0"
   },
 
 
@@ -3907,7 +3908,8 @@
     "connects_to": [
       "Spring Chickens - Exit"
     ],
-    "requires": "{YamlEnabled(enable_tsf)} and (|Spring Chickens Unlock| or |The Secret Files Progressive Level Unlock:2|)"
+    "requires": "{YamlEnabled(enable_tsf)} and (|Spring Chickens Unlock| or |The Secret Files Progressive Level Unlock:2|)",
+    "_comment": "R:M0"
   },
 
 
@@ -3923,7 +3925,8 @@
     "connects_to": [
       "Scrambled Eggs - Exit"
     ],
-    "requires": "{YamlEnabled(enable_tsf)} and (|Scrambled Eggs Unlock| or |The Secret Files Progressive Level Unlock:3|)"
+    "requires": "{YamlEnabled(enable_tsf)} and (|Scrambled Eggs Unlock| or |The Secret Files Progressive Level Unlock:3|)",
+    "_comment": "R:M0"
   },
 
 
@@ -3939,7 +3942,8 @@
     "connects_to": [
       "Ghostly Antics - Exit"
     ],
-    "requires": "{YamlEnabled(enable_tsf)} and (|Ghostly Antics Unlock| or |The Secret Files Progressive Level Unlock:4|)"
+    "requires": "{YamlEnabled(enable_tsf)} and (|Ghostly Antics Unlock| or |The Secret Files Progressive Level Unlock:4|)",
+    "_comment": "R:M0"
   },
 
 
@@ -3955,7 +3959,8 @@
     "connects_to": [
       "Skeletons Turf - Exit"
     ],
-    "requires": "{YamlEnabled(enable_tsf)} and (|Skeletons Turf Unlock| or |The Secret Files Progressive Level Unlock:5|)"
+    "requires": "{YamlEnabled(enable_tsf)} and (|Skeletons Turf Unlock| or |The Secret Files Progressive Level Unlock:5|)",
+    "_comment": "R:M0"
   },
 
 
@@ -3971,7 +3976,8 @@
     "connects_to": [
       "Graveyard Shift - Exit"
     ],
-    "requires": "{YamlEnabled(enable_tsf)} and (|Graveyard Shift Unlock| or |The Secret Files Progressive Level Unlock:6|)"
+    "requires": "{YamlEnabled(enable_tsf)} and (|Graveyard Shift Unlock| or |The Secret Files Progressive Level Unlock:6|)",
+    "_comment": "R:M0"
   },
 
 
@@ -3987,7 +3993,8 @@
     "connects_to": [
       "Turtle Town - Exit"
     ],
-    "requires": "{YamlEnabled(enable_tsf)} and (|Turtle Town Unlock| or |The Secret Files Progressive Level Unlock:7|)"
+    "requires": "{YamlEnabled(enable_tsf)} and (|Turtle Town Unlock| or |The Secret Files Progressive Level Unlock:7|)",
+    "_comment": "R:M0"
   },
 
 
@@ -4003,7 +4010,8 @@
     "connects_to": [
       "Suburbia Commando - Exit"
     ],
-    "requires": "{YamlEnabled(enable_tsf)} and (|Suburbia Commando Unlock| or |The Secret Files Progressive Level Unlock:8|)"
+    "requires": "{YamlEnabled(enable_tsf)} and (|Suburbia Commando Unlock| or |The Secret Files Progressive Level Unlock:8|)",
+    "_comment": "R:M0"
   },
 
 
@@ -4019,7 +4027,8 @@
     "connects_to": [
       "Urban Brawl - Exit"
     ],
-    "requires": "{YamlEnabled(enable_tsf)} and (|Urban Brawl Unlock| or |The Secret Files Progressive Level Unlock:9|)"
+    "requires": "{YamlEnabled(enable_tsf)} and (|Urban Brawl Unlock| or |The Secret Files Progressive Level Unlock:9|)",
+    "_comment": "R:M0"
   },
 
 
@@ -4033,7 +4042,8 @@
     "connects_to": [
       "Snow Bunnies - Exit"
     ],
-    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and (|Snow Bunnies Unlock| or |Christmas Chronicles Progressive Level Unlock:1|)"
+    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and (|Snow Bunnies Unlock| or |Christmas Chronicles Progressive Level Unlock:1|)",
+    "_comment": "R:M0"
   },
 
 
@@ -4051,13 +4061,15 @@
     "connects_to": [
       "Dashing thru the snow.. - Exit"
     ],
-    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and (|Jazz Unlock| or |Lori Unlock|) and (|Dashing thru the snow.. Unlock| or |Christmas Chronicles Progressive Level Unlock:2|)"
+    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and (|Jazz Unlock| or |Lori Unlock|) and (|Dashing thru the snow.. Unlock| or |Christmas Chronicles Progressive Level Unlock:2|)",
+    "_comment": "R:J0"
   },
   "Dashing thru the snow.. - Spaz Start": {
     "connects_to": [
       "Dashing thru the snow.. - Exit"
     ],
-    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and |Spaz Unlock| and (|Dashing thru the snow.. Unlock| or |Christmas Chronicles Progressive Level Unlock:2|)"
+    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and |Spaz Unlock| and (|Dashing thru the snow.. Unlock| or |Christmas Chronicles Progressive Level Unlock:2|)",
+    "_comment": "R:S0"
   },
 
 
@@ -4073,7 +4085,8 @@
     "connects_to": [
       "Tinsel Town - Exit"
     ],
-    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and (|Tinsel Town Unlock| or |Christmas Chronicles Progressive Level Unlock:3|)"
+    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and (|Tinsel Town Unlock| or |Christmas Chronicles Progressive Level Unlock:3|)",
+    "_comment": "R:M0"
   },
 
 
