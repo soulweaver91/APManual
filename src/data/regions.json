@@ -3889,16 +3889,126 @@
   },
   "Easter Bunny - Start": {
     "connects_to": [
-      "Easter Bunny - Exit"
+      "Easter Bunny - Room After Trigger Crate Loop"
     ],
     "requires": "{YamlEnabled(enable_tsf)} and (|Easter Bunny Unlock| or |The Secret Files Progressive Level Unlock:1|)",
     "_comment": "R:M0"
   },
-
-
-
-
-
+  "Easter Bunny - Room After Trigger Crate Loop": {
+    "connects_to": [
+      "Easter Bunny - Start",
+      "Easter Bunny - Vines Before Main Section"
+    ],
+    "requires": "{canDestroyTriggerCrates(Easter Bunny, above/sides)}",
+    "_comment": "R:M1"
+  },
+  "Easter Bunny - Vines Before Main Section": {
+    "connects_to": [
+      "Easter Bunny - Room After Trigger Crate Loop",
+      "Easter Bunny - Main Section",
+      "Easter Bunny - Room With Rock Above Vine Section"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M2"
+  },
+  "Easter Bunny - Room With Rock Above Vine Section": {
+    "connects_to": [
+      "Easter Bunny - Vines Before Main Section",
+      "Easter Bunny - Blue Gem Reachable With Double Jump Only Secret"
+    ],
+    "_comment": "R:A1"
+  },
+  "Easter Bunny - Blue Gem Reachable With Double Jump Only Secret": {
+    "connects_to": [
+      "Easter Bunny - Room With Rock Above Vine Section"
+    ],
+    "requires": "{canDoubleJump()}",
+    "_comment": "R:A2"
+  },
+  "Easter Bunny - Main Section": {
+    "connects_to": [
+      "Easter Bunny - Vines Before Main Section",
+      "Easter Bunny - Chute With Many Springs Lining Its Walls",
+      "Easter Bunny - Gold Coin Above Buttstomp Sucker Tube Secret",
+      "Easter Bunny - Room at Bottom of Windy Chasm"
+    ],
+    "_comment": "R:M3"
+  },
+  "Easter Bunny - Gold Coin Above Buttstomp Sucker Tube Secret": {
+    "connects_to": [
+      "Easter Bunny - Main Section"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Easter Bunny, above)}",
+    "_comment": "R:A3"
+  },
+  "Easter Bunny - Room at Bottom of Windy Chasm": {
+    "connects_to": [
+      "Easter Bunny - Main Section"
+    ],
+    "_comment": "R:A4"
+  },
+  "Easter Bunny - Chute With Many Springs Lining Its Walls": {
+    "connects_to": [
+      "Easter Bunny - After Spring Chute",
+      "Easter Bunny - Red Gems Above Left Vine in Room Midway Through Spring Chute",
+      "Easter Bunny - Red Gems Above Right Vine in Room Midway Through Spring Chute"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Easter Bunny, above)}",
+    "_comment": "R:M4"
+  },
+  "Easter Bunny - Red Gems Above Left Vine in Room Midway Through Spring Chute": {
+    "connects_to": [
+      "Easter Bunny - Chute With Many Springs Lining Its Walls"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A5"
+  },
+  "Easter Bunny - Red Gems Above Right Vine in Room Midway Through Spring Chute": {
+    "connects_to": [
+      "Easter Bunny - Chute With Many Springs Lining Its Walls"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A6"
+  },
+  "Easter Bunny - After Spring Chute": {
+    "connects_to": [
+      "Easter Bunny - Vines Near Exit",
+      "Easter Bunny - Bonus Warp Area"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Easter Bunny, above)}",
+    "_comment": "R:M5"
+  },
+  "Easter Bunny - Bonus Warp Area": {
+    "connects_to": [
+      "Easter Bunny - After Spring Chute"
+    ],
+    "requires": "{canCollectEnoughCoins(Easter Bunny, 10)}",
+    "_comment": "R:B1"
+  },
+  "Easter Bunny - Vines Near Exit": {
+    "connects_to": [
+      "Easter Bunny - After Spring Chute",
+      "Easter Bunny - Exit Room",
+      "Easter Bunny - Blue Gem Above Uppercut Blocks Secret"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M6"
+  },
+  "Easter Bunny - Blue Gem Above Uppercut Blocks Secret": {
+    "connects_to": [
+      "Easter Bunny - Vines Near Exit"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Easter Bunny, below)}",
+    "_comment": "R:A7"
+  },
+  "Easter Bunny - Exit Room": {
+    "connects_to": [
+      "Easter Bunny - Vines Near Exit",
+      "Easter Bunny - Exit"
+    ],
+    "requires": "{canDestroyTriggerCrates(Easter Bunny, above/below/sides)}",
+    "_comment": "R:M7"
+  },
   "Easter Bunny - Exit": {
     "connects_to": [
       "Spring Chickens - Start"
@@ -3906,16 +4016,148 @@
   },
   "Spring Chickens - Start": {
     "connects_to": [
-      "Spring Chickens - Exit"
+      "Spring Chickens - Gem Path at Start First Room",
+      "Spring Chickens - Turtle Path at Start"
     ],
     "requires": "{YamlEnabled(enable_tsf)} and (|Spring Chickens Unlock| or |The Secret Files Progressive Level Unlock:2|)",
     "_comment": "R:M0"
   },
-
-
-
-
-
+  "Spring Chickens - Turtle Path at Start": {
+    "connects_to": [
+      "Spring Chickens - After Diverging Paths at Start"
+    ],
+    "_comment": "R:A1"
+  },
+  "Spring Chickens - Gem Path at Start First Room": {
+    "connects_to": [
+      "Spring Chickens - Gem Path at Start Second Room"
+    ],
+    "_comment": "R:M1"
+  },
+  "Spring Chickens - Gem Path at Start Second Room": {
+    "connects_to": [
+      "Spring Chickens - Gem Path at Start First Room",
+      "Spring Chickens - After Diverging Paths at Start"
+    ],
+    "exit_requires": {
+      "Spring Chickens - Gem Path at Start First Room": "{canDoubleJump()} or {canUppercut()}"
+    },
+    "_comment": "R:M2"
+  },
+  "Spring Chickens - After Diverging Paths at Start": {
+    "connects_to": [
+      "Spring Chickens - Triple Bridges Lower Section to Alternating Springs and Spikes",
+      "Spring Chickens - Platforms With Gems Below Trigger Scenery Secret",
+      "Spring Chickens - Sloping Tunnel Secret"
+    ],
+    "_comment": "R:M3"
+  },
+  "Spring Chickens - Platforms With Gems Below Trigger Scenery Secret": {
+    "connects_to": [
+      "Spring Chickens - After Diverging Paths at Start"
+    ],
+    "requires": "{canDestroyTriggerCrates(Spring Chickens, above/below/sides)}",
+    "_comment": "R:A2"
+  },
+  "Spring Chickens - Sloping Tunnel Secret": {
+    "connects_to": [
+      "Spring Chickens - After Diverging Paths at Start"
+    ],
+    "_comment": "R:A3"
+  },
+  "Spring Chickens - Triple Bridges Lower Section to Alternating Springs and Spikes": {
+    "connects_to": [
+      "Spring Chickens - Mid Level Vine Climb"
+    ],
+    "_comment": "R:M4"
+  },
+  "Spring Chickens - Mid Level Vine Climb": {
+    "connects_to": [
+      "Spring Chickens - Triple Bridges Lower Section to Alternating Springs and Spikes",
+      "Spring Chickens - Around Save Point"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M5"
+  },
+  "Spring Chickens - Around Save Point": {
+    "connects_to": [
+      "Spring Chickens - Mid Level Vine Climb",
+      "Spring Chickens - After Destructible Blocks"
+    ],
+    "_comment": "R:M6"
+  },
+  "Spring Chickens - After Destructible Blocks": {
+    "connects_to": [
+      "Spring Chickens - Around Save Point",
+      "Spring Chickens - Room Halfway Up Springs After Turtle Zigzag",
+      "Spring Chickens - Cakes Above Vine in Cave"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M7"
+  },
+  "Spring Chickens - Cakes Above Vine in Cave": {
+    "connects_to": [
+      "Spring Chickens - After Destructible Blocks"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A4"
+  },
+  "Spring Chickens - Room Halfway Up Springs After Turtle Zigzag": {
+    "connects_to": [
+      "Spring Chickens - Egg Basket Room"
+    ],
+    "_comment": "R:M8"
+  },
+  "Spring Chickens - Egg Basket Room": {
+    "connects_to": [
+      "Spring Chickens - Cakes Above Vine in Egg Basket Room",
+      "Spring Chickens - Final Fall First Room on Left",
+      "Spring Chickens - Final Fall First Room on Right"
+    ],
+    "_comment": "R:M9"
+  },
+  "Spring Chickens - Cakes Above Vine in Egg Basket Room": {
+    "connects_to": [
+      "Spring Chickens - Egg Basket Room"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A5"
+  },
+  "Spring Chickens - Final Fall First Room on Left": {
+    "connects_to": [
+      "Spring Chickens - Final Fall Second Room"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Spring Chickens, above)}",
+    "_comment": "R:A6"
+  },
+  "Spring Chickens - Final Fall First Room on Right": {
+    "connects_to": [
+      "Spring Chickens - Final Fall Second Room"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Spring Chickens, above)}",
+    "_comment": "R:M10"
+  },
+  "Spring Chickens - Final Fall Second Room": {
+    "connects_to": [
+      "Spring Chickens - Final Fall Third Room"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Spring Chickens, above)}",
+    "_comment": "R:M11"
+  },
+  "Spring Chickens - Final Fall Third Room": {
+    "connects_to": [
+      "Spring Chickens - Final Fall Exit Room"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Spring Chickens, above)}",
+    "_comment": "R:M12"
+  },
+  "Spring Chickens - Final Fall Exit Room": {
+    "connects_to": [
+      "Spring Chickens - Exit"
+    ],
+    "requires": "{canDestroyWildcardBlocks()} and {canDestroyTriggerCrates(Spring Chickens, above/sides)}",
+    "_comment": "R:M13"
+  },
   "Spring Chickens - Exit": {
     "connects_to": [
       "Scrambled Eggs - Start"
@@ -3923,16 +4165,139 @@
   },
   "Scrambled Eggs - Start": {
     "connects_to": [
-      "Scrambled Eggs - Exit"
+      "Scrambled Eggs - Room Below Start"
     ],
     "requires": "{YamlEnabled(enable_tsf)} and (|Scrambled Eggs Unlock| or |The Secret Files Progressive Level Unlock:3|)",
     "_comment": "R:M0"
   },
-
-
-
-
-
+  "Scrambled Eggs - Room Below Start": {
+    "connects_to": [
+      "Scrambled Eggs - After Trigger Crate at Start"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Scrambled Eggs, above)}",
+    "_comment": "R:M1"
+  },
+  "Scrambled Eggs - After Trigger Crate at Start": {
+    "connects_to": [
+      "Scrambled Eggs - Vines at Start"
+    ],
+    "requires": "{canDestroyWildcardBlocks()} and {canDestroyTriggerCrates(Scrambled Eggs, above/sides)}",
+    "_comment": "R:M2"
+  },
+  "Scrambled Eggs - Vines at Start": {
+    "connects_to": [
+      "Scrambled Eggs - Above Vines at Start"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M3"
+  },
+  "Scrambled Eggs - Above Vines at Start": {
+    "connects_to": [
+      "Scrambled Eggs - After Trigger Crate at Start",
+      "Scrambled Eggs - Vines at Start",
+      "Scrambled Eggs - Triple Stacked Routes Room"
+    ],
+    "_comment": "R:M4"
+  },
+  "Scrambled Eggs - Triple Stacked Routes Room": {
+    "connects_to": [
+      "Scrambled Eggs - Red Gems Reachable with Double Jump Secret",
+      "Scrambled Eggs - Trigger Crate Platforms Room"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Scrambled Eggs, above)}",
+    "_comment": "R:M5"
+  },
+  "Scrambled Eggs - Red Gems Reachable with Double Jump Secret": {
+    "connects_to": [
+      "Scrambled Eggs - Triple Stacked Routes Room"
+    ],
+    "requires": "{canDoubleJump()}",
+    "_comment": "R:A1"
+  },
+  "Scrambled Eggs - Trigger Crate Platforms Room": {
+    "connects_to": [
+      "Scrambled Eggs - Trigger Crate Behind Blocks Room"
+    ],
+    "_comment": "R:M6"
+  },
+  "Scrambled Eggs - Trigger Crate Behind Blocks Room": {
+    "connects_to": [
+      "Scrambled Eggs - After Trigger Crate Platforms"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M7"
+  },
+  "Scrambled Eggs - After Trigger Crate Platforms": {
+    "connects_to": [
+      "Scrambled Eggs - Around First Save Point"
+    ],
+    "requires": "{canDestroyTriggerCrates(Scrambled Eggs, above/sides)}",
+    "_comment": "R:M8"
+  },
+  "Scrambled Eggs - Around First Save Point": {
+    "connects_to": [
+      "Scrambled Eggs - Middle Zigzag Room After First Save Point"
+    ],
+    "_comment": "R:M9"
+  },
+  "Scrambled Eggs - Middle Zigzag Room After First Save Point": {
+    "connects_to": [
+      "Scrambled Eggs - Large Room Before Exit"
+    ],
+    "_comment": "R:M10"
+  },
+  "Scrambled Eggs - Large Room Before Exit": {
+    "connects_to": [
+      "Scrambled Eggs - After Final Trigger Crate",
+      "Scrambled Eggs - Blue Gem Above First Hidden Spring Secret",
+      "Scrambled Eggs - Blue Gem Above Second Hidden Spring Secret",
+      "Scrambled Eggs - Red Gems Loop Near Exit First Room"
+    ],
+    "_comment": "R:M11"
+  },
+  "Scrambled Eggs - Blue Gem Above First Hidden Spring Secret": {
+    "connects_to": [
+      "Scrambled Eggs - Large Room Before Exit"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Scrambled Eggs, above)}",
+    "_comment": "R:A2"
+  },
+  "Scrambled Eggs - Blue Gem Above Second Hidden Spring Secret": {
+    "connects_to": [
+      "Scrambled Eggs - Large Room Before Exit"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Scrambled Eggs, above)}",
+    "_comment": "R:A3"
+  },
+  "Scrambled Eggs - Red Gems Loop Near Exit First Room": {
+    "connects_to": [
+      "Scrambled Eggs - Large Room Before Exit",
+      "Scrambled Eggs - Red Gems Loop Near Exit Second Room"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A4"
+  },
+  "Scrambled Eggs - Red Gems Loop Near Exit Second Room": {
+    "connects_to": [
+      "Scrambled Eggs - Large Room Before Exit",
+      "Scrambled Eggs - Red Gems Loop Near Exit Third Room"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Scrambled Eggs, above)}",
+    "_comment": "R:A5"
+  },
+  "Scrambled Eggs - Red Gems Loop Near Exit Third Room": {
+    "connects_to": [
+      "Scrambled Eggs - Red Gems Loop Near Exit Second Room"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Scrambled Eggs, below)}",
+    "_comment": "R:A6"
+  },
+  "Scrambled Eggs - After Final Trigger Crate": {
+    "connects_to": [
+      "Scrambled Eggs - Exit"
+    ],
+    "_comment": "R:M12"
+  },
   "Scrambled Eggs - Exit": {
     "connects_to": [
       "Ghostly Antics - Start"

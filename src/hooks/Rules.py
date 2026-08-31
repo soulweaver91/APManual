@@ -251,6 +251,18 @@ LEVEL_WEAPON_ACCESS_LOOKUP: dict[str, dict[Weapons, bool | list[str]]] = {
     Levels.RETRO_RABBIT: {
         Weapons.FREEZER: True,
         Weapons.TOASTER: True
+    },
+    Levels.FROG_STOMP: {
+        # no weapon specific ammo in this level, only ammo crates
+    },
+    Levels.EASTER_BUNNY: {
+        Weapons.BOUNCER: True
+    },
+    Levels.SPRING_CHICKENS: {
+        Weapons.TOASTER: True
+    },
+    Levels.SCRAMBLED_EGGS: {
+        # no weapon specific ammo in this level
     }
 }
 
@@ -1026,7 +1038,29 @@ COIN_ACCESS_BY_LEVEL_LOOKUP: dict[Levels, CoinPathGroup] = {
     ]),
     Levels.FROG_STOMP: CG(Levels.FROG_STOMP).seq([
         # No bonus warp or loose coins in this level
-    ])
+    ]),
+    Levels.EASTER_BUNNY: CG(Levels.EASTER_BUNNY).seq([
+        # M0     silver: (47, 0) (48, 0) (47, 1) (48, 1)
+        CN(4),
+        # A3     gold:   (189, 4)
+        CN(5, 'Gold Coin Above Buttstomp Sucker Tube Secret'),
+        # A4     silver: (332, 41) (333, 41) (332, 42) (333, 42)
+        CN(4, 'Room at Bottom of Windy Chasm'),
+        # M4     silver: (427, 51) (427, 52)
+        CN(2)
+    ]),
+    Levels.SPRING_CHICKENS: CG(Levels.SPRING_CHICKENS).seq([
+        # No bonus warp or loose coins in this level
+    ]),
+    Levels.SCRAMBLED_EGGS: CG(Levels.SCRAMBLED_EGGS).seq([
+        # No bonus warp or loose coins in this level
+    ]),
+    Levels.GHOSTLY_ANTICS: CG(Levels.GHOSTLY_ANTICS).seq([]),
+    Levels.SKELETONS_TURF: CG(Levels.SKELETONS_TURF).seq([]),
+    Levels.GRAVEYARD_SHIFT: CG(Levels.GRAVEYARD_SHIFT).seq([]),
+    Levels.TURTLE_TOWN: CG(Levels.TURTLE_TOWN).seq([]),
+    Levels.SUBURBIA_COMMANDO: CG(Levels.SUBURBIA_COMMANDO).seq([]),
+    Levels.URBAN_BRAWL: CG(Levels.URBAN_BRAWL).seq([]),
 }
 
 def canCollectEnoughCoins(state: CollectionState, player: int, level: str, cost: int) -> bool:

@@ -1785,6 +1785,127 @@
       "sort-key": "05-03-99-Complete"
     },
     {
+      "name": "Easter Bunny - Save Point 1 (374, 3)",
+      "category": [
+        "Episode: The Secret Files",
+        "Easter Bunny",
+        "Save Point Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Easter Bunny - Main Section",
+      "sort-key": "06-01-00-SavePoint"
+    },
+    {
+      "name": "Easter Bunny - Sign 1 (14, 6)",
+      "category": [
+        "Episode: The Secret Files",
+        "Easter Bunny",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Easter Bunny - Start",
+      "sort-key": "06-01-20-Sign"
+    },
+    {
+      "name": "Easter Bunny - Sign 2 (43, 41)",
+      "category": [
+        "Episode: The Secret Files",
+        "Easter Bunny",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Easter Bunny - Start",
+      "sort-key": "06-01-21-Sign"
+    },
+    {
+      "name": "Easter Bunny - Sign 3 (60, 13)",
+      "category": [
+        "Episode: The Secret Files",
+        "Easter Bunny",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Easter Bunny - Room With Rock Above Vine Section",
+      "sort-key": "06-01-22-Sign"
+    },
+    {
+      "name": "Easter Bunny - Sign 4 (55, 4)",
+      "category": [
+        "Episode: The Secret Files",
+        "Easter Bunny",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Easter Bunny - Blue Gem Reachable With Double Jump Only Secret",
+      "sort-key": "06-01-23-Sign"
+    },
+    {
+      "name": "Easter Bunny - Sign 5 (151, 15)",
+      "category": [
+        "Episode: The Secret Files",
+        "Easter Bunny",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Easter Bunny - Main Section",
+      "sort-key": "06-01-24-Sign"
+    },
+    {
+      "name": "Easter Bunny - Sign 6 (319, 31)",
+      "category": [
+        "Episode: The Secret Files",
+        "Easter Bunny",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Easter Bunny - Main Section",
+      "sort-key": "06-01-25-Sign"
+    },
+    {
+      "name": "Easter Bunny - Sign 7 (306, 14)",
+      "category": [
+        "Episode: The Secret Files",
+        "Easter Bunny",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Easter Bunny - Main Section",
+      "sort-key": "06-01-26-Sign"
+    },
+    {
+      "name": "Easter Bunny - Sign 8 (332, 44)",
+      "category": [
+        "Episode: The Secret Files",
+        "Easter Bunny",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Easter Bunny - Room at Bottom of Windy Chasm",
+      "sort-key": "06-01-27-Sign"
+    },
+    {
+      "name": "Easter Bunny - Sign 9 (489, 4)",
+      "category": [
+        "Episode: The Secret Files",
+        "Easter Bunny",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Easter Bunny - Vines Near Exit",
+      "sort-key": "06-01-28-Sign"
+    },
+    {
+      "name": "Easter Bunny - Bonus Warp",
+      "category": [
+        "Episode: The Secret Files",
+        "Easter Bunny",
+        "Bonus Warp Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Easter Bunny - Bonus Warp Area",
+      "sort-key": "06-01-90-Bonus"
+    },
+    {
       "name": "Easter Bunny - Level Complete",
       "category": [
         "Episode: The Secret Files",
@@ -1795,6 +1916,50 @@
       "sort-key": "06-01-99-Complete"
     },
     {
+      "name": "Spring Chickens - Save Point 1 (200, 4)",
+      "category": [
+        "Episode: The Secret Files",
+        "Spring Chickens",
+        "Save Point Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Spring Chickens - Around Save Point",
+      "sort-key": "06-02-00-SavePoint"
+    },
+    {
+      "name": "Spring Chickens - Sign 1 (509, 9)",
+      "category": [
+        "Episode: The Secret Files",
+        "Spring Chickens",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Spring Chickens - Start",
+      "sort-key": "06-02-20-Sign"
+    },
+    {
+      "name": "Spring Chickens - Sign 2 (408, 41)",
+      "category": [
+        "Episode: The Secret Files",
+        "Spring Chickens",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Spring Chickens - After Diverging Paths at Start",
+      "sort-key": "06-02-21-Sign"
+    },
+    {
+      "name": "Spring Chickens - Sign 3 (426, 18)",
+      "category": [
+        "Episode: The Secret Files",
+        "Spring Chickens",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Spring Chickens - After Diverging Paths at Start",
+      "sort-key": "06-02-22-Sign"
+    },
+    {
       "name": "Spring Chickens - Level Complete",
       "category": [
         "Episode: The Secret Files",
@@ -1803,6 +1968,72 @@
       ],
       "region": "Spring Chickens - Exit",
       "sort-key": "06-02-99-Complete"
+    },
+    {
+      "name": "Scrambled Eggs - Save Point 1 (293, 3)",
+      "category": [
+        "Episode: The Secret Files",
+        "Scrambled Eggs",
+        "Save Point Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Scrambled Eggs - Around First Save Point",
+      "sort-key": "06-03-00-SavePoint"
+    },
+    {
+      "name": "Scrambled Eggs - Save Point 2 (463, 34)",
+      "category": [
+        "Episode: The Secret Files",
+        "Scrambled Eggs",
+        "Save Point Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Scrambled Eggs - Large Room Before Exit",
+      "sort-key": "06-03-01-SavePoint"
+    },
+    {
+      "name": "Scrambled Eggs - Sign 1 (55, 42)",
+      "category": [
+        "Episode: The Secret Files",
+        "Scrambled Eggs",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Scrambled Eggs - Triple Stacked Routes Room",
+      "sort-key": "06-03-20-Sign"
+    },
+    {
+      "name": "Scrambled Eggs - Sign 2 (164, 53)",
+      "category": [
+        "Episode: The Secret Files",
+        "Scrambled Eggs",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Scrambled Eggs - Trigger Crate Platforms Room",
+      "sort-key": "06-03-21-Sign"
+    },
+    {
+      "name": "Scrambled Eggs - Sign 3 (178, 52)",
+      "category": [
+        "Episode: The Secret Files",
+        "Scrambled Eggs",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Scrambled Eggs - Trigger Crate Behind Blocks Room",
+      "sort-key": "06-03-20-Sign"
+    },
+    {
+      "name": "Scrambled Eggs - Sign 4 (462, 34)",
+      "category": [
+        "Episode: The Secret Files",
+        "Scrambled Eggs",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Scrambled Eggs - Large Room Before Exit",
+      "sort-key": "06-03-20-Sign"
     },
     {
       "name": "Scrambled Eggs - Level Complete",
