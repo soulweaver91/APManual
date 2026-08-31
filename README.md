@@ -14,12 +14,13 @@ similarly found in its own [introduction](src/docs/en_Manual_JazzJackrabbit2_Sou
 and its [setup guide](src/docs/setup_en.md) of sorts.
 
 ## Currently known issues
-So far, the majority of work has gone towards getting the four main base 
-game episodes into a decent enough state. The Shareware, the Secret Files, and
-Christmas Chronicles episodes only have a skeleton implementation so far that
-assumes that you're able to complete every level from start to finish as long
-as you have access to that level (i.e. no logic for missing weapon, permission
-or ability unlocks).
+So far, the majority of work has gone towards getting the five episodes
+released with the base game (the main campaign + the Shareware Episode)
+into a decent enough state. The levels from the Secret Files and from
+Holiday Hare/Christmas Chronicles only have a skeleton implementation so far
+that assumes that you're able to complete each of them from start to finish
+as long as you have access to that level (i.e. no logic for missing weapon,
+permission or ability unlocks).
 
 Due to some levels having quite restrictive locations available, players
 using minimal accessibility may rarely lead into generation failures.
