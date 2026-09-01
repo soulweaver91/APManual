@@ -906,7 +906,7 @@
     "connects_to": [
       "Weirder Science - Spaz Gold Coin Below Start Secret",
       "Weirder Science - Spaz Silver Coins Warp Secret",
-      "Weirder Science - Spaz Silver Coins Behind Blocks Secret",
+      "Weirder Science - Spaz Silver Coins Behind Blocks Entrance Side Secret",
       "Weirder Science - Spaz Only Below Silver Coins Behind Blocks"
     ],
     "requires": "(|Weirder Science Unlock| or |Formerly a Prince Progressive Level Unlock:6|) and (|Spaz Unlock|)",
@@ -925,19 +925,26 @@
     ],
     "_comment": "R:A4"
   },
-  "Weirder Science - Spaz Silver Coins Behind Blocks Secret": {
+  "Weirder Science - Spaz Silver Coins Behind Blocks Entrance Side Secret": {
     "connects_to": [
       "Weirder Science - Spaz Start",
-      "Weirder Science - Spaz Only Below Silver Coins Behind Blocks"
+      "Weirder Science - Spaz Silver Coins Behind Blocks Exit Side Secret"
     ],
     "requires": "{canDestroyWildcardBlocks()}",
-    "_comment": "R:A5    All but one coin in this secret area can be collected with a double jump from the exit side."
+    "_comment": "R:A5    One coin is on this side."
+  },
+  "Weirder Science - Spaz Silver Coins Behind Blocks Exit Side Secret": {
+    "connects_to": [
+      "Weirder Science - Spaz Only Below Silver Coins Behind Blocks"
+    ],
+    "requires": "{canDestroyWildcardBlocks()} or {canDoubleJump()}",
+    "_comment": "R:A5a    Three coins are on this side and can be obtained from below with a double jump."
   },
   "Weirder Science - Spaz Only Below Silver Coins Behind Blocks": {
     "connects_to": [
       "Weirder Science - Spaz Only After Springs"
     ],
-    "_comment": "R:S1"
+    "_comment": "R:S1    The final coin in the secret tunnel can be obtained from below with a simple jump."
   },
   "Weirder Science - Spaz Only After Springs": {
     "connects_to": [

@@ -70,7 +70,7 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
         try:
             world.get_location(weird_location).progress_type = LocationProgressType.EXCLUDED
         except KeyError:
-            # Location doesn't exist, probably filtered by player objects. That's fine
+            # Location doesn't exist, probably filtered by player options. That's fine
             pass
 
     # Use this hook to remove locations from the world

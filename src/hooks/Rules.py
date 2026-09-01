@@ -622,11 +622,11 @@ COIN_ACCESS_BY_LEVEL_LOOKUP: dict[Levels, CoinPathGroup] = {
     Levels.KNIGHT_CAP: CG(Levels.KNIGHT_CAP).seq([
         CG('Start position branch', min_mode=True).branch(
             CG('Jazz branch', 'Jazz').seq([
-                # J1     gold:   (112, 8) (112, 9) (189, 9)
+                # J1     gold:   (112, 8) (112, 9) (189, 8)
                 CN(15),
                 # A2     gold:   (163, 6)
                 CN(5, 'Jazz Only Gold Coin Secret'),
-                # J3     gold:   (20, 23) (56, 31) (56, 32)
+                # J3     gold:   (20, 23) (56, 31) (57, 31)
                 CN(15)
             ])
         ).branch(
@@ -639,7 +639,7 @@ COIN_ACCESS_BY_LEVEL_LOOKUP: dict[Levels, CoinPathGroup] = {
                 CN(4, 'Spaz Only Four Silver Coins in Secluded Room Secret'),
                 # A6     gold:   (77, 62) (78, 62)
                 CN(10, 'Spaz Only Two Gold Coins Secret'),
-                # A8     gold:   (77, 62) (78, 62)
+                # A8     gold:   (130, 61)
                 CN(5, 'Spaz Only Gold Coin Secret'),
             ])
         ),
@@ -717,9 +717,11 @@ COIN_ACCESS_BY_LEVEL_LOOKUP: dict[Levels, CoinPathGroup] = {
                 # A4     silver: (29, 30) (30, 30) (29, 31) (30, 31) (29, 32) (30, 32)
                 CN(6, 'Spaz Silver Coins Warp Secret'),
                 # A5     silver: (37, 42)
-                CN(1, 'Spaz Silver Coins Behind Blocks Secret'),
-                # S1     silver: (36, 42) (36, 43) (36, 44) (36, 45)
-                CN(4)
+                CN(1, 'Spaz Silver Coins Behind Blocks Entrance Side Secret'),
+                # S1     silver: (36, 42) (36, 43) (36, 44)
+                CN(3, 'Spaz Silver Coins Behind Blocks Exit Side Secret'),
+                # S1     silver: (36, 45)
+                CN(1)
             ])
         ),
         CG('Shared path').seq([
@@ -858,10 +860,14 @@ COIN_ACCESS_BY_LEVEL_LOOKUP: dict[Levels, CoinPathGroup] = {
         CN(14),
         # A5     gold:   (77, 3)
         CN(5, 'Gold Coin Behind Destructible Blocks Secret'),
+        # A7     gold:   (119, 20)
+        CN(5, 'Gold Coin Blocked By Spring Secret'),
         # A8     silver: (161, 6) (162, 6) (163, 6) (161, 7) (162, 7) (163, 7)
         CN(6, 'Six Silver Coins and Super Gem Above Frozen Spring Secret')
     ]),
     Levels.ELECTRIC_BOOGALOO: CG(Levels.ELECTRIC_BOOGALOO).seq([
+        # M1     silver: (5, 57) (5, 58) (7, 57) (7, 58) (15, 57) (15, 58) (17, 57) (17, 58)
+        CN(8),
         # A1     silver: (3, 35) (5, 35) (3, 36) (5, 36)
         CN(4, 'Four Silver Coins in Room Accessed with Pipe Secret'),
         # A4     gold:   (33, 46) (35, 46)
@@ -870,7 +876,7 @@ COIN_ACCESS_BY_LEVEL_LOOKUP: dict[Levels, CoinPathGroup] = {
         CN(6, 'Six Silver Coins and Fruit and Gems in Shape of \'YO\' Secret'),
         # M4     silver: (163, 33) (164, 33) (163, 34) (164, 34)
         CN(4),
-        # A13    silvere: (250, 37) (251, 37) (250, 38) (251, 38) (250, 39) (251, 39)
+        # A13    silver: (250, 37) (251, 37) (250, 38) (251, 38) (250, 39) (251, 39)
         CN(6, 'Six Silver Coins Surrounded by Breakable Blocks Secret')
     ]),
     Levels.VOLTAGE_VILLAGE: CG(Levels.VOLTAGE_VILLAGE).seq([
@@ -967,6 +973,8 @@ COIN_ACCESS_BY_LEVEL_LOOKUP: dict[Levels, CoinPathGroup] = {
         ])
     ]),
     Levels.JUNGLE_JUMP: CG(Levels.JUNGLE_JUMP).seq([
+        # M0     gold    (28, 45)
+        CN(5),
         # M1     silver: (43, 30) (43, 31) (74, 7) (75, 7) (74, 8) (75, 8)
         CN(6),
         # M2     gold:   (123, 17)
