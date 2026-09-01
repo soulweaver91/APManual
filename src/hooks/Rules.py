@@ -263,6 +263,17 @@ LEVEL_WEAPON_ACCESS_LOOKUP: dict[str, dict[Weapons, bool | list[str]]] = {
     },
     Levels.SCRAMBLED_EGGS: {
         # no weapon specific ammo in this level
+    },
+    Levels.GHOSTLY_ANTICS: {
+        Weapons.BOUNCER: True,
+        Weapons.TOASTER: True
+    },
+    Levels.SKELETONS_TURF: {
+        Weapons.TOASTER: True
+    },
+    Levels.GRAVEYARD_SHIFT: {
+        Weapons.BOUNCER: ['After Trigger Crate in Room Behind Sturdy Blocks Secret'],
+        Weapons.TOASTER: True
     }
 }
 
@@ -1055,9 +1066,29 @@ COIN_ACCESS_BY_LEVEL_LOOKUP: dict[Levels, CoinPathGroup] = {
     Levels.SCRAMBLED_EGGS: CG(Levels.SCRAMBLED_EGGS).seq([
         # No bonus warp or loose coins in this level
     ]),
-    Levels.GHOSTLY_ANTICS: CG(Levels.GHOSTLY_ANTICS).seq([]),
-    Levels.SKELETONS_TURF: CG(Levels.SKELETONS_TURF).seq([]),
-    Levels.GRAVEYARD_SHIFT: CG(Levels.GRAVEYARD_SHIFT).seq([]),
+    Levels.GHOSTLY_ANTICS: CG(Levels.GHOSTLY_ANTICS).seq([
+        # M0     gold:   (35, 5) (89, 14)
+        CN(10),
+        # M3     silver: (139, 69)
+        CN(1),
+        # M7     gold:   (208, 82)
+        #        silver: (124, 119) (125, 119) (124, 120) (125, 120)
+        CN(9),
+        # A6     silver: (119, 87) (120, 87) (119, 88) (120, 88)
+        CN(4, 'Silver Coins Below Trigger Crate Ledge')
+    ]),
+    Levels.SKELETONS_TURF: CG(Levels.SKELETONS_TURF).seq([
+        # M0     gold:   (237, 7) (253, 14)
+        #        silver: (147, 34) (147, 35) (150, 34) (150, 35) (153, 34) (153, 35) (156, 34) (156, 35)
+        CN(18),
+        # A1     silver: (1, 42) (2, 42) (1, 43) (2, 43)
+        CN(4, 'Four Silver Coins on Roof Above Start'),
+        # A3     silver: (282, 3) (283, 3) (282, 4) (283, 4)
+        CN(4, 'Four Silver Coins Above Vines')
+    ]),
+    Levels.GRAVEYARD_SHIFT: CG(Levels.GRAVEYARD_SHIFT).seq([
+        # No bonus warp or loose coins in this level
+    ]),
     Levels.TURTLE_TOWN: CG(Levels.TURTLE_TOWN).seq([]),
     Levels.SUBURBIA_COMMANDO: CG(Levels.SUBURBIA_COMMANDO).seq([]),
     Levels.URBAN_BRAWL: CG(Levels.URBAN_BRAWL).seq([]),

@@ -4305,16 +4305,148 @@
   },
   "Ghostly Antics - Start": {
     "connects_to": [
-      "Ghostly Antics - Exit"
+      "Ghostly Antics - Between Second and Third Buildings"
     ],
     "requires": "{YamlEnabled(enable_tsf)} and (|Ghostly Antics Unlock| or |The Secret Files Progressive Level Unlock:4|)",
     "_comment": "R:M0"
   },
-
-
-
-
-
+  "Ghostly Antics - Between Second and Third Buildings": {
+    "connects_to": [
+      "Ghostly Antics - Start",
+      "Ghostly Antics - After Sucker Tube Across the Building"
+    ],
+    "exit_requires": {
+      "Ghostly Antics - Start": "{canDoubleJump()} or {canUppercut()}"
+    },
+    "_comment": "R:M1"
+  },
+  "Ghostly Antics - After Sucker Tube Across the Building": {
+    "connects_to": [
+      "Ghostly Antics - Submerged Trigger Crate Building"
+    ],
+    "_comment": "R:M2"
+  },
+  "Ghostly Antics - Submerged Trigger Crate Building": {
+    "connects_to": [
+      "Ghostly Antics - After Sucker Tube Across the Building",
+      "Ghostly Antics - Water Level Control Room"
+    ],
+    "requires": "{canSwim()}",
+    "_comment": "R:M3"
+  },
+  "Ghostly Antics - Water Level Control Room": {
+    "connects_to": [
+      "Ghostly Antics - Between Second and Third Buildings",
+      "Ghostly Antics - Submerged Trigger Crate Building",
+      "Ghostly Antics - Before Spring Section"
+    ],
+    "requires": "{canDestroyTriggerCrates(Ghostly Antics, below/sides)}",
+    "_comment": "R:M4    There's a design error in the level; it seems intended that you return to the bottom floor with the water level lowered, but both that crate and this 'water control' one use the same trigger ID that just opens the door."
+  },
+  "Ghostly Antics - Before Spring Section": {
+    "connects_to": [
+      "Ghostly Antics - Water Level Control Room",
+      "Ghostly Antics - Spring Section"
+    ],
+    "requires": "{canDestroyTriggerCrates(Ghostly Antics, below/sides)}",
+    "_comment": "R:M5"
+  },
+  "Ghostly Antics - Spring Section": {
+    "connects_to": [
+      "Ghostly Antics - Second Half of Level"
+    ],
+    "_comment": "R:M6"
+  },
+  "Ghostly Antics - Second Half of Level": {
+    "connects_to": [
+      "Ghostly Antics - Exit Room",
+      "Ghostly Antics - Room Under Gap in Line of Red Springs Secret",
+      "Ghostly Antics - Banana Tunnel Secret",
+      "Ghostly Antics - Silver Coins Below Trigger Crate Ledge",
+      "Ghostly Antics - Toaster Power Up Secret",
+      "Ghostly Antics - Red Gems Below Bridge Secret",
+      "Ghostly Antics - Bonus Warp Below Bridge",
+      "Ghostly Antics - Gems and Drumsticks Tube Secret"
+    ],
+    "_comment": "R:M7"
+  },
+  "Ghostly Antics - Room Under Gap in Line of Red Springs Secret": {
+    "connects_to": [
+      "Ghostly Antics - Second Half of Level",
+      "Ghostly Antics - Green Gems in Room Under Spring Section Secret",
+      "Ghostly Antics - Extra Life Above Gap in Line of Red Springs Secret"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Ghostly Antics, above)}",
+    "_comment": "R:A2"
+  },
+  "Ghostly Antics - Green Gems in Room Under Spring Section Secret": {
+    "connects_to": [
+      "Ghostly Antics - Room Under Gap in Line of Red Springs Secret"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A3"
+  },
+  "Ghostly Antics - Extra Life Above Gap in Line of Red Springs Secret": {
+    "connects_to": [
+      "Ghostly Antics - Second Half of Level"
+    ],
+    "requires": "{canDestroySpeedBlocks()}",
+    "_comment": "R:A4"
+  },
+  "Ghostly Antics - Banana Tunnel Secret": {
+    "connects_to": [
+      "Ghostly Antics - Second Half of Level"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A5"
+  },
+  "Ghostly Antics - Silver Coins Below Trigger Crate Ledge": {
+    "connects_to": [
+      "Ghostly Antics - Second Half of Level"
+    ],
+    "requires": "{canDestroyTriggerCrates(Ghostly Antics, below/sides)} or {canCopter()} or {canDoubleJump()}",
+    "_comment": "R:A6"
+  },
+  "Ghostly Antics - Toaster Power Up Secret": {
+    "connects_to": [
+      "Ghostly Antics - Second Half of Level"
+    ],
+    "_comment": "R:A7"
+  },
+  "Ghostly Antics - Red Gems Below Bridge Secret": {
+    "connects_to": [
+      "Ghostly Antics - Second Half of Level"
+    ],
+    "requires": "({canDoubleJump()} or {canUppercut()}) and {canDestroyTriggerCrates(Ghostly Antics, below/sides)}",
+    "_comment": "R:A8"
+  },
+  "Ghostly Antics - Bonus Warp Below Bridge": {
+    "connects_to": [
+      "Ghostly Antics - Second Half of Level",
+      "Ghostly Antics - Bonus Warp Area"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Ghostly Antics, above)}",
+    "_comment": "R:A9"
+  },
+  "Ghostly Antics - Gems and Drumsticks Tube Secret": {
+    "connects_to": [
+      "Ghostly Antics - Second Half of Level"
+    ],
+    "_comment": "R:A10"
+  },
+  "Ghostly Antics - Bonus Warp Area": {
+    "connects_to": [
+      "Ghostly Antics - Second Half of Level"
+    ],
+    "requires": "{canCollectEnoughCoins(Ghostly Antics, 20)}",
+    "_comment": "R:B1"
+  },
+  "Ghostly Antics - Exit Room": {
+    "connects_to": [
+      "Ghostly Antics - Exit"
+    ],
+    "_comment": "R:M8"
+  },
   "Ghostly Antics - Exit": {
     "connects_to": [
       "Skeletons Turf - Start"
@@ -4322,16 +4454,76 @@
   },
   "Skeletons Turf - Start": {
     "connects_to": [
-      "Skeletons Turf - Exit"
+      "Skeletons Turf - After Building with Clock Tower",
+      "Skeletons Turf - Four Silver Coins on Roof Above Start"
     ],
     "requires": "{YamlEnabled(enable_tsf)} and (|Skeletons Turf Unlock| or |The Secret Files Progressive Level Unlock:5|)",
     "_comment": "R:M0"
   },
-
-
-
-
-
+  "Skeletons Turf - Four Silver Coins on Roof Above Start": {
+    "connects_to": [
+      "Skeletons Turf - Start"
+    ],
+    "requires": "{canUppercut()} or {canDoubleJump()} or {canCopter()}",
+    "_comment": "R:A1"
+  },
+  "Skeletons Turf - After Building with Clock Tower": {
+    "connects_to": [
+      "Skeletons Turf - Bottom Section Near Trigger Crate"
+    ],
+    "_comment": "R:M1"
+  },
+  "Skeletons Turf - Bottom Section Near Trigger Crate": {
+    "connects_to": [
+      "Skeletons Turf - After Buttstomp Near Trigger Crate"
+    ],
+    "_comment": "R:M2"
+  },
+  "Skeletons Turf - After Buttstomp Near Trigger Crate": {
+    "connects_to": [
+      "Skeletons Turf - Bottom Section Near Trigger Crate",
+      "Skeletons Turf - After Trigger Crate"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Skeletons Turf, above)}",
+    "_comment": "R:M3"
+  },
+  "Skeletons Turf - After Trigger Crate": {
+    "connects_to": [
+      "Skeletons Turf - Final Section",
+      "Skeletons Turf - Vines After Trigger Crate"
+    ],
+    "requires": "{canDestroyWildcardBlocks()} and {canDestroyTriggerCrates(Skeletons Turf, above/sides)}",
+    "_comment": "R:M4"
+  },
+  "Skeletons Turf - Vines After Trigger Crate": {
+    "connects_to": [
+      "Skeletons Turf - After Trigger Crate",
+      "Skeletons Turf - Four Silver Coins Above Vines"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A2"
+  },
+  "Skeletons Turf - Four Silver Coins Above Vines": {
+    "connects_to": [
+      "Skeletons Turf - Vines After Trigger Crate"
+    ],
+    "_comment": "R:A2"
+  },
+  "Skeletons Turf - Final Section": {
+    "connects_to": [
+      "Skeletons Turf - Exit",
+      "Skeletons Turf - Bonus Warp Area"
+    ],
+    "_comment": "R:M5"
+  },
+  "Skeletons Turf - Bonus Warp Area": {
+    "connects_to": [
+      "Skeletons Turf - Exit",
+      "Skeletons Turf - Final Section"
+    ],
+    "requires": "{canCollectEnoughCoins(Skeletons Turf, 20)}",
+    "_comment": "R:B1"
+  },
   "Skeletons Turf - Exit": {
     "connects_to": [
       "Graveyard Shift - Start"
@@ -4339,16 +4531,118 @@
   },
   "Graveyard Shift - Start": {
     "connects_to": [
-      "Graveyard Shift - Exit"
+      "Graveyard Shift - Upper Section After Ledge"
     ],
     "requires": "{YamlEnabled(enable_tsf)} and (|Graveyard Shift Unlock| or |The Secret Files Progressive Level Unlock:6|)",
     "_comment": "R:M0"
   },
-
-
-
-
-
+  "Graveyard Shift - Upper Section After Ledge": {
+    "connects_to": [
+      "Graveyard Shift - Start",
+      "Graveyard Shift - Lower Section Before Destructible Blocks",
+      "Graveyard Shift - Toaster Ammo and Carrot Crates Secret",
+      "Graveyard Shift - Warp High Above Upper Section Secret"
+    ],
+    "exit_requires": {
+      "Graveyard Shift - Start": "{canCopter()}"
+    },
+    "_comment": "R:M1"
+  },
+  "Graveyard Shift - Toaster Ammo and Carrot Crates Secret": {
+    "connects_to": [
+      "Graveyard Shift - Upper Section After Ledge"
+    ],
+    "requires": "{canDestroyTriggerCrates(Graveyard Shift, above/sides} or {canCopter()} or {canDoubleJump()}",
+    "_comment": "R:A1"
+  },
+  "Graveyard Shift - Warp High Above Upper Section Secret": {
+    "connects_to": [
+      "Graveyard Shift - Upper Section After Ledge",
+      "Graveyard Shift - Michelle's Grave"
+    ],
+    "requires": "{canCopter()} or {canDoubleJump()}",
+    "_comment": "R:A2"
+  },
+  "Graveyard Shift - Michelle's Grave": {
+    "connects_to": [
+      "Graveyard Shift - Upper Section After Ledge"
+    ],
+    "requires": "{canCopter()} or {canDoubleJump()}",
+    "_comment": "R:A3    Or just 'Message to Michelle'. But it's written onto a tombstone, so it feels there's some subtext to it here."
+  },
+  "Graveyard Shift - Lower Section Before Destructible Blocks": {
+    "connects_to": [
+      "Graveyard Shift - Lower Section After Destructible Blocks"
+    ],
+    "_comment": "R:M2"
+  },
+  "Graveyard Shift - Lower Section After Destructible Blocks": {
+    "connects_to": [
+      "Graveyard Shift - Lower Section Before Destructible Blocks",
+      "Graveyard Shift - Chute With Spring Platforms",
+      "Graveyard Shift - Green Gems Above Wall of Destructible Blocks Secret",
+      "Graveyard Shift - Toaster Ammo Above Vine",
+      "Graveyard Shift - Room Behind Sturdy Blocks Secret",
+      "Graveyard Shift - Super Gem Behind Sidekick Blocks Secret"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M3"
+  },
+  "Graveyard Shift - Green Gems Above Wall of Destructible Blocks Secret": {
+    "connects_to": [
+      "Graveyard Shift - Lower Section After Destructible Blocks"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Graveyard Shift, below)}",
+    "_comment": "R:A4"
+  },
+  "Graveyard Shift - Toaster Ammo Above Vine": {
+    "connects_to": [
+      "Graveyard Shift - Lower Section After Destructible Blocks"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A5"
+  },
+  "Graveyard Shift - Room Behind Sturdy Blocks Secret": {
+    "connects_to": [
+      "Graveyard Shift - Lower Section After Destructible Blocks",
+      "Graveyard Shift - After Trigger Crate in Room Behind Sturdy Blocks Secret"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A6"
+  },
+  "Graveyard Shift - After Trigger Crate in Room Behind Sturdy Blocks Secret": {
+    "connects_to": [
+      "Graveyard Shift - Lower Section After Destructible Blocks"
+    ],
+    "requires": "({canUppercut()} or {canDoubleJump()}) and {canDestroyTriggerCrates(Graveyard Shift, above/below/sides)}",
+    "_comment": "R:A7"
+  },
+  "Graveyard Shift - Super Gem Behind Sidekick Blocks Secret": {
+    "connects_to": [
+      "Graveyard Shift - Lower Section After Destructible Blocks"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Graveyard Shift, sides)}",
+    "_comment": "R:A8"
+  },
+  "Graveyard Shift - Chute With Spring Platforms": {
+    "connects_to": [
+      "Graveyard Shift - Final Section"
+    ],
+    "_comment": "R:M4"
+  },
+  "Graveyard Shift - Final Section": {
+    "connects_to": [
+      "Graveyard Shift - Exit",
+      "Graveyard Shift - Blue Gems Above Exit Secret"
+    ],
+    "_comment": "R:M5"
+  },
+  "Graveyard Shift - Blue Gems Above Exit Secret": {
+    "connects_to": [
+      "Graveyard Shift - Final Section"
+    ],
+    "_comment": "R:A9"
+  },
   "Graveyard Shift - Exit": {
     "connects_to": [
       "Turtle Town - Start"

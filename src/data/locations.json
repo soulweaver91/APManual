@@ -2046,6 +2046,83 @@
       "sort-key": "06-03-99-Complete"
     },
     {
+      "name": "Ghostly Antics - Save Point 1 (151, 112)",
+      "category": [
+        "Episode: The Secret Files",
+        "Ghostly Antics",
+        "Save Point Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Ghostly Antics - Second Half of Level",
+      "sort-key": "06-01-00-SavePoint"
+    },
+    {
+      "name": "Ghostly Antics - Save Point 2 (160, 96) - Hard Difficulty Only",
+      "category": [
+        "Episode: The Secret Files",
+        "Ghostly Antics",
+        "Save Point Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Ghostly Antics - Second Half of Level",
+      "sort-key": "06-01-00-SavePoint"
+    },
+    {
+      "name": "Ghostly Antics - Sign 1 (138, 45)",
+      "category": [
+        "Episode: The Secret Files",
+        "Ghostly Antics",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Ghostly Antics - Between Second and Third Buildings",
+      "sort-key": "06-04-20-Sign"
+    },
+    {
+      "name": "Ghostly Antics - Sign 2 (146, 59)",
+      "category": [
+        "Episode: The Secret Files",
+        "Ghostly Antics",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Ghostly Antics - After Sucker Tube Across the Building",
+      "sort-key": "06-04-21-Sign"
+    },
+    {
+      "name": "Ghostly Antics - Sign 3 (132, 69)",
+      "category": [
+        "Episode: The Secret Files",
+        "Ghostly Antics",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Ghostly Antics - Submerged Trigger Crate Building",
+      "sort-key": "06-04-22-Sign"
+    },
+    {
+      "name": "Ghostly Antics - Sign 4 (121, 84)",
+      "category": [
+        "Episode: The Secret Files",
+        "Ghostly Antics",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Ghostly Antics - Second Half of Level",
+      "sort-key": "06-04-23-Sign"
+    },
+    {
+      "name": "Ghostly Antics - Bonus Warp",
+      "category": [
+        "Episode: The Secret Files",
+        "Ghostly Antics",
+        "Bonus Warp Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Ghostly Antics - Bonus Warp Area",
+      "sort-key": "06-04-90-Bonus"
+    },
+    {
       "name": "Ghostly Antics - Level Complete",
       "category": [
         "Episode: The Secret Files",
@@ -2056,6 +2133,61 @@
       "sort-key": "06-04-99-Complete"
     },
     {
+      "name": "Skeletons Turf - Save Point 1 (159, 35)",
+      "category": [
+        "Episode: The Secret Files",
+        "Skeletons Turf",
+        "Save Point Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Skeletons Turf - Start",
+      "sort-key": "06-05-00-SavePoint"
+    },
+    {
+      "name": "Skeletons Turf - Save Point 2 (254, 47)",
+      "category": [
+        "Episode: The Secret Files",
+        "Skeletons Turf",
+        "Save Point Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Skeletons Turf - After Building with Clock Tower",
+      "sort-key": "06-05-01-SavePoint"
+    },
+    {
+      "name": "Skeletons Turf - Save Point 3 (348, 9)",
+      "category": [
+        "Episode: The Secret Files",
+        "Skeletons Turf",
+        "Save Point Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Skeletons Turf - After Trigger Crate",
+      "sort-key": "06-05-02-SavePoint"
+    },
+    {
+      "name": "Skeletons Turf - Save Point 4 (385, 3)",
+      "category": [
+        "Episode: The Secret Files",
+        "Skeletons Turf",
+        "Save Point Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Skeletons Turf - Final Section",
+      "sort-key": "06-05-03-SavePoint"
+    },
+    {
+      "name": "Skeletons Turf - Bonus Warp",
+      "category": [
+        "Episode: The Secret Files",
+        "Skeletons Turf",
+        "Bonus Warp Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Skeletons Turf - Bonus Warp Area",
+      "sort-key": "06-05-90-Bonus"
+    },
+    {
       "name": "Skeletons Turf - Level Complete",
       "category": [
         "Episode: The Secret Files",
@@ -2064,6 +2196,28 @@
       ],
       "region": "Skeletons Turf - Exit",
       "sort-key": "06-05-99-Complete"
+    },
+    {
+      "name": "Graveyard Shift - Save Point 1 (195, 47)",
+      "category": [
+        "Episode: The Secret Files",
+        "Graveyard Shift",
+        "Save Point Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Graveyard Shift - Lower Section After Destructible Blocks",
+      "sort-key": "06-06-00-SavePoint"
+    },
+    {
+      "name": "Graveyard Shift - Sign 1 (103, 59) Through Warp at (177, 0)",
+      "category": [
+        "Episode: The Secret Files",
+        "Graveyard Shift",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Graveyard Shift - Michelle's Grave",
+      "sort-key": "06-06-20-Sign"
     },
     {
       "name": "Graveyard Shift - Level Complete",

@@ -1,7 +1,7 @@
 # Object classes from AP core, to represent an entire MultiWorld and this individual World that's part of it
 from typing import Any
 from worlds.AutoWorld import World
-from BaseClasses import MultiWorld, CollectionState, Item
+from BaseClasses import MultiWorld, CollectionState, Item, LocationProgressType
 
 # Object classes from Manual -- extending AP core -- representing items and locations that are used in generation
 from ..Items import ManualItem
@@ -61,6 +61,18 @@ def before_create_regions(world: World, multiworld: MultiWorld, player: int):
 
 # Called after regions and locations are created, in case you want to see or modify that information. Victory location is included.
 def after_create_regions(world: World, multiworld: MultiWorld, player: int):
+    # Never put anything useful here, as it is very much an outlier when it comes to locations.
+    # No other location at the moment demands the player to play on hard difficulty, but its absence would also be confusing.
+    
+    for weird_location in [
+        'Ghostly Antics - Save Point 2 (160, 96) - Hard Difficulty Only'
+    ]:
+        try:
+            world.get_location(weird_location).progress_type = LocationProgressType.EXCLUDED
+        except KeyError:
+            # Location doesn't exist, probably filtered by player objects. That's fine
+            pass
+
     # Use this hook to remove locations from the world
     locationNamesToRemove: list[str] = [] # List of location names
 
