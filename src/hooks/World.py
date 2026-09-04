@@ -65,7 +65,8 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
     # No other location at the moment demands the player to play on hard difficulty, but its absence would also be confusing.
     
     for weird_location in [
-        'Ghostly Antics - Save Point 2 (160, 96) - Hard Difficulty Only'
+        'Ghostly Antics - Save Point 2 (160, 96) - Hard Difficulty Only',
+        'Suburbia Commando - Sign 1 (199, 22) - Hard Difficulty Only'
     ]:
         try:
             world.get_location(weird_location).progress_type = LocationProgressType.EXCLUDED

@@ -4657,16 +4657,120 @@
   },
   "Turtle Town - Start": {
     "connects_to": [
-      "Turtle Town - Exit"
+      "Turtle Town - Second Layer Before Spring Section"
     ],
     "requires": "{YamlEnabled(enable_tsf)} and (|Turtle Town Unlock| or |The Secret Files Progressive Level Unlock:7|)",
     "_comment": "R:M0"
   },
-
-
-
-
-
+  "Turtle Town - Second Layer Before Spring Section": {
+    "connects_to": [
+      "Turtle Town - Second Layer Spring Section",
+      "Turtle Town - Red Gems Above Vine Secret"
+    ],
+    "_comment": "R:M1"
+  },
+  "Turtle Town - Red Gems Above Vine Secret": {
+    "connects_to": [
+      "Turtle Town - Second Layer Before Spring Section"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A1"
+  },
+  "Turtle Town - Second Layer Spring Section": {
+    "connects_to": [
+      "Turtle Town - Second Layer After Spring Section"
+    ],
+    "_comment": "R:M2"
+  },
+  "Turtle Town - Second Layer After Spring Section": {
+    "connects_to": [
+      "Turtle Town - Third Layer Before Destructible Blocks",
+      "Turtle Town - Bouncer and Toaster Power Ups from the Sky Secret",
+      "Turtle Town - Blue Gems High Above Secret",
+      "Turtle Town - Five Silver Coins Chute Secret"
+    ],
+    "_comment": "R:M3"
+  },
+  "Turtle Town - Bouncer and Toaster Power Ups from the Sky Secret": {
+    "connects_to": [
+      "Turtle Town - Second Layer After Spring Section"
+    ],
+    "requires": "{canDestroyTriggerCrates(Turtle Town, above/sides)}",
+    "_comment": "R:A2"
+  },
+  "Turtle Town - Blue Gems High Above Secret": {
+    "connects_to": [
+      "Turtle Town - Second Layer After Spring Section"
+    ],
+    "requires": "{canCopter()}",
+    "_comment": "R:A3"
+  },
+  "Turtle Town - Five Silver Coins Chute Secret": {
+    "connects_to": [
+      "Turtle Town - Second Layer After Spring Section"
+    ],
+    "_comment": "R:A4"
+  },
+  "Turtle Town - Third Layer Before Destructible Blocks": {
+    "connects_to": [
+      "Turtle Town - Third Layer Between Destructible Blocks",
+      "Turtle Town - Third Layer Red Gems on Rooftops"
+    ],
+    "_comment": "R:M4"
+  },
+  "Turtle Town - Third Layer Red Gems on Rooftops": {
+    "connects_to": [
+      "Turtle Town - Third Layer Before Destructible Blocks"
+    ],
+    "_comment": "R:A5"
+  },
+  "Turtle Town - Third Layer Between Destructible Blocks": {
+    "connects_to": [
+      "Turtle Town - Third Layer Before Destructible Blocks",
+      "Turtle Town - From End of Third Layer to End of Fourth Layer"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M5    The speed block here is inconsequential; technically the player isn't allowed to break it, but the gems are before it in the secret tunnel, so whatever."
+  },
+  "Turtle Town - From End of Third Layer to End of Fourth Layer": {
+    "connects_to": [
+      "Turtle Town - Third Layer Before Destructible Blocks",
+      "Turtle Town - Final Layer",
+      "Turtle Town - Red Gems Below Buttstomp Blocks Secret",
+      "Turtle Town - Super Gems on Cliff High Above Third Save Point Secret"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M6"
+  },
+  "Turtle Town - Red Gems Below Buttstomp Blocks Secret": {
+    "connects_to": [
+      "Turtle Town - From End of Third Layer to End of Fourth Layer"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Turtle Town, above)}",
+    "_comment": "R:A6"
+  },
+  "Turtle Town - Super Gems on Cliff High Above Third Save Point Secret": {
+    "connects_to": [
+      "Turtle Town - From End of Third Layer to End of Fourth Layer"
+    ],
+    "requires": "{canCopter()}",
+    "_comment": "R:A7"
+  },
+  "Turtle Town - Final Layer": {
+    "connects_to": [
+      "Turtle Town - Exit",
+      "Turtle Town - Bonus Warp Area"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Turtle Town, above)}",
+    "_comment": "R:M7"
+  },
+  "Turtle Town - Bonus Warp Area": {
+    "connects_to": [
+      "Turtle Town - Final Layer"
+    ],
+    "requires": "{canCollectEnoughCoins(Turtle Town, 20)}",
+    "_comment": "R:B1"
+  },
   "Turtle Town - Exit": {
     "connects_to": [
       "Suburbia Commando - Start"
@@ -4674,16 +4778,161 @@
   },
   "Suburbia Commando - Start": {
     "connects_to": [
-      "Suburbia Commando - Exit"
+      "Suburbia Commando - Topmost Section After First Three Buildings",
+      "Suburbia Commando - Gems in House Near Start Secret",
+      "Suburbia Commando - Gem Crate in House Basement Near Start Secret"
     ],
     "requires": "{YamlEnabled(enable_tsf)} and (|Suburbia Commando Unlock| or |The Secret Files Progressive Level Unlock:8|)",
     "_comment": "R:M0"
   },
-
-
-
-
-
+  "Suburbia Commando - Gems in House Near Start Secret": {
+    "connects_to": [
+      "Suburbia Commando - Start"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Suburbia Commando, sides)}",
+    "_comment": "R:A1"
+  },
+  "Suburbia Commando - Gem Crate in House Basement Near Start Secret": {
+    "connects_to": [
+      "Suburbia Commando - Start"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A2"
+  },
+  "Suburbia Commando - Topmost Section After First Three Buildings": {
+    "connects_to": [
+      "Suburbia Commando - Start",
+      "Suburbia Commando - Room at the End of Topmost Section",
+      "Suburbia Commando - Rooftop With Green Gems Secret"
+    ],
+    "_comment": "R:M1"
+  },
+  "Suburbia Commando - Rooftop With Green Gems Secret": {
+    "connects_to": [
+      "Suburbia Commando - Topmost Section After First Three Buildings"
+    ],
+    "requires": "{canDoubleJump()} or {canCopter()}",
+    "_comment": "R:A3"
+  },
+  "Suburbia Commando - Room at the End of Topmost Section": {
+    "connects_to": [
+      "Suburbia Commando - Topmost Section After First Three Buildings",
+      "Suburbia Commando - Rooftop After Entering Section With Huge Upward Slope",
+      "Suburbia Commando - Gold Coin High Above End of Topmost Section Secret"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M2"
+  },
+  "Suburbia Commando - Gold Coin High Above End of Topmost Section Secret": {
+    "connects_to": [
+      "Suburbia Commando - Room at the End of Topmost Section"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A4"
+  },
+  "Suburbia Commando - Rooftop After Entering Section With Huge Upward Slope": {
+    "connects_to": [
+      "Suburbia Commando - Section With Huge Upward Slope"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Suburbia Commando, above)}",
+    "_comment": "R:M3    Not 100% sure if this can be reached from below without special abilities, so it's separate from the rest of the section."
+  },
+  "Suburbia Commando - Section With Huge Upward Slope": {
+    "connects_to": [
+      "Suburbia Commando - Rooftop After Entering Section With Huge Upward Slope",
+      "Suburbia Commando - Zigzagging Tube Chute",
+      "Suburbia Commando - Fast Fires in Building Wall Secret"
+    ],
+    "exit_requires": {
+      "Suburbia Commando - Rooftop After Entering Section With Huge Upward Slope": "{canUppercut()} or {canCopter()} or {canDoubleJump()}"
+    },
+    "_comment": "R:M4"
+  },
+  "Suburbia Commando - Fast Fires in Building Wall Secret": {
+    "connects_to": [
+      "Suburbia Commando - Section With Huge Upward Slope"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A5"
+  },
+  "Suburbia Commando - Zigzagging Tube Chute": {
+    "connects_to": [
+      "Suburbia Commando - Tall Aircon Climb Building Room"
+    ],
+    "_comment": "R:M5    Hard difficulty has a horizontal spring at the entrance to this chute and a sign that implies that you need to freeze that spring. You can just shimmy in between without using Freezer at all, though."
+  },
+  "Suburbia Commando - Tall Aircon Climb Building Room": {
+    "connects_to": [
+      "Suburbia Commando - After Tall Building",
+      "Suburbia Commando - Sixteen Green Gems Behind Trigger Scenery Blocks"
+    ],
+    "_comment": "R:M6"
+  },
+  "Suburbia Commando - Sixteen Green Gems Behind Trigger Scenery Blocks": {
+    "connects_to": [
+      "Suburbia Commando - Tall Aircon Climb Building Room"
+    ],
+    "requires": "{canDestroyTriggerCrates(Suburbia Commando, above/sides)}",
+    "_comment": "R:A6"
+  },
+  "Suburbia Commando - After Tall Building": {
+    "connects_to": [
+      "Suburbia Commando - Exit Stretch Next to TNT",
+      "Suburbia Commando - Rooftop After Destroying Trigger Crate",
+      "Suburbia Commando - Ten Coin Bonus Warp Room"
+    ],
+    "_comment": "R:M7"
+  },
+  "Suburbia Commando - Rooftop After Destroying Trigger Crate": {
+    "connects_to": [
+      "Suburbia Commando - After Tall Building",
+      "Suburbia Commando - Twenty Coin Bonus Warp Area"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Suburbia Commando, above)} and {canDestroyTriggerCrates(Suburbia Commando, above/sides)}",
+    "_comment": "R:A7"
+  },
+  "Suburbia Commando - Ten Coin Bonus Warp Room": {
+    "connects_to": [
+      "Suburbia Commando - After Tall Building",
+      "Suburbia Commando - Ten Coin Bonus Warp Area"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Suburbia Commando, above)}",
+    "_comment": "R:A8"
+  },
+  "Suburbia Commando - Ten Coin Bonus Warp Area": {
+    "connects_to": [
+      "Suburbia Commando - After Tall Building"
+    ],
+    "requires": "{canCollectEnoughCoins(Suburbia Commando, 10)}",
+    "_comment": "R:B1"
+  },
+  "Suburbia Commando - Twenty Coin Bonus Warp Area": {
+    "connects_to": [
+      "Suburbia Commando - Ten Coin Bonus Warp Area"
+    ],
+    "requires": "{canCollectEnoughCoins(Suburbia Commando, 20)}",
+    "_comment": "R:B2"
+  },
+  "Suburbia Commando - Exit Stretch Next to TNT": {
+    "connects_to": [
+      "Suburbia Commando - Exit Stretch Final Room"
+    ],
+    "_comment": "R:M8"
+  },
+  "Suburbia Commando - Exit Stretch Final Room": {
+    "connects_to": [
+      "Suburbia Commando - Exit",
+      "Suburbia Commando - Green Gems Above Uppercut Blocks Secret"
+    ],
+    "_comment": "R:M9"
+  },
+  "Suburbia Commando - Green Gems Above Uppercut Blocks Secret": {
+    "connects_to": [
+      "Suburbia Commando - Exit Stretch Final Room"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Suburbia Commando@1, below)}",
+    "_comment": "R:A9"
+  },
   "Suburbia Commando - Exit": {
     "connects_to": [
       "Urban Brawl - Start"
@@ -4691,16 +4940,103 @@
   },
   "Urban Brawl - Start": {
     "connects_to": [
-      "Urban Brawl - Exit"
+      "Urban Brawl - First Layer After Horizontal Pole",
+      "Urban Brawl - Gems Below Buttstomp Blocks Secret"
     ],
     "requires": "{YamlEnabled(enable_tsf)} and (|Urban Brawl Unlock| or |The Secret Files Progressive Level Unlock:9|)",
     "_comment": "R:M0"
   },
-
-
-
-
-
+  "Urban Brawl - Gems Below Buttstomp Blocks Secret": {
+    "connects_to": [
+      "Urban Brawl - Start"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Urban Brawl, above)}",
+    "_comment": "R:A1"
+  },
+  "Urban Brawl - First Layer After Horizontal Pole": {
+    "connects_to": [
+      "Urban Brawl - Chute from First to Second Layer"
+    ],
+    "_comment": "R:M1"
+  },
+  "Urban Brawl - Chute from First to Second Layer": {
+    "connects_to": [
+      "Urban Brawl - Second Layer"
+    ],
+    "_comment": "R:M2"
+  },
+  "Urban Brawl - Second Layer": {
+    "connects_to": [
+      "Urban Brawl - Third Layer Before Trigger Crate"
+    ],
+    "_comment": "R:M3"
+  },
+  "Urban Brawl - Third Layer Before Trigger Crate": {
+    "connects_to": [
+      "Urban Brawl - Third Layer After Trigger Crate"
+    ],
+    "_comment": "R:M4"
+  },
+  "Urban Brawl - Third Layer After Trigger Crate": {
+    "connects_to": [
+      "Urban Brawl - Third Layer Before Trigger Crate",
+      "Urban Brawl - Fourth Layer Before Destructible Blocks",
+      "Urban Brawl - Manhole Loop Onto the Roof of Building With Nine Silver Coins"
+    ],
+    "requires": "{canDestroyTriggerCrates(Urban Brawl, above/sides)}",
+    "_comment": "R:M5"
+  },
+  "Urban Brawl - Manhole Loop Onto the Roof of Building With Nine Silver Coins": {
+    "connects_to": [
+      "Urban Brawl - Third Layer After Trigger Crate"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Urban Brawl, above)}",
+    "_comment": "R:A2"
+  },
+  "Urban Brawl - Fourth Layer Before Destructible Blocks": {
+    "connects_to": [
+      "Urban Brawl - Fourth Layer After Destructible Blocks"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Urban Brawl, above)}",
+    "_comment": "R:M6"
+  },
+  "Urban Brawl - Fourth Layer After Destructible Blocks": {
+    "connects_to": [
+      "Urban Brawl - Fourth Layer Before Destructible Blocks",
+      "Urban Brawl - Final Section"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M7"
+  },
+  "Urban Brawl - Final Section": {
+    "connects_to": [
+      "Urban Brawl - Exit",
+      "Urban Brawl - Bonus Warp Area",
+      "Urban Brawl - Warp Tucked in Corner High Above Secret"
+    ],
+    "_comment": "R:M8"
+  },
+  "Urban Brawl - Bonus Warp Area": {
+    "connects_to": [
+      "Urban Brawl - Fourth Layer After Destructible Blocks"
+    ],
+    "requires": "{canCollectEnoughCoins(Urban Brawl, 20)}",
+    "_comment": "R:B1"
+  },
+  "Urban Brawl - Warp Tucked in Corner High Above Secret": {
+    "connects_to": [
+      "Urban Brawl - Final Section",
+      "Urban Brawl - Room With Two Extra Lives and Greetings to GeoBunny"
+    ],
+    "requires": "{canCopter()}",
+    "_comment": "R:A3"
+  },
+  "Urban Brawl - Room With Two Extra Lives and Greetings to GeoBunny": {
+    "connects_to": [
+      "Urban Brawl - Final Section"
+    ],
+    "_comment": "R:A4"
+  },
   "Urban Brawl - Exit": {
     "connects_to": []
   },

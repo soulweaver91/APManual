@@ -274,7 +274,20 @@ LEVEL_WEAPON_ACCESS_LOOKUP: dict[str, dict[Weapons, bool | list[str]]] = {
     Levels.GRAVEYARD_SHIFT: {
         Weapons.BOUNCER: ['After Trigger Crate in Room Behind Sturdy Blocks Secret'],
         Weapons.TOASTER: True
-    }
+    },
+    Levels.TURTLE_TOWN: {
+        Weapons.BOUNCER: True,
+        Weapons.TOASTER: True
+    },
+    Levels.SUBURBIA_COMMANDO: {
+        Weapons.BOUNCER: True,
+        Weapons.FREEZER: True,
+        Weapons.SEEKER: True,
+        Weapons.TNT: True
+    },
+    Levels.URBAN_BRAWL: {
+        Weapons.TOASTER: True
+    },
 }
 
 # Tuples of level and an arbitrary number, splitting the level into region groups
@@ -294,7 +307,11 @@ IN_LEVEL_TNT_RULES: dict[tuple[Levels, int], list[str] | bool] = {
     # Bad Pitt #0: From start to after the first wildcard blocks
     (Levels.BAD_PITT, 0): False,
     # Bad Pitt #1: From start to after the first wildcard blocks
-    (Levels.BAD_PITT, 1): True
+    (Levels.BAD_PITT, 1): True,
+    # Suburbia Commando #0: Most of the level
+    (Levels.SUBURBIA_COMMANDO, 0): False,
+    # Suburbia Commando #1: The last stretch to the exit
+    (Levels.SUBURBIA_COMMANDO, 1): True
 }
 
 
@@ -1097,9 +1114,37 @@ COIN_ACCESS_BY_LEVEL_LOOKUP: dict[Levels, CoinPathGroup] = {
     Levels.GRAVEYARD_SHIFT: CG(Levels.GRAVEYARD_SHIFT).seq([
         # No bonus warp or loose coins in this level
     ]),
-    Levels.TURTLE_TOWN: CG(Levels.TURTLE_TOWN).seq([]),
-    Levels.SUBURBIA_COMMANDO: CG(Levels.SUBURBIA_COMMANDO).seq([]),
-    Levels.URBAN_BRAWL: CG(Levels.URBAN_BRAWL).seq([]),
+    Levels.TURTLE_TOWN: CG(Levels.TURTLE_TOWN).seq([
+        # M1     gold:   (115, 39)
+        CN(5),
+        # A4     silver: (1, 65) (1, 66) (1, 67) (1, 68) (1, 69)
+        CN(5, 'Five Silver Coins Chute Secret'),
+        # M6     gold:   (336, 97) (179, 115)
+        #        silver: (294, 70) (295, 70) (294, 71) (295, 71) (250, 133) (251, 133) (250, 134) (251, 134)
+        CN(18)
+    ]),
+    Levels.SUBURBIA_COMMANDO: CG(Levels.SUBURBIA_COMMANDO).seq([
+        # M0     silver: (0, 6)
+        CN(1),
+        # A4     gold:   (96, 17)
+        CN(5, 'Gold Coin High Above End of Topmost Section Secret'),
+        # M4     gold:   (74, 35)
+        #        silver: (115, 29) (116, 29) (115, 30) (116, 30)
+        # The gold coin is tricky, but can be obtained with just a regular dash jump.
+        CN(9),
+        # M7     gold: (46, 123) (50, 123)
+        CN(10)
+    ]),
+    Levels.URBAN_BRAWL: CG(Levels.URBAN_BRAWL).seq([
+        # M0     gold: (16, 5)
+        CN(5),
+        # M4     silver: (185, 107) (186, 107) (185, 108) (186, 108)
+        CN(4),
+        # A2     silver: (255, 80) (256, 80) (257, 80) (255, 81) (256, 81) (257, 81) (255, 82) (256, 82) (257, 82)
+        CN(9, 'Manhole Loop Onto the Roof of Building With Nine Silver Coins'),
+        # M7     silver: (213, 138) (214, 138) (213, 139) (214, 139)
+        CN(4)
+    ]),
 }
 
 def canCollectEnoughCoins(state: CollectionState, player: int, level: str, cost: int) -> bool:

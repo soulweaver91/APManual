@@ -2230,6 +2230,116 @@
       "sort-key": "06-06-99-Complete"
     },
     {
+      "name": "Turtle Town - Save Point 1 (116, 92)",
+      "category": [
+        "Episode: The Secret Files",
+        "Turtle Town",
+        "Save Point Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Turtle Town - Third Layer Before Destructible Blocks",
+      "sort-key": "06-07-00-SavePoint"
+    },
+    {
+      "name": "Turtle Town - Save Point 2 (349, 72)",
+      "category": [
+        "Episode: The Secret Files",
+        "Turtle Town",
+        "Save Point Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Turtle Town - From End of Third Layer to End of Fourth Layer",
+      "sort-key": "06-07-01-SavePoint"
+    },
+    {
+      "name": "Turtle Town - Save Point 3 (130, 134)",
+      "category": [
+        "Episode: The Secret Files",
+        "Turtle Town",
+        "Save Point Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Turtle Town - From End of Third Layer to End of Fourth Layer",
+      "sort-key": "06-07-02-SavePoint"
+    },
+    {
+      "name": "Turtle Town - Sign 1 (165, 44)",
+      "category": [
+        "Episode: The Secret Files",
+        "Turtle Town",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Turtle Town - Second Layer Before Spring Section",
+      "sort-key": "06-07-20-Sign"
+    },
+    {
+      "name": "Turtle Town - Sign 2 (95, 58)",
+      "category": [
+        "Episode: The Secret Files",
+        "Turtle Town",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Turtle Town - Second Layer Before Spring Section",
+      "sort-key": "06-07-21-Sign"
+    },
+    {
+      "name": "Turtle Town - Sign 3 (57, 49)",
+      "category": [
+        "Episode: The Secret Files",
+        "Turtle Town",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Turtle Town - Second Layer After Spring Section",
+      "sort-key": "06-07-22-Sign"
+    },
+    {
+      "name": "Turtle Town - Sign 4 (312, 72)",
+      "category": [
+        "Episode: The Secret Files",
+        "Turtle Town",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Turtle Town - From End of Third Layer to End of Fourth Layer",
+      "sort-key": "06-07-23-Sign"
+    },
+    {
+      "name": "Turtle Town - Sign 5 (323, 103)",
+      "category": [
+        "Episode: The Secret Files",
+        "Turtle Town",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Turtle Town - From End of Third Layer to End of Fourth Layer",
+      "sort-key": "06-07-24-Sign"
+    },
+    {
+      "name": "Turtle Town - Sign 6 (338, 72)",
+      "category": [
+        "Episode: The Secret Files",
+        "Turtle Town",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Turtle Town - From End of Third Layer to End of Fourth Layer",
+      "sort-key": "06-07-25-Sign"
+    },
+    {
+      "name": "Turtle Town - Bonus Warp",
+      "category": [
+        "Episode: The Secret Files",
+        "Turtle Town",
+        "Bonus Warp Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Turtle Town - Bonus Warp Area",
+      "sort-key": "06-07-90-Bonus"
+    },
+    {
       "name": "Turtle Town - Level Complete",
       "category": [
         "Episode: The Secret Files",
@@ -2238,6 +2348,71 @@
       ],
       "region": "Turtle Town - Exit",
       "sort-key": "06-07-99-Complete"
+    },    {
+      "name": "Suburbia Commando - Save Point 1 (252, 126)",
+      "category": [
+        "Episode: The Secret Files",
+        "Suburbia Commando",
+        "Save Point Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Suburbia Commando - Tall Aircon Climb Building Room",
+      "sort-key": "06-08-00-SavePoint"
+    },
+    {
+      "name": "Suburbia Commando - Sign 1 (199, 22) - Hard Difficulty Only",
+      "category": [
+        "Episode: The Secret Files",
+        "Suburbia Commando",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Suburbia Commando - Section With Huge Upward Slope",
+      "sort-key": "06-08-20-Sign"
+    },
+    {
+      "name": "Suburbia Commando - Sign 2 (270, 122)",
+      "category": [
+        "Episode: The Secret Files",
+        "Suburbia Commando",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Suburbia Commando - Tall Aircon Climb Building Room",
+      "sort-key": "06-08-21-Sign"
+    },
+    {
+      "name": "Suburbia Commando - Sign 3 (10, 114)",
+      "category": [
+        "Episode: The Secret Files",
+        "Suburbia Commando",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Suburbia Commando - After Tall Building",
+      "sort-key": "06-08-22-Sign"
+    },
+    {
+      "name": "Suburbia Commando - Bonus Warp (Either)",
+      "category": [
+        "Episode: The Secret Files",
+        "Suburbia Commando",
+        "Bonus Warp Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Suburbia Commando - Ten Coin Bonus Warp Area",
+      "sort-key": "06-08-90-Bonus"
+    },
+    {
+      "name": "Suburbia Commando - Bonus Warp (20 Coins)",
+      "category": [
+        "Episode: The Secret Files",
+        "Suburbia Commando",
+        "Bonus Warp Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Suburbia Commando - Twenty Coin Bonus Warp Area",
+      "sort-key": "06-08-91-Bonus"
     },
     {
       "name": "Suburbia Commando - Level Complete",
@@ -2248,6 +2423,105 @@
       ],
       "region": "Suburbia Commando - Exit",
       "sort-key": "06-08-99-Complete"
+    },
+    {
+      "name": "Urban Brawl - Save Point 1 (124, 87)",
+      "category": [
+        "Episode: The Secret Files",
+        "Urban Brawl",
+        "Save Point Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Urban Brawl - Second Layer",
+      "sort-key": "06-09-00-SavePoint"
+    },
+    {
+      "name": "Urban Brawl - Save Point 2 (218, 112)",
+      "category": [
+        "Episode: The Secret Files",
+        "Urban Brawl",
+        "Save Point Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Urban Brawl - Third Layer After Trigger Crate",
+      "sort-key": "06-09-01-SavePoint"
+    },
+    {
+      "name": "Urban Brawl - Sign 1 (261, 15)",
+      "category": [
+        "Episode: The Secret Files",
+        "Urban Brawl",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Urban Brawl - First Layer After Horizontal Pole",
+      "sort-key": "06-09-20-Sign"
+    },
+    {
+      "name": "Urban Brawl - Sign 2 (86, 80)",
+      "category": [
+        "Episode: The Secret Files",
+        "Urban Brawl",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Urban Brawl - Second Layer",
+      "sort-key": "06-09-21-Sign"
+    },
+    {
+      "name": "Urban Brawl - Sign 3 (196, 111)",
+      "category": [
+        "Episode: The Secret Files",
+        "Urban Brawl",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Urban Brawl - Third Layer Before Trigger Crate",
+      "sort-key": "06-09-22-Sign"
+    },
+    {
+      "name": "Urban Brawl - Sign 4 (265, 92)",
+      "category": [
+        "Episode: The Secret Files",
+        "Urban Brawl",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Urban Brawl - Third Layer After Trigger Crate",
+      "sort-key": "06-09-23-Sign"
+    },
+    {
+      "name": "Urban Brawl - Sign 5 (89, 223) Through Warp at (142, 196)",
+      "category": [
+        "Episode: The Secret Files",
+        "Urban Brawl",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Urban Brawl - Room With Two Extra Lives and Greetings to GeoBunny",
+      "sort-key": "06-09-24-Sign"
+    },
+    {
+      "name": "Urban Brawl - Sign 6 (153, 183)",
+      "category": [
+        "Episode: The Secret Files",
+        "Urban Brawl",
+        "Sign Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Urban Brawl - Final Section",
+      "sort-key": "06-09-25-Sign"
+    },
+    {
+      "name": "Urban Brawl - Bonus Warp",
+      "category": [
+        "Episode: The Secret Files",
+        "Urban Brawl",
+        "Bonus Warp Locations",
+        "The Secret Files Content"
+      ],
+      "region": "Urban Brawl - Bonus Warp Area",
+      "sort-key": "06-09-90-Bonus"
     },
     {
       "name": "Urban Brawl - Level Complete",
