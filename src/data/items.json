@@ -2,6 +2,7 @@
   "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.items.schema.json",
   "data": [
     {
+      "id": 1001,
       "count": 1,
       "name": "Jazz Unlock",
       "category": [
@@ -10,6 +11,7 @@
       "progression": true
     },
     {
+      "id": 1002,
       "count": 1,
       "name": "Spaz Unlock",
       "category": [
@@ -18,6 +20,7 @@
       "progression": true
     },
     {
+      "id": 1003,
       "count": 1,
       "name": "Lori Unlock",
       "category": [
@@ -28,6 +31,7 @@
       "progression": true
     },
     {
+      "id": 1101,
       "count": 1,
       "name": "Double Jump Unlock",
       "category": [
@@ -36,6 +40,7 @@
       "progression": true
     },
     {
+      "id": 1102,
       "count": 1,
       "name": "Copter Ears Unlock",
       "category": [
@@ -44,6 +49,7 @@
       "progression": true
     },
     {
+      "id": 1103,
       "count": 1,
       "name": "Uppercut Unlock",
       "category": [
@@ -52,6 +58,7 @@
       "progression": true
     },
     {
+      "id": 1104,
       "count": 1,
       "name": "Sidekick Unlock",
       "category": [
@@ -60,6 +67,7 @@
       "progression": true
     },
     {
+      "id": 1105,
       "count": 1,
       "name": "Buttstomp Unlock",
       "category": [
@@ -68,6 +76,7 @@
       "progression": true
     },
     {
+      "id": 1106,
       "count": 1,
       "name": "Swimming Unlock",
       "category": [
@@ -76,70 +85,7 @@
       "progression": true
     },
     {
-      "count": 1,
-      "name": "Bouncer Permit",
-      "category": [
-        "Weapon Unlock"
-      ],
-      "progression": true
-    },
-    {
-      "count": 1,
-      "name": "Freezer Permit",
-      "category": [
-        "Weapon Unlock"
-      ],
-      "progression": true
-    },
-    {
-      "count": 1,
-      "name": "Seeker Permit",
-      "category": [
-        "Weapon Unlock"
-      ],
-      "progression": true
-    },
-    {
-      "count": 1,
-      "name": "RF Missile Permit",
-      "category": [
-        "Weapon Unlock"
-      ],
-      "progression": true
-    },
-    {
-      "count": 1,
-      "name": "Toaster Permit",
-      "category": [
-        "Weapon Unlock"
-      ],
-      "progression": true
-    },
-    {
-      "count": 1,
-      "name": "TNT Permit",
-      "category": [
-        "Weapon Unlock"
-      ],
-      "progression": true
-    },
-    {
-      "count": 1,
-      "name": "Pepper Spray Permit",
-      "category": [
-        "Weapon Unlock"
-      ],
-      "useful": true
-    },
-    {
-      "count": 1,
-      "name": "Electro Blaster Permit",
-      "category": [
-        "Weapon Unlock"
-      ],
-      "useful": true
-    },
-    {
+      "id": 1107,
       "count": 1,
       "name": "Vine Traversal",
       "category": [
@@ -148,6 +94,7 @@
       "progression": true
     },
     {
+      "id": 1108,
       "count": 1,
       "name": "Hook Traversal",
       "category": [
@@ -156,6 +103,7 @@
       "progression": true
     },
     {
+      "id": 1201,
       "count": 1,
       "name": "Wildcard Destructible Scenery",
       "category": [
@@ -164,6 +112,7 @@
       "progression": true
     },
     {
+      "id": 1202,
       "count": 1,
       "name": "Bouncer Destructible Scenery",
       "category": [
@@ -172,6 +121,7 @@
       "progression": true
     },
     {
+      "id": 1204,
       "count": 1,
       "name": "Seeker Destructible Scenery",
       "category": [
@@ -180,6 +130,7 @@
       "useful": true
     },
     {
+      "id": 1205,
       "count": 1,
       "name": "RF Missile Destructible Scenery",
       "category": [
@@ -188,6 +139,7 @@
       "progression": true
     },
     {
+      "id": 1206,
       "count": 1,
       "name": "Toaster Destructible Scenery",
       "category": [
@@ -196,6 +148,7 @@
       "progression": true
     },
     {
+      "id": 1207,
       "count": 1,
       "name": "TNT Destructible Scenery",
       "category": [
@@ -204,6 +157,7 @@
       "progression": true
     },
     {
+      "id": 1210,
       "count": 1,
       "name": "Speed Destructible Scenery",
       "category": [
@@ -212,6 +166,7 @@
       "progression": true
     },
     {
+      "id": 1211,
       "count": 1,
       "name": "Special Move Destructible Scenery",
       "category": [
@@ -220,6 +175,79 @@
       "progression": true
     },
     {
+      "id": 1302,
+      "count": 1,
+      "name": "Bouncer Permit",
+      "category": [
+        "Weapon Unlock"
+      ],
+      "progression": true
+    },
+    {
+      "id": 1303,
+      "count": 1,
+      "name": "Freezer Permit",
+      "category": [
+        "Weapon Unlock"
+      ],
+      "progression": true
+    },
+    {
+      "id": 1304,
+      "count": 1,
+      "name": "Seeker Permit",
+      "category": [
+        "Weapon Unlock"
+      ],
+      "progression": true
+    },
+    {
+      "id": 1305,
+      "count": 1,
+      "name": "RF Missile Permit",
+      "category": [
+        "Weapon Unlock"
+      ],
+      "progression": true
+    },
+    {
+      "id": 1306,
+      "count": 1,
+      "name": "Toaster Permit",
+      "category": [
+        "Weapon Unlock"
+      ],
+      "progression": true
+    },
+    {
+      "id": 1307,
+      "count": 1,
+      "name": "TNT Permit",
+      "category": [
+        "Weapon Unlock"
+      ],
+      "progression": true
+    },
+    {
+      "id": 1308,
+      "count": 1,
+      "name": "Pepper Spray Permit",
+      "category": [
+        "Weapon Unlock"
+      ],
+      "useful": true
+    },
+    {
+      "id": 1309,
+      "count": 1,
+      "name": "Electro Blaster Permit",
+      "category": [
+        "Weapon Unlock"
+      ],
+      "useful": true
+    },
+    {
+      "id": 2100,
       "count": 1,
       "name": "Rabbit in Training Unlock",
       "category": [
@@ -232,6 +260,7 @@
       "progression": true
     },
     {
+      "id": 2101,
       "count": 1,
       "name": "Dungeon Dilemma Unlock",
       "category": [
@@ -244,6 +273,7 @@
       "progression": true
     },
     {
+      "id": 2102,
       "count": 1,
       "name": "Knight Cap Unlock",
       "category": [
@@ -255,6 +285,7 @@
       "progression": true
     },
     {
+      "id": 2103,
       "count": 1,
       "name": "Tossed Salad Unlock",
       "category": [
@@ -266,6 +297,7 @@
       "progression": true
     },
     {
+      "id": 2104,
       "count": 1,
       "name": "Carrot Juice Unlock",
       "category": [
@@ -277,6 +309,7 @@
       "progression": true
     },
     {
+      "id": 2105,
       "count": 1,
       "name": "Weirder Science Unlock",
       "category": [
@@ -287,6 +320,7 @@
       "progression": true
     },
     {
+      "id": 2106,
       "count": 1,
       "name": "Loose Screws Unlock",
       "category": [
@@ -297,6 +331,19 @@
       "progression": true
     },
     {
+      "id": 2199,
+      "count": 7,
+      "name": "Formerly a Prince Progressive Level Unlock",
+      "category": [
+        "Level Unlock",
+        "Progressive Level Unlocks",
+        "Episode: Formerly a Prince",
+        "Starting Levels"
+      ],
+      "progression": true
+    },
+    {
+      "id": 2201,
       "count": 1,
       "name": "Victorian Secret Unlock",
       "category": [
@@ -309,6 +356,7 @@
       "progression": true
     },
     {
+      "id": 2202,
       "count": 1,
       "name": "Colonial Chaos Unlock",
       "category": [
@@ -319,6 +367,7 @@
       "progression": true
     },
     {
+      "id": 2203,
       "count": 1,
       "name": "Purple Haze Maze Unlock",
       "category": [
@@ -329,6 +378,7 @@
       "progression": true
     },
     {
+      "id": 2204,
       "count": 1,
       "name": "Funky Grooveathon Unlock",
       "category": [
@@ -340,6 +390,7 @@
       "progression": true
     },
     {
+      "id": 2205,
       "count": 1,
       "name": "Beach Bunny Bingo Unlock",
       "category": [
@@ -351,6 +402,7 @@
       "progression": true
     },
     {
+      "id": 2206,
       "count": 1,
       "name": "Marinated Rabbit Unlock",
       "category": [
@@ -362,6 +414,19 @@
       "progression": true
     },
     {
+      "id": 2299,
+      "count": 6,
+      "name": "Jazz in Time Progressive Level Unlock",
+      "category": [
+        "Level Unlock",
+        "Progressive Level Unlocks",
+        "Episode: Jazz in Time",
+        "Starting Levels"
+      ],
+      "progression": true
+    },
+    {
+      "id": 2301,
       "count": 1,
       "name": "A Diamondus Forever Unlock",
       "category": [
@@ -373,6 +438,7 @@
       "progression": true
     },
     {
+      "id": 2302,
       "count": 1,
       "name": "Fourteen Carrot Unlock",
       "category": [
@@ -384,6 +450,7 @@
       "progression": true
     },
     {
+      "id": 2303,
       "count": 1,
       "name": "Electric Boogaloo Unlock",
       "category": [
@@ -395,6 +462,7 @@
       "progression": true
     },
     {
+      "id": 2304,
       "count": 1,
       "name": "Voltage Village Unlock",
       "category": [
@@ -405,6 +473,7 @@
       "progression": true
     },
     {
+      "id": 2305,
       "count": 1,
       "name": "Medieval Kineval Unlock",
       "category": [
@@ -415,6 +484,7 @@
       "progression": true
     },
     {
+      "id": 2306,
       "count": 1,
       "name": "Hare Scare Unlock",
       "category": [
@@ -425,6 +495,7 @@
       "progression": true
     },
     {
+      "id": 2307,
       "count": 1,
       "name": "Gargoyles Lair Unlock",
       "category": [
@@ -435,6 +506,19 @@
       "progression": true
     },
     {
+      "id": 2399,
+      "count": 7,
+      "name": "Flashback Progressive Level Unlock",
+      "category": [
+        "Level Unlock",
+        "Progressive Level Unlocks",
+        "Episode: Flashback",
+        "Starting Levels"
+      ],
+      "progression": true
+    },
+    {
+      "id": 2401,
       "count": 1,
       "name": "Thriller Gorilla Unlock",
       "category": [
@@ -447,6 +531,7 @@
       "progression": true
     },
     {
+      "id": 2402,
       "count": 1,
       "name": "Jungle Jump Unlock",
       "category": [
@@ -457,6 +542,7 @@
       "progression": true
     },
     {
+      "id": 2403,
       "count": 1,
       "name": "A Cold Day in Heck Unlock",
       "category": [
@@ -468,6 +554,7 @@
       "progression": true
     },
     {
+      "id": 2404,
       "count": 1,
       "name": "Rabbit Roast Unlock",
       "category": [
@@ -478,6 +565,7 @@
       "progression": true
     },
     {
+      "id": 2405,
       "count": 1,
       "name": "Burnin Biscuits Unlock",
       "category": [
@@ -488,6 +576,7 @@
       "progression": true
     },
     {
+      "id": 2406,
       "count": 1,
       "name": "Bad Pitt Unlock",
       "category": [
@@ -498,6 +587,19 @@
       "progression": true
     },
     {
+      "id": 2499,
+      "count": 6,
+      "name": "Funky Monkeys Progressive Level Unlock",
+      "category": [
+        "Level Unlock",
+        "Progressive Level Unlocks",
+        "Episode: Funky Monkeys",
+        "Starting Levels"
+      ],
+      "progression": true
+    },
+    {
+      "id": 2501,
       "count": 1,
       "name": "Darn Ratz Unlock",
       "category": [
@@ -510,6 +612,7 @@
       "progression": true
     },
     {
+      "id": 2502,
       "count": 1,
       "name": "Retro Rabbit Unlock",
       "category": [
@@ -520,6 +623,7 @@
       "progression": true
     },
     {
+      "id": 2503,
       "count": 1,
       "name": "Frog Stomp Unlock",
       "category": [
@@ -530,6 +634,19 @@
       "progression": true
     },
     {
+      "id": 2599,
+      "count": 3,
+      "name": "Shareware Demo Progressive Level Unlock",
+      "category": [
+        "Level Unlock",
+        "Progressive Level Unlocks",
+        "Episode: Shareware Demo",
+        "Starting Levels"
+      ],
+      "progression": true
+    },
+    {
+      "id": 2601,
       "count": 1,
       "name": "Easter Bunny Unlock",
       "category": [
@@ -543,6 +660,7 @@
       "progression": true
     },
     {
+      "id": 2602,
       "count": 1,
       "name": "Spring Chickens Unlock",
       "category": [
@@ -555,6 +673,7 @@
       "progression": true
     },
     {
+      "id": 2603,
       "count": 1,
       "name": "Scrambled Eggs Unlock",
       "category": [
@@ -566,6 +685,7 @@
       "progression": true
     },
     {
+      "id": 2604,
       "count": 1,
       "name": "Ghostly Antics Unlock",
       "category": [
@@ -578,6 +698,7 @@
       "progression": true
     },
     {
+      "id": 2605,
       "count": 1,
       "name": "Skeletons Turf Unlock",
       "category": [
@@ -590,6 +711,7 @@
       "progression": true
     },
     {
+      "id": 2606,
       "count": 1,
       "name": "Graveyard Shift Unlock",
       "category": [
@@ -601,6 +723,7 @@
       "progression": true
     },
     {
+      "id": 2607,
       "count": 1,
       "name": "Turtle Town Unlock",
       "category": [
@@ -613,6 +736,7 @@
       "progression": true
     },
     {
+      "id": 2608,
       "count": 1,
       "name": "Suburbia Commando Unlock",
       "category": [
@@ -624,6 +748,7 @@
       "progression": true
     },
     {
+      "id": 2609,
       "count": 1,
       "name": "Urban Brawl Unlock",
       "category": [
@@ -636,6 +761,20 @@
       "progression": true
     },
     {
+      "id": 2699,
+      "count": 9,
+      "name": "The Secret Files Progressive Level Unlock",
+      "category": [
+        "Level Unlock",
+        "Progressive Level Unlocks",
+        "Episode: The Secret Files",
+        "The Secret Files Content",
+        "Starting Levels"
+      ],
+      "progression": true
+    },
+    {
+      "id": 2701,
       "count": 1,
       "name": "Snow Bunnies Unlock",
       "category": [
@@ -650,6 +789,7 @@
       "progression": true
     },
     {
+      "id": 2702,
       "count": 1,
       "name": "Dashing thru the snow.. Unlock",
       "category": [
@@ -663,6 +803,7 @@
       "progression": true
     },
     {
+      "id": 2703,
       "count": 1,
       "name": "Tinsel Town Unlock",
       "category": [
@@ -676,73 +817,7 @@
       "progression": true
     },
     {
-      "count": 7,
-      "name": "Formerly a Prince Progressive Level Unlock",
-      "category": [
-        "Level Unlock",
-        "Progressive Level Unlocks",
-        "Episode: Formerly a Prince",
-        "Starting Levels"
-      ],
-      "progression": true
-    },
-    {
-      "count": 6,
-      "name": "Jazz in Time Progressive Level Unlock",
-      "category": [
-        "Level Unlock",
-        "Progressive Level Unlocks",
-        "Episode: Jazz in Time",
-        "Starting Levels"
-      ],
-      "progression": true
-    },
-    {
-      "count": 7,
-      "name": "Flashback Progressive Level Unlock",
-      "category": [
-        "Level Unlock",
-        "Progressive Level Unlocks",
-        "Episode: Flashback",
-        "Starting Levels"
-      ],
-      "progression": true
-    },
-    {
-      "count": 6,
-      "name": "Funky Monkeys Progressive Level Unlock",
-      "category": [
-        "Level Unlock",
-        "Progressive Level Unlocks",
-        "Episode: Funky Monkeys",
-        "Starting Levels"
-      ],
-      "progression": true
-    },
-    {
-      "count": 3,
-      "name": "Shareware Demo Progressive Level Unlock",
-      "category": [
-        "Level Unlock",
-        "Progressive Level Unlocks",
-        "Episode: Shareware Demo",
-        "Starting Levels"
-      ],
-      "progression": true
-    },
-    {
-      "count": 9,
-      "name": "The Secret Files Progressive Level Unlock",
-      "category": [
-        "Level Unlock",
-        "Progressive Level Unlocks",
-        "Episode: The Secret Files",
-        "The Secret Files Content",
-        "Starting Levels"
-      ],
-      "progression": true
-    },
-    {
+      "id": 2799,
       "count": 3,
       "name": "Christmas Chronicles Progressive Level Unlock",
       "category": [
