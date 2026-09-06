@@ -58,18 +58,19 @@ def before_create_regions(world: World, multiworld: MultiWorld, player: int):
 
 # Called after regions and locations are created, in case you want to see or modify that information. Victory location is included.
 def after_create_regions(world: World, multiworld: MultiWorld, player: int):
-    # Never put anything useful in these locations, as they are very much outliers.
-    # They are the only locations that demand the player to play on hard difficulty, but their absence would also be confusing.
-    for weird_location in [
-        'Ghostly Antics - Save Point 2 (160, 96) - Hard Difficulty Only',
-        'Suburbia Commando - Sign 1 (199, 22) - Hard Difficulty Only'
-    ]:
-        try:
-            world.get_location(weird_location).progress_type = LocationProgressType.EXCLUDED
-        except KeyError:
-            # Location doesn't exist, probably filtered by player options. That's fine
-            pass
+    if is_option_enabled(multiworld, player, 'exclude_hard_difficulty_checks'):
+        # Never put anything useful in these locations if the player prefers to not play on hard difficulty.
+        for hard_mode_location in [
+            'Ghostly Antics - Save Point 2 (160, 96) - Hard Difficulty Only',
+            'Suburbia Commando - Sign 1 (199, 22) - Hard Difficulty Only'
+        ]:
+            try:
+                world.get_location(hard_mode_location).progress_type = LocationProgressType.EXCLUDED
+            except KeyError:
+                # Location doesn't exist, probably filtered by player options. That's fine
+                pass
 
+    # Set up indirect access conditions for regions that might let the player to access the bonus warp in that world.
     regions = world.get_regions()
     for level_name, data in COIN_ACCESS_BY_LEVEL_LOOKUP.items():
         if len(data.dependency_regions) == 0:
