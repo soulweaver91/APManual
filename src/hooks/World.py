@@ -50,6 +50,7 @@ def before_generate_early(world: World, multiworld: MultiWorld, player: int) -> 
     # In the future, the connections could possibly be specified explicitly.
     world.explicit_indirect_conditions = False
 
+
     # Progressive levels are unlocked in order by design, so allowing levels out of order doesn't do anything.
     if is_option_enabled(multiworld, player, 'allow_levels_out_of_order') and not is_option_enabled(multiworld, player, 'individual_level_unlock_keys'):
         logging.debug('before_generate_early: turning allow_levels_out_of_order off as individual_level_unlock_keys is off')
@@ -61,9 +62,8 @@ def before_create_regions(world: World, multiworld: MultiWorld, player: int):
 
 # Called after regions and locations are created, in case you want to see or modify that information. Victory location is included.
 def after_create_regions(world: World, multiworld: MultiWorld, player: int):
-    # Never put anything useful here, as it is very much an outlier when it comes to locations.
-    # No other location at the moment demands the player to play on hard difficulty, but its absence would also be confusing.
-    
+    # Never put anything useful in these locations, as they are very much outliers.
+    # They are the only locations that demand the player to play on hard difficulty, but their absence would also be confusing.
     for weird_location in [
         'Ghostly Antics - Save Point 2 (160, 96) - Hard Difficulty Only',
         'Suburbia Commando - Sign 1 (199, 22) - Hard Difficulty Only'
