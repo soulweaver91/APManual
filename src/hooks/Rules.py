@@ -288,6 +288,20 @@ LEVEL_WEAPON_ACCESS_LOOKUP: dict[str, dict[Weapons, bool | list[str]]] = {
     Levels.URBAN_BRAWL: {
         Weapons.TOASTER: True
     },
+    Levels.SNOW_BUNNIES: {
+        Weapons.BOUNCER: True,
+        Weapons.FREEZER: True,
+        Weapons.SEEKER: True,
+        Weapons.RF: ['RF Ammo Inside Destructible Block Platforms Secret'],
+        Weapons.TNT: True
+    },
+    Levels.DASHING_THRU_THE_SNOW: {
+        Weapons.BOUNCER: True
+    },
+    Levels.TINSEL_TOWN: {
+        Weapons.TNT: True,
+        Weapons.ELECTRO: True
+    }
 }
 
 # Tuples of level and an arbitrary number, splitting the level into region groups
@@ -306,12 +320,16 @@ IN_LEVEL_TNT_RULES: dict[tuple[Levels, int], list[str] | bool] = {
     (Levels.VOLTAGE_VILLAGE, 2): True,
     # Bad Pitt #0: From start to after the first wildcard blocks
     (Levels.BAD_PITT, 0): False,
-    # Bad Pitt #1: From start to after the first wildcard blocks
+    # Bad Pitt #1: The rest of the level
     (Levels.BAD_PITT, 1): True,
     # Suburbia Commando #0: Most of the level
     (Levels.SUBURBIA_COMMANDO, 0): False,
     # Suburbia Commando #1: The last stretch to the exit
-    (Levels.SUBURBIA_COMMANDO, 1): True
+    (Levels.SUBURBIA_COMMANDO, 1): True,
+    # Snow Bunnies #0: The entire level
+    (Levels.SNOW_BUNNIES, 0): True,
+    # Tinsel Town #0: The entire level
+    (Levels.TINSEL_TOWN, 0): True
 }
 
 
@@ -1144,6 +1162,41 @@ COIN_ACCESS_BY_LEVEL_LOOKUP: dict[Levels, CoinPathGroup] = {
         CN(9, 'Manhole Loop Onto the Roof of Building With Nine Silver Coins'),
         # M7     silver: (213, 138) (214, 138) (213, 139) (214, 139)
         CN(4)
+    ]),
+    Levels.SNOW_BUNNIES: CG(Levels.SNOW_BUNNIES).seq([
+        # M0     silver: (25, 12) (26, 12) (25, 13) (26, 13)
+        CN(4),
+        # A1     gold:   (76, 9)
+        CN(5, 'Gold Coin High Above Hidden Spring Secret'),
+        # M1     silver: (84, 41) (85, 41) (84, 42) (85, 42)
+        CN(4),
+        # A3     silver: (194, 0) (195, 0) (194, 1) (195, 1)
+        CN(4, 'Four Silver Coins and Goodies on Vines Above Spike Pit'),
+        # M4     silver: (334, 1) (335, 1) (334, 2) (335, 2) (403, 0) (404, 0) (403, 1) (404, 1)
+        CN(8)
+    ]),
+    Levels.DASHING_THRU_THE_SNOW: CG(Levels.DASHING_THRU_THE_SNOW).seq([
+        # M0     gold:   (1, 1)
+        CN(5),
+        # A2     silver: (153, 1) (154, 1) (155, 1) (156, 1) (157, 1)
+        CN(5, 'Five Silver Coins in Sucker Tube Secret'),
+        # M4     gold: (687, 42) (687, 43)
+        #        silver: (507, 46) (508, 46) (507, 47) (508, 47) (507, 48) (508, 48) (528, 43) (545, 43)
+        CN(18)
+    ]),
+    Levels.TINSEL_TOWN: CG(Levels.TINSEL_TOWN).seq([
+        # A4     silver: (184, 33) (185, 33) (184, 34) (185, 34)
+        CN(4, 'TNT Block Bypass into Room With Four Silver Coins Secret'),
+        # M2     silver: (247, 39) (248, 39) (247, 40) (248, 40)
+        CN(4),
+        # M8     silver: (402, 1) (403, 1) (402, 2) (403, 2)
+        CN(4),
+        # A10    gold:   (560, 6)
+        CN(5, 'Burrowsville Upper Layer'),
+        # A14    silver: (608, 47) (609, 47) (610, 47)
+        CN(3, 'Three Silver Coins Above Spring Secret'),
+        # M13    gold:   (700, 36)
+        CN(5)
     ]),
 }
 

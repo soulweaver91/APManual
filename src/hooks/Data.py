@@ -14,7 +14,7 @@ def after_load_progressive_item_file(progressive_item_table: list) -> list:
 # called after the locations.json file has been loaded, before any location loading or processing has occurred
 # if you need access to the locations after processing to add ids, etc., you should use the hooks in World.py
 def after_load_location_file(location_table: list) -> list:
-    return location_table
+    return [x for x in location_table if 'requires' not in x or not x['requires'] == 'Inaccessible']
 
 # called after the events.json file has been loaded, before any processing has occurred
 # If you need access to the events after processing, you should use the hooks in World.py
@@ -24,7 +24,7 @@ def after_load_event_file(event_table: list) -> list:
 # called after the regions.json file has been loaded, before any location loading or processing has occurred
 # if you need access to the locations after processing to add ids, etc., you should use the hooks in World.py
 def after_load_region_file(region_table: dict) -> dict:
-    return region_table
+    return {k: x for k, x in region_table.items() if 'requires' not in x or not x['requires'] == 'Inaccessible'}
 
 # called after the categories.json file has been loaded
 def after_load_category_file(category_table: dict) -> dict:

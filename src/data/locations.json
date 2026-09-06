@@ -2532,6 +2532,89 @@
       ],
       "region": "Urban Brawl - Exit",
       "sort-key": "06-09-99-Complete"
+    },    
+    {
+      "name": "Snow Bunnies - Save Point 1 (280, 26)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Snow Bunnies",
+        "Save Point Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Snow Bunnies - Around and After Save Point",
+      "sort-key": "07-01-00-SavePoint"
+    },
+    {
+      "name": "Snow Bunnies - Sign 1 (8, 35)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Snow Bunnies",
+        "Sign Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Snow Bunnies - Start",
+      "sort-key": "07-01-20-Sign"
+    },
+    {
+      "name": "Snow Bunnies - Sign 2 (10, 35)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Snow Bunnies",
+        "Sign Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Snow Bunnies - Start",
+      "sort-key": "07-01-21-Sign"
+    },
+    {
+      "name": "Snow Bunnies - Sign 3 (77, 24)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Snow Bunnies",
+        "Sign Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Snow Bunnies - Start",
+      "sort-key": "07-01-22-Sign"
+    },
+    {
+      "name": "Snow Bunnies - Sign 4 (176, 20)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Snow Bunnies",
+        "Sign Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Snow Bunnies - Spike Pit After Trigger Crate",
+      "sort-key": "07-01-23-Sign"
+    },
+    {
+      "name": "Snow Bunnies - Sign 5 (445, 24)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Snow Bunnies",
+        "Sign Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Snow Bunnies - Around and After Save Point",
+      "sort-key": "07-01-24-Sign"
+    },
+    {
+      "name": "Snow Bunnies - Bonus Warp",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Snow Bunnies",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Snow Bunnies - Bonus Warp Area",
+      "sort-key": "07-01-90-Bonus"
     },
     {
       "name": "Snow Bunnies - Level Complete",
@@ -2545,6 +2628,141 @@
       "sort-key": "07-01-99-Complete"
     },
     {
+      "name": "Dashing thru the snow.. - Save Point 1 (293, 49)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Dashing thru the snow..",
+        "Save Point Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Dashing thru the snow.. - Main Section",
+      "sort-key": "07-02-00-SavePoint"
+    },
+    {
+      "name": "Dashing thru the snow.. - Save Point 2 (515, 39)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Dashing thru the snow..",
+        "Save Point Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Dashing thru the snow.. - Main Section",
+      "sort-key": "07-02-01-SavePoint"
+    },
+    {
+      "name": "Dashing thru the snow.. - Sign 1 (101, 28)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Dashing thru the snow..",
+        "Sign Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Dashing thru the snow.. - Start",
+      "sort-key": "07-02-20-Sign"
+    },
+    {
+      "name": "Dashing thru the snow.. - Sign 2 (157, 43)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Dashing thru the snow..",
+        "Sign Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Dashing thru the snow.. - Start",
+      "sort-key": "07-02-21-Sign"
+    },
+    {
+      "name": "Dashing thru the snow.. - Sign 3 (173, 4)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Dashing thru the snow..",
+        "Sign Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Dashing thru the snow.. - Upper Path Near Start",
+      "sort-key": "07-02-22-Sign"
+    },
+    {
+      "name": "Dashing thru the snow.. - Sign 4 (242, 18)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Dashing thru the snow..",
+        "Sign Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Dashing thru the snow.. - Upper Path Near Start",
+      "sort-key": "07-02-23-Sign"
+    },
+    {
+      "name": "Dashing thru the snow.. - Sign 5 (289, 30)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Dashing thru the snow..",
+        "Sign Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Dashing thru the snow.. - Main Section",
+      "sort-key": "07-02-24-Sign"
+    },
+    {
+      "name": "Dashing thru the snow.. - Sign 6 (10, 59) Through Warp at (443, 0)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Dashing thru the snow..",
+        "Sign Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "requires": "Inaccessible",
+      "_comment": "The warp that's required to access the room this is in doesn't seem to be accessible without cheats. This and the following two locations will be removed when the data is loaded and are here only for documentation purposes.",
+      "region": "Dashing thru the snow.. - Room With Personal Messages From Developers Secret",
+      "sort-key": "07-02-25-Sign"
+    },
+    {
+      "name": "Dashing thru the snow.. - Sign 7 (13, 59) Through Warp at (443, 0)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Dashing thru the snow..",
+        "Sign Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "requires": "Inaccessible",
+      "region": "Dashing thru the snow.. - Room With Personal Messages From Developers Secret",
+      "sort-key": "07-02-26-Sign"
+    },
+    {
+      "name": "Dashing thru the snow.. - Sign 8 (16, 59) Through Warp at (443, 0)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Dashing thru the snow..",
+        "Sign Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "requires": "Inaccessible",
+      "region": "Dashing thru the snow.. - Room With Personal Messages From Developers Secret",
+      "sort-key": "07-02-27-Sign"
+    },
+    {
+      "name": "Dashing thru the snow.. - Bonus Warp",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Dashing thru the snow..",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Dashing thru the snow.. - Bonus Warp Area",
+      "sort-key": "07-02-90-Bonus"
+    },
+    {
       "name": "Dashing thru the snow.. - Level Complete",
       "category": [
         "Episode: Christmas Chronicles",
@@ -2554,6 +2772,139 @@
       ],
       "region": "Dashing thru the snow.. - Exit",
       "sort-key": "07-02-99-Complete"
+    },
+    {
+      "name": "Tinsel Town - Save Point 1 (256, 42)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Tinsel Town",
+        "Save Point Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Tinsel Town - After TNT Blocks",
+      "sort-key": "07-03-00-SavePoint"
+    },
+    {
+      "name": "Tinsel Town - Save Point 2 (351, 54)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Tinsel Town",
+        "Save Point Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Tinsel Town - Cave Section Lower Path",
+      "sort-key": "07-03-01-SavePoint"
+    },
+    {
+      "name": "Tinsel Town - Save Point 3 (579, 18)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Tinsel Town",
+        "Save Point Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Tinsel Town - Burrowsville Upper Layer",
+      "sort-key": "07-03-02-SavePoint"
+    },
+    {
+      "name": "Tinsel Town - Save Point 4 (721, 7)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Tinsel Town",
+        "Save Point Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Tinsel Town - Before Boss Room",
+      "sort-key": "07-03-03-SavePoint"
+    },
+    {
+      "name": "Tinsel Town - Sign 1 (157, 54)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Tinsel Town",
+        "Sign Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Tinsel Town - Start",
+      "sort-key": "07-03-20-Sign"
+    },
+    {
+      "name": "Tinsel Town - Sign 2 (214, 42)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Tinsel Town",
+        "Sign Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Tinsel Town - After TNT Blocks",
+      "sort-key": "07-03-21-Sign"
+    },
+    {
+      "name": "Tinsel Town - Sign 3 (485, 40)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Tinsel Town",
+        "Sign Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Tinsel Town - Burrowsville Middle Layer",
+      "sort-key": "07-03-22-Sign"
+    },
+    {
+      "name": "Tinsel Town - Sign 4 (622, 36)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Tinsel Town",
+        "Sign Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Tinsel Town - Burrowsville Open Room and Lower Layers",
+      "sort-key": "07-03-23-Sign"
+    },
+    {
+      "name": "Tinsel Town - Sign 5 (645, 54)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Tinsel Town",
+        "Sign Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Tinsel Town - Near Bonus Warp",
+      "sort-key": "07-03-24-Sign"
+    },
+    {
+      "name": "Tinsel Town - Sign 6 (514, 58) Through Warp at (543, 0)",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Tinsel Town",
+        "Sign Locations",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "requires": "Inaccessible",
+      "_comment": "Actually multiple signs in a ring around the central platform. As with the previous level, the warp to reach this sign also seems to be inaccessible without cheat codes. Will be removed when location data is loaded.",
+      "region": "Tinsel Town - Room With Numerous Springs Lining Its Walls Secret",
+      "sort-key": "07-03-25-Sign"
+    },
+    {
+      "name": "Tinsel Town - Bonus Warp",
+      "category": [
+        "Episode: Christmas Chronicles",
+        "Tinsel Town",
+        "Christmas Chronicles Content",
+        "Holiday Hare Content"
+      ],
+      "region": "Tinsel Town - Bonus Warp Area",
+      "sort-key": "07-03-90-Bonus"
     },
     {
       "name": "Tinsel Town - Xmas Bilsy Defeated",

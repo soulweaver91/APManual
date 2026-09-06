@@ -61,7 +61,7 @@
       "Suburbia Commando - Start",
       "Urban Brawl - Start",
       "Snow Bunnies - Start",
-      "Dashing thru the snow.. - Jazz Start",
+      "Dashing thru the snow.. - Start",
       "Dashing thru the snow.. - Spaz Start",
       "Tinsel Town - Start"
     ],
@@ -112,7 +112,7 @@
       "Suburbia Commando - Start": "{levelFreeSelectEnabled()}",
       "Urban Brawl - Start": "{levelFreeSelectEnabled()}",
       "Snow Bunnies - Start": "{levelFreeSelectEnabled()}",
-      "Dashing thru the snow.. - Jazz Start": "{levelFreeSelectEnabled()}",
+      "Dashing thru the snow.. - Start": "{levelFreeSelectEnabled()}",
       "Dashing thru the snow.. - Spaz Start": "{levelFreeSelectEnabled()}",
       "Tinsel Town - Start": "{levelFreeSelectEnabled()}"
     }
@@ -5042,60 +5042,543 @@
   },
   "Snow Bunnies - Start": {
     "connects_to": [
-      "Snow Bunnies - Exit"
+      "Snow Bunnies - After Buttstomp Blocks Near Start",
+      "Snow Bunnies - Gold Coin High Above Hidden Spring Secret"
     ],
     "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and (|Snow Bunnies Unlock| or |Christmas Chronicles Progressive Level Unlock:1|)",
     "_comment": "R:M0"
   },
-
-
-
-
-
-
+  "Snow Bunnies - Gold Coin High Above Hidden Spring Secret": {
+    "connects_to": [
+      "Snow Bunnies - Start"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Snow Bunnies, above)}",
+    "_comment": "R:A1"
+  },
+  "Snow Bunnies - After Buttstomp Blocks Near Start": {
+    "connects_to": [
+      "Snow Bunnies - Spike Pit After Trigger Crate",
+      "Snow Bunnies - Gems and Extra Life Below Destructible Blocks Secret"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Snow Bunnies, above)}",
+    "_comment": "R:M1"
+  },
+  "Snow Bunnies - Gems and Extra Life Below Destructible Blocks Secret": {
+    "connects_to": [
+      "Snow Bunnies - After Buttstomp Blocks Near Start"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A2"
+  },
+  "Snow Bunnies - Spike Pit After Trigger Crate": {
+    "connects_to": [
+      "Snow Bunnies - After Buttstomp Blocks Near Start",
+      "Snow Bunnies - Descent Upon Destructible Blocks with RF Ammo Inside",
+      "Snow Bunnies - Four Silver Coins and Goodies on Vines Above Spike Pit"
+    ],
+    "requires": "{canDestroyTriggerCrates(Snow Bunnies, above/below/sides)}",
+    "_comment": "R:M2"
+  },
+  "Snow Bunnies - Four Silver Coins and Goodies on Vines Above Spike Pit": {
+    "connects_to": [
+      "Snow Bunnies - Spike Pit After Trigger Crate"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A3"
+  },
+  "Snow Bunnies - Descent Upon Destructible Blocks with RF Ammo Inside": {
+    "connects_to": [
+      "Snow Bunnies - Spike Pit After Trigger Crate",
+      "Snow Bunnies - Around and After Save Point",
+      "Snow Bunnies - RF Ammo Inside Destructible Block Platforms Secret"
+    ],
+    "_comment": "R:M3"
+  },
+  "Snow Bunnies - RF Ammo Inside Destructible Block Platforms Secret": {
+    "connects_to": [
+      "Snow Bunnies - Descent Upon Destructible Blocks with RF Ammo Inside",
+      "Snow Bunnies - Around and After Save Point"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A4"
+  },
+  "Snow Bunnies - Around and After Save Point": {
+    "connects_to": [
+      "Snow Bunnies - Chute Near Bonus Warp",
+      "Snow Bunnies - Red Gems Below Bridge Secret"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:M4"
+  },
+  "Snow Bunnies - Red Gems Below Bridge Secret": {
+    "connects_to": [
+      "Snow Bunnies - Around and After Save Point"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Snow Bunnies, above)}",
+    "_comment": "R:A5"
+  },
+  "Snow Bunnies - Chute Near Bonus Warp": {
+    "connects_to": [
+      "Snow Bunnies - Final Section"
+    ],
+    "requires": "{canDestroyWeaponBlocks(TNT)}",
+    "_comment": "R:M5"
+  },
+  "Snow Bunnies - Final Section": {
+    "connects_to": [
+      "Snow Bunnies - Exit",
+      "Snow Bunnies - Bonus Warp Area"
+    ],
+    "_comment": "R:M6"
+  },
+  "Snow Bunnies - Bonus Warp Area": {
+    "connects_to": [
+      "Snow Bunnies - Final Section"
+    ],
+    "requires": "{canCollectEnoughCoins(Snow Bunnies, 20)}",
+    "_comment": "R:B1"
+  },
   "Snow Bunnies - Exit": {
     "connects_to": [
-      "Dashing thru the snow.. - Jazz Start",
+      "Dashing thru the snow.. - Start",
       "Dashing thru the snow.. - Spaz Start"
     ]
   },
-  "Dashing thru the snow.. - Jazz Start": {
+  "Dashing thru the snow.. - Start": {
     "connects_to": [
-      "Dashing thru the snow.. - Exit"
+      "Dashing thru the snow.. - Middle Path Near Start First Room",
+      "Dashing thru the snow.. - Blue Gem High Above Climbable Trees Secret",
+      "Dashing thru the snow.. - Five Silver Coins in Sucker Tube Secret",
+      "Dashing thru the snow.. - Upper Path Near Start"
     ],
-    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and (|Jazz Unlock| or |Lori Unlock|) and (|Dashing thru the snow.. Unlock| or |Christmas Chronicles Progressive Level Unlock:2|)",
-    "_comment": "R:J0"
+    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and (|Dashing thru the snow.. Unlock| or |Christmas Chronicles Progressive Level Unlock:2|)",
+    "_comment": "R:M0    There's no Jazz start, really, since Spaz plops right into where Jazz starts after his own little exclusive cavern."
   },
   "Dashing thru the snow.. - Spaz Start": {
     "connects_to": [
-      "Dashing thru the snow.. - Exit"
+      "Dashing thru the snow.. - Start"
     ],
     "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and |Spaz Unlock| and (|Dashing thru the snow.. Unlock| or |Christmas Chronicles Progressive Level Unlock:2|)",
     "_comment": "R:S0"
   },
-
-
-
-
-
+  "Dashing thru the snow.. - Blue Gem High Above Climbable Trees Secret": {
+    "connects_to": [
+      "Dashing thru the snow.. - Start"
+    ],
+    "requires": "{canDoubleJump()} or {canUppercut()}",
+    "_comment": "R:A1"
+  },
+  "Dashing thru the snow.. - Five Silver Coins in Sucker Tube Secret": {
+    "connects_to": [
+      "Dashing thru the snow.. - Start"
+    ],
+    "requires": "{canDoubleJump()} or {canUppercut()}",
+    "_comment": "R:A2"
+  },
+  "Dashing thru the snow.. - Upper Path Near Start": {
+    "connects_to": [
+      "Dashing thru the snow.. - Start",
+      "Dashing thru the snow.. - Lower Path Near Start After Trigger Crate on Upper Path",
+      "Dashing thru the snow.. - Main Section"
+    ],
+    "_comment": "R:A3"
+  },
+  "Dashing thru the snow.. - Lower Path Near Start After Trigger Crate on Upper Path": {
+    "connects_to": [
+      "Dashing thru the snow.. - Main Section"
+    ],
+    "requires": "{canDestroyTriggerCrates(Dashing thru the snow.., above/sides)}",
+    "_comment": "R:A4"
+  },
+  "Dashing thru the snow.. - Middle Path Near Start First Room": {
+    "connects_to": [
+      "Dashing thru the snow.. - Start",
+      "Dashing thru the snow.. - Middle Path Near Start Second Room"
+    ],
+    "_comment": "R:M1"
+  },
+  "Dashing thru the snow.. - Middle Path Near Start Second Room": {
+    "connects_to": [
+      "Dashing thru the snow.. - Middle Path Near Start First Room",
+      "Dashing thru the snow.. - Middle Path Near Start Third Room"
+    ],
+    "requires": "{canDestroyTriggerCrates(Dashing thru the snow.., above/sides)}",
+    "_comment": "R:M2"
+  },
+  "Dashing thru the snow.. - Middle Path Near Start Third Room": {
+    "connects_to": [
+      "Dashing thru the snow.. - Middle Path Near Start Second Room",
+      "Dashing thru the snow.. - Main Section"
+    ],
+    "requires": "{canDestroyTriggerCrates(Dashing thru the snow.., above/sides)}",
+    "_comment": "R:M3"
+  },
+  "Dashing thru the snow.. - Main Section": {
+    "connects_to": [
+      "Dashing thru the snow.. - Trigger Crate Chain Room After First Crate",
+      "Dashing thru the snow.. - Green Gems Above Uppercut Block Secret",
+      "Dashing thru the snow.. - Red Gems in Diamond Shape High Up Secret",
+      "Dashing thru the snow.. - Bouncer Power Up High Above Accessed With Lizard Copter Secret",
+      "Dashing thru the snow.. - Green Gems Behind Sidekick Blocks Secret"
+    ],
+    "entrance_requires": {
+      "Dashing thru the snow.. - Middle Path Near Start Third Room": "{canDestroyTriggerCrates(Dashing thru the snow.., above/sides)}"
+    },
+    "_comment": "R:M4"
+  },
+  "Dashing thru the snow.. - Green Gems Above Uppercut Block Secret": {
+    "connects_to": [
+      "Dashing thru the snow.. - Main Section"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Dashing thru the snow.., below)}",
+    "_comment": "R:A5"
+  },
+  "Dashing thru the snow.. - Red Gems in Diamond Shape High Up Secret": {
+    "connects_to": [
+      "Dashing thru the snow.. - Main Section"
+    ],
+    "_comment": "R:A6"
+  },
+  "Dashing thru the snow.. - Bouncer Power Up High Above Accessed With Lizard Copter Secret": {
+    "connects_to": [
+      "Dashing thru the snow.. - Main Section"
+    ],
+    "_comment": "R:A7"
+  },
+  "Dashing thru the snow.. - Green Gems Behind Sidekick Blocks Secret": {
+    "connects_to": [
+      "Dashing thru the snow.. - Main Section"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Dashing thru the snow.., sides)}",
+    "_comment": "R:A8"
+  },
+  "Dashing thru the snow.. - Trigger Crate Chain Room After First Crate": {
+    "connects_to": [
+      "Dashing thru the snow.. - Main Section",
+      "Dashing thru the snow.. - Trigger Crate Chain Room After Second Crate"
+    ],
+    "requires": "{canDestroyTriggerCrates(Dashing thru the snow.., above/sides)}",
+    "_comment": "R:M5"
+  },
+  "Dashing thru the snow.. - Trigger Crate Chain Room After Second Crate": {
+    "connects_to": [
+      "Dashing thru the snow.. - Main Section",
+      "Dashing thru the snow.. - Trigger Crate Chain Room After Third Crate"
+    ],
+    "requires": "{canDestroyTriggerCrates(Dashing thru the snow.., above/sides)}",
+    "_comment": "R:M6"
+  },
+  "Dashing thru the snow.. - Trigger Crate Chain Room After Third Crate": {
+    "connects_to": [
+      "Dashing thru the snow.. - Main Section",
+      "Dashing thru the snow.. - After Trigger Crate Chain Room"
+    ],
+    "requires": "{canDestroyTriggerCrates(Dashing thru the snow.., above/sides)}",
+    "_comment": "R:M7"
+  },
+  "Dashing thru the snow.. - After Trigger Crate Chain Room": {
+    "connects_to": [
+      "Dashing thru the snow.. - Main Section",
+      "Dashing thru the snow.. - Chute Near Exit"
+    ],
+    "requires": "{canDestroyTriggerCrates(Dashing thru the snow.., above/sides)}",
+    "_comment": "R:M8"
+  },
+  "Dashing thru the snow.. - Chute Near Exit": {
+    "connects_to": [
+      "Dashing thru the snow.. - Final Section"
+    ],
+    "_comment": "R:M9"
+  },
+  "Dashing thru the snow.. - Final Section": {
+    "connects_to": [
+      "Dashing thru the snow.. - Exit",
+      "Dashing thru the snow.. - Bonus Warp Area"
+    ],
+    "_comment": "R:M10"
+  },
+  "Dashing thru the snow.. - Bonus Warp Area": {
+    "connects_to": [
+      "Dashing thru the snow.. - Final Section"
+    ],
+    "requires": "{canCollectEnoughCoins(Dashing thru the snow.., 20)}",
+    "_comment": "R:B1"
+  },
   "Dashing thru the snow.. - Exit": {
     "connects_to": [
       "Tinsel Town - Start"
     ]
   },
+  "Dashing thru the snow.. - Warp to Room With Personal Messages From Developers Secret": {
+    "connects_to": [
+      "Dashing thru the snow.. - Room With Personal Messages From Developers Secret",
+      "Dashing thru the snow.. - Main Section"
+    ],
+    "requires": "Inaccessible",
+    "_comment": "R:X1    This warp is so high up in the level that it doesn't seem possible to get to here without using either jjfly or jjnowall + the copter dropped by the flyinglizard on the other side. This region will be removed when this file is loaded and is only listed here for documentation purposes."
+  },
+  "Dashing thru the snow.. - Room With Personal Messages From Developers Secret": {
+    "connects_to": [
+      "Dashing thru the snow.. - Main Section"
+    ],
+    "requires": "Inaccessible",
+    "_comment": "R:X2    The continuation of the above region. Will be removed when region data is loaded."
+  },
   "Tinsel Town - Start": {
     "connects_to": [
-      "Tinsel Town - Exit"
+      "Tinsel Town - Between Main Path TNT Blocks",
+      "Tinsel Town - Room With Candy Below Buttstomp Blocks at Start",
+      "Tinsel Town - Room With Candy and Gem Crate Below Buttstomp Blocks at Start",
+      "Tinsel Town - Chute With Candy in Big Downwards and Upwards Slope Section",
+      "Tinsel Town - TNT Block Bypass into Room With Four Silver Coins Secret"
     ],
     "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and (|Tinsel Town Unlock| or |Christmas Chronicles Progressive Level Unlock:3|)",
     "_comment": "R:M0"
   },
-
-
-
-
-
+  "Tinsel Town - Room With Candy Below Buttstomp Blocks at Start": {
+    "connects_to": [
+      "Tinsel Town - Start"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Tinsel Town, above)}",
+    "_comment": "R:A1"
+  },
+  "Tinsel Town - Room With Candy and Gem Crate Below Buttstomp Blocks at Start": {
+    "connects_to": [
+      "Tinsel Town - Start"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Tinsel Town, above)}",
+    "_comment": "R:A2"
+  },
+  "Tinsel Town - Chute With Candy in Big Downwards and Upwards Slope Section": {
+    "connects_to": [
+      "Tinsel Town - Start"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Tinsel Town, above)}",
+    "_comment": "R:A3"
+  },
+  "Tinsel Town - TNT Block Bypass into Room With Four Silver Coins Secret": {
+    "connects_to": [
+      "Tinsel Town - After TNT Blocks"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Tinsel Town, above)}",
+    "_comment": "R:A4"
+  },
+  "Tinsel Town - Between Main Path TNT Blocks": {
+    "connects_to": [
+      "Tinsel Town - Start",
+      "Tinsel Town - After TNT Blocks"
+    ],
+    "requires": "{canDestroyWeaponBlocks(TNT)}",
+    "_comment": "R:M1"
+  },
+  "Tinsel Town - After TNT Blocks": {
+    "connects_to": [
+      "Tinsel Town - Between Main Path TNT Blocks",
+      "Tinsel Town - Chute into Cave Section",
+      "Tinsel Town - Vines Above First Save Point"
+    ],
+    "_comment": "R:M2"
+  },
+  "Tinsel Town - Vines Above First Save Point": {
+    "connects_to": [
+      "Tinsel Town - After TNT Blocks",
+      "Tinsel Town - Room With Secluded House Above First Save Point"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A5"
+  },
+  "Tinsel Town - Room With Secluded House Above First Save Point": {
+    "connects_to": [
+      "Tinsel Town - Vines Above First Save Point"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A6"
+  },
+  "Tinsel Town - Chute into Cave Section": {
+    "connects_to": [
+      "Tinsel Town - Cave Section Before Trigger Crate"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Tinsel Town, above)}",
+    "_comment": "R:M3"
+  },
+  "Tinsel Town - Cave Section Before Trigger Crate": {
+    "connects_to": [
+      "Tinsel Town - Cave Section After Trigger Crate",
+      "Tinsel Town - Green Gems Above Uppercut Blocks Secret"
+    ],
+    "_comment": "R:M4"
+  },
+  "Tinsel Town - Green Gems Above Uppercut Blocks Secret": {
+    "connects_to": [
+      "Tinsel Town - Cave Section Before Trigger Crate"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Tinsel Town, below)}",
+    "_comment": "R:A7"
+  },
+  "Tinsel Town - Cave Section After Trigger Crate": {
+    "connects_to": [
+      "Tinsel Town - Cave Section Before Trigger Crate",
+      "Tinsel Town - Cave Section Lower Path"
+    ],
+    "requires": "{canDestroyTriggerCrates(Tinsel Town, above/below/sides)}",
+    "_comment": "R:M5"
+  },
+  "Tinsel Town - Cave Section Lower Path": {
+    "connects_to": [
+      "Tinsel Town - Vines After Cave Section",
+      "Tinsel Town - Extra Life Behind Sidekick Blocks Secret"
+    ],
+    "_comment": "R:M6"
+  },
+  "Tinsel Town - Extra Life Behind Sidekick Blocks Secret": {
+    "connects_to": [
+      "Tinsel Town - Cave Section Lower Path"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Tinsel Town, sides)}",
+    "_comment": "R:A8"
+  },
+  "Tinsel Town - Vines After Cave Section": {
+    "connects_to": [
+      "Tinsel Town - Cave Section Lower Path",
+      "Tinsel Town - Room With Two Bomb Crates and Four Silver Coins"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M7"
+  },
+  "Tinsel Town - Room With Two Bomb Crates and Four Silver Coins": {
+    "connects_to": [
+      "Tinsel Town - Vines After Cave Section",
+      "Tinsel Town - Vines Before Burrowsville"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M8"
+  },
+  "Tinsel Town - Vines Before Burrowsville": {
+    "connects_to": [
+      "Tinsel Town - Room With Two Bomb Crates and Four Silver Coins",
+      "Tinsel Town - Burrowsville Middle Layer"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M9"
+  },
+  "Tinsel Town - Burrowsville Middle Layer": {
+    "connects_to": [
+      "Tinsel Town - Vines Before Burrowsville",
+      "Tinsel Town - Burrowsville Upper Layer",
+      "Tinsel Town - Burrowsville Open Room and Lower Layers",
+      "Tinsel Town - Burrowsville Middle Layer House Interiors With Red Gems Secret"
+    ],
+    "exit_requires": {
+      "Tinsel Town - Vines Before Burrowsville": "{canGrabVines()} and ({canDoubleJump()} or {canUppercut()})"
+    },
+    "_comment": "R:M10"
+  },
+  "Tinsel Town - Burrowsville Middle Layer House Interiors With Red Gems Secret": {
+    "connects_to": [
+      "Tinsel Town - Burrowsville Middle Layer"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A9"
+  },
+  "Tinsel Town - Burrowsville Upper Layer": {
+    "connects_to": [
+      "Tinsel Town - Burrowsville Middle Layer",
+      "Tinsel Town - Burrowsville Open Room and Lower Layers"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A10"
+  },
+  "Tinsel Town - Burrowsville Open Room and Lower Layers": {
+    "connects_to": [
+      "Tinsel Town - Trigger Crate Above Spring on Main Path",
+      "Tinsel Town - Candy Sucker Tube Secret",
+      "Tinsel Town - Red Gems Beneath Vine Under Collapsing Bridge Secret",
+      "Tinsel Town - Burrowsville Lower Layers House Interiors With Red Gems Secret",
+      "Tinsel Town - Three Silver Coins Above Spring Secret"
+    ],
+    "_comment": "R:M11"
+  },
+  "Tinsel Town - Candy Sucker Tube Secret": {
+    "connects_to": [
+      "Tinsel Town - Burrowsville Open Room and Lower Layers"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Tinsel Town, above)}",
+    "_comment": "R:A11"
+  },
+  "Tinsel Town - Red Gems Beneath Vine Under Collapsing Bridge Secret": {
+    "connects_to": [
+      "Tinsel Town - Burrowsville Open Room and Lower Layers"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:A12"
+  },
+  "Tinsel Town - Burrowsville Lower Layers House Interiors With Red Gems Secret": {
+    "connects_to": [
+      "Tinsel Town - Burrowsville Open Room and Lower Layers"
+    ],
+    "requires": "{canDestroyWildcardBlocks()}",
+    "_comment": "R:A13"
+  },
+  "Tinsel Town - Three Silver Coins Above Spring Secret": {
+    "connects_to": [
+      "Tinsel Town - Burrowsville Open Room and Lower Layers"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Tinsel Town, above)}",
+    "_comment": "R:A14"
+  },
+  "Tinsel Town - Trigger Crate Above Spring on Main Path": {
+    "connects_to": [
+      "Tinsel Town - Burrowsville Open Room and Lower Layers",
+      "Tinsel Town - Near Bonus Warp"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Tinsel Town, above)}",
+    "_comment": "R:M12"
+  },
+  "Tinsel Town - Near Bonus Warp": {
+    "connects_to": [
+      "Tinsel Town - Burrowsville Open Room and Lower Layers",
+      "Tinsel Town - Before Boss Room",
+      "Tinsel Town - Bonus Warp Area"
+    ],
+    "requires": "{canDestroyTriggerCrates(Tinsel Town, above/sides)}",
+    "_comment": "R:M13"
+  },
+  "Tinsel Town - Bonus Warp Area": {
+    "connects_to": [
+      "Tinsel Town - Near Bonus Warp"
+    ],
+    "requires": "{canCollectEnoughCoins(Tinsel Town, 20)}",
+    "_comment": "R:B1"
+  },
+  "Tinsel Town - Before Boss Room": {
+    "connects_to": [
+      "Tinsel Town - Near Bonus Warp",
+      "Tinsel Town - Boss Room"
+    ],
+    "requires": "{canGrabVines()}",
+    "_comment": "R:M14"
+  },
+  "Tinsel Town - Boss Room": {
+    "connects_to": [
+      "Tinsel Town - Exit"
+    ],
+    "_comment": "R:M15"
+  },
   "Tinsel Town - Exit": {
     "connects_to": []
+  },
+  "Tinsel Town.. - Warp to Room With Numerous Springs Lining Its Walls Secret": {
+    "connects_to": [
+      "Tinsel Town - "
+    ],
+    "requires": "Inaccessible",
+    "_comment": "R:X1    The same deal as with the warp in the last level. Will be removed when region data is loaded."
+  },
+  "Tinsel Town.. - Room With Numerous Springs Lining Its Walls Secret": {
+    "connects_to": [
+      "Tinsel Town - "
+    ],
+    "requires": "Inaccessible",
+    "_comment": "R:X2    The continuation of the above region. Will be removed when region data is loaded."
   }
 }
