@@ -175,6 +175,15 @@
       "progression": true
     },
     {
+      "id": 1301,
+      "count": 1,
+      "name": "Blaster Permit",
+      "category": [
+        "Weapon Unlock"
+      ],
+      "progression": true
+    },
+    {
       "id": 1302,
       "count": 1,
       "name": "Bouncer Permit",

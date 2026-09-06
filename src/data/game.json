@@ -4,6 +4,17 @@
   "creator": "Soulweaver",
   "filler_item_name": "Nothing",
   "starting_items": [
+    { 
+      "items": ["Blaster Permit"]
+    },
+    { 
+      "items": ["Double Jump Unlock", "Copter Ears Unlock", "Uppercut Unlock", "Sidekick Unlock", "Buttstomp Unlock", "Swimming Unlock", "Vine Traversal", "Hook Traversal"],
+      "yaml_option": ["!basic_movement_in_pool"]
+    },
+    { 
+      "items": ["Wildcard Destructible Scenery", "Bouncer Destructible Scenery", "Seeker Destructible Scenery", "RF Missile Destructible Scenery", "Toaster Destructible Scenery", "TNT Destructible Scenery", "Speed Destructible Scenery", "Special Move Destructible Scenery"],
+      "yaml_option": ["!block_destruction_in_pool"]
+    },
     {
       "item_categories": ["Playable Character"],
       "random": 1
