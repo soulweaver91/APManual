@@ -14,16 +14,14 @@ similarly found in its own [introduction](src/docs/en_Manual_JazzJackrabbit2_Sou
 and its [setup guide](src/docs/setup_en.md) of sorts.
 
 ## Currently known issues
-So far, the majority of work has gone towards getting the five episodes
-released with the base game (the main campaign + the Shareware Episode)
-into a decent enough state. The levels from the Secret Files and from
-Holiday Hare/Christmas Chronicles only have a skeleton implementation so far
-that assumes that you're able to complete each of them from start to finish
-as long as you have access to that level (i.e. no logic for missing weapon,
-permission or ability unlocks).
+All official levels are currently provisionally supported. As the world hasn't
+been thoroughly tested yet, there might be errors in region connections or
+bonus warp data, though, possibly leading to minor logic errors.
 
 Due to some levels having quite restrictive locations available, players
-using minimal accessibility may rarely lead into generation failures.
+using minimal accessibility may rarely lead into generation failures
+(with current fuzz tests with only JJ2 Manual worlds present, less than
+one in 500 randomly generated yaml bundles fail this way).
 This might be something that [this pull request in Archipelago core](
   https://github.com/ArchipelagoMW/Archipelago/pull/4225) could fix
 when merged.
