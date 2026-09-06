@@ -1,3 +1,5 @@
+import re
+
 # Object classes from AP core, to represent an entire MultiWorld and this individual World that's part of it
 from typing import Any
 from worlds.AutoWorld import World
@@ -15,6 +17,7 @@ from ..Data import game_table, item_table, location_table, region_table
 
 # These helper methods allow you to determine if an option has been set, or what its value is, for any player in the multiworld
 from ..Helpers import is_option_enabled, get_option_value, format_state_prog_items_key, ProgItemsCat, remove_specific_item
+from ..logic.BonusWarp import COIN_ACCESS_BY_LEVEL_LOOKUP
 
 # calling logging.info("message") anywhere below in this file will output the message to both console and log file
 import logging
@@ -44,13 +47,6 @@ def before_generate_early(world: World, multiworld: MultiWorld, player: int) -> 
     Use it to check or modify incompatible options, or to set up variables for later use.
     """
 
-    # Various access rules in this world rely on checking if specific locations or regions can be reached,
-    # especially the bonus warp logic.
-    # For now, this setting is set off to make those work at the expense of generation performance.
-    # In the future, the connections could possibly be specified explicitly.
-    world.explicit_indirect_conditions = False
-
-
     # Progressive levels are unlocked in order by design, so allowing levels out of order doesn't do anything.
     if is_option_enabled(multiworld, player, 'allow_levels_out_of_order') and not is_option_enabled(multiworld, player, 'individual_level_unlock_keys'):
         logging.debug('before_generate_early: turning allow_levels_out_of_order off as individual_level_unlock_keys is off')
@@ -73,6 +69,22 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
         except KeyError:
             # Location doesn't exist, probably filtered by player options. That's fine
             pass
+
+    regions = world.get_regions()
+    for level_name, data in COIN_ACCESS_BY_LEVEL_LOOKUP.items():
+        if len(data.dependency_regions) == 0:
+            continue
+
+        # Could just look for 'Level Name - Bonus Warp Area' if it weren't for Suburbia Commando.
+        # This should still provide accurate results as long as future non-bonus regions don't start
+        # using those exact words at the ends of their names.
+        bonus_regions = [region for region in regions if region.name.startswith(level_name) and region.name.endswith('Bonus Warp Area')]
+        
+        for region_name in data.dependency_regions:
+            region = world.get_region(f'{level_name} - {region_name}')
+            for bonus_region in bonus_regions:
+                for entrance in bonus_region.entrances:
+                    multiworld.register_indirect_condition(region, entrance)
 
     # Use this hook to remove locations from the world
     locationNamesToRemove: list[str] = [] # List of location names

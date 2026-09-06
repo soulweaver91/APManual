@@ -24,6 +24,8 @@ class CoinPathGroup:
     minimum_coins_from_sequence: int
     minimum_coins: int
 
+    dependency_regions: list[str]
+
     def __init__(self, name: str, character: StartPositionCharacterName | None = None, min_mode: bool = False) -> None:
         logging.debug(f'')
         logging.debug(f'CoinPathGroup: init {name}')
@@ -38,6 +40,8 @@ class CoinPathGroup:
         self.minimum_coins_from_sequence = 0
         self.minimum_coins = 0
 
+        self.dependency_regions = []
+
     def branch(self, subpath: 'CoinPathGroup') -> Self:
         self.branches.append(subpath)
         
@@ -47,6 +51,7 @@ class CoinPathGroup:
             self.minimum_coins_from_branches = max([branch.minimum_coins for branch in self.branches if branch is not None])
 
         self._update_minimum_coins()
+        self.dependency_regions.extend(subpath.dependency_regions)
         return self
     
     def seq(self, sequence: list['CoinPathNode | CoinPathGroup']) -> Self:
@@ -56,7 +61,10 @@ class CoinPathGroup:
         for step in sequence:
             if isinstance(step, CoinPathGroup):
                 self.minimum_coins_from_sequence += step.minimum_coins
-            elif step.region is None:
+                self.dependency_regions.extend(step.dependency_regions)
+            elif step.region is not None:
+                self.dependency_regions.append(step.region)
+            else:
                 self.minimum_coins_from_sequence += step.amount
 
         self._update_minimum_coins()
