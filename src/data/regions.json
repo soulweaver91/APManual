@@ -2233,7 +2233,7 @@
     "connects_to": [
       "Electric Boogaloo - After Chute Near Start"
     ],
-    "requires": "|Freezer Permit| and '({canDestroyWeaponBlocks(Bouncer)} or {hasWeaponAccess(Electric Boogaloo, Freezer)})",
+    "requires": "|Freezer Permit| and ({canDestroyWeaponBlocks(Bouncer)} or {hasWeaponAccess(Electric Boogaloo, Freezer)})",
     "_comment": "R:A4"
   },
   "Electric Boogaloo - Carrots Behind Sturdy Blocks Secret": {
