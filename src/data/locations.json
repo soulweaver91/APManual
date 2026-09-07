@@ -2978,49 +2978,6 @@
       "sort-key": "07-02-24-Sign"
     },
     {
-      "id": 70225,
-      "name": "Dashing thru the snow.. - Sign 6 (10, 59) Through Warp at (443, 0)",
-      "category": [
-        "Episode: Christmas Chronicles",
-        "Dashing thru the snow..",
-        "Sign Locations",
-        "Christmas Chronicles Content",
-        "Holiday Hare Content"
-      ],
-      "requires": "Inaccessible",
-      "_comment": "The warp that's required to access the room this is in doesn't seem to be accessible without cheats. This and the following two locations will be removed when the data is loaded and are here only for documentation purposes.",
-      "region": "Dashing thru the snow.. - Room With Personal Messages From Developers Secret",
-      "sort-key": "07-02-25-Sign"
-    },
-    {
-      "id": 70226,
-      "name": "Dashing thru the snow.. - Sign 7 (13, 59) Through Warp at (443, 0)",
-      "category": [
-        "Episode: Christmas Chronicles",
-        "Dashing thru the snow..",
-        "Sign Locations",
-        "Christmas Chronicles Content",
-        "Holiday Hare Content"
-      ],
-      "requires": "Inaccessible",
-      "region": "Dashing thru the snow.. - Room With Personal Messages From Developers Secret",
-      "sort-key": "07-02-26-Sign"
-    },
-    {
-      "id": 70227,
-      "name": "Dashing thru the snow.. - Sign 8 (16, 59) Through Warp at (443, 0)",
-      "category": [
-        "Episode: Christmas Chronicles",
-        "Dashing thru the snow..",
-        "Sign Locations",
-        "Christmas Chronicles Content",
-        "Holiday Hare Content"
-      ],
-      "requires": "Inaccessible",
-      "region": "Dashing thru the snow.. - Room With Personal Messages From Developers Secret",
-      "sort-key": "07-02-27-Sign"
-    },
-    {
       "id": 70290,
       "name": "Dashing thru the snow.. - Bonus Warp",
       "category": [
@@ -3160,21 +3117,6 @@
       ],
       "region": "Tinsel Town - Near Bonus Warp",
       "sort-key": "07-03-24-Sign"
-    },
-    {
-      "id": 70325,
-      "name": "Tinsel Town - Sign 6 (514, 58) Through Warp at (543, 0)",
-      "category": [
-        "Episode: Christmas Chronicles",
-        "Tinsel Town",
-        "Sign Locations",
-        "Christmas Chronicles Content",
-        "Holiday Hare Content"
-      ],
-      "requires": "Inaccessible",
-      "_comment": "Actually multiple signs in a ring around the central platform. As with the previous level, the warp to reach this sign also seems to be inaccessible without cheat codes. Will be removed when location data is loaded.",
-      "region": "Tinsel Town - Room With Numerous Springs Lining Its Walls Secret",
-      "sort-key": "07-03-25-Sign"
     },
     {
       "id": 70390,

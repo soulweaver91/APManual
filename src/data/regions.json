@@ -5309,21 +5309,6 @@
       "Tinsel Town - Start"
     ]
   },
-  "Dashing thru the snow.. - Warp to Room With Personal Messages From Developers Secret": {
-    "connects_to": [
-      "Dashing thru the snow.. - Room With Personal Messages From Developers Secret",
-      "Dashing thru the snow.. - Main Section"
-    ],
-    "requires": "Inaccessible",
-    "_comment": "R:X1    This warp is so high up in the level that it doesn't seem possible to get to here without using either jjfly or jjnowall + the copter dropped by the flyinglizard on the other side. This region will be removed when this file is loaded and is only listed here for documentation purposes."
-  },
-  "Dashing thru the snow.. - Room With Personal Messages From Developers Secret": {
-    "connects_to": [
-      "Dashing thru the snow.. - Main Section"
-    ],
-    "requires": "Inaccessible",
-    "_comment": "R:X2    The continuation of the above region. Will be removed when region data is loaded."
-  },
   "Tinsel Town - Start": {
     "connects_to": [
       "Tinsel Town - Between Main Path TNT Blocks",
@@ -5566,19 +5551,5 @@
   },
   "Tinsel Town - Exit": {
     "connects_to": []
-  },
-  "Tinsel Town.. - Warp to Room With Numerous Springs Lining Its Walls Secret": {
-    "connects_to": [
-      "Tinsel Town - "
-    ],
-    "requires": "Inaccessible",
-    "_comment": "R:X1    The same deal as with the warp in the last level. Will be removed when region data is loaded."
-  },
-  "Tinsel Town.. - Room With Numerous Springs Lining Its Walls Secret": {
-    "connects_to": [
-      "Tinsel Town - "
-    ],
-    "requires": "Inaccessible",
-    "_comment": "R:X2    The continuation of the above region. Will be removed when region data is loaded."
   }
 }
