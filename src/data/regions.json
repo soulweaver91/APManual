@@ -174,7 +174,6 @@
       "Rabbit in Training - Start",
       "Rabbit in Training - After Destructible Blocks"
     ],
-    "requires": "{canDoubleJump()} or {canCopter()}",
     "_comment": "R:M1"
   },
   "Rabbit in Training - After Destructible Blocks": {
