@@ -29,6 +29,7 @@ when merged.
 ## AI usage disclosure
 No AI tools have been used in any part of the development of this custom game
 implementation, including for code or asset generation, consulting, analysis,
-or for any other reason. I'm not aware if this is also the case with the
-underlying Manual client itself, so please check this with its authors
-separately.
+or for any other reason. The project builds upon the general Manual template,
+though, which doesn't seem to have an AI disclosure available at the moment;
+thus, it's not possible at this time to say that this repository is AI-free
+with full certainty.
