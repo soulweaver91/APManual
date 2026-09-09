@@ -15,158 +15,145 @@
   },
   "Level Free Select": {
     "connects_to": [
-      "Rabbit in Training - Start",
-      "Dungeon Dilemma - Start",
-      "Knight Cap - Jazz Start",
-      "Knight Cap - Spaz Start",
-      "Tossed Salad - Jazz Start",
-      "Tossed Salad - Spaz Start",
-      "Carrot Juice - Start",
-      "Weirder Science - Jazz Start",
-      "Weirder Science - Spaz Start",
-      "Loose Screws - Start",
-      "Victorian Secret - Start",
-      "Colonial Chaos - Start",
-      "Purple Haze Maze - Start",
-      "Funky Grooveathon - Start",
-      "Beach Bunny Bingo - Start",
-      "Marinated Rabbit - Start",
-      "A Diamondus Forever - Jazz Start",
-      "A Diamondus Forever - Spaz Start",
-      "Fourteen Carrot - Start",
-      "Electric Boogaloo - Start",
-      "Voltage Village - Jazz Start",
-      "Voltage Village - Spaz Start",
-      "Medieval Kineval - Start",
-      "Hare Scare - Start",
-      "Gargoyles Lair - Start",
-      "Thriller Gorilla - Jazz Start",
-      "Thriller Gorilla - Spaz Start",
-      "Jungle Jump - Start",
-      "A Cold Day in Heck - Start",
-      "Rabbit Roast - Start",
-      "Burnin Biscuits - Start",
-      "Bad Pitt - Start",
-      "Darn Ratz - Start",
-      "Retro Rabbit - Jazz Start",
-      "Retro Rabbit - Spaz Start",
-      "Frog Stomp - Start",
-      "Easter Bunny - Start",
-      "Spring Chickens - Start",
-      "Scrambled Eggs - Start",
-      "Ghostly Antics - Start",
-      "Skeletons Turf - Start",
-      "Graveyard Shift - Start",
-      "Turtle Town - Start",
-      "Suburbia Commando - Start",
-      "Urban Brawl - Start",
-      "Snow Bunnies - Start",
-      "Dashing thru the snow.. - Start",
-      "Dashing thru the snow.. - Spaz Start",
-      "Tinsel Town - Start"
+      "Rabbit in Training - Entrance",
+      "Dungeon Dilemma - Entrance",
+      "Knight Cap - Entrance",
+      "Tossed Salad - Entrance",
+      "Carrot Juice - Entrance",
+      "Weirder Science - Entrance",
+      "Loose Screws - Entrance",
+      "Victorian Secret - Entrance",
+      "Colonial Chaos - Entrance",
+      "Purple Haze Maze - Entrance",
+      "Funky Grooveathon - Entrance",
+      "Beach Bunny Bingo - Entrance",
+      "Marinated Rabbit - Entrance",
+      "A Diamondus Forever - Entrance",
+      "Fourteen Carrot - Entrance",
+      "Electric Boogaloo - Entrance",
+      "Voltage Village - Entrance",
+      "Medieval Kineval - Entrance",
+      "Hare Scare - Entrance",
+      "Gargoyles Lair - Entrance",
+      "Thriller Gorilla - Entrance",
+      "Jungle Jump - Entrance",
+      "A Cold Day in Heck - Entrance",
+      "Rabbit Roast - Entrance",
+      "Burnin Biscuits - Entrance",
+      "Bad Pitt - Entrance",
+      "Darn Ratz - Entrance",
+      "Retro Rabbit - Entrance",
+      "Frog Stomp - Entrance",
+      "Easter Bunny - Entrance",
+      "Spring Chickens - Entrance",
+      "Scrambled Eggs - Entrance",
+      "Ghostly Antics - Entrance",
+      "Skeletons Turf - Entrance",
+      "Graveyard Shift - Entrance",
+      "Turtle Town - Entrance",
+      "Suburbia Commando - Entrance",
+      "Urban Brawl - Entrance",
+      "Snow Bunnies - Entrance",
+      "Dashing thru the snow.. - Entrance",
+      "Tinsel Town - Entrance"
     ],
     "exit_requires": {
-      "Rabbit in Training - Start": "{levelFreeSelectEnabled()}",
-      "Dungeon Dilemma - Start": "{levelFreeSelectEnabled()}",
-      "Knight Cap - Jazz Start": "{levelFreeSelectEnabled()}",
-      "Knight Cap - Spaz Start": "{levelFreeSelectEnabled()}",
-      "Tossed Salad - Jazz Start": "{levelFreeSelectEnabled()}",
-      "Tossed Salad - Spaz Start": "{levelFreeSelectEnabled()}",
-      "Carrot Juice - Start": "{levelFreeSelectEnabled()}",
-      "Weirder Science - Jazz Start": "{levelFreeSelectEnabled()}",
-      "Weirder Science - Spaz Start": "{levelFreeSelectEnabled()}",
-      "Loose Screws - Start": "{levelFreeSelectEnabled()}",
-      "Victorian Secret - Start": "{levelFreeSelectEnabled()}",
-      "Colonial Chaos - Start": "{levelFreeSelectEnabled()}",
-      "Purple Haze Maze - Start": "{levelFreeSelectEnabled()}",
-      "Funky Grooveathon - Start": "{levelFreeSelectEnabled()}",
-      "Beach Bunny Bingo - Start": "{levelFreeSelectEnabled()}",
-      "Marinated Rabbit - Start": "{levelFreeSelectEnabled()}",
-      "A Diamondus Forever - Jazz Start": "{levelFreeSelectEnabled()}",
-      "A Diamondus Forever - Spaz Start": "{levelFreeSelectEnabled()}",
-      "Fourteen Carrot - Start": "{levelFreeSelectEnabled()}",
-      "Electric Boogaloo - Start": "{levelFreeSelectEnabled()}",
-      "Voltage Village - Jazz Start": "{levelFreeSelectEnabled()}",
-      "Voltage Village - Spaz Start": "{levelFreeSelectEnabled()}",
-      "Medieval Kineval - Start": "{levelFreeSelectEnabled()}",
-      "Hare Scare - Start": "{levelFreeSelectEnabled()}",
-      "Gargoyles Lair - Start": "{levelFreeSelectEnabled()}",
-      "Thriller Gorilla - Jazz Start": "{levelFreeSelectEnabled()}",
-      "Thriller Gorilla - Spaz Start": "{levelFreeSelectEnabled()}",
-      "Jungle Jump - Start": "{levelFreeSelectEnabled()}",
-      "A Cold Day in Heck - Start": "{levelFreeSelectEnabled()}",
-      "Rabbit Roast - Start": "{levelFreeSelectEnabled()}",
-      "Burnin Biscuits - Start": "{levelFreeSelectEnabled()}",
-      "Bad Pitt - Start": "{levelFreeSelectEnabled()}",
-      "Darn Ratz - Start": "{levelFreeSelectEnabled()}",
-      "Retro Rabbit - Jazz Start": "{levelFreeSelectEnabled()}",
-      "Retro Rabbit - Spaz Start": "{levelFreeSelectEnabled()}",
-      "Frog Stomp - Start": "{levelFreeSelectEnabled()}",
-      "Easter Bunny - Start": "{levelFreeSelectEnabled()}",
-      "Spring Chickens - Start": "{levelFreeSelectEnabled()}",
-      "Scrambled Eggs - Start": "{levelFreeSelectEnabled()}",
-      "Ghostly Antics - Start": "{levelFreeSelectEnabled()}",
-      "Skeletons Turf - Start": "{levelFreeSelectEnabled()}",
-      "Graveyard Shift - Start": "{levelFreeSelectEnabled()}",
-      "Turtle Town - Start": "{levelFreeSelectEnabled()}",
-      "Suburbia Commando - Start": "{levelFreeSelectEnabled()}",
-      "Urban Brawl - Start": "{levelFreeSelectEnabled()}",
-      "Snow Bunnies - Start": "{levelFreeSelectEnabled()}",
-      "Dashing thru the snow.. - Start": "{levelFreeSelectEnabled()}",
-      "Dashing thru the snow.. - Spaz Start": "{levelFreeSelectEnabled()}",
-      "Tinsel Town - Start": "{levelFreeSelectEnabled()}"
+      "Rabbit in Training - Entrance": "{levelFreeSelectEnabled()}",
+      "Dungeon Dilemma - Entrance": "{levelFreeSelectEnabled()}",
+      "Knight Cap - Entrance": "{levelFreeSelectEnabled()}",
+      "Tossed Salad - Entrance": "{levelFreeSelectEnabled()}",
+      "Carrot Juice - Entrance": "{levelFreeSelectEnabled()}",
+      "Weirder Science - Entrance": "{levelFreeSelectEnabled()}",
+      "Loose Screws - Entrance": "{levelFreeSelectEnabled()}",
+      "Victorian Secret - Entrance": "{levelFreeSelectEnabled()}",
+      "Colonial Chaos - Entrance": "{levelFreeSelectEnabled()}",
+      "Purple Haze Maze - Entrance": "{levelFreeSelectEnabled()}",
+      "Funky Grooveathon - Entrance": "{levelFreeSelectEnabled()}",
+      "Beach Bunny Bingo - Entrance": "{levelFreeSelectEnabled()}",
+      "Marinated Rabbit - Entrance": "{levelFreeSelectEnabled()}",
+      "A Diamondus Forever - Entrance": "{levelFreeSelectEnabled()}",
+      "Fourteen Carrot - Entrance": "{levelFreeSelectEnabled()}",
+      "Electric Boogaloo - Entrance": "{levelFreeSelectEnabled()}",
+      "Voltage Village - Entrance": "{levelFreeSelectEnabled()}",
+      "Medieval Kineval - Entrance": "{levelFreeSelectEnabled()}",
+      "Hare Scare - Entrance": "{levelFreeSelectEnabled()}",
+      "Gargoyles Lair - Entrance": "{levelFreeSelectEnabled()}",
+      "Thriller Gorilla - Entrance": "{levelFreeSelectEnabled()}",
+      "Jungle Jump - Entrance": "{levelFreeSelectEnabled()}",
+      "A Cold Day in Heck - Entrance": "{levelFreeSelectEnabled()}",
+      "Rabbit Roast - Entrance": "{levelFreeSelectEnabled()}",
+      "Burnin Biscuits - Entrance": "{levelFreeSelectEnabled()}",
+      "Bad Pitt - Entrance": "{levelFreeSelectEnabled()}",
+      "Darn Ratz - Entrance": "{levelFreeSelectEnabled()}",
+      "Retro Rabbit - Entrance": "{levelFreeSelectEnabled()}",
+      "Frog Stomp - Entrance": "{levelFreeSelectEnabled()}",
+      "Easter Bunny - Entrance": "{levelFreeSelectEnabled()}",
+      "Spring Chickens - Entrance": "{levelFreeSelectEnabled()}",
+      "Scrambled Eggs - Entrance": "{levelFreeSelectEnabled()}",
+      "Ghostly Antics - Entrance": "{levelFreeSelectEnabled()}",
+      "Skeletons Turf - Entrance": "{levelFreeSelectEnabled()}",
+      "Graveyard Shift - Entrance": "{levelFreeSelectEnabled()}",
+      "Turtle Town - Entrance": "{levelFreeSelectEnabled()}",
+      "Suburbia Commando - Entrance": "{levelFreeSelectEnabled()}",
+      "Urban Brawl - Entrance": "{levelFreeSelectEnabled()}",
+      "Snow Bunnies - Entrance": "{levelFreeSelectEnabled()}",
+      "Dashing thru the snow.. - Entrance": "{levelFreeSelectEnabled()}",
+      "Tinsel Town - Entrance": "{levelFreeSelectEnabled()}"
     }
   },
   "Episode: Formerly a Prince": {
     "connects_to": [
-      "Rabbit in Training - Start",
-      "Dungeon Dilemma - Start"
+      "Rabbit in Training - Entrance",
+      "Dungeon Dilemma - Entrance"
     ],
     "requires": "|Rabbit in Training Unlock| or |Dungeon Dilemma Unlock| or |Formerly a Prince Progressive Level Unlock:1|"
   },
   "Episode: Jazz in Time": {
     "connects_to": [
-      "Victorian Secret - Start"
+      "Victorian Secret - Entrance"
     ],
     "requires": "|Victorian Secret Unlock| or |Jazz in Time Progressive Level Unlock:1|"
   },
   "Episode: Flashback": {
     "connects_to": [
-      "A Diamondus Forever - Jazz Start",
-      "A Diamondus Forever - Spaz Start"
+      "A Diamondus Forever - Entrance"
     ],
     "requires": "|A Diamondus Forever Unlock| or |Flashback Progressive Level Unlock:1|"
   },
   "Episode: Funky Monkeys": {
     "connects_to": [
-      "Thriller Gorilla - Jazz Start",
-      "Thriller Gorilla - Spaz Start"
+      "Thriller Gorilla - Entrance"
     ],
     "requires": "|Thriller Gorilla Unlock| or |Funky Monkeys Progressive Level Unlock:1|"
   },
   "Episode: Shareware Demo": {
     "connects_to": [
-      "Darn Ratz - Start"
+      "Darn Ratz - Entrance"
     ],
     "requires": "|Darn Ratz Unlock| or |Shareware Demo Progressive Level Unlock:1|"
   },
   "Episode: The Secret Files": {
     "connects_to": [
-      "Easter Bunny - Start"
+      "Easter Bunny - Entrance"
     ],
     "requires": "|Easter Bunny Unlock| or |The Secret Files Progressive Level Unlock:1|"
   },
   "Episode: Christmas Chronicles": {
     "connects_to": [
-      "Snow Bunnies - Start"
+      "Snow Bunnies - Entrance"
     ],
     "requires": "|Snow Bunnies Unlock| or |Christmas Chronicles Progressive Level Unlock:1|"
+  },
+  "Rabbit in Training - Entrance": {
+    "connects_to": [
+      "Rabbit in Training - Start"
+    ],
+    "requires": "|Rabbit in Training Unlock| or |Formerly a Prince Progressive Level Unlock:1|"
   },
   "Rabbit in Training - Start": {
     "connects_to": [
       "Rabbit in Training - After Vine Pit"
     ],
-    "requires": "|Rabbit in Training Unlock| or |Formerly a Prince Progressive Level Unlock:1|",
     "_comment": "R:M0"
   },
   "Rabbit in Training - After Vine Pit": {
@@ -193,14 +180,19 @@
   },
   "Rabbit in Training - Exit": {
     "connects_to": [
-      "Dungeon Dilemma - Start"
+      "Dungeon Dilemma - Entrance"
     ]
+  },
+  "Dungeon Dilemma - Entrance": {
+    "connects_to": [
+      "Dungeon Dilemma - Start"
+    ],
+    "requires": "|Dungeon Dilemma Unlock| or |Formerly a Prince Progressive Level Unlock:2|"
   },
   "Dungeon Dilemma - Start": {
     "connects_to": [
       "Dungeon Dilemma - After Drop at Start"
     ],
-    "requires": "|Dungeon Dilemma Unlock| or |Formerly a Prince Progressive Level Unlock:2|",
     "_comment": "R:M0"
   },
   "Dungeon Dilemma - After Drop at Start": {
@@ -293,15 +285,24 @@
   },
   "Dungeon Dilemma - Exit": {
     "connects_to": [
+      "Knight Cap - Entrance"
+    ]
+  },
+  "Knight Cap - Entrance": {
+    "connects_to": [
       "Knight Cap - Jazz Start",
       "Knight Cap - Spaz Start"
-    ]
+    ],
+    "exit_requires": {
+      "Knight Cap - Jazz Start": "|Jazz Unlock| or |Lori Unlock|",
+      "Knight Cap - Spaz Start": "|Spaz Unlock|"
+    },
+    "requires": "|Knight Cap Unlock| or |Formerly a Prince Progressive Level Unlock:3|"
   },
   "Knight Cap - Jazz Start": {
     "connects_to": [
       "Knight Cap - Jazz Main Area"
     ],
-    "requires": "(|Knight Cap Unlock| or |Formerly a Prince Progressive Level Unlock:3|) and (|Jazz Unlock| or |Lori Unlock|)",
     "_comment": "R:J0"
   },
   "Knight Cap - Jazz Main Area": {
@@ -376,7 +377,7 @@
       "Knight Cap - Spaz Only After Chute",
       "Knight Cap - Spaz Only Four Silver Coins Behind Trigger Scenery Secret"
     ],
-    "requires": "(|Knight Cap Unlock| or |Formerly a Prince Progressive Level Unlock:3|) and |Spaz Unlock|",
+    "requires": "|Knight Cap Unlock| or |Formerly a Prince Progressive Level Unlock:3|",
     "_comment": "R:S0"
   },
   "Knight Cap - Spaz Only Four Silver Coins Behind Trigger Scenery Secret": {
@@ -514,9 +515,19 @@
   },
   "Knight Cap - Exit": {
     "connects_to": [
+      "Tossed Salad - Entrance"
+    ]
+  },
+  "Tossed Salad - Entrance": {
+    "connects_to": [
       "Tossed Salad - Jazz Start",
       "Tossed Salad - Spaz Start"
-    ]
+    ],
+    "exit_requires": {
+      "Tossed Salad - Jazz Start": "|Jazz Unlock| or |Lori Unlock|",
+      "Tossed Salad - Spaz Start": "|Spaz Unlock|"
+    },
+    "requires": "|Tossed Salad Unlock| or |Formerly a Prince Progressive Level Unlock:4|"
   },
   "Tossed Salad - Jazz Start": {
     "connects_to": [
@@ -524,7 +535,6 @@
       "Tossed Salad - Extra Life High Above Frozen Spring Secret",
       "Tossed Salad - Five Silver Coins Above Trigger Scenery Blocks Secret"
     ],
-    "requires": "|Tossed Salad Unlock| or |Formerly a Prince Progressive Level Unlock:4|",
     "_comment": "R:J0    Spaz can drop down here by not shooting down the tree bridges"
   },
   "Tossed Salad - Spaz Start": {
@@ -532,7 +542,6 @@
       "Tossed Salad - Jazz Start",
       "Tossed Salad - Spaz Only Final Part"
     ],
-    "requires": "(|Tossed Salad Unlock| or |Formerly a Prince Progressive Level Unlock:4|) and |Spaz Unlock|",
     "_comment": "R:S0"
   },
   "Tossed Salad - Spaz Only Final Part": {
@@ -636,8 +645,14 @@
   },
   "Tossed Salad - Exit": {
     "connects_to": [
-      "Carrot Juice - Start"
+      "Carrot Juice - Entrance"
     ]
+  },
+  "Carrot Juice - Entrance": {
+    "connects_to": [
+      "Carrot Juice - Start"
+    ],
+    "requires": "|Carrot Juice Unlock| or |Formerly a Prince Progressive Level Unlock:5|"
   },
   "Carrot Juice - Start": {
     "connects_to": [
@@ -645,7 +660,6 @@
       "Carrot Juice - Right Path",
       "Carrot Juice - Extra Life High Above Start Secret"
     ],
-    "requires": "|Carrot Juice Unlock| or |Formerly a Prince Progressive Level Unlock:5|",
     "_comment": "R:M0"
   },
   "Carrot Juice - Extra Life High Above Start Secret": {
@@ -868,15 +882,25 @@
   },
   "Carrot Juice - Exit": {
     "connects_to": [
+      "Weirder Science - Entrance"
+    ]
+  },
+  "Weirder Science - Entrance": {
+    "connects_to": [
       "Weirder Science - Jazz Start",
       "Weirder Science - Spaz Start"
-    ]
+    ],
+    "exit_requires": {
+      "Weirder Science - Jazz Start": "|Jazz Unlock| or |Lori Unlock|",
+      "Weirder Science - Spaz Start": "|Spaz Unlock|"
+    },
+    "requires": "|Weirder Science Unlock| or |Formerly a Prince Progressive Level Unlock:6|",
+    "_comment": "R:J0"
   },
   "Weirder Science - Jazz Start": {
     "connects_to": [
       "Weirder Science - Jazz After First Room"
     ],
-    "requires": "(|Weirder Science Unlock| or |Formerly a Prince Progressive Level Unlock:6|) and (|Jazz Unlock| or |Lori Unlock|)",
     "_comment": "R:J0"
   },
   "Weirder Science - Jazz After First Room": {
@@ -1095,14 +1119,19 @@
   },
   "Weirder Science - Exit": {
     "connects_to": [
-      "Loose Screws - Start"
+      "Loose Screws - Entrance"
     ]
+  },
+  "Loose Screws - Entrance": {
+    "connects_to": [
+      "Loose Screws - Start"
+    ],
+    "requires": "|Loose Screws Unlock| or |Formerly a Prince Progressive Level Unlock:7|"
   },
   "Loose Screws - Start": {
     "connects_to": [
       "Loose Screws - After Speed Blocks"
     ],
-    "requires": "|Loose Screws Unlock| or |Formerly a Prince Progressive Level Unlock:7|",
     "_comment": "R:M0    All coins at the start can be reached with basic jumps and dashing (high gold coin requires using the green spring in the crate on the left)"
   },
   "Loose Screws - After Speed Blocks": {
@@ -1241,15 +1270,20 @@
   },
   "Loose Screws - Exit": {
     "connects_to": [
-      "Victorian Secret - Start"
+      "Victorian Secret - Entrance"
     ]
+  },
+  "Victorian Secret - Entrance": {
+    "connects_to": [
+      "Victorian Secret - Start"
+    ],
+    "requires": "|Victorian Secret Unlock| or |Jazz in Time Progressive Level Unlock:1|"
   },
   "Victorian Secret - Start": {
     "connects_to": [
       "Victorian Secret - Coins in Window Above Start Secret",
       "Victorian Secret - In and After First Sewer Section"
     ],
-    "requires": "|Victorian Secret Unlock| or |Jazz in Time Progressive Level Unlock:1|",
     "exit_requires": {
       "Victorian Secret - In and After First Sewer Section": "{canDestroySpecialMoveBlocks(Victorian Secret, above)}"
     },
@@ -1318,18 +1352,23 @@
   },
   "Victorian Secret - Exit": {
     "connects_to": [
-      "Colonial Chaos - Start"
+      "Colonial Chaos - Entrance"
     ]
+  },
+  "Colonial Chaos - Entrance": {
+    "connects_to": [
+      "Colonial Chaos - Start"
+    ],
+    "requires": "|Colonial Chaos Unlock| or |Jazz in Time Progressive Level Unlock:2|",
+    "_comment": "R:M0"
   },
   "Colonial Chaos - Start": {
     "connects_to": [
       "Colonial Chaos - Silver Coins in Window Above Start",
       "Colonial Chaos - In and Near First Sewer Section"
     ],
-    "requires": "|Colonial Chaos Unlock| or |Jazz in Time Progressive Level Unlock:2|",
     "_comment": "R:M0"
   },
-
   "Colonial Chaos - Silver Coins in Window Above Start": {
     "connects_to": [
       "Colonial Chaos - Start"
@@ -1401,14 +1440,19 @@
   },
   "Colonial Chaos - Exit": {
     "connects_to": [
-      "Purple Haze Maze - Start"
+      "Purple Haze Maze - Entrance"
     ]
+  },
+  "Purple Haze Maze - Entrance": {
+    "connects_to": [
+      "Purple Haze Maze - Start"
+    ],
+    "requires": "|Purple Haze Maze Unlock| or |Jazz in Time Progressive Level Unlock:3|"
   },
   "Purple Haze Maze - Start": {
     "connects_to": [
       "Purple Haze Maze - Through the Hat Near Start"
     ],
-    "requires": "|Purple Haze Maze Unlock| or |Jazz in Time Progressive Level Unlock:3|",
     "_comment": "R:M0"
   },
   "Purple Haze Maze - Through the Hat Near Start": {
@@ -1581,8 +1625,14 @@
   },
   "Purple Haze Maze - Exit": {
     "connects_to": [
-      "Funky Grooveathon - Start"
+      "Funky Grooveathon - Entrance"
     ]
+  },
+  "Funky Grooveathon - Entrance": {
+    "connects_to": [
+      "Funky Grooveathon - Start"
+    ],
+    "requires": "|Funky Grooveathon Unlock| or |Jazz in Time Progressive Level Unlock:4|"
   },
   "Funky Grooveathon - Start": {
     "connects_to": [
@@ -1590,7 +1640,6 @@
       "Funky Grooveathon - TNT Ammo Above Vine Near Start",
       "Funky Grooveathon - Bouncer Ammo on High Ledge"
     ],
-    "requires": "|Funky Grooveathon Unlock| or |Jazz in Time Progressive Level Unlock:4|",
     "_comment": "R:M0"
   },
   "Funky Grooveathon - TNT Ammo Above Vine Near Start": {
@@ -1669,14 +1718,19 @@
   },
   "Funky Grooveathon - Exit": {
     "connects_to": [
-      "Beach Bunny Bingo - Start"
+      "Beach Bunny Bingo - Entrance"
     ]
+  },
+  "Beach Bunny Bingo - Entrance": {
+    "connects_to": [
+      "Beach Bunny Bingo - Start"
+    ],
+    "requires": "|Beach Bunny Bingo Unlock| or |Jazz in Time Progressive Level Unlock:5|"
   },
   "Beach Bunny Bingo - Start": {
     "connects_to": [
       "Beach Bunny Bingo - After One Ways"
     ],
-    "requires": "|Beach Bunny Bingo Unlock| or |Jazz in Time Progressive Level Unlock:5|",
     "_comment": "R:M0"
   },
   "Beach Bunny Bingo - After One Ways": {
@@ -1715,14 +1769,19 @@
   },
   "Beach Bunny Bingo - Exit": {
     "connects_to": [
-      "Marinated Rabbit - Start"
+      "Marinated Rabbit - Entrance"
     ]
+  },
+  "Marinated Rabbit - Entrance": {
+    "connects_to": [
+      "Marinated Rabbit - Start"
+    ],
+    "requires": "|Marinated Rabbit Unlock| or |Jazz in Time Progressive Level Unlock:6|"
   },
   "Marinated Rabbit - Start": {
     "connects_to": [
       "Marinated Rabbit - Water Section Before Strong Current"
     ],
-    "requires": "|Marinated Rabbit Unlock| or |Jazz in Time Progressive Level Unlock:6|",
     "_comment": "R:M0"
   },
   "Marinated Rabbit - Water Section Before Strong Current": {
@@ -1785,9 +1844,19 @@
 
   "Marinated Rabbit - Exit": {
     "connects_to": [
+      "A Diamondus Forever - Entrance"
+    ]
+  },
+  "A Diamondus Forever - Entrance": {
+    "connects_to": [
       "A Diamondus Forever - Jazz Start",
       "A Diamondus Forever - Spaz Start"
-    ]
+    ],
+    "exit_requires": {
+      "A Diamondus Forever - Jazz Start": "|Jazz Unlock| or |Lori Unlock|",
+      "A Diamondus Forever - Spaz Start": "|Spaz Unlock|"
+    },
+    "requires": "|A Diamondus Forever Unlock| or |Flashback Progressive Level Unlock:1|"
   },
   "A Diamondus Forever - Jazz Start": {
     "connects_to": [
@@ -1795,7 +1864,6 @@
       "A Diamondus Forever - Jazz Spring Tunnel Behind Destructible Blocks",
       "A Diamondus Forever - Jazz Toaster Ammo and Gold Coin Below Start Secret"
     ],
-    "requires": "(|Jazz Unlock| or |Lori Unlock|) and (|A Diamondus Forever Unlock| or |Flashback Progressive Level Unlock:1|)",
     "_comment": "R:J0"
   },
   "A Diamondus Forever - Jazz Toaster Ammo and Gold Coin Below Start Secret": {
@@ -1892,11 +1960,9 @@
   },
   "A Diamondus Forever - Spaz Start": {
     "connects_to": [
-      "A Diamondus Forever - Exit",
       "A Diamondus Forever - Spaz Vines Below First Room",
       "A Diamondus Forever - Spaz Cave Upper Section"
     ],
-    "requires": "|Spaz Unlock| and (|A Diamondus Forever Unlock| or |Flashback Progressive Level Unlock:1|)",
     "_comment": "R:S0"
   },
   "A Diamondus Forever - Spaz Vines Below First Room": {
@@ -2034,8 +2100,14 @@
   },
   "A Diamondus Forever - Exit": {
     "connects_to": [
-      "Fourteen Carrot - Start"
+      "Fourteen Carrot - Entrance"
     ]
+  },
+  "Fourteen Carrot - Entrance": {
+    "connects_to": [
+      "Fourteen Carrot - Start"
+    ],
+    "requires": "|Fourteen Carrot Unlock| or |Flashback Progressive Level Unlock:2|"
   },
   "Fourteen Carrot - Start": {
     "connects_to": [
@@ -2049,7 +2121,6 @@
       "Fourteen Carrot - Gold Coin Blocked By Spring Secret",
       "Fourteen Carrot - Six Silver Coins and Super Gem Above Frozen Spring Secret"
     ],
-    "requires": "|Fourteen Carrot Unlock| or |Flashback Progressive Level Unlock:2|",
     "_comment": "R:M0"
   },
   "Fourteen Carrot - Pepper Spray Ammo Above Trigger Scenery at Start Secret": {
@@ -2181,14 +2252,19 @@
   },
   "Fourteen Carrot - Exit": {
     "connects_to": [
-      "Electric Boogaloo - Start"
+      "Electric Boogaloo - Entrance"
     ]
+  },
+  "Electric Boogaloo - Entrance": {
+    "connects_to": [
+      "Electric Boogaloo - Start"
+    ],
+    "requires": "|Electric Boogaloo Unlock| or |Flashback Progressive Level Unlock:3|"
   },
   "Electric Boogaloo - Start": {
     "connects_to": [
       "Electric Boogaloo - Above and In First Pinball Room"
     ],
-    "requires": "|Electric Boogaloo Unlock| or |Flashback Progressive Level Unlock:3|",
     "_comment": "R:M0"
   },
   "Electric Boogaloo - Above and In First Pinball Room": {
@@ -2358,16 +2434,25 @@
   },
   "Electric Boogaloo - Exit": {
     "connects_to": [
+      "Voltage Village - Entrance"
+    ]
+  },
+  "Voltage Village - Entrance": {
+    "connects_to": [
       "Voltage Village - Jazz Start",
       "Voltage Village - Spaz Start"
-    ]
+    ],
+    "exit_requires": {
+      "Voltage Village - Jazz Start": "|Jazz Unlock| or |Lori Unlock|",
+      "Voltage Village - Spaz Start": "|Spaz Unlock|"
+    },
+    "requires": "|Voltage Village Unlock| or |Flashback Progressive Level Unlock:4|"
   },
   "Voltage Village - Jazz Start": {
     "connects_to": [
       "Voltage Village - Shared Path Start",
       "Voltage Village - Jazz Only TNT Ammo Behind Uppercut Blocks Secret"
     ],
-    "requires": "(|Jazz Unlock| or |Lori Unlock|) and (|Voltage Village Unlock| or |Flashback Progressive Level Unlock:4|)",
     "_comment": "R:J0"
   },
   "Voltage Village - Jazz Only TNT Ammo Behind Uppercut Blocks Secret": {
@@ -2381,7 +2466,6 @@
     "connects_to": [
       "Voltage Village - Spaz After First Sidekick Blocks"
     ],
-    "requires": "|Spaz Unlock| and (|Voltage Village Unlock| or |Flashback Progressive Level Unlock:4|)",
     "_comment": "R:S0"
   },
   "Voltage Village - Spaz After First Sidekick Blocks": {
@@ -2510,8 +2594,14 @@
   },
   "Voltage Village - Exit": {
     "connects_to": [
-      "Medieval Kineval - Start"
+      "Medieval Kineval - Entrance"
     ]
+  },
+  "Medieval Kineval - Entrance": {
+    "connects_to": [
+      "Medieval Kineval - Start"
+    ],
+    "requires": "|Medieval Kineval Unlock| or |Flashback Progressive Level Unlock:5|"
   },
   "Medieval Kineval - Start": {
     "connects_to": [
@@ -2519,7 +2609,6 @@
       "Medieval Kineval - Two Gold Coins Behind Destructible Pillar Secret",
       "Medieval Kineval - Birdy and Two Gold Coins Below Rope Bridge Secret"
     ],
-    "requires": "|Medieval Kineval Unlock| or |Flashback Progressive Level Unlock:5|",
     "_comment": "R:M0"
   },
   "Medieval Kineval - Two Gold Coins Behind Destructible Pillar Secret": {
@@ -2599,7 +2688,7 @@
   },
   "Medieval Kineval - Secret Level Exit": {
     "connects_to": [
-      "Gargoyles Lair - Start"
+      "Gargoyles Lair - Entrance"
     ],
     "_comment": "R:A9    Can be reached with dashing only as long as the trigger scenery blocks haven't been removed. Otherwise likely requires DJ/UC+CE."
   },
@@ -2680,14 +2769,19 @@
   },
   "Medieval Kineval - Exit": {
     "connects_to": [
-      "Hare Scare - Start"
+      "Hare Scare - Entrance"
     ]
+  },
+  "Hare Scare - Entrance": {
+    "connects_to": [
+      "Hare Scare - Start"
+    ],
+    "requires": "|Hare Scare Unlock| or |Flashback Progressive Level Unlock:6|"
   },
   "Hare Scare - Start": {
     "connects_to": [
       "Hare Scare - First Climb RF Ammo Over Spikes Section"
     ],
-    "requires": "|Hare Scare Unlock| or |Flashback Progressive Level Unlock:6|",
     "_comment": "R:M0"
   },
   "Hare Scare - First Climb RF Ammo Over Spikes Section": {
@@ -2805,16 +2899,20 @@
   },
   "Hare Scare - Exit": {
     "connects_to": [
-      "Thriller Gorilla - Jazz Start",
-      "Thriller Gorilla - Spaz Start"
+      "Thriller Gorilla - Entrance"
     ]
+  },
+  "Gargoyles Lair - Entrance": {
+    "connects_to": [
+      "Gargoyles Lair - Start"
+    ],
+    "requires": "|Gargoyles Lair Unlock| or |Flashback Progressive Level Unlock:7|"
   },
   "Gargoyles Lair - Start": {
     "connects_to": [
       "Gargoyles Lair - First Trigger Crate Enclave",
       "Gargoyles Lair - Cakes Above Vine"
     ],
-    "requires": "|Gargoyles Lair Unlock| or |Flashback Progressive Level Unlock:7|",
     "_comment": "R:M0"
   },
   "Gargoyles Lair - Cakes Above Vine": {
@@ -2922,11 +3020,21 @@
       "Medieval Kineval - After Return From Secret Level"
     ]
   },
+  "Thriller Gorilla - Entrance": {
+    "connects_to": [
+      "Thriller Gorilla - Jazz Start",
+      "Thriller Gorilla - Spaz Start"
+    ],
+    "exit_requires": {
+      "Thriller Gorilla - Jazz Start": "|Jazz Unlock| or |Lori Unlock|",
+      "Thriller Gorilla - Spaz Start": "|Spaz Unlock|"
+    },
+    "requires": "|Thriller Gorilla Unlock| or |Funky Monkeys Progressive Level Unlock:1|"
+  },
   "Thriller Gorilla - Jazz Start": {
     "connects_to": [
       "Thriller Gorilla - Jazz Between First Two Trees"
     ],
-    "requires": "(|Jazz Unlock| or |Lori Unlock|) and (|Thriller Gorilla Unlock| or |Funky Monkeys Progressive Level Unlock:1|)",
     "_comment": "R:J0"
   },
   "Thriller Gorilla - Jazz Between First Two Trees": {
@@ -2974,7 +3082,6 @@
       "Thriller Gorilla - Shared Path Start",
       "Thriller Gorilla - Spaz Only Four Silver Coins Above Vine Secret"
     ],
-    "requires": "|Spaz Unlock| and (|Thriller Gorilla Unlock| or |Funky Monkeys Progressive Level Unlock:1|)",
     "_comment": "R:S0"
   },
   "Thriller Gorilla - Spaz Only Four Silver Coins Above Vine Secret": {
@@ -3061,14 +3168,19 @@
   },
   "Thriller Gorilla - Exit": {
     "connects_to": [
-      "Jungle Jump - Start"
+      "Jungle Jump - Entrance"
     ]
+  },
+  "Jungle Jump - Entrance": {
+    "connects_to": [
+      "Jungle Jump - Start"
+    ],
+    "requires": "|Jungle Jump Unlock| or |Funky Monkeys Progressive Level Unlock:2|"
   },
   "Jungle Jump - Start": {
     "connects_to": [
       "Jungle Jump - Climb After Destructible Blocks Near Start"
     ],
-    "requires": "|Jungle Jump Unlock| or |Funky Monkeys Progressive Level Unlock:2|",
     "_comment": "R:M0"
   },
   "Jungle Jump - Climb After Destructible Blocks Near Start": {
@@ -3173,15 +3285,20 @@
   },
   "Jungle Jump - Exit": {
     "connects_to": [
-      "A Cold Day in Heck - Start"
+      "A Cold Day in Heck - Entrance"
     ]
+  },
+  "A Cold Day in Heck - Entrance": {
+    "connects_to": [
+      "A Cold Day in Heck - Start"
+    ],
+    "requires": "|A Cold Day in Heck Unlock| or |Funky Monkeys Progressive Level Unlock:3|"
   },
   "A Cold Day in Heck - Start": {
     "connects_to": [
       "A Cold Day in Heck - Near Save Point",
       "A Cold Day in Heck - Extra Life Behind Frozen Blocks Secret"
     ],
-    "requires": "|A Cold Day in Heck Unlock| or |Funky Monkeys Progressive Level Unlock:3|",
     "_comment": "R:M0"
   },
   "A Cold Day in Heck - Extra Life Behind Frozen Blocks Secret": {
@@ -3262,15 +3379,20 @@
   },
   "A Cold Day in Heck - Exit": {
     "connects_to": [
-      "Rabbit Roast - Start"
+      "Rabbit Roast - Entrance"
     ]
+  },
+  "Rabbit Roast - Entrance": {
+    "connects_to": [
+      "Rabbit Roast - Start"
+    ],
+    "requires": "|Rabbit Roast Unlock| or |Funky Monkeys Progressive Level Unlock:4|"
   },
   "Rabbit Roast - Start": {
     "connects_to": [
       "Rabbit Roast - After First Save Point",
       "Rabbit Roast - Plasma Shield Secret"
     ],
-    "requires": "|Rabbit Roast Unlock| or |Funky Monkeys Progressive Level Unlock:4|",
     "_comment": "R:M0"
   },
   "Rabbit Roast - Plasma Shield Secret": {
@@ -3339,8 +3461,14 @@
   },
   "Rabbit Roast - Exit": {
     "connects_to": [
-      "Burnin Biscuits - Start"
+      "Burnin Biscuits - Entrance"
     ]
+  },
+  "Burnin Biscuits - Entrance": {
+    "connects_to": [
+      "Burnin Biscuits - Start"
+    ],
+    "requires": "|Burnin Biscuits Unlock| or |Funky Monkeys Progressive Level Unlock:5|"
   },
   "Burnin Biscuits - Start": {
     "connects_to": [
@@ -3350,7 +3478,6 @@
       "Burnin Biscuits - Four Silver Coins in a Corner High Above Main Path Secret",
       "Burnin Biscuits - Ammo and Extra Life Crates Accessed by Spring Below Buttstomp Blocks Secret"
     ],
-    "requires": "|Burnin Biscuits Unlock| or |Funky Monkeys Progressive Level Unlock:5|",
     "_comment": "R:M0"
   },
   "Burnin Biscuits - Four Silver Coins Behind Sidekick Blocks Secret": {
@@ -3418,14 +3545,19 @@
   },
   "Burnin Biscuits - Exit": {
     "connects_to": [
-      "Bad Pitt - Start"
+      "Bad Pitt - Entrance"
     ]
+  },
+  "Bad Pitt - Entrance": {
+    "connects_to": [
+      "Bad Pitt - Start"
+    ],
+    "requires": "|Bad Pitt Unlock| or |Funky Monkeys Progressive Level Unlock:6|"
   },
   "Bad Pitt - Start": {
     "connects_to": [
       "Bad Pitt - After Buttstomp Blocks Near Start"
     ],
-    "requires": "|Bad Pitt Unlock| or |Funky Monkeys Progressive Level Unlock:6|",
     "_comment": "R:M0"
   },
   "Bad Pitt - After Buttstomp Blocks Near Start": {
@@ -3533,6 +3665,12 @@
   "Bad Pitt - Exit": {
     "connects_to": []
   },
+  "Darn Ratz - Entrance": {
+    "connects_to": [
+      "Darn Ratz - Start"
+    ],
+    "requires": "|Darn Ratz Unlock| or |Shareware Demo Progressive Level Unlock:1|"
+  },
   "Darn Ratz - Start": {
     "connects_to": [
       "Darn Ratz - Room With Wildcard Destructible Block Tutorial",
@@ -3542,7 +3680,6 @@
     "exit_requires": {
       "Darn Ratz - Room With Wildcard Destructible Block Tutorial": "{canGrabVines()}"
     },
-    "requires": "|Darn Ratz Unlock| or |Shareware Demo Progressive Level Unlock:1|",
     "_comment": "R:M0"
   },
   "Darn Ratz - Red Gems Above Vine Secret": {
@@ -3711,15 +3848,24 @@
   },
   "Darn Ratz - Exit": {
     "connects_to": [
+      "Retro Rabbit - Entrance"
+    ]
+  },
+  "Retro Rabbit - Entrance": {
+    "connects_to": [
       "Retro Rabbit - Jazz Start",
       "Retro Rabbit - Spaz Start"
-    ]
+    ],
+    "exit_requires": {
+      "Retro Rabbit - Jazz Start": "|Jazz Unlock| or |Lori Unlock|",
+      "Retro Rabbit - Spaz Start": "|Spaz Unlock|"
+    },
+    "requires": "|Retro Rabbit Unlock| or |Shareware Demo Progressive Level Unlock:2|"
   },
   "Retro Rabbit - Jazz Start": {
     "connects_to": [
       "Retro Rabbit - Jazz After Buttstomp Blocks"
     ],
-    "requires": "(|Jazz Unlock| or |Lori Unlock|) and (|Retro Rabbit Unlock| or |Shareware Demo Progressive Level Unlock:2|)",
     "_comment": "R:J0"
   },
   "Retro Rabbit - Jazz After Buttstomp Blocks": {
@@ -3737,7 +3883,6 @@
     "connects_to": [
       "Retro Rabbit - Spaz Platforms Above Jazz Path"
     ],
-    "requires": "|Spaz Unlock| and (|Retro Rabbit Unlock| or |Shareware Demo Progressive Level Unlock:2|)",
     "_comment": "R:S0"
   },
   "Retro Rabbit - Spaz Platforms Above Jazz Path": {
@@ -3818,14 +3963,19 @@
   },
   "Retro Rabbit - Exit": {
     "connects_to": [
-      "Frog Stomp - Start"
+      "Frog Stomp - Entrance"
     ]
+  },
+  "Frog Stomp - Entrance": {
+    "connects_to": [
+      "Frog Stomp - Start"
+    ],
+    "requires": "|Frog Stomp Unlock| or |Shareware Demo Progressive Level Unlock:3|"
   },
   "Frog Stomp - Start": {
     "connects_to": [
       "Frog Stomp - Tunnel After Destructible Blocks on First Visit"
     ],
-    "requires": "|Frog Stomp Unlock| or |Shareware Demo Progressive Level Unlock:3|",
     "_comment": "R:M0"
   },
   "Frog Stomp - Tunnel After Destructible Blocks on First Visit": {
@@ -3893,11 +4043,16 @@
   "Frog Stomp - Exit": {
     "connects_to": []
   },
+  "Easter Bunny - Entrance": {
+    "connects_to": [
+      "Easter Bunny - Start"
+    ],
+    "requires": "{YamlEnabled(enable_tsf)} and (|Easter Bunny Unlock| or |The Secret Files Progressive Level Unlock:1|)"
+  },
   "Easter Bunny - Start": {
     "connects_to": [
       "Easter Bunny - Room After Trigger Crate Loop"
     ],
-    "requires": "{YamlEnabled(enable_tsf)} and (|Easter Bunny Unlock| or |The Secret Files Progressive Level Unlock:1|)",
     "_comment": "R:M0"
   },
   "Easter Bunny - Room After Trigger Crate Loop": {
@@ -4017,15 +4172,20 @@
   },
   "Easter Bunny - Exit": {
     "connects_to": [
-      "Spring Chickens - Start"
+      "Spring Chickens - Entrance"
     ]
+  },
+  "Spring Chickens - Entrance": {
+    "connects_to": [
+      "Spring Chickens - Start"
+    ],
+    "requires": "{YamlEnabled(enable_tsf)} and (|Spring Chickens Unlock| or |The Secret Files Progressive Level Unlock:2|)"
   },
   "Spring Chickens - Start": {
     "connects_to": [
       "Spring Chickens - Gem Path at Start First Room",
       "Spring Chickens - Turtle Path at Start"
     ],
-    "requires": "{YamlEnabled(enable_tsf)} and (|Spring Chickens Unlock| or |The Secret Files Progressive Level Unlock:2|)",
     "_comment": "R:M0"
   },
   "Spring Chickens - Turtle Path at Start": {
@@ -4166,14 +4326,19 @@
   },
   "Spring Chickens - Exit": {
     "connects_to": [
-      "Scrambled Eggs - Start"
+      "Scrambled Eggs - Entrance"
     ]
+  },
+  "Scrambled Eggs - Entrance": {
+    "connects_to": [
+      "Scrambled Eggs - Start"
+    ],
+    "requires": "{YamlEnabled(enable_tsf)} and (|Scrambled Eggs Unlock| or |The Secret Files Progressive Level Unlock:3|)"
   },
   "Scrambled Eggs - Start": {
     "connects_to": [
       "Scrambled Eggs - Room Below Start"
     ],
-    "requires": "{YamlEnabled(enable_tsf)} and (|Scrambled Eggs Unlock| or |The Secret Files Progressive Level Unlock:3|)",
     "_comment": "R:M0"
   },
   "Scrambled Eggs - Room Below Start": {
@@ -4306,14 +4471,19 @@
   },
   "Scrambled Eggs - Exit": {
     "connects_to": [
-      "Ghostly Antics - Start"
+      "Ghostly Antics - Entrance"
     ]
+  },
+  "Ghostly Antics - Entrance": {
+    "connects_to": [
+      "Ghostly Antics - Start"
+    ],
+    "requires": "{YamlEnabled(enable_tsf)} and (|Ghostly Antics Unlock| or |The Secret Files Progressive Level Unlock:4|)"
   },
   "Ghostly Antics - Start": {
     "connects_to": [
       "Ghostly Antics - Between Second and Third Buildings"
     ],
-    "requires": "{YamlEnabled(enable_tsf)} and (|Ghostly Antics Unlock| or |The Secret Files Progressive Level Unlock:4|)",
     "_comment": "R:M0"
   },
   "Ghostly Antics - Between Second and Third Buildings": {
@@ -4455,15 +4625,20 @@
   },
   "Ghostly Antics - Exit": {
     "connects_to": [
-      "Skeletons Turf - Start"
+      "Skeletons Turf - Entrance"
     ]
+  },
+  "Skeletons Turf - Entrance": {
+    "connects_to": [
+      "Skeletons Turf - Start"
+    ],
+    "requires": "{YamlEnabled(enable_tsf)} and (|Skeletons Turf Unlock| or |The Secret Files Progressive Level Unlock:5|)"
   },
   "Skeletons Turf - Start": {
     "connects_to": [
       "Skeletons Turf - After Building with Clock Tower",
       "Skeletons Turf - Four Silver Coins on Roof Above Start"
     ],
-    "requires": "{YamlEnabled(enable_tsf)} and (|Skeletons Turf Unlock| or |The Secret Files Progressive Level Unlock:5|)",
     "_comment": "R:M0"
   },
   "Skeletons Turf - Four Silver Coins on Roof Above Start": {
@@ -4532,14 +4707,19 @@
   },
   "Skeletons Turf - Exit": {
     "connects_to": [
-      "Graveyard Shift - Start"
+      "Graveyard Shift - Entrance"
     ]
+  },
+  "Graveyard Shift - Entrance": {
+    "connects_to": [
+      "Graveyard Shift - Start"
+    ],
+    "requires": "{YamlEnabled(enable_tsf)} and (|Graveyard Shift Unlock| or |The Secret Files Progressive Level Unlock:6|)"
   },
   "Graveyard Shift - Start": {
     "connects_to": [
       "Graveyard Shift - Upper Section After Ledge"
     ],
-    "requires": "{YamlEnabled(enable_tsf)} and (|Graveyard Shift Unlock| or |The Secret Files Progressive Level Unlock:6|)",
     "_comment": "R:M0"
   },
   "Graveyard Shift - Upper Section After Ledge": {
@@ -4651,14 +4831,19 @@
   },
   "Graveyard Shift - Exit": {
     "connects_to": [
-      "Turtle Town - Start"
+      "Turtle Town - Entrance"
     ]
+  },
+  "Turtle Town - Entrance": {
+    "connects_to": [
+      "Turtle Town - Start"
+    ],
+    "requires": "{YamlEnabled(enable_tsf)} and (|Turtle Town Unlock| or |The Secret Files Progressive Level Unlock:7|)"
   },
   "Turtle Town - Start": {
     "connects_to": [
       "Turtle Town - Second Layer Before Spring Section"
     ],
-    "requires": "{YamlEnabled(enable_tsf)} and (|Turtle Town Unlock| or |The Secret Files Progressive Level Unlock:7|)",
     "_comment": "R:M0"
   },
   "Turtle Town - Second Layer Before Spring Section": {
@@ -4772,8 +4957,14 @@
   },
   "Turtle Town - Exit": {
     "connects_to": [
-      "Suburbia Commando - Start"
+      "Suburbia Commando - Entrance"
     ]
+  },
+  "Suburbia Commando - Entrance": {
+    "connects_to": [
+      "Suburbia Commando - Start"
+    ],
+    "requires": "{YamlEnabled(enable_tsf)} and (|Suburbia Commando Unlock| or |The Secret Files Progressive Level Unlock:8|)"
   },
   "Suburbia Commando - Start": {
     "connects_to": [
@@ -4781,7 +4972,6 @@
       "Suburbia Commando - Gems in House Near Start Secret",
       "Suburbia Commando - Gem Crate in House Basement Near Start Secret"
     ],
-    "requires": "{YamlEnabled(enable_tsf)} and (|Suburbia Commando Unlock| or |The Secret Files Progressive Level Unlock:8|)",
     "_comment": "R:M0"
   },
   "Suburbia Commando - Gems in House Near Start Secret": {
@@ -4934,15 +5124,20 @@
   },
   "Suburbia Commando - Exit": {
     "connects_to": [
-      "Urban Brawl - Start"
+      "Urban Brawl - Entrance"
     ]
+  },
+  "Urban Brawl - Entrance": {
+    "connects_to": [
+      "Urban Brawl - Start"
+    ],
+    "requires": "{YamlEnabled(enable_tsf)} and (|Urban Brawl Unlock| or |The Secret Files Progressive Level Unlock:9|)"
   },
   "Urban Brawl - Start": {
     "connects_to": [
       "Urban Brawl - First Layer After Horizontal Pole",
       "Urban Brawl - Gems Below Buttstomp Blocks Secret"
     ],
-    "requires": "{YamlEnabled(enable_tsf)} and (|Urban Brawl Unlock| or |The Secret Files Progressive Level Unlock:9|)",
     "_comment": "R:M0"
   },
   "Urban Brawl - Gems Below Buttstomp Blocks Secret": {
@@ -5039,12 +5234,17 @@
   "Urban Brawl - Exit": {
     "connects_to": []
   },
+  "Snow Bunnies - Entrance": {
+    "connects_to": [
+      "Snow Bunnies - Start"
+    ],
+    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and (|Snow Bunnies Unlock| or |Christmas Chronicles Progressive Level Unlock:1|)"
+  },
   "Snow Bunnies - Start": {
     "connects_to": [
       "Snow Bunnies - After Buttstomp Blocks Near Start",
       "Snow Bunnies - Gold Coin High Above Hidden Spring Secret"
     ],
-    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and (|Snow Bunnies Unlock| or |Christmas Chronicles Progressive Level Unlock:1|)",
     "_comment": "R:M0"
   },
   "Snow Bunnies - Gold Coin High Above Hidden Spring Secret": {
@@ -5139,9 +5339,19 @@
   },
   "Snow Bunnies - Exit": {
     "connects_to": [
+      "Dashing thru the snow.. - Entrance"
+    ]
+  },
+  "Dashing thru the snow.. - Entrance": {
+    "connects_to": [
       "Dashing thru the snow.. - Start",
       "Dashing thru the snow.. - Spaz Start"
-    ]
+    ],
+    "exit_requires": {
+      "Dashing thru the snow.. - Spaz Start": "|Spaz Unlock|"
+    },
+    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and (|Dashing thru the snow.. Unlock| or |Christmas Chronicles Progressive Level Unlock:2|)",
+    "_comment": "There's no Jazz start, really, since Spaz plops right into where Jazz starts after his own little exclusive cavern."
   },
   "Dashing thru the snow.. - Start": {
     "connects_to": [
@@ -5150,14 +5360,12 @@
       "Dashing thru the snow.. - Five Silver Coins in Sucker Tube Secret",
       "Dashing thru the snow.. - Upper Path Near Start"
     ],
-    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and (|Dashing thru the snow.. Unlock| or |Christmas Chronicles Progressive Level Unlock:2|)",
-    "_comment": "R:M0    There's no Jazz start, really, since Spaz plops right into where Jazz starts after his own little exclusive cavern."
+    "_comment": "R:M0"
   },
   "Dashing thru the snow.. - Spaz Start": {
     "connects_to": [
       "Dashing thru the snow.. - Start"
     ],
-    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and |Spaz Unlock| and (|Dashing thru the snow.. Unlock| or |Christmas Chronicles Progressive Level Unlock:2|)",
     "_comment": "R:S0"
   },
   "Dashing thru the snow.. - Blue Gem High Above Climbable Trees Secret": {
@@ -5305,7 +5513,7 @@
   },
   "Dashing thru the snow.. - Exit": {
     "connects_to": [
-      "Tinsel Town - Start"
+      "Tinsel Town - Entrance"
     ]
   },
   "Dashing thru the snow.. - Warp to Room With Personal Messages From Developers Secret": {
@@ -5323,6 +5531,12 @@
     "requires": "Inaccessible",
     "_comment": "R:X2    The continuation of the above region. Will be removed when region data is loaded."
   },
+  "Tinsel Town - Entrance": {
+    "connects_to": [
+      "Tinsel Town - Start"
+    ],
+    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and (|Tinsel Town Unlock| or |Christmas Chronicles Progressive Level Unlock:3|)"
+  },
   "Tinsel Town - Start": {
     "connects_to": [
       "Tinsel Town - Between Main Path TNT Blocks",
@@ -5331,7 +5545,6 @@
       "Tinsel Town - Chute With Candy in Big Downwards and Upwards Slope Section",
       "Tinsel Town - TNT Block Bypass into Room With Four Silver Coins Secret"
     ],
-    "requires": "({YamlEnabled(enable_cc)} or {YamlEnabled(enable_hh)}) and (|Tinsel Town Unlock| or |Christmas Chronicles Progressive Level Unlock:3|)",
     "_comment": "R:M0"
   },
   "Tinsel Town - Room With Candy Below Buttstomp Blocks at Start": {
