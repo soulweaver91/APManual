@@ -177,5 +177,8 @@
   },
   "Level Movement Ability": {
 
+  },
+  "Victory": {
+    "hidden": true
   }
 }
