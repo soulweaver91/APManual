@@ -3216,7 +3216,7 @@
       "id": 990099,
       "name": "Victory",
       "category": [
-        "Victory"
+        "Victory Condition"
       ],
       "requires": "|All Episodes Complete|",
       "victory": true,
