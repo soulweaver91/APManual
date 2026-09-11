@@ -5,3 +5,8 @@
 .idea
 build.py
 *.apworld
+
+# The raw result from the converter will be initially output here.
+# The actual tracker, to which changes from that converted result will
+# be transferred to, lives in another repository.
+src/tracker
