@@ -4025,7 +4025,7 @@
     "connects_to": [
       "Frog Stomp - Before Boss Room"
     ],
-    "requires": "{canDestroySpecialMoveBlocks(above)}",
+    "requires": "{canDestroySpecialMoveBlocks(Frog Stomp, above)}",
     "_comment": "R:M6"
   },
   "Frog Stomp - Before Boss Room": {
