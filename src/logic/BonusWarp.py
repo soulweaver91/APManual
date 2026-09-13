@@ -100,7 +100,7 @@ COIN_ACCESS_BY_LEVEL_LOOKUP: dict[Levels, CoinPathGroup] = {
                 # A2     gold:   (163, 6)
                 CN(5, 'Jazz Only Gold Coin Secret'),
                 # J3     gold:   (20, 23) (56, 31) (57, 31)
-                CN(15)
+                CN(15, 'Jazz Left Path Left Branch After Chute')
             ])
         ).branch(
             CG('Spaz branch', 'Spaz').seq([
@@ -496,8 +496,10 @@ COIN_ACCESS_BY_LEVEL_LOOKUP: dict[Levels, CoinPathGroup] = {
         CN(5),
         # A1     gold:   (89, 24)
         CN(5),
-        # M7     gold:   (143, 42) (175, 51)
-        CN(10),
+        # M6     gold:   (143, 42)
+        CN(5),
+        # M7     gold:   (175, 51)
+        CN(5),
         # M9     gold:   (230, 30)
         CN(5)
     ]),
