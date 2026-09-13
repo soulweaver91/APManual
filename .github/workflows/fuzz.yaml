@@ -2,6 +2,7 @@ name: Fuzz apworld
 on:
   push:
     paths:
+      - '.github/workflows/**'
       - 'pytest.ini'
       - 'src/**'
       - '!src/docs/**'

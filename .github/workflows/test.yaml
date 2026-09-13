@@ -2,6 +2,7 @@ name: Test apworld
 on:
   push:
     paths:
+      - '.github/workflows/**'
       - 'pytest.ini'
       - 'src/**'
       - '!src/docs/**'
