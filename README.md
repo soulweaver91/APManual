@@ -13,6 +13,9 @@ The specifics of how this particular manual implementation works can be
 similarly found in its own [introduction](src/docs/en_Manual_JazzJackrabbit2_Soulweaver.md)
 and its [setup guide](src/docs/setup_en.md) of sorts.
 
+This implementation also has a PopTracker pack available [here](
+  https://github.com/soulweaver91/APManualTracker-Jazz2).
+
 ## Currently known issues
 All official levels are currently provisionally supported. As the world hasn't
 been thoroughly tested yet, there might be errors in region connections or
