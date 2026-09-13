@@ -1,6 +1,10 @@
 name: Fuzz apworld
 on:
   push:
+    paths:
+      - 'pytest.ini'
+      - 'src/**'
+      - '!src/docs/**'
   pull_request:
 
 jobs:
