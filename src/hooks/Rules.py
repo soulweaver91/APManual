@@ -105,15 +105,16 @@ def canUseSpecialMoveByDirection(multiworld: MultiWorld, state: CollectionState,
 
 
 def canDestroySpecialMoveBlockOrTriggerCrate(multiworld: MultiWorld, state: CollectionState, player: int, level: str, directions: str = ''):
-    level_subdivision_index = 0
-    if level.find('@') > 0:
-        level, level_subdivision_index = level.split('@', 2)
-        level_subdivision_index = int(level_subdivision_index)
-
+    
     if canUseSpecialMoveByDirection(multiworld, state, player, directions):
         return True
-
+    
     if state.has('TNT Permit', player):
+        level_subdivision_index = 0
+        if level.find('@') > 0:
+            level, level_subdivision_index = level.split('@', 2)
+            level_subdivision_index = int(level_subdivision_index)
+
         if hasWeaponAccess(state, player, level, Weapons.TNT):
             return True
 
@@ -121,8 +122,8 @@ def canDestroySpecialMoveBlockOrTriggerCrate(multiworld: MultiWorld, state: Coll
             if (level, level_subdivision_index) in IN_LEVEL_TNT_RULES:
                 in_level_rule = IN_LEVEL_TNT_RULES[(Levels(level), level_subdivision_index)]
                 if isinstance(in_level_rule, list):
-                    for location in in_level_rule:
-                        if CanReachRegion(state, player, f'{level} - {location}'):
+                    for region in in_level_rule:
+                        if CanReachRegion(state, player, f'{level} - {region}'):
                             return True
                 elif in_level_rule is True:
                     return True
@@ -151,16 +152,14 @@ def canDestroySpeedBlocks(multiworld: MultiWorld, state: CollectionState, player
     return state.has('Speed Destructible Scenery', player)
 
 
-def CanReachRegion(state: CollectionState, player: int, location: str) -> bool:
+def CanReachRegion(state: CollectionState, player: int, region: str) -> bool:
     """Can the player reach the given region?"""
-    if state.can_reach_region(location, player):
+    if state.can_reach_region(region, player):
         return True
     return False
 
 
 def hasContinuousLevelAccess(state: CollectionState, player: int, from_level: str, to_level: str) -> bool:
-    from ..Rules import CanReachLocation
-
     end_index = 0
     try:
         end_index = LEVEL_ORDER_LOOKUP.index(to_level)
@@ -178,22 +177,20 @@ def hasContinuousLevelAccess(state: CollectionState, player: int, from_level: st
             return False
 
         try:
-            next_level_access = CanReachLocation(state, player, f'{prev_level} - Level Complete')
+            next_level_access = CanReachRegion(state, player, f'{prev_level} - Exit')
 
             if prev_level == from_level:
                 return next_level_access
             elif not next_level_access:
                 return False
         except ValueError:
-            logging.error(f'hasContinuousLevelAccess: unexpected error when checking if level completion location for {prev_level} could be reached')
+            logging.error(f'hasContinuousLevelAccess: unexpected error when checking if level exit region for {prev_level} could be reached')
             return False
 
     return False
 
 
 def hasWeaponAccess(state: CollectionState, player: int, level: str, weapon: str) -> bool:
-    from ..Rules import CanReachLocation
-
     if not weapon in Weapons:
         logging.error(f'hasWeaponAccess: invalid weapon {weapon}')
         return False
@@ -206,7 +203,7 @@ def hasWeaponAccess(state: CollectionState, player: int, level: str, weapon: str
         return False
 
     unconditional_last_level = None
-    conditional_last_locations: list[tuple[str, str]] = []
+    conditional_last_regions: list[tuple[str, str]] = []
             
     cursor_index = end_index
     while cursor_index > 0:
@@ -221,27 +218,27 @@ def hasWeaponAccess(state: CollectionState, player: int, level: str, weapon: str
                 unconditional_last_level = prev_level
                 break
             else:
-                for location in LEVEL_WEAPON_ACCESS_LOOKUP[weapon]:
-                    conditional_last_locations.append((prev_level, location))
+                for region in LEVEL_WEAPON_ACCESS_LOOKUP[weapon]:
+                    conditional_last_regions.append((prev_level, region))
 
     if unconditional_last_level is not None:
         if hasContinuousLevelAccess(state, player, unconditional_last_level, level):
-            logging.debug(f'hasWeaponAccess: can access unconditional weapon {weapon} location in {unconditional_last_level}')
+            logging.debug(f'hasWeaponAccess: can access unconditional weapon {weapon} region in {unconditional_last_level}')
             return True
-        logging.debug(f'hasWeaponAccess: unconditional weapon {weapon} location in {unconditional_last_level} is inaccessible')
+        logging.debug(f'hasWeaponAccess: unconditional weapon {weapon} region in {unconditional_last_level} is inaccessible')
     else:
-        logging.debug(f'hasWeaponAccess: no unconditional weapon {weapon} location available')
+        logging.debug(f'hasWeaponAccess: no unconditional weapon {weapon} region available')
 
-    for weapon_level, location in conditional_last_locations:
+    for weapon_level, region in conditional_last_regions:
         if not hasContinuousLevelAccess(state, player, weapon_level, level):
             continue
 
-        if CanReachLocation(state, player, f'{weapon_level} - {location}'):
-            logging.debug(f'hasWeaponAccess: can access conditional weapon {weapon} location in {weapon_level} - {location}')
+        if CanReachRegion(state, player, f'{weapon_level} - {region}'):
+            logging.debug(f'hasWeaponAccess: can access conditional weapon {weapon} region in {weapon_level} - {region}')
             return True
-        logging.debug(f'hasWeaponAccess: conditional weapon {weapon} location in {weapon_level} - {location} is inaccessible')
+        logging.debug(f'hasWeaponAccess: conditional weapon {weapon} region in {weapon_level} - {region} is inaccessible')
 
-    logging.debug(f'hasWeaponAccess: cannot access any weapon {weapon} locations from {level}')
+    logging.debug(f'hasWeaponAccess: cannot access any weapon {weapon} regions from {level}')
     return False
 
 
