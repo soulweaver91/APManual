@@ -212,12 +212,13 @@ def hasWeaponAccess(state: CollectionState, player: int, level: str, weapon: str
         if prev_level is None:
             break
 
-        if prev_level in LEVEL_WEAPON_ACCESS_LOOKUP.keys() and weapon in LEVEL_WEAPON_ACCESS_LOOKUP[prev_level].keys():
-            if LEVEL_WEAPON_ACCESS_LOOKUP[prev_level][Weapons(weapon)] == True:
+        if prev_level in LEVEL_WEAPON_ACCESS_LOOKUP and weapon in LEVEL_WEAPON_ACCESS_LOOKUP[prev_level]:
+            weapon_regions = LEVEL_WEAPON_ACCESS_LOOKUP[prev_level][Weapons(weapon)]
+            if weapon_regions == True:
                 unconditional_last_level = prev_level
                 break
-            else:
-                for region in LEVEL_WEAPON_ACCESS_LOOKUP[weapon]:
+            elif isinstance(weapon_regions, dict):
+                for region in weapon_regions:
                     conditional_last_regions.append((prev_level, region))
 
     if unconditional_last_level is not None:
