@@ -3896,7 +3896,7 @@
       "Retro Rabbit - Jazz Start",
       "Retro Rabbit - Shared Path Start"
     ],
-    "requires": "{canDestroySpecialMoveBlocks(above)}",
+    "requires": "{canDestroySpecialMoveBlocks(Retro Rabbit, above)}",
     "exit_requires": {  
       "Retro Rabbit - Jazz Start": "{canDoubleJump()} or {canUppercut()}"
     },
