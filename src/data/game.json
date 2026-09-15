@@ -2,7 +2,23 @@
   "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.game.schema.json",
   "game": "Jazz Jackrabbit 2",
   "creator": "Soulweaver",
-  "filler_item_name": "Nothing",
+  "filler_item_name": [
+    "'Queen of  B o a r D  for Dummies, Vol. VIII'",
+    "Box of Candion Chocolates",
+    "Carrot Peelings",
+    "Bronze Coin",
+    "Furball",
+    "Clear Gem",
+    "Cracked Gem",
+    "Murky Gem",
+    "Pale Gem",
+    "Blue Bird Feathers",
+    "Red-Green Bird Feathers",
+    "Sweaty Headband",
+    "Blaster Ammo",
+    "Not Very Bouncy Bouncer Ammo",
+    "Premium Bottle of Carrottus Carrot Juice"
+  ],
   "starting_items": [
     { 
       "items": ["Blaster Permit"]

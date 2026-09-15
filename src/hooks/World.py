@@ -35,11 +35,41 @@ import logging
 ########################################################################################
 
 
+UNIQUE_FILLER_ITEMS: list[str] = [
+    "'Queen of  B o a r D  for Dummies, Vol. VIII'",
+    "Box of Candion Chocolates",
+    "Premium Bottle of Carrottus Carrot Juice"
+]
+GENERIC_FILLER_ITEMS: list[str] = [
+    *["Carrot Peelings"                 for _ in range(1, 50)],
+    *["Furball"                         for _ in range(1, 25)],
+    *["Bronze Coin"                     for _ in range(1, 18)],
+    *["Blaster Ammo"                    for _ in range(1, 12)],
+    *["Red-Green Bird Feathers"         for _ in range(1, 5)],
+    *["Clear Gem"                       for _ in range(1, 4)],
+    *["Cracked Gem"                     for _ in range(1, 4)],
+    *["Murky Gem"                       for _ in range(1, 4)],
+    *["Pale Gem"                        for _ in range(1, 4)],
+    *["Not Very Bouncy Bouncer Ammo"    for _ in range(1, 3)],
+    *["Blue Bird Feathers"              for _ in range(1, 3)],
+    *["Sweaty Headband"                                     ],
+]
+
+unique_filler_pool_per_player: dict[int, list[str]] = {}
 
 # Use this function to change the valid filler items to be created to replace item links or starting items.
 # Default value is the `filler_item_name` from game.json
 def hook_get_filler_item_name(world: World, multiworld: MultiWorld, player: int) -> list[str] | str | bool:
-    return False
+    if world.player not in unique_filler_pool_per_player:
+        unique_filler_pool_per_player[world.player] = UNIQUE_FILLER_ITEMS.copy()
+
+    if len(unique_filler_pool_per_player[world.player]) > 0 and world.random.random() >= .98:
+        item = unique_filler_pool_per_player[world.player].pop(
+            world.random.randint(0, len(unique_filler_pool_per_player[world.player]) - 1)
+        )
+        return item
+
+    return world.random.choice(GENERIC_FILLER_ITEMS)
 
 def before_generate_early(world: World, multiworld: MultiWorld, player: int) -> None:
     """
