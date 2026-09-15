@@ -1916,7 +1916,7 @@
     ],
     "requires": "{canDestroyWeaponBlocks(Bouncer)}",
     "exit_requires": {
-      "A Diamondus Forever - Jazz Start": "|Freezer Permit| and {hasWeaponAccess(A Diamondus Forever, Freezer)})"
+      "A Diamondus Forever - Jazz Start": "|Freezer Permit| and {hasWeaponAccess(A Diamondus Forever, Freezer)}"
     },
     "_comment": "R:J3"
   },
@@ -2356,7 +2356,7 @@
       "Electric Boogaloo - Bouncer Power Up Behind Uppercut Blocks Secret"
     ],
     "exit_requires": {
-      "Electric Boogaloo - Small Room After Upwards Pipe": "|Freezer Permit| and '({canDestroyWeaponBlocks(Bouncer)} or {canDestroyWildcardBlocks()} or {CanReachLocation(Electric Boogaloo - First Freezer Power Up Behind Sidekick Blocks Secret)} or {hasWeaponAccess(Electric Boogaloo, Freezer)})"
+      "Electric Boogaloo - Small Room After Upwards Pipe": "|Freezer Permit| and ({canDestroyWeaponBlocks(Bouncer)} or {canDestroyWildcardBlocks()} or {CanReachRegion(Electric Boogaloo - First Freezer Power Up Behind Sidekick Blocks Secret)} or {hasWeaponAccess(Electric Boogaloo, Freezer)})"
     },
     "_comment": "R:M4"
   },
@@ -3669,7 +3669,7 @@
     "connects_to": [
       "Bad Pitt - Around Bonus Warp and Second Save Point"
     ],
-    "requires": "{canCollectEnoughCoins(Burnin Biscuits, 20)}",
+    "requires": "{canCollectEnoughCoins(Bad Pitt, 20)}",
     "_comment": "R:B1"
   },
   "Bad Pitt - Before Boss Room": {
@@ -4762,7 +4762,7 @@
     "connects_to": [
       "Graveyard Shift - Upper Section After Ledge"
     ],
-    "requires": "{canDestroyTriggerCrates(Graveyard Shift, above/sides} or {canCopter()} or {canDoubleJump()}",
+    "requires": "{canDestroyTriggerCrates(Graveyard Shift, above/sides)} or {canCopter()} or {canDoubleJump()}",
     "_comment": "R:A1"
   },
   "Graveyard Shift - Warp High Above Upper Section Secret": {
