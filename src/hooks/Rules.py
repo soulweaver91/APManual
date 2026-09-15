@@ -105,7 +105,6 @@ def canUseSpecialMoveByDirection(multiworld: MultiWorld, state: CollectionState,
 
 
 def canDestroySpecialMoveBlockOrTriggerCrate(multiworld: MultiWorld, state: CollectionState, player: int, level: str, directions: str = ''):
-    
     if canUseSpecialMoveByDirection(multiworld, state, player, directions):
         return True
     

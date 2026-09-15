@@ -2,16 +2,22 @@
   "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.regions.schema.json",
   "New Game": {
     "connects_to": [
+      "Episode Select",
+      "Level Free Select"
+    ],
+    "starting": true
+  },
+  "Episode Select": {
+    "connects_to": [
       "Episode: Formerly a Prince",
       "Episode: Jazz in Time",
       "Episode: Flashback",
       "Episode: Funky Monkeys",
       "Episode: Shareware Demo",
       "Episode: The Secret Files",
-      "Episode: Christmas Chronicles",
-      "Level Free Select"
+      "Episode: Christmas Chronicles"
     ],
-    "starting": true
+    "requires": "|@Playable Character:1|"
   },
   "Level Free Select": {
     "connects_to": [
@@ -57,6 +63,7 @@
       "Dashing thru the snow.. - Entrance",
       "Tinsel Town - Entrance"
     ],
+    "requires": "|@Playable Character:1|",
     "exit_requires": {
       "Rabbit in Training - Entrance": "{levelFreeSelectEnabled()}",
       "Dungeon Dilemma - Entrance": "{levelFreeSelectEnabled()}",

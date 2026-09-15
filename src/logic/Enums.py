@@ -46,7 +46,7 @@ class Levels(StrEnum):
     SNOW_BUNNIES = 'Snow Bunnies'
     DASHING_THRU_THE_SNOW = 'Dashing thru the snow..'
     TINSEL_TOWN = 'Tinsel Town'
-    
+
 class Weapons(StrEnum):
     BOUNCER = 'Bouncer'
     FREEZER = 'Freezer'
