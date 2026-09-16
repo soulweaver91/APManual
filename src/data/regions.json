@@ -2678,7 +2678,7 @@
   },
   "Medieval Kineval - Start": {
     "connects_to": [
-      "Medieval Kineval - After Either Trigger Crate or Vine",
+      "Medieval Kineval - After Trigger Crate Next to Breakable Pillars",
       "Medieval Kineval - Two Gold Coins Behind Destructible Pillar Secret",
       "Medieval Kineval - Birdy and Two Gold Coins Below Rope Bridge Secret"
     ],
@@ -2698,7 +2698,7 @@
     "requires": "{canDestroySpecialMoveBlocks(Medieval Kineval, above)}",
     "_comment": "R:A2"
   },
-  "Medieval Kineval - After Either Trigger Crate or Vine": {
+  "Medieval Kineval - After Trigger Crate Next to Breakable Pillars": {
     "connects_to": [
       "Medieval Kineval - Start",
       "Medieval Kineval - Around Save Point",
@@ -2706,26 +2706,26 @@
       "Medieval Kineval - Electro Blaster Ammo Above Vine",
       "Medieval Kineval - Green Gems, Extra Life Crate and Gem Crate Behind Blocks Secret"
     ],
-    "requires": "{canGrabVines()} or {canDestroyTriggerCrates(Medieval Kineval, above/sides)} or ({canDestroyWildcardBlocks()} and {canDestroyTriggerCrates(Medieval Kineval, above/below/sides)})",
+    "requires": "{canDestroyTriggerCrates(Medieval Kineval, above/sides)} or ({canDestroyWildcardBlocks()} and {canDestroyTriggerCrates(Medieval Kineval, above/below/sides)})",
     "_comment": "R:M1"
   },
   "Medieval Kineval - Electro Blaster Ammo Above Vine": {
     "connects_to": [
-      "Medieval Kineval - After Either Trigger Crate or Vine"
+      "Medieval Kineval - After Trigger Crate Next to Breakable Pillars"
     ],
     "requires": "{canGrabVines()}",
     "_comment": "R:A3"
   },
   "Medieval Kineval - Green Gems, Extra Life Crate and Gem Crate Behind Blocks Secret": {
     "connects_to": [
-      "Medieval Kineval - After Either Trigger Crate or Vine"
+      "Medieval Kineval - After Trigger Crate Next to Breakable Pillars"
     ],
     "requires": "{canDestroyWildcardBlocks()}",
     "_comment": "R:A4"
   },
   "Medieval Kineval - Around Save Point": {
     "connects_to": [
-      "Medieval Kineval - After Either Trigger Crate or Vine",
+      "Medieval Kineval - After Trigger Crate Next to Breakable Pillars",
       "Medieval Kineval - Trigger Crate Detour First Room",
       "Medieval Kineval - Hooks Near Bonus Warp",
       "Medieval Kineval - Bonus Warp Area"
@@ -2768,7 +2768,7 @@
   },
   "Medieval Kineval - After Return From Secret Level": {
     "connects_to": [
-      "Medieval Kineval - After Either Trigger Crate or Vine"
+      "Medieval Kineval - After Trigger Crate Next to Breakable Pillars"
     ],
     "_comment": "R:C1    Technically the region connections here make it possible to loop back to the secret level warp again, which is something that vanilla JJ2 allows (to the detriment of possibly getting stuck in a secret level loop). JJ2+ fixes this AFAIK. Then again, this shouldn't have any consequences as far as AP is concerned."
   },
