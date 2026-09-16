@@ -111,7 +111,7 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
         # using those exact words at the ends of their names.
         bonus_regions = [region for region in regions if region.name.startswith(level_name) and region.name.endswith('Bonus Warp Area')]
         
-        for region_name in data.dependency_regions:
+        for region_name in set(data.dependency_regions):
             region = world.get_region(f'{level_name} - {region_name}')
             for bonus_region in bonus_regions:
                 for entrance in bonus_region.entrances:

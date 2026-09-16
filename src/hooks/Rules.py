@@ -291,11 +291,17 @@ def canCollectEnoughCoins(state: CollectionState, player: int, level: str, cost:
                 logging.debug(f'canCollectEnoughCoins: update group coins collected from {coins_collected} to {coins_collected + step_coins_collected}')
                 coins_collected += step_coins_collected
             else:
-                if step.region is None or CanReachRegion(state, player, f'{level} - {step.region}'):
-                    logging.debug(f'canCollectEnoughCoins: update group coins collected from {coins_collected} to {coins_collected + step.amount} (region {step.region or 'none'})')
+                required_regions = None
+                if isinstance(step.region, str):
+                    required_regions = [step.region]
+                elif isinstance(step.region, list):
+                    required_regions = step.region.copy()
+
+                if required_regions is None or False not in [CanReachRegion(state, player, f'{level} - {region}') for region in required_regions]:
+                    logging.debug(f'canCollectEnoughCoins: update group coins collected from {coins_collected} to {coins_collected + step.amount} (regions {','.join(required_regions or ['none'])})')
                     coins_collected += step.amount
                 else:
-                    logging.debug(f'canCollectEnoughCoins: skip step (region {step.region} not reachable)')
+                    logging.debug(f'canCollectEnoughCoins: skip step (region list {', '.join(required_regions)} not fully reachable)')
 
             if coins_collected >= cost:
                 logging.debug(f'canCollectEnoughCoins: target reached, exiting recursion branch')

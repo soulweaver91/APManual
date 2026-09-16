@@ -316,9 +316,11 @@
     "connects_to": [
       "Knight Cap - Jazz Left Path Left Branch Before Chute",
       "Knight Cap - Jazz Left Path Convergence",
+      "Knight Cap - Jazz Right Path Past Blue Spring",
       "Knight Cap - Jazz Only Freezer Upgrade Secret",
-      "Knight Cap - Jazz Only Gold Coin Secret",
-      "Knight Cap - Shared Path Start From Right"
+      "Knight Cap - Jazz Only Gold Coins Blocked by Spring Secret",
+      "Knight Cap - Coin Path Virtual Region Loop Around Left Path",
+      "Knight Cap - Coin Path Virtual Region Loop Around Right Path"
     ],
     "exit_requires": {
       "Knight Cap - Jazz Left Path Convergence": "{canDestroySpecialMoveBlocks(Knight Cap, above)}"
@@ -346,6 +348,13 @@
     "requires": "{canDestroySpecialMoveBlocks(Knight Cap, below)}",
     "_comment": "R:A1"
   },
+  "Knight Cap - Jazz Only Gold Coins Blocked by Spring Secret": {
+    "connects_to": [
+      "Knight Cap - Jazz Main Area"
+    ],
+    "requires": "|Freezer Permit|",
+    "_comment": "R:A14"
+  },
   "Knight Cap - Jazz Only Gold Coin Secret": {
     "connects_to": [
       "Knight Cap - Jazz Main Area"
@@ -363,7 +372,7 @@
       "Knight Cap - Jazz Main Area": "{canDestroySpecialMoveBlocks(Knight Cap, below)}",
       "Knight Cap - Jazz Left Path Left Branch After Chute": "{canUppercut()}"
     },
-    "_comment": "R:J4"
+    "_comment": "R:J4     The coins in the window can be grabbed from this side without any tools; uppercut is only needed for getting to the coin to the left backwards."
   },
   "Knight Cap - Jazz Left Path End": {
     "connects_to": [
@@ -372,12 +381,33 @@
     ],
     "_comment": "R:J5"
   },
+  "Knight Cap - Jazz Right Path Past Blue Spring": {
+    "connects_to": [
+      "Knight Cap - Shared Path Start From Right",
+      "Knight Cap - Jazz Main Area",
+      "Knight Cap - Jazz Only Gold Coin Secret"
+    ],
+    "exit_requires": {
+      "Knight Cap - Jazz Main Area": "|Freezer Permit|"
+    },
+    "_comment": "R:J6"
+  },
   "Knight Cap - Jazz Only Red Gems Behind Trigger Scenery Secret": {
     "connects_to": [
       "Knight Cap - Jazz Left Path End"
     ],
     "requires": "{canDestroyTriggerCrates(Knight Cap, above)}",
     "_comment": "R:A3"
+  },
+  "Knight Cap - Coin Path Virtual Region Loop Around Left Path": {
+    "connects_to": [],
+    "requires": "(|Bouncer Permit| and {canDestroySpecialMoveBlocks(Knight Cap, below)} or {canDestroySpecialMoveBlocks(Knight Cap, above)}",
+    "_comment": "R:V1"
+  },
+  "Knight Cap - Coin Path Virtual Region Loop Around Right Path": {
+    "connects_to": [],
+    "requires": "|Freezer Permit|",
+    "_comment": "R:V2"
   },
   "Knight Cap - Spaz Start": {
     "connects_to": [
@@ -595,10 +625,17 @@
   },
   "Tossed Salad - East Gold Coin Area": {
     "connects_to": [
-      "Tossed Salad - Shared Path Lower Section"
+      "Tossed Salad - Shared Path Lower Section",
+      "Tossed Salad - East Gold Coin Area Gems and Fruit Accessed with Copter Secret"
     ],
     "requires": "{canDestroyWildcardBlocks()}",
     "_comment": "R:A3"
+  },
+  "Tossed Salad - East Gold Coin Area Gems and Fruit Accessed with Copter Secret": {
+    "connects_to": [
+      "Tossed Salad - East Gold Coin Area"
+    ],
+    "_comment": "R:A6"
   },
   "Tossed Salad - After Main Path Trigger Crate": {
     "connects_to": [
@@ -618,9 +655,15 @@
   },
   "Tossed Salad - Under Jazz Section Bridge": {
     "connects_to": [
-      "Tossed Salad - Around Second Save Point"
+      "Tossed Salad - Around Second Save Point",
+      "Tossed Salad - Jazz Start"
     ],
-    "requires": "{canDestroyWildcardBlocks()}",
+    "entrance_requires": {
+      "Tossed Salad - Around Second Save Point": "{canDestroyWildcardBlocks()}"
+    },
+    "exit_requires": {
+      "Tossed Salad - Around Second Save Point": "{canDestroyWildcardBlocks()}"
+    },
     "_comment": "R:A4"
   },
   "Tossed Salad - Two Silver Coins After Second Save Point Secret": {
@@ -632,16 +675,30 @@
   "Tossed Salad - Before Final Chute": {
     "connects_to": [
       "Tossed Salad - Final Part",
-      "Tossed Salad - Bonus Warp Area"
+      "Tossed Salad - Bonus Warp Area",
+      "Tossed Salad - Fruit on Ledge Accessible by Copter Secret"
     ],
     "_comment": "R:M6"
   },
   "Tossed Salad - Bonus Warp Area": {
     "connects_to": [
-      "Tossed Salad - Before Final Chute"
+      "Tossed Salad - Bonus Warp Area Exit Room"
     ],
     "requires": "{canCollectEnoughCoins(Tossed Salad, 20)}",
     "_comment": "R:B1"
+  },
+  "Tossed Salad - Bonus Warp Area Exit Room": {
+    "connects_to": [
+      "Tossed Salad - Before Final Chute"
+    ],
+    "requires": "{canDestroySpecialMoveBlocks(Tossed Salad, above)}",
+    "_comment": "R:B2"
+  },
+  "Tossed Salad - Fruit on Ledge Accessible by Copter Secret": {
+    "connects_to": [
+      "Tossed Salad - Before Final Chute"
+    ],
+    "_comment": "R:A7"
   },
   "Tossed Salad - Final Part": {
     "connects_to": [

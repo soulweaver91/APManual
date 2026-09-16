@@ -5,9 +5,9 @@ from .Enums import Levels, StartPositionCharacterName
 
 class CoinPathNode:
     amount: int
-    region: str | None
+    region: str | list[str] | None
 
-    def __init__(self, amount, region = None) -> None:
+    def __init__(self, amount: int, region: str | list[str] | None = None) -> None:
         self.amount = amount
         self.region = region
         pass
@@ -62,6 +62,8 @@ class CoinPathGroup:
             if isinstance(step, CoinPathGroup):
                 self.minimum_coins_from_sequence += step.minimum_coins
                 self.dependency_regions.extend(step.dependency_regions)
+            elif isinstance(step.region, list):
+                self.dependency_regions.extend(step.region)
             elif step.region is not None:
                 self.dependency_regions.append(step.region)
             else:
@@ -94,13 +96,33 @@ COIN_ACCESS_BY_LEVEL_LOOKUP: dict[Levels, CoinPathGroup] = {
     ]),
     Levels.KNIGHT_CAP: CG(Levels.KNIGHT_CAP).seq([
         CG('Start position branch', min_mode=True).branch(
-            CG('Jazz branch', 'Jazz').seq([
-                # J1     gold:   (112, 8) (112, 9) (189, 8)
-                CN(15),
-                # A2     gold:   (163, 6)
-                CN(5, 'Jazz Only Gold Coin Secret'),
-                # J3     gold:   (20, 23) (56, 31) (57, 31)
-                CN(15, 'Jazz Left Path Left Branch After Chute')
+            CG('Jazz branch', 'Jazz').branch(
+                CG('Left path first').seq([
+                    # J3     gold:   (20, 23)
+                    CN(5, 'Jazz Left Path Left Branch After Chute'),
+                    # J4     gold:   (56, 31) (57, 31)
+                    CN(10, 'Jazz Left Path Convergence'),
+
+                    # J6     gold:   (112, 8) (112, 9)
+                    CN(5, 'Coin Path Virtual Region Loop Around Left Path'),
+                    # A2     gold:   (163, 6)
+                    CN(5, ['Coin Path Virtual Region Loop Around Left Path', 'Jazz Only Gold Coin Secret']),         
+                ])
+            ).branch(
+                CG('Right path first').seq([
+                    # J6     gold:   (112, 8) (112, 9)
+                    CN(5),
+                    # A2     gold:   (163, 6)
+                    CN(5, 'Jazz Only Gold Coin Secret'),
+                    
+                    # J3     gold:   (20, 23)
+                    CN(5, ['Coin Path Virtual Region Loop Around Right Path', 'Jazz Left Path Left Branch After Chute']),
+                    # J4     gold:   (56, 31) (57, 31)
+                    CN(10, ['Coin Path Virtual Region Loop Around Right Path', 'Jazz Left Path Convergence']),
+                ])
+            ).seq([
+                # A14     gold:   (112, 8) (112, 9)
+                CN(10, 'Jazz Only Gold Coins Blocked by Spring Secret')
             ])
         ).branch(
             CG('Spaz branch', 'Spaz').seq([
