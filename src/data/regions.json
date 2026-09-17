@@ -3678,7 +3678,7 @@
       "Bad Pitt - Gold Coin Below Broken Bridge Secret",
       "Bad Pitt - Red Gems Behind Destructible Blocks Secret"
     ],
-    "requires": "{canDestroyWildcardBlocks()}",
+    "requires": "{canDestroyWildcardBlocks()} or {canDoubleJump()} or {canUppercut()}",
     "_comment": "R:M5"
   },
   "Bad Pitt - Gold Coin Below Broken Bridge Secret": {
